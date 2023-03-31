@@ -68,9 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="App_Data\GroceryDatabase.mdf" />
-    <Content Include="App_Data\GroceryDatabase_log.ldf">
-      <DependentUpon>GroceryDatabase.mdf</DependentUpon>
+    <Content Include="App_Data\GoceriesDatabase.mdf" />
+    <Content Include="App_Data\GoceriesDatabase_log.ldf">
+      <DependentUpon>GoceriesDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="Contact.aspx" />
     <Content Include="FAQ.aspx" />

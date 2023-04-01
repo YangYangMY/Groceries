@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Groceries.MasterPage
+namespace Groceries.Admin
 {
-    public partial class Admin : System.Web.UI.MasterPage
+    public partial class Orders : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

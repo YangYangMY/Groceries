@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Groceries
+namespace Groceries.MasterPage
 {
 
 
-    public partial class Site2
+    public partial class Admin
     {
 
         /// <summary>

@@ -43,7 +43,7 @@
    <div class="h-full px-3 py-4 overflow-y-auto bg-[#191C24] ">
       <a href="../Admin/Dashboard.aspx" class="flex items-center pl-2.5 mb-5">
          <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-7" alt="Flowbite Logo" />
-         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Groceries</span>
+         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"><h1>Admin</h1>Groceries</span>
       </a>
       <ul class="space-y-2 font-medium">
           <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">

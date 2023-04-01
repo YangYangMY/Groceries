@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Payment.aspx.cs" Inherits="Groceries.Payment" MasterPageFile="~/Site1.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Payment.aspx.cs" Inherits="Groceries.Payment" MasterPageFile="~/MasterPage/Customer.Master" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
@@ -87,7 +87,7 @@
     <div class="w-full mx-auto rounded-lg bg-white shadow-lg p-5 text-gray-700" style="max-width:800px">
         <div class="grid grid-cols-3 gap-4">
             <div class="flex items-center pr-4 border-r-2">
-                <img src="images/card.png" alt="Credit card" />
+                <img src="../images/card.png" alt="Credit card" />
             </div>
          <div class="col-span-2">
              <div class="mb-10">

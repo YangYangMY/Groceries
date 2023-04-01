@@ -67,26 +67,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="Customer\About.aspx" />
     <Content Include="Admin\Admin.aspx" />
     <Content Include="App_Data\GoceriesDatabase.mdf" />
     <Content Include="App_Data\GoceriesDatabase_log.ldf">
       <DependentUpon>GoceriesDatabase.mdf</DependentUpon>
     </Content>
-    <Content Include="Contact.aspx" />
-    <Content Include="FAQ.aspx" />
-    <Content Include="Products.aspx" />
-    <Content Include="HomePage.aspx" />
-    <Content Include="Login.aspx" />
-    <Content Include="Promotion.aspx" />
+    <Content Include="Customer\Contact.aspx" />
+    <Content Include="Customer\FAQ.aspx" />
+    <Content Include="Customer\Products.aspx" />
+    <Content Include="Customer\HomePage.aspx" />
+    <Content Include="Customer\Login.aspx" />
+    <Content Include="Customer\Promotion.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.aspx.cs">
+    <Compile Include="Customer\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
+    <Compile Include="Customer\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Admin.aspx.cs">
@@ -96,46 +96,46 @@
     <Compile Include="Admin\Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
+    <Compile Include="Customer\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
+    <Compile Include="Customer\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FAQ.aspx.cs">
+    <Compile Include="Customer\FAQ.aspx.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FAQ.aspx.designer.cs">
+    <Compile Include="Customer\FAQ.aspx.designer.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Products.aspx.cs">
+    <Compile Include="Customer\Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Products.aspx.designer.cs">
+    <Compile Include="Customer\Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.aspx.cs">
+    <Compile Include="Customer\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="HomePage.aspx.designer.cs">
+    <Compile Include="Customer\HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Customer\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Customer\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Promotion.aspx.cs">
+    <Compile Include="Customer\Promotion.aspx.cs">
       <DependentUpon>Promotion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Promotion.aspx.designer.cs">
+    <Compile Include="Customer\Promotion.aspx.designer.cs">
       <DependentUpon>Promotion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -168,7 +168,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
-    <Folder Include="Customer\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>

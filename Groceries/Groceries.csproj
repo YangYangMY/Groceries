@@ -265,9 +265,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="favicon_io\site.webmanifest" />
     <Content Include="MasterPage\Admin.Master" />
     <Content Include="MasterPage\Customer.Master" />
+    <Content Include="favicon_io\site.webmanifest" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

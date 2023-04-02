@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Groceries
+namespace Groceries.Customer
 {
 
 
-    public partial class WebForm1
+    public partial class Profile
     {
 
         /// <summary>

@@ -108,7 +108,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs" />
     <Compile Include="Admin\AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -158,8 +157,6 @@
     <Compile Include="Admin\Report.aspx.designer.cs">
       <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Category.cs" />
-    <Compile Include="Customer.cs" />
     <Compile Include="Customer\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -265,9 +262,7 @@
     <Compile Include="MasterPage\Customer.Master.designer.cs">
       <DependentUpon>Customer.Master</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShippingAddress.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon_io\site.webmanifest" />

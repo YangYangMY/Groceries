@@ -44,10 +44,10 @@
                         <!--Icons-->
                         <div class="flex space-x-5 mx-8">
                             <a href="HomePage.aspx">
-                                <img class="w-5 h-5" src="img/user.png" alt="user" />
+                                <img class="w-5 h-5" src="../images/user.png" alt="user" />
                             </a>
                             <a href="HomePage.aspx">
-                                <img class="w-5 h-5" src="img/cart.png" alt="user" />
+                                <img class="w-5 h-5" src="../images/cart.png" alt="user" />
                             </a>
                         </div>
                     </div>

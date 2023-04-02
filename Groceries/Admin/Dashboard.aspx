@@ -5,7 +5,7 @@
     <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl lg:text-3xl">Dashboard</h1>
 
     <!--Total Profit, orders, products -->
-    <div class="grid grid-cols-3 gap-10">
+    <div class="grid grid-cols-3 gap-10 my-auto">
         <div class="w-full mx-auto px-0 py-5 ">
             <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl ">
                 <img class="mx-4 object-cover w-full rounded-t-lg h-96 md:h-auto md:w-20 md:rounded-none md:rounded-l-lg" src="../images/save-money.gif" alt="">
@@ -40,7 +40,7 @@
     <!--Line Chart-->
     <div class="grid grid-cols-3 gap-10 ">
 
-        <div class="block  p-6 bg-white border border-gray-200 rounded-lg shadow col-span-2">
+        <div class="block p-6 bg-white border border-gray-200 rounded-lg shadow col-span-2">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">Sales Satistics</h5>
             <span class="text-base font-normal text-gray-500">Recent month</span>
             <div class="overflow-hidden rounded-lg shadow-lg">

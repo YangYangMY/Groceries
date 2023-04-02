@@ -4,47 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl lg:text-3xl">Dashboard</h1>
 
-    <!--Total Profit, orders, products-->
-    <div class="grid grid-cols-3 gap-10">
-        <div class="w-full mx-auto px-0 py-5 ">
-            <div class="pt-6 text-center bg-white rounded">
-                <img class=" mx-auto justify-center items-center  md:h-auto md:w-20 " src="../images/save-money.gif" alt="">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-1.5xl font-bold tracking-tight text-[#4B49AC]">Total Profit</h5>
-                    <h1 class="mb-1 text-2xl font-bold dark:text-black">RM 5,000.20</h1>
-                    <span class="inline-block py-2 px-3 mb-2 text-xs text-white bg-green-500 rounded-full my-1">+RM1,015</span>
-                </div>
-            </div>
-        </div>
-        <div class="w-full mx-auto px-0 py-5 ">
-            <div class="pt-6 text-center bg-white rounded">
-                <img class=" mx-auto justify-center items-center  md:h-auto md:w-20 " src="../images/shopping-cart.gif" alt="">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-1.5xl font-bold tracking-tight text-[#4B49AC]">Total Orders</h5>
-                    <h1 class="mb-1 text-2xl font-bold dark:text-black  my-1">400</h1>
-                    <a href="Orders.aspx">
-                        <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">View Orders</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="w-full mx-auto px-0 py-5 ">
-                <div class="pt-6 text-center bg-white rounded">
-                    <img class=" mx-auto justify-center items-center  md:h-auto md:w-20 " src="../images/shopping-basket.gif" alt="">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-1.5xl font-bold tracking-tight text-[#4B49AC]">Total Products</h5>
-                        <h1 class="mb-1 text-2xl font-bold dark:text-black my-1">45</h1>
-                        <a href="ProductList.aspx">
-                            <button href="ProductList.aspx" type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">View Products</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Total Profit, orders, products 2 -->
+    <!--Total Profit, orders, products -->
     <div class="grid grid-cols-3 gap-10">
         <div class="w-full mx-auto px-0 py-5 ">
             <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl ">

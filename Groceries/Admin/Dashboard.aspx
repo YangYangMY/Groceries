@@ -2,7 +2,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl lg:text-3xl">Hi, welcome back!</h1>
+    <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl lg:text-3xl">Dashboard</h1>
 
     <!--Total Profit, orders, products-->
     <div class="grid grid-cols-3 gap-10">
@@ -44,6 +44,39 @@
         </div>
     </div>
 
+    <!--Total Profit, orders, products 2 -->
+    <div class="grid grid-cols-3 gap-10">
+        <div class="w-full mx-auto px-0 py-5 ">
+            <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl ">
+                <img class="mx-4 object-cover w-full rounded-t-lg h-96 md:h-auto md:w-20 md:rounded-none md:rounded-l-lg" src="../images/save-money.gif" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-1xl font-bold tracking-tight text-[#4B49AC]">Total Profit</h5>
+                    <p class="mb-3 text-2xl font-bold dark:text-black">RM 5,000.20</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full mx-auto px-0 py-5 ">
+            <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl ">
+                <img class="mx-4 object-cover w-full rounded-t-lg h-96 md:h-auto md:w-20 md:rounded-none md:rounded-l-lg" src="../images/shopping-cart.gif" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-1xl font-bold tracking-tight text-[#4B49AC]">Total Orders</h5>
+                    <p class="mb-3 text-2xl font-bold dark:text-black">400</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full mx-auto px-0 py-5 ">
+            <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl ">
+                <img class="mx-4 object-cover w-full rounded-t-lg h-96 md:h-auto md:w-20 md:rounded-none md:rounded-l-lg" src="../images/shopping-basket.gif" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-1xl font-bold tracking-tight text-[#4B49AC]">Total Products</h5>
+                    <p class="mb-3 text-2xl font-bold dark:text-black">45</p>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+
     <!--Line Chart-->
     <div class="grid grid-cols-3 gap-10 ">
 
@@ -64,7 +97,7 @@
                     labels: labels,
                     datasets: [
                         {
-                            label: "Sales Satistics Oct 2022 - March 2023",
+                            label: "Sales Satistics",
                             backgroundColor: "hsl(217, 57%, 51%)",
                             borderColor: "hsl(217, 57%, 51%)",
                             data: [500, 1500, 600, 1000, 500, 1400],
@@ -137,7 +170,7 @@
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Latest Orders</h3>
                 </div>
                 <div class="flex-shrink-0">
-                    <a href="#" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View all</a>
+                    <a href="Orders.aspx" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View all</a>
                 </div>
             </div>
             <div class="flex flex-col mt-8">
@@ -181,7 +214,7 @@
                                     <tr>
                                         <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1003
                                         </td>
-                                          <td class=" p-4 whitespace-nowrap text-sm font-semibold">Ga Men
+                                        <td class=" p-4 whitespace-nowrap text-sm font-semibold">Ga Men
                                         </td>
                                         <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-500">Apr 18 ,2021
                                         </td>
@@ -191,7 +224,7 @@
                                     <tr class="bg-gray-50">
                                         <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900 rounded-lg rounded-left">1002
                                         </td>
-                                                                                <td class=" p-4 whitespace-nowrap text-sm font-semibold">Chia Chia
+                                        <td class=" p-4 whitespace-nowrap text-sm font-semibold">Chia Chia
                                         </td>
                                         <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-500">Apr 15 ,2021
                                         </td>
@@ -201,7 +234,7 @@
                                     <tr>
                                         <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1001
                                         </td>
-                                                                                <td class=" p-4 whitespace-nowrap text-sm font-semibold">Wee Yan
+                                        <td class=" p-4 whitespace-nowrap text-sm font-semibold">Wee Yan
                                         </td>
                                         <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-500">Apr 15 ,2021
                                         </td>

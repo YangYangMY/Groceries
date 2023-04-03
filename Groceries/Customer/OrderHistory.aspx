@@ -2,7 +2,5 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--Content-->
-    <div>
 
-    </div>
 </asp:Content>

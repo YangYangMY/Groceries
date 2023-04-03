@@ -124,11 +124,13 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="Customer\About.aspx" />
     <Content Include="Customer\AddressBook.aspx" />
+    <Content Include="Customer\Checkout.aspx" />
     <Content Include="Customer\Contact.aspx" />
     <Content Include="Customer\FAQ.aspx" />
     <Content Include="Customer\HomePage.aspx" />
     <Content Include="Customer\Login.aspx" />
     <Content Include="Customer\OrderHistory.aspx" />
+    <Content Include="Customer\OrderSuccess.aspx" />
     <Content Include="Customer\Payment.aspx" />
     <Content Include="Customer\Products.aspx" />
     <Content Include="Customer\Profile.aspx" />
@@ -149,6 +151,7 @@
     <Content Include="images\header.png" />
     <Content Include="images\mail.png" />
     <Content Include="images\massimobread.png" />
+    <Content Include="images\oderConfirmed.png" />
     <Content Include="images\Online shopping.jpg" />
     <Content Include="images\phone.png" />
     <Content Include="images\rabbit-candy.png" />
@@ -233,6 +236,13 @@
     <Compile Include="Customer\AddressBook.aspx.designer.cs">
       <DependentUpon>AddressBook.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -267,6 +277,13 @@
     </Compile>
     <Compile Include="Customer\OrderHistory.aspx.designer.cs">
       <DependentUpon>OrderHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\OrderSuccess.aspx.cs">
+      <DependentUpon>OrderSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\OrderSuccess.aspx.designer.cs">
+      <DependentUpon>OrderSuccess.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Payment.aspx.cs">
       <DependentUpon>Payment.aspx</DependentUpon>

@@ -6,9 +6,9 @@
     <div class="flex justify-start item-start space-y-2 flex-col">
         <h1 class="text-3xl lg:text-4xl font-semibold leading-7 lg:leading-9 text-gray-800">Shopping Cart</h1>
     </div> 
-    <div class="grid grid-cols-3 gap-4 mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
+    <div class="grid grid-cols-4 gap-4 mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
               
-        <div class="col-span-2 flex flex-col justify-start items-start rounded-lg bg-white shadow-lg border px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
+        <div class="col-span-3 flex flex-col justify-start items-start rounded-lg bg-white shadow-lg border px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
                 <div class="mt-0 border-b flex flex-col md:flex-row justify-start items-start md:items-center md:space-x-6 xl:space-x-8 w-full">
                     <div class="pb-4 md:pb-8 w-full md:w-40">
                     </div>
@@ -16,9 +16,9 @@
                         <div class="w-full flex flex-col justify-start items-start space-y-8 pr-2">
                             <h3 class="font-semibold text-base  xl:text-lg leading-6 text-gray-800 ">Product</h3>
                         </div>
-                        <div class="flex justify-between space-x-8 items-start w-full">
+                        <div class="flex justify-right space-x-14 items-start w-full">
                             <p class="font-semibold text-base xl:text-lg leading-6">Unit Price</p>
-                            <p class="font-semibold text-base xl:text-lg leading-6 text-gray-800">Quantity</p>
+                            <p class="font-semibold text-base xl:text-lg leading-6 text-gray-800">Qty</p>
                             <p class="font-semibold text-base xl:text-lg leading-6 text-gray-800">Total Price</p>
                         </div>
                     </div>
@@ -31,10 +31,16 @@
                         <div class="w-full flex flex-col justify-start items-start space-y-8 pr-2">
                             <h3 class="text-l xl:text-l font-semibold leading-6 text-gray-800">Massimo Sandwich Loaf with Wheat Germ (400g)</h3>
                         </div>
-                        <div class="flex justify-between space-x-8 items-start w-full">
+                        <div class="flex justify-between space-x-6 items-start w-full">
                             <p class="text-base xl:text-lg leading-6">RM 3.19</p>
-                            <p class="text-base xl:text-lg leading-6 text-gray-800">1</p>
+                            <div>
+                            <%--<p class="text-base xl:text-lg leading-6 text-gray-800">1</p>--%>
+                            <asp:Button ID="btnIncrement" runat="server" Text=" +  " class ="rounded-full bg-black text-white hover:bg-stone-300 hover:text-black" OnClick="btnIncrement_Click" />
+                            <asp:Label ID="lblQty" runat="server" Text="" class="mx-2"></asp:Label>
+                            <asp:Button ID="btnDecrement" runat="server" Text="  -  " class ="rounded-full bg-black text-white font-bold hover:bg-stone-300 hover:text-black" OnClick="btnDecrement_Click" />
+                            </div>
                             <p class="text-base xl:text-lg font-semibold leading-6 text-gray-800">RM 3.19</p>
+                            <asp:Button ID="btnRemoveItem" runat="server" Text="Remove" class="underline"/>
                         </div>
                     </div>
                 </div>
@@ -48,8 +54,14 @@
                         </div>
                         <div class="flex justify-between space-x-8 items-start w-full">
                             <p class="text-base xl:text-lg leading-6">RM5.50</p>
-                            <p class="text-base xl:text-lg leading-6 text-gray-800">1</p>
+                           <div>
+                            <%--<p class="text-base xl:text-lg leading-6 text-gray-800">1</p>--%>
+                            <asp:Button ID="ButtonIncrement2" runat="server" Text=" +  " class ="rounded-full bg-black text-white hover:bg-stone-300 hover:text-black" OnClick="btnIncrement_Click" />
+                            <asp:Label ID="lblQty2" runat="server" Text="" class="mx-2"></asp:Label>
+                            <asp:Button ID="ButtonDecrement2" runat="server" Text="  -  " class ="rounded-full bg-black text-white font-bold hover:bg-stone-300 hover:text-black" OnClick="btnDecrement_Click" />
+                            </div>
                             <p class="text-base xl:text-lg font-semibold leading-6 text-gray-800">RM5.50</p>
+                            <asp:Button ID="btnRemoveItem2" runat="server" Text="Remove" class="underline"/>
                         </div>
                     </div>
                 </div>

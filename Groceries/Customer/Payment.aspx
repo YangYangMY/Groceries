@@ -69,7 +69,7 @@
         </div>
         <div>
 
-            <asp:Button ID="btnPay" runat="server" Text="PAY NOW" class="block w-full max-w-xs mx-auto bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold"/>
+            <asp:Button ID="btnPay" runat="server" Text="PAY NOW" class="block w-full max-w-xs mx-auto bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" PostBackUrl="~/Customer/OrderSuccess.aspx"/>
 
         </div>
     </div>

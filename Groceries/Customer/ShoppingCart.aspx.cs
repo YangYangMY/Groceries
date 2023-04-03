@@ -11,7 +11,26 @@ namespace Groceries.Customer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                lblQty.Text = "1";
+                lblQty2.Text = "1";
+            }
+            
+        }
 
+        protected void btnIncrement_Click(object sender, EventArgs e)
+        {
+           lblQty.Text = (int.Parse(lblQty.Text) + 1).ToString();
+            
+        }
+        protected void btnDecrement_Click(object sender, EventArgs e)
+        {
+          if (int.Parse(lblQty.Text) > 1)
+          {
+            lblQty.Text = (int.Parse(lblQty.Text) - 1).ToString();
+          }
+                
         }
     }
 }

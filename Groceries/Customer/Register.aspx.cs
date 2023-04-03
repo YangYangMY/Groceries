@@ -23,5 +23,10 @@ namespace Groceries.Customer
         {
 
         }
+
+        protected void txtConfirm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

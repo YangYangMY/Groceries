@@ -99,6 +99,8 @@
     <Content Include="favicon_io\favicon-32x32.png" />
     <Content Include="favicon_io\favicon.ico" />
     <Content Include="images\card.png" />
+    <Content Include="images\ForgotPassword.jpg" />
+    <Content Include="images\Online shopping.jpg" />
     <Content Include="images\registerbg.jpg" />
     <Content Include="images\save-money.gif" />
     <Content Include="images\shopping-basket.gif" />

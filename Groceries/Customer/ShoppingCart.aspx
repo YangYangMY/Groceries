@@ -23,11 +23,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-0 flex flex-col md:flex-row justify-start items-start md:items-center md:space-x-6 xl:space-x-8 w-full">
-                    <div class="pb-4 md:pb-8 w-full md:w-40">
+                <div class="border-b mt-6 flex flex-col md:flex-row justify-start items-start md:items-center md:space-x-6 xl:space-x-8 w-full">
+                    <div class="w-full md:w-40">
                         <img class="w-full hidden md:block" src="../images/massimobread.png" alt="missimo" />
                     </div>
-                    <div class="border-b border-gray-200 md:flex-row flex-col flex justify-between items-start w-full pb-8 space-y-4 md:space-y-0">
+                    <div class="border-gray-200 md:flex-row flex-col flex justify-between items-start w-full space-y-4 md:space-y-0">
                         <div class="w-full flex flex-col justify-start items-start space-y-8 pr-2">
                             <h3 class="text-l xl:text-l font-semibold leading-6 text-gray-800">Massimo Sandwich Loaf with Wheat Germ (400g)</h3>
                         </div>
@@ -40,11 +40,11 @@
                             <asp:Button ID="btnDecrement" runat="server" Text="  -  " class ="rounded-full bg-black text-white font-bold hover:bg-stone-300 hover:text-black" OnClick="btnDecrement_Click" />
                             </div>
                             <p class="text-base xl:text-lg font-semibold leading-6 text-gray-800">RM 3.19</p>
-                            <asp:Button ID="btnRemoveItem" runat="server" Text="Remove" class="underline"/>
+                            <asp:Button ID="btnRemoveItem" runat="server" Text="Remove" class="underline hover:text-stone-300"/>
                         </div>
                     </div>
                 </div>
-                <div class="mt-6 md:mt-0 flex justify-start flex-col md:flex-row items-start md:items-center space-y-4 md:space-x-6 xl:space-x-8 w-full">
+                <div class="mt-6 flex justify-start flex-col md:flex-row items-start md:items-center space-y-4 md:space-x-6 xl:space-x-8 w-full">
                     <div class="w-full md:w-40">
                         <img class="w-full hidden md:block" src="../images/hbchips.jpg" alt="chips" />
                     </div>
@@ -61,7 +61,7 @@
                             <asp:Button ID="ButtonDecrement2" runat="server" Text="  -  " class ="rounded-full bg-black text-white font-bold hover:bg-stone-300 hover:text-black" OnClick="btnDecrement_Click" />
                             </div>
                             <p class="text-base xl:text-lg font-semibold leading-6 text-gray-800">RM5.50</p>
-                            <asp:Button ID="btnRemoveItem2" runat="server" Text="Remove" class="underline"/>
+                            <asp:Button ID="btnRemoveItem2" runat="server" Text="Remove" class="underline hover:text-stone-300"/>
                         </div>
                     </div>
                 </div>
@@ -83,8 +83,10 @@
                         <p class="text-base font-semibold leading-4 text-gray-800">Total</p>
                         <p class="text-base font-semibold leading-4 text-gray-600">RM16.69</p>
                     </div>
-                    <div>
-                        <asp:Button ID="btnCheckout" runat="server" Text="Checkout" class=" mt-28 mb-2 block w-full max-w-xs mx-auto bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" />
+                    <div class="relative">
+                         <div class="bottom-0">
+                             <asp:Button ID="btnCheckout" runat="server" Text="Checkout" class="mt-28 mb-2 block w-full max-w-xs mx-auto bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" />
+                         </div>
                     </div>
             </div>
 </div>

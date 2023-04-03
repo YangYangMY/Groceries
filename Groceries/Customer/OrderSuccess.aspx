@@ -5,7 +5,7 @@
     <div class="bg-stone-50 flex items-center justify-center">
     <div class="my-28 w-full mx-auto rounded-lg bg-white shadow-lg p-5 text-gray-700" style="max-width:600px">
             <div class="text-center">
-            <img src="../images/oderConfirmed.png" class="text-green-600 w-16 h-16 mx-auto my-6" style="max-width:200px"/>
+            <img src="../images/oderConfirmed.png" class="w-16 h-16 mx-auto my-6"/>
             <h3 class="my-10 md:text-2xl text-base text-gray-900 font-semibold text-center">Order Confirmed</h3>
             <p class="text-gray-600 my-2">Thank you for your purchase!</p>
             <p> Have a great day!  </p>

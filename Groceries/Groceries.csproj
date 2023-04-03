@@ -74,7 +74,7 @@
     <Content Include="Admin\Orders.aspx" />
     <Content Include="Admin\ProductList.aspx" />
     <Content Include="Admin\Report.aspx" />
-    <Content Include="Admin\RegisterAdmin.aspx" />
+    <Content Include="Admin\AddAdmin.aspx" />
     <Content Include="App_Data\GoceriesDatabase.mdf" />
     <Content Include="App_Data\GoceriesDatabase_log.ldf">
       <DependentUpon>GoceriesDatabase.mdf</DependentUpon>
@@ -215,12 +215,12 @@
     <Compile Include="Admin\Report.aspx.designer.cs">
       <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\RegisterAdmin.aspx.cs">
-      <DependentUpon>RegisterAdmin.aspx</DependentUpon>
+    <Compile Include="Admin\AddAdmin.aspx.cs">
+      <DependentUpon>AddAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\RegisterAdmin.aspx.designer.cs">
-      <DependentUpon>RegisterAdmin.aspx</DependentUpon>
+    <Compile Include="Admin\AddAdmin.aspx.designer.cs">
+      <DependentUpon>AddAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>

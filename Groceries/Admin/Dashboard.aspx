@@ -170,7 +170,7 @@
                         data: [300, 50, 100],
                         backgroundColor: [
                             "rgb(100,200,1)",
-                            "rgb(164, 101, 1)",
+                            "#F6BD60",
                             "rgb(1, 5, 51)",
                         ],
                         hoverOffset: 4,

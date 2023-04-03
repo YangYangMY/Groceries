@@ -9,13 +9,13 @@
     
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+        <thead class="text-xs text-gray-700 uppercase bg-[#FBEBDB]">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    Product name
+                    Product ID
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Category
+                    Product Name
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Stock
@@ -23,7 +23,7 @@
                 <th scope="col" class="px-6 py-3">
                     Price
                 </th>
-                <th scope="col" class="px-6 py-3 text-center">
+                <th scope="col" class="px-6 py-3 ">
                     Action
                 </th>
             </tr>
@@ -31,180 +31,180 @@
         <tbody>
             <tr class="bg-white border-b hover:bg-gray-50">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Apple MacBook Pro 17"
+                    1001
                 </th>
                 <td class="px-6 py-4">
-                    Silver
+                    100 Plus
                 </td>
                 <td class="px-6 py-4">
-                    Laptop
+                    50
                 </td>
                 <td class="px-6 py-4">
-                    $2999
+                    RM40
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
                     <a href="#" class=" mx-2 font-medium text-red-600 hover:underline">Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b hover:bg-gray-50">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Microsoft Surface Pro
+                    1002
                 </th>
                 <td class="px-6 py-4">
-                    White
+                    Milk
                 </td>
                 <td class="px-6 py-4">
-                    Laptop PC
+                   100
                 </td>
                 <td class="px-6 py-4">
-                    $1999
+                    RM10
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
                     <a href="#" class=" mx-2 font-medium text-red-600 hover:underline">Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b hover:bg-gray-50">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Magic Mouse 2
+                    1003
                 </th>
                 <td class="px-6 py-4">
-                    Black
+                    Biscuit
                 </td>
                 <td class="px-6 py-4">
-                    Accessories
+                    12
                 </td>
                 <td class="px-6 py-4">
-                    $99
+                    RM5
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
                     <a href="#" class=" mx-2 font-medium text-red-600 hover:underline">Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b hover:bg-gray-50">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Apple Watch
+                    1004
                 </th>
                 <td class="px-6 py-4">
-                    Black
+                    Coffee Bean
                 </td>
                 <td class="px-6 py-4">
-                    Watches
+                    60
                 </td>
                 <td class="px-6 py-4">
-                    $199
+                    RM199
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
                     <a href="#" class=" mx-2 font-medium text-red-600 hover:underline">Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b hover:bg-gray-50">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Apple iMac
+                    1005
                 </th>
                 <td class="px-6 py-4">
-                    Silver
+                    Mineral Water
                 </td>
                 <td class="px-6 py-4">
-                    PC
+                    20
                 </td>
                 <td class="px-6 py-4">
-                    $2999
+                    RM2999
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
                     <a href="#" class=" mx-2 font-medium text-red-600 hover:underline">Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b hover:bg-gray-50">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Apple AirPods
+                    1006
                 </th>
                 <td class="px-6 py-4">
-                    White
+                    Ice Cream
                 </td>
                 <td class="px-6 py-4">
-                    Accessories
+                    10
                 </td>
                 <td class="px-6 py-4">
-                    $399
+                    RM399
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
                     <a href="#" class=" mx-2 font-medium text-red-600 hover:underline">Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b hover:bg-gray-50">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    iPad Pro
+                    1007
                 </th>
                 <td class="px-6 py-4">
-                    Gold
+                    Chocolate
                 </td>
                 <td class="px-6 py-4">
-                    Tablet
+                    69
                 </td>
                 <td class="px-6 py-4">
-                    $699
+                    RM699
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
                     <a href="#" class=" mx-2 font-medium text-red-600 hover:underline">Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b hover:bg-gray-50 ">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                    Magic Keyboard
+                    1008
                 </th>
                 <td class="px-6 py-4">
-                    Black
+                    Noodle
                 </td>
                 <td class="px-6 py-4">
-                    Accessories
+                    26
                 </td>
                 <td class="px-6 py-4">
-                    $99
+                    RM99
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
                     <a href="#" class=" mx-2 font-medium text-red-600 hover:underline">Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b hover:bg-gray-50 ">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                    Smart Folio iPad Air
+                    1009
                 </th>
                 <td class="px-6 py-4">
-                    Blue
+                    Magee
                 </td>
                 <td class="px-6 py-4">
-                    Accessories
+                    26
                 </td>
                 <td class="px-6 py-4">
-                    $79
+                    RM79
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
                     <a href="#" class=" mx-2 font-medium text-red-600 hover:underline">Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b hover:bg-gray-50 ">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                    AirTag
+                    1010
                 </th>
                 <td class="px-6 py-4">
-                    Silver
+                    Bread
                 </td>
                 <td class="px-6 py-4">
-                    Accessories
+                    67
                 </td>
                 <td class="px-6 py-4">
-                    $29
+                    RM29
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
                     <a href="#" class=" mx-2 font-medium text-red-600 hover:underline">Delete</a>
                 </td>

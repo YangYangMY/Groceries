@@ -33,40 +33,31 @@ namespace Groceries.Admin.Product
         protected global::System.Web.UI.WebControls.TextBox TextBoxProductName;
 
         /// <summary>
-        /// TextBoxProductBrand control.
+        /// TextBoxProductCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxProductBrand;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxProductCategory;
 
         /// <summary>
-        /// TextBox1 control.
+        /// TextBoxDescriptions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxDescriptions;
 
         /// <summary>
-        /// TextBoxDescription control.
+        /// TextBoxStock control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxDescription;
-
-        /// <summary>
-        /// TextBoxStockNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxStockNumber;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxStock;
 
         /// <summary>
         /// TextBoxUnitPrice control.

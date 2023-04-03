@@ -2,10 +2,10 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl lg:text-3xl">Dashboard</h1>
+    <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl lg:text-3xl my-3">Dashboard</h1>
 
     <!--Total Profit, orders, products -->
-    <section class="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
+    <section class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 my-10">
         <div class="flex items-center p-8 bg-white shadow rounded-lg">
             <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-purple-600 bg-purple-100 rounded-full mr-6">
                 <img class="mx-4 object-cover w-full rounded-t-lg h-30 md:h-20 md:w-20 md:rounded-none md:rounded-l-lg" src="../images/save-money.gif" alt="">
@@ -39,11 +39,11 @@
 
 
 
-    <section class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 my-8">
+    <section class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 my-8 ">
 
             <!--Line Chart-->
         <!-- Component Start -->
-        <div class="flex flex-col items-center w-full max-w-screen-md p-6 pb-6 bg-white rounded-lg shadow-xl sm:p-8 col-span-2 mx-auto">
+        <div class="flex flex-col items-center w-full max-w-screen-md p-6 pb-6 bg-white rounded-lg shadow-xl sm:p-8 col-span-2">
             <h2 class="text-xl font-bold">Monthly Revenue</h2>
             <span class="text-sm font-semibold text-gray-500">2022 - 2023</span>
             <div class="flex items-end flex-grow w-full mt-2 space-x-2 sm:space-x-3">
@@ -151,7 +151,8 @@
 
 
         <!--Doughnut Chart-->
-            <div class="overflow-hidden rounded-lg shadow-lg">
+        
+            <div class="overflow-hidden rounded-lg bg-white shadow-lg">
                 <canvas class="p-10" id="chartDoughnut"></canvas>
             </div>
 

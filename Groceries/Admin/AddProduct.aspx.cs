@@ -18,6 +18,7 @@ namespace Groceries.Admin.Product
 
         protected void ButtonSubmit_Click(object sender, EventArgs e)
         {
+            PanelAddProduct.Visible = false;
             PanelSuccess.Visible = true;
         }
     }

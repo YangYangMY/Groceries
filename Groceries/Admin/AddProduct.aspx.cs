@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace Groceries.Admin.Product
 {
@@ -12,6 +14,11 @@ namespace Groceries.Admin.Product
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void ButtonSubmit_Click(object sender, EventArgs e)
+        {
+            PanelSuccess.Visible = true;
         }
     }
 }

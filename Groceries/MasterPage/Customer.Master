@@ -82,7 +82,7 @@
                     <div class="md:flex md:justify-between">
                         <div class="mb-6 md:mb-0">
                             <a href="HomePage.aspx" class="flex items-center">
-                                <span class="self-center text-xl text-[#F6BD60] font-semibold whitespace-nowrap">Goceries</span>
+                                <span class="self-center text-2xl text-[#F6BD60] font-semibold whitespace-nowrap">Goceries</span>
                             </a>
                         </div>
                         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -109,10 +109,12 @@
                             <div>
                                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact Us</h2>
                                 <ul class="text-gray-600 dark:text-gray-400 font-medium">
-                                    <li class="mb-4">
+                                    <li>
+                                        <img src="../images/phone.png" class="h-4 mr-3" alt="phone" />
                                         <a href="tel:+60341450123" class="hover:underline ">+603-4145 0123</a>
                                     </li>
                                     <li>
+                                        <img src="../images/mail.png" class="h-4 mr-3" alt="mail" />
                                         <a href="mailto: goceries@gmail.com" class="hover:underline">goceries@gmail.com</a>
                                     </li>
                                 </ul>

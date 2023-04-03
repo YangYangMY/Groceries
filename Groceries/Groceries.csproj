@@ -98,12 +98,18 @@
     <Content Include="favicon_io\favicon-32x32.png" />
     <Content Include="favicon_io\favicon.ico" />
     <Content Include="images\card.png" />
+    <Content Include="images\grocery-header.png" />
+    <Content Include="images\header.png" />
+    <Content Include="images\mail.png" />
+    <Content Include="images\phone.png" />
+    <Content Include="images\rabbit-candy.png" />
     <Content Include="images\registerbg.jpg" />
     <Content Include="images\save-money.gif" />
     <Content Include="images\shopping-basket.gif" />
     <Content Include="images\shopping-cart.gif" />
     <Content Include="images\cart.png" />
     <Content Include="images\user.png" />
+    <Content Include="images\yellow-rec.png" />
     <Content Include="tailwind.config.js" />
     <Content Include="Web.config" />
   </ItemGroup>

@@ -8,7 +8,7 @@ module.exports = {
     },
     plugins: [
         plugin(function ({ addUtilities, addComponents, e, config }) {
-            // Add your custom styles here
+            require('@tailwindcss/aspect-ratio')
         }),
     ]
 }

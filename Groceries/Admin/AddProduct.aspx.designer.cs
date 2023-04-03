@@ -78,15 +78,6 @@ namespace Groceries.Admin.Product
         protected global::System.Web.UI.WebControls.Button ButtonReset;
 
         /// <summary>
-        /// View1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View View1;
-
-        /// <summary>
         /// PanelSuccess control.
         /// </summary>
         /// <remarks>
@@ -96,12 +87,12 @@ namespace Groceries.Admin.Product
         protected global::System.Web.UI.WebControls.Panel PanelSuccess;
 
         /// <summary>
-        /// Button1 control.
+        /// ButtonSuccess control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button ButtonSuccess;
     }
 }

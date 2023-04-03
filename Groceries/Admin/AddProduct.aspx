@@ -89,14 +89,13 @@
         </div>
         <!--Button-->
         <div class="flex justify-center space-x-2 p-4">
-            <asp:Button ID="ButtonSubmit" runat="server" Text="Submit" CssClass="cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " />
+            <asp:Button ID="ButtonSubmit" runat="server" Text="Submit" CssClass="cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " OnClick="ButtonSubmit_Click" />
             <asp:Button ID="ButtonReset" runat="server" Text="Reset" CssClass="cursor-pointer text-white bg-[#FDBA74] hover:bg-[#FB923C] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " />
             <br />
 
         </div>
     </div>
     <!--End of Form-->
-    <asp:View ID="View1" runat="server"></asp:View>
     <!-- Modal  -->
 
     <asp:Panel ID="PanelSuccess" runat="server" Visible="False">
@@ -108,7 +107,7 @@
                 </svg>
                 <span class="text-2xl font-medium">Added Successful</span>
                 <p class="text-center">Press continue to go to product list page.</p>
-                <asp:Button ID="Button1" runat="server" PostBackUrl="~/Admin/ProductList.aspx" Text="Button" CssClass=" cursor-pointer text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" />
+                <asp:Button ID="ButtonSuccess" runat="server" Text="Continue" CssClass="cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " PostBackUrl="~/Admin/ProductList.aspx" />
             </div>
         </div>
     </asp:Panel>

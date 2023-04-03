@@ -18,5 +18,15 @@ namespace Groceries.Customer
         {
 
         }
+
+        protected void fvLogin_PageIndexChanging(object sender, FormViewPageEventArgs e)
+        {
+
+        }
+
+        protected void txtConfirm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

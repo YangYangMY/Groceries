@@ -74,6 +74,7 @@
     <Content Include="Admin\Orders.aspx" />
     <Content Include="Admin\ProductList.aspx" />
     <Content Include="Admin\Report.aspx" />
+    <Content Include="Admin\RoleAssign.aspx" />
     <Content Include="App_Data\GoceriesDatabase.mdf" />
     <Content Include="App_Data\GoceriesDatabase_log.ldf">
       <DependentUpon>GoceriesDatabase.mdf</DependentUpon>
@@ -98,18 +99,14 @@
     <Content Include="favicon_io\favicon-32x32.png" />
     <Content Include="favicon_io\favicon.ico" />
     <Content Include="images\card.png" />
-    <Content Include="images\grocery-header.png" />
-    <Content Include="images\header.png" />
-    <Content Include="images\mail.png" />
-    <Content Include="images\phone.png" />
-    <Content Include="images\rabbit-candy.png" />
+    <Content Include="images\ForgotPassword.jpg" />
+    <Content Include="images\Online shopping.jpg" />
     <Content Include="images\registerbg.jpg" />
     <Content Include="images\save-money.gif" />
     <Content Include="images\shopping-basket.gif" />
     <Content Include="images\shopping-cart.gif" />
     <Content Include="images\cart.png" />
     <Content Include="images\user.png" />
-    <Content Include="images\yellow-rec.png" />
     <Content Include="tailwind.config.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -162,6 +159,13 @@
     </Compile>
     <Compile Include="Admin\Report.aspx.designer.cs">
       <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RoleAssign.aspx.cs">
+      <DependentUpon>RoleAssign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RoleAssign.aspx.designer.cs">
+      <DependentUpon>RoleAssign.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>

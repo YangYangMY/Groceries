@@ -5,7 +5,9 @@
     <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl lg:text-3xl">Add Product</h1>
     <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
 
-    <!--Add product-->
+
+    <asp:Panel ID="PanelAddProduct" runat="server" Visible="True">
+            <!--Add product-->
     <div class=" bg-white shadow rounded-lg shadow-xl border-solid border-2 w-4/5 mx-auto">
         <h2 class="text-xl font-bold text-center bg-[#FBEBDB] p-4 uppercase text-gray-700">New Product</h2>
         <h1 class="pt-4 font-medium border-t border-gray-700"></h1>
@@ -96,18 +98,20 @@
         </div>
     </div>
     <!--End of Form-->
+    </asp:Panel>
+
     <!-- Modal  -->
 
     <asp:Panel ID="PanelSuccess" runat="server" Visible="False">
-        <div class="w-full h-full">
-            <div id="modal-bg" class="w-full h-full bg-[#848A97] top-0 absolute"></div>
+        <div class="w-full h-full mx-auto text-center">
+            <div id="modal-bg" class="w-full h-full bg-[#848A97] top-0  absolute"></div>
             <div id="modal-box" class="sm:w-[385px] sm:min-w-[20vw] min-w-[50vw] min-h-[30vh] flex flex-col items-center gap-2 -translate-y-1/2 p-6 bg-[#FFFFEB] rounded-lg top-1/2 left-1/2 -translate-x-1/2 absolute">
                 <svg xmlns="http://www.w3.org/2000/svg" class="text-[#059669] mx-auto h-11 rounded-full bg-[#D1FAE5] w-11" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13l4 4L19 7" />
                 </svg>
                 <span class="text-2xl font-medium">Added Successful</span>
                 <p class="text-center">Press continue to go to product list page.</p>
-                <asp:Button ID="ButtonSuccess" runat="server" Text="Continue" CssClass="cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " PostBackUrl="~/Admin/ProductList.aspx" />
+                <asp:Button ID="ButtonSuccess" runat="server" Text="Continue" CssClass=" my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " PostBackUrl="~/Admin/ProductList.aspx" />
             </div>
         </div>
     </asp:Panel>

@@ -15,6 +15,15 @@ namespace Groceries.Admin.Product
     {
 
         /// <summary>
+        /// PanelAddProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelAddProduct;
+
+        /// <summary>
         /// TextBoxProductName control.
         /// </summary>
         /// <remarks>

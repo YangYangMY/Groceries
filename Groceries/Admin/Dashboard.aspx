@@ -194,7 +194,6 @@
 
 
     <!--Latest Orders-->
-    <div class="grid grid-cols-1 gap-10 ">
         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 my-5  border-solid border-2">
             <div class="mb-4 flex items-center justify-between">
                 <div>

@@ -6,7 +6,7 @@
     <div class="flex justify-start item-start space-y-2 flex-col">
         <h1 class="text-3xl lg:text-4xl font-semibold leading-7 lg:leading-9 text-gray-800">Shopping Cart</h1>
     </div> 
-    <div class="grid grid-cols-4 gap-4 mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
+    <div class="grid grid-cols-4 gap-4 mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full">
               
         <div class="col-span-3 flex flex-col justify-start items-start rounded-lg bg-white shadow-lg border px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
                 <div class="mt-0 border-b flex flex-col md:flex-row justify-start items-start md:items-center md:space-x-6 xl:space-x-8 w-full">
@@ -67,7 +67,7 @@
                 </div>
             </div>
                 
-                <div class="flex flex-col px-4 py-6 md:p-6 xl:p-8 w-full rounded-lg bg-white shadow-lg border space-y-6">
+                <div class="flex flex-col px-4 py-6 xl:p-6 w-full rounded-lg bg-white shadow-lg border space-y-6 max-h-80">
                     <h3 class="text-xl font-semibold leading-5 text-gray-800">Summary</h3>
                     <div class="flex justify-center items-center w-full space-y-4 flex-col border-gray-200 border-b pb-4">
                         <div class="flex justify-between w-full">
@@ -85,7 +85,7 @@
                     </div>
                     <div class="relative">
                          <div class="bottom-0">
-                             <asp:Button ID="btnCheckout" runat="server" Text="Checkout" class="mt-28 mb-2 block w-full max-w-xs mx-auto bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" />
+                             <asp:Button ID="btnCheckout" runat="server" Text="Checkout" class="mt-10 mb-2 block w-full max-w-xs mx-auto bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" PostBackUrl="~/Customer/Checkout.aspx" />
                          </div>
                     </div>
             </div>

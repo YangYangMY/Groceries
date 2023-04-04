@@ -10,7 +10,7 @@
             <p class="text-gray-600 my-2">Thank you for your purchase!</p>
             <p> Have a great day!  </p>
             <div class="py-10 text-center">
-                <asp:Button ID="Button1" runat="server" Text="View Orders" class="block w-full max-w-xs mx-auto bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" />
+                <asp:Button ID="btnViewOrder" runat="server" Text="View Orders" class="block w-full max-w-xs mx-auto bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" PostBackUrl="~/Customer/OrderHistory.aspx" />
             </div>
         </div>
         </div>

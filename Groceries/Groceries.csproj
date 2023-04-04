@@ -120,6 +120,7 @@
   <ItemGroup>
     <Compile Include="Admin\AddAdmin.aspx.cs">
       <DependentUpon>AddAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AddAdmin.aspx.designer.cs">
       <DependentUpon>AddAdmin.aspx</DependentUpon>

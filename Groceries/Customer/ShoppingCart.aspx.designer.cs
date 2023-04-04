@@ -7,110 +7,92 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Groceries.Admin.Product
+namespace Groceries.Customer
 {
 
 
-    public partial class AddProduct
+    public partial class ShoppingCart
     {
 
         /// <summary>
-        /// PanelAddProduct control.
+        /// btnIncrement control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelAddProduct;
+        protected global::System.Web.UI.WebControls.Button btnIncrement;
 
         /// <summary>
-        /// TextBoxProductName control.
+        /// lblQty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxProductName;
+        protected global::System.Web.UI.WebControls.Label lblQty;
 
         /// <summary>
-        /// TextBoxProductCategory control.
+        /// btnDecrement control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxProductCategory;
+        protected global::System.Web.UI.WebControls.Button btnDecrement;
 
         /// <summary>
-        /// TextBoxDescriptions control.
+        /// btnRemoveItem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxDescriptions;
+        protected global::System.Web.UI.WebControls.Button btnRemoveItem;
 
         /// <summary>
-        /// TextBoxStock control.
+        /// ButtonIncrement2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxStock;
+        protected global::System.Web.UI.WebControls.Button ButtonIncrement2;
 
         /// <summary>
-        /// TextBoxUnitPrice control.
+        /// lblQty2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxUnitPrice;
+        protected global::System.Web.UI.WebControls.Label lblQty2;
 
         /// <summary>
-        /// FileUploadProductImage control.
+        /// ButtonDecrement2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUploadProductImage;
+        protected global::System.Web.UI.WebControls.Button ButtonDecrement2;
 
         /// <summary>
-        /// ButtonSubmit control.
+        /// btnRemoveItem2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonSubmit;
+        protected global::System.Web.UI.WebControls.Button btnRemoveItem2;
 
         /// <summary>
-        /// ButtonReset control.
+        /// btnCheckout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonReset;
-
-        /// <summary>
-        /// PanelSuccess control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelSuccess;
-
-        /// <summary>
-        /// ButtonSuccess control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonSuccess;
+        protected global::System.Web.UI.WebControls.Button btnCheckout;
     }
 }

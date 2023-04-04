@@ -2,11 +2,11 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl lg:text-3xl my-3">Dashboard</h1>
-
+    <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl lg:text-3xl">Dashboard</h1>
+    <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"></h1>
     <!--Total Profit, orders, products -->
-    <section class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 my-10">
-        <div class="flex items-center p-8 bg-white shadow rounded-lg">
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 my-2">
+        <div class="flex items-center p-8 bg-white shadow rounded-lg shadow-xl border-solid border-2">
             <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-purple-600 bg-purple-100 rounded-full mr-6">
                 <img class="mx-4 object-cover w-full rounded-t-lg h-30 md:h-20 md:w-20 md:rounded-none md:rounded-l-lg" src="../images/save-money.gif" alt="">
             </div>
@@ -15,7 +15,7 @@
                 <span class="block text-2xl text-black font-bold">RM 5,000.20</span>
             </div>
         </div>
-        <div class="flex items-center p-8 bg-white shadow rounded-lg">
+        <div class="flex items-center p-8 bg-white shadow rounded-lg shadow-xl border-solid border-2">
             <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-purple-600 bg-purple-100 rounded-full mr-6">
                 <img class="mx-4 object-cover w-full rounded-t-lg h-30 md:h-20 md:w-20 md:rounded-none md:rounded-l-lg" src="../images/shopping-cart.gif" alt="">
             </div>
@@ -24,7 +24,7 @@
                 <span class="block text-2xl text-black font-bold">400</span>
             </div>
         </div>
-        <div class="flex items-center p-8 bg-white shadow rounded-lg">
+        <div class="flex items-center p-8 bg-white shadow rounded-lg shadow-xl border-solid border-2">
             <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-purple-600 bg-purple-100 rounded-full mr-6">
                 <img class="mx-4 object-cover w-full rounded-t-lg h-30 md:h-20 md:w-20 md:rounded-none md:rounded-l-lg" src="../images/shopping-basket.gif" alt="">
             </div>
@@ -33,17 +33,15 @@
                 <span class="block text-2xl text-black font-bold">40</span>
             </div>
         </div>
-    </section>
+    </div>
 
     <!--end -->
 
 
-
-    <section class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 my-8 ">
-
-            <!--Line Chart-->
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 my-10 ">
+        <!--Line Chart-->
         <!-- Component Start -->
-        <div class="flex flex-col items-center w-full max-w-screen-md p-6 pb-6 bg-white rounded-lg shadow-xl sm:p-8 col-span-2">
+        <div class="flex flex-col items-center w-auto max-w-screen-md p-6 pb-6 bg-white rounded-lg shadow-xl sm:p-8 col-span-2  border-solid border-2">
             <h2 class="text-xl font-bold">Monthly Revenue</h2>
             <span class="text-sm font-semibold text-gray-500">2022 - 2023</span>
             <div class="flex items-end flex-grow w-full mt-2 space-x-2 sm:space-x-3">
@@ -151,50 +149,53 @@
 
 
         <!--Doughnut Chart-->
-        
-            <div class="overflow-hidden rounded-lg bg-white shadow-lg">
-                <canvas class="p-10" id="chartDoughnut"></canvas>
+        <div class="overflow-hidden rounded-lg shadow-lg border-solid border-2">
+            <div
+                class="text-xl font-bold py-5 px-5 bg-white text-black text-center">
+                Product Trends
             </div>
+            <canvas class="p-10" id="chartDoughnut"></canvas>
+        </div>
 
-            <!-- Required chart.js -->
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- Required chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-            <!-- Chart doughnut -->
-            <script>
-                const dataDoughnut = {
-                    labels: ["Foods", "Drinks", "Diary"],
-                    datasets: [
-                        {
-                            label: "Product Category",
-                            data: [300, 500, 100],
-                            backgroundColor: [
-                                "rgb(133, 105, 241)",
-                                "rgb(164, 101, 241)",
-                                "rgb(101, 143, 241)",
-                            ],
-                            hoverOffset: 4,
-                        },
-                    ],
-                };
+        <!-- Chart doughnut -->
+        <script>
+            const dataDoughnut = {
+                labels: ["Bread", "Sushi", "Drinks"],
+                datasets: [
+                    {
+                        label: "My First Dataset",
+                        data: [300, 50, 100],
+                        backgroundColor: [
+                            "rgb(100,200,1)",
+                            "#F6BD60",
+                            "rgb(1, 5, 51)",
+                        ],
+                        hoverOffset: 4,
+                    },
+                ],
+            };
 
-                const configDoughnut = {
-                    type: "doughnut",
-                    data: dataDoughnut,
-                    options: {},
-                };
+            const configDoughnut = {
+                type: "doughnut",
+                data: dataDoughnut,
+                options: {},
+            };
 
-                var chartBar = new Chart(
-                    document.getElementById("chartDoughnut"),
-                    configDoughnut
-                );
-            </script>
-    </section>
+            var chartBar = new Chart(
+                document.getElementById("chartDoughnut"),
+                configDoughnut
+            );
+        </script>
+    </div>
 
-       
+
 
     <!--Latest Orders-->
     <div class="grid grid-cols-1 gap-10 ">
-        <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 my-5 ">
+        <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 my-5  border-solid border-2">
             <div class="mb-4 flex items-center justify-between">
                 <div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Latest Orders</h3>
@@ -285,6 +286,8 @@
                                         <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
                                             <a href="Orders.aspx" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View</a>
                                         </td>
+                                    </tr>
+                            </table>
                         </div>
                     </div>
                 </div>

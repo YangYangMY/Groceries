@@ -4,7 +4,7 @@
     <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl lg:text-3xl">Add Admin</h1>
     <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
 
-    <!--Start of Registration-->
+    <!--Start of Add Admin-->
     <section class="bg-gray-50">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div class="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 ">

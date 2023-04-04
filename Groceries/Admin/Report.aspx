@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Admin.Master" AutoEventWireup="true" CodeBehind="Report.aspx.cs" Inherits="Groceries.Admin.Report" %>
 <asp:content id="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-<h2 class="mb-4 text-3xl font-extrabold leading-none tracking-tight md:text-4xl text-[#003049]">Report</h2>
+    <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl lg:text-3xl">Reports</h1>
+    <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"></h1>
 
 </asp:content>
 

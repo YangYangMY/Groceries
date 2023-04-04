@@ -98,15 +98,22 @@
     <Content Include="favicon_io\favicon-16x16.png" />
     <Content Include="favicon_io\favicon-32x32.png" />
     <Content Include="favicon_io\favicon.ico" />
+    <Content Include="images\aboutUsBg.jpg" />
     <Content Include="images\card.png" />
+    <Content Include="images\facebook.png" />
+    <Content Include="images\fastDelivery.png" />
     <Content Include="images\ForgotPassword.jpg" />
+    <Content Include="images\google.png" />
+    <Content Include="images\instagram.png" />
     <Content Include="images\Online shopping.jpg" />
+    <Content Include="images\qualityGuarantee.png" />
     <Content Include="images\registerbg.jpg" />
     <Content Include="images\save-money.gif" />
     <Content Include="images\shopping-basket.gif" />
     <Content Include="images\shopping-cart.gif" />
     <Content Include="images\cart.png" />
     <Content Include="images\user.png" />
+    <Content Include="images\varietyGrocery.png" />
     <Content Include="tailwind.config.js" />
     <Content Include="Web.config" />
   </ItemGroup>

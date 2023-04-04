@@ -13,5 +13,20 @@ namespace Groceries
         {
 
         }
+
+        protected void ibtnGoogle_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void ibtnFacebook_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void ibtnInstagram_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
     }
 }

@@ -106,18 +106,10 @@
     <Content Include="App_Data\GoceriesDatabase_log.ldf">
       <DependentUpon>GoceriesDatabase.mdf</DependentUpon>
     </Content>
-    <Content Include="bin\BouncyCastle.Crypto.dll" />
-    <Content Include="bin\BouncyCastle.Crypto.xml" />
     <Content Include="bin\Groceries.dll" />
     <Content Include="bin\Groceries.pdb" />
-    <Content Include="bin\MailKit.dll" />
-    <Content Include="bin\MailKit.pdb" />
-    <Content Include="bin\MailKit.xml" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
-    <Content Include="bin\MimeKit.dll" />
-    <Content Include="bin\MimeKit.pdb" />
-    <Content Include="bin\MimeKit.xml" />
     <Content Include="bin\roslyn\csc.exe" />
     <Content Include="bin\roslyn\csi.exe" />
     <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
@@ -158,23 +150,24 @@
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="bin\System.Buffers.dll" />
-    <Content Include="bin\System.Buffers.xml" />
     <Content Include="bin\System.Memory.dll" />
-    <Content Include="bin\System.Memory.xml" />
     <Content Include="bin\System.Numerics.Vectors.dll" />
-    <Content Include="bin\System.Numerics.Vectors.xml" />
     <Content Include="bin\System.Runtime.CompilerServices.Unsafe.dll" />
-    <Content Include="bin\System.Runtime.CompilerServices.Unsafe.xml" />
     <Content Include="bin\System.Threading.Tasks.Extensions.dll" />
-    <Content Include="bin\System.Threading.Tasks.Extensions.xml" />
     <Content Include="Customer\About.aspx" />
+    <Content Include="Customer\Bakery.aspx" />
+    <Content Include="Customer\Beverages.aspx" />
     <Content Include="Customer\Checkout.aspx" />
     <Content Include="Customer\Contact.aspx" />
     <Content Include="Customer\FAQ.aspx" />
+    <Content Include="Customer\Favourite.aspx" />
+    <Content Include="Customer\Fruits.aspx" />
     <Content Include="Customer\HomePage.aspx" />
     <Content Include="Customer\Login.aspx" />
+    <Content Include="Customer\Meat.aspx" />
     <Content Include="Customer\OrderHistory.aspx" />
     <Content Include="Customer\OrderSuccess.aspx" />
+    <Content Include="Customer\OrderTracking.aspx" />
     <Content Include="Customer\Payment.aspx" />
     <Content Include="Customer\Products.aspx" />
     <Content Include="Customer\Profile.aspx" />
@@ -182,35 +175,63 @@
     <Content Include="Customer\Register.aspx" />
     <Content Include="Customer\ResetPassword.aspx" />
     <Content Include="Customer\ShoppingCart.aspx" />
+    <Content Include="Customer\Snacks.aspx" />
+    <Content Include="Customer\Vegetables.aspx" />
     <Content Include="favicon_io\android-chrome-192x192.png" />
     <Content Include="favicon_io\android-chrome-512x512.png" />
     <Content Include="favicon_io\apple-touch-icon.png" />
+    <Content Include="images\aboutUsBg.jpg" />
+    <Content Include="images\avocado.png" />
     <Content Include="images\bakery.png" />
+    <Content Include="images\chips.png" />
+    <Content Include="images\cornflakes.png" />
     <Content Include="images\drinks.png" />
     <Content Include="favicon_io\favicon-16x16.png" />
     <Content Include="favicon_io\favicon-32x32.png" />
     <Content Include="favicon_io\favicon.ico" />
-    <Content Include="images\ForgotPassword.png" />
+    <Content Include="images\fastDelivery.png" />
+    <Content Include="images\favourite.png" />
+    <Content Include="images\google.png" />
+    <Content Include="images\grocery-header.png" />
+    <Content Include="images\grocery3.jpg" />
+    <Content Include="images\hbchips.jpg" />
+    <Content Include="images\header.png" />
     <Content Include="images\homepage-ads.png" />
+    <Content Include="images\lalamove.png" />
+    <Content Include="images\mandu.png" />
+    <Content Include="images\massimo.png" />
+    <Content Include="images\massimobread.png" />
     <Content Include="images\meat.png" />
-    <Content Include="images\registerBg.jpg" />
+    <Content Include="images\milk.png" />
+    <Content Include="images\oderConfirmed.png" />
+    <Content Include="images\phone.png" />
+    <Content Include="images\qualityGuarantee.png" />
+    <Content Include="images\rabbit-candy.png" />
     <Content Include="images\snack.png" />
+    <Content Include="images\varietyGrocery.png" />
     <Content Include="images\vegetable.png" />
     <Content Include="images\card.png" />
     <Content Include="images\facebook.png" />
+    <Content Include="images\ForgotPassword.jpg" />
     <Content Include="images\fruits.png" />
     <Content Include="images\github.png" />
     <Content Include="images\hero-pic.png" />
     <Content Include="images\instagram.png" />
     <Content Include="images\mail.png" />
     <Content Include="images\Online shopping.jpg" />
+    <Content Include="images\registerbg.jpg" />
     <Content Include="images\save-money.gif" />
     <Content Include="images\shopping-basket.gif" />
     <Content Include="images\shopping-cart.gif" />
     <Content Include="images\cart.png" />
     <Content Include="images\twitter.png" />
     <Content Include="images\user.png" />
+    <Content Include="images\yellow-rec.png" />
+    <Content Include="images\yoghurt.png" />
     <Content Include="images\yyphoto.png" />
+    <Content Include="obj\Debug\Groceries.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Groceries.dll" />
+    <Content Include="obj\Debug\Groceries.pdb" />
     <Content Include="tailwind.config.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -278,6 +299,20 @@
     <Compile Include="Customer\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\Bakery.aspx.cs">
+      <DependentUpon>Bakery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Bakery.aspx.designer.cs">
+      <DependentUpon>Bakery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Beverages.aspx.cs">
+      <DependentUpon>Beverages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Beverages.aspx.designer.cs">
+      <DependentUpon>Beverages.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Checkout.aspx.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -299,6 +334,20 @@
     <Compile Include="Customer\FAQ.aspx.designer.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\Favourite.aspx.cs">
+      <DependentUpon>Favourite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Favourite.aspx.designer.cs">
+      <DependentUpon>Favourite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Fruits.aspx.cs">
+      <DependentUpon>Fruits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Fruits.aspx.designer.cs">
+      <DependentUpon>Fruits.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -313,6 +362,13 @@
     <Compile Include="Customer\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\Meat.aspx.cs">
+      <DependentUpon>Meat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Meat.aspx.designer.cs">
+      <DependentUpon>Meat.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\OrderHistory.aspx.cs">
       <DependentUpon>OrderHistory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -326,6 +382,12 @@
     </Compile>
     <Compile Include="Customer\OrderSuccess.aspx.designer.cs">
       <DependentUpon>OrderSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\OrderTracking.aspx.cs">
+      <DependentUpon>OrderTracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\OrderTracking.aspx.designer.cs">
+      <DependentUpon>OrderTracking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Payment.aspx.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
@@ -376,6 +438,20 @@
     <Compile Include="Customer\ShoppingCart.aspx.designer.cs">
       <DependentUpon>ShoppingCart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\Snacks.aspx.cs">
+      <DependentUpon>Snacks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Snacks.aspx.designer.cs">
+      <DependentUpon>Snacks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Vegetables.aspx.cs">
+      <DependentUpon>Vegetables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Vegetables.aspx.designer.cs">
+      <DependentUpon>Vegetables.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPage\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -390,20 +466,27 @@
     <Compile Include="MasterPage\Customer.Master.designer.cs">
       <DependentUpon>Customer.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\ProductsCategory.master.cs">
-      <DependentUpon>ProductsCategory.master</DependentUpon>
+    <Compile Include="MasterPage\MyProfile.master.cs">
+      <DependentUpon>MyProfile.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\ProductsCategory.master.designer.cs">
-      <DependentUpon>ProductsCategory.master</DependentUpon>
+    <Compile Include="MasterPage\MyProfile.master.designer.cs">
+      <DependentUpon>MyProfile.master</DependentUpon>
     </Compile>
+    <Compile Include="MasterPage\ProductsCat.master.cs">
+      <DependentUpon>ProductsCat.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\ProductsCat.master.designer.cs">
+      <DependentUpon>ProductsCat.master</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage\Admin.Master" />
     <Content Include="MasterPage\Customer.Master" />
     <Content Include="favicon_io\site.webmanifest" />
-    <Content Include="MasterPage\ProductsCategory.master" />
     <Content Include="bin\Groceries.dll.config" />
     <Content Include="bin\roslyn\csc.exe.config" />
     <Content Include="bin\roslyn\csc.rsp" />
@@ -415,6 +498,13 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Groceries.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\Groceries.csproj.CopyComplete" />
+    <Content Include="obj\Debug\Groceries.csproj.CoreCompileInputs.cache" />
+    <Content Include="MasterPage\MyProfile.master" />
+    <Content Include="MasterPage\ProductsCat.master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -422,6 +512,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

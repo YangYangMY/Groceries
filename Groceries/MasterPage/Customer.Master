@@ -44,8 +44,8 @@
                     <div class="flex items-center md:order-2">
                         <!--Icons-->
                         <div class="flex space-x-5 mx-8">
-                            <a href="HomePage.aspx">
-                                <img class="w-4 h-4" src="../images/user.png" alt="user" />
+                            <a href="Profile.aspx">
+                                <img class="w-4 h-4" src="../images/user.png" alt="profile" />
                             </a>
                             <a href="Favourite.aspx">
                                 <img class="w-4 h-4" src="../images/favourite.png" alt="favourite" />

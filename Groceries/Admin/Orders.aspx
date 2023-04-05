@@ -35,13 +35,12 @@
                     </td>
                     <td class="px-6 py-4">RM 200
                     </td>
-                    <td class="inline-flex my-4 mx-6 items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
-                        <span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
-                        Success
+                    <td>
+                        <asp:Label ID="Status1" runat="server" Text="Success" CssClass="inline-flex my-4 mx-6 items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full"></asp:Label>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-blue-600 hover:underline">Update</a>
-                        <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
+                        <asp:Button ID="ButtonUpdate1" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
+                        <asp:Button ID="ButtonView1" runat="server" Text="View" CssClass=" cursor-pointer font-medium text-gray-700 hover:underline mx-5" />
                     </td>
                 </tr>
                 <tr class="bg-white border-b hover:bg-gray-50">
@@ -53,12 +52,11 @@
                     </td>
                     <td class="px-6 py-4">RM 450
                     </td>
-                    <td class="inline-flex my-4 mx-6 items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
-                        <span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
-                        Success
+                    <td>
+                        <asp:Label ID="Status2" runat="server" Text="Success" CssClass="inline-flex my-4 mx-6 items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full"></asp:Label>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-blue-600 hover:underline">Update</a>
+                        <asp:Button ID="ButtonUpdate2" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
                         <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
                     </td>
                 </tr>
@@ -71,12 +69,11 @@
                     </td>
                     <td class="px-6 py-4">RM 434
                     </td>
-                    <td class="inline-flex my-4 mx-6 items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
-                        <span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
-                        Success
+                    <td>
+                        <asp:Label ID="Status3" runat="server" Text="Success" CssClass="inline-flex my-4 mx-6 items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full"></asp:Label>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-blue-600 hover:underline">Update</a>
+                        <asp:Button ID="ButtonUpdate3" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
                         <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
                     </td>
                 </tr>
@@ -89,12 +86,11 @@
                     </td>
                     <td class="px-6 py-4">RM 500
                     </td>
-                    <td class="inline-flex my-4 mx-6 items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
-                        <span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
-                        Success
+                    <td>
+                        <asp:Label ID="Status4" runat="server" Text="Success" CssClass="inline-flex my-4 mx-6 items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full"></asp:Label>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-blue-600 hover:underline">Update</a>
+                        <asp:Button ID="ButtonUpdate4" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
                         <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
                     </td>
                 </tr>
@@ -107,12 +103,11 @@
                     </td>
                     <td class="px-6 py-4">RM 1300
                     </td>
-                    <td class="inline-flex my-4 mx-6 items-center bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
-                        <span class="w-2 h-2 mr-1 bg-red-500 rounded-full"></span>
-                        Canceled
+                    <td>
+                        <asp:Label ID="Status5" runat="server" Text="Canceled" CssClass="inline-flex my-4 mx-6 items-center bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full"></asp:Label>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-blue-600 hover:underline">Update</a>
+                        <asp:Button ID="ButtonUpdate5" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
                         <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
                     </td>
                 </tr>
@@ -125,12 +120,11 @@
                     </td>
                     <td class="px-6 py-4">RM 231
                     </td>
-                    <td class="inline-flex my-4 mx-6 items-center bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
-                        <span class="w-2 h-2 mr-1 bg-red-500 rounded-full"></span>
-                        Canceled
+                    <td>
+                        <asp:Label ID="Status6" runat="server" Text="Canceled" CssClass="inline-flex my-4 mx-6 items-center bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full"></asp:Label>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-blue-600 hover:underline">Update</a>
+                        <asp:Button ID="ButtonUpdate6" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
                         <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
                     </td>
                 </tr>
@@ -143,15 +137,15 @@
                     </td>
                     <td class="px-6 py-4">RM 50000
                     </td>
-                    <td class="inline-flex my-4 mx-6 items-center bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
-                        <span class="w-2 h-2 mr-1 bg-yellow-500 rounded-full"></span>
-                        In Progress
+                    <td>
+                        <asp:Label ID="Status7" runat="server" Text="In Progress" CssClass="inline-flex my-4 mx-6 items-center bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full"></asp:Label>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-blue-600 hover:underline">Update</a>
+                        <asp:Button ID="ButtonUpdate7" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
                         <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
                     </td>
                 </tr>
+
                 <tr class="bg-white border-b hover:bg-gray-50 ">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">1008
                     </th>
@@ -161,12 +155,11 @@
                     </td>
                     <td class="px-6 py-4">RM 199
                     </td>
-                    <td class="inline-flex my-4 mx-6 items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
-                        <span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
-                        Success
+                    <td>
+                        <asp:Label ID="Status8" runat="server" Text="Success" CssClass="inline-flex my-4 mx-6 items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full"></asp:Label>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-blue-600 hover:underline">Update</a>
+                        <asp:Button ID="ButtonUpdate8" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
                         <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
                     </td>
                 </tr>
@@ -179,12 +172,11 @@
                     </td>
                     <td class="px-6 py-4">RM 25000
                     </td>
-                    <td class="inline-flex my-4 mx-6 items-center bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
-                        <span class="w-2 h-2 mr-1 bg-yellow-500 rounded-full"></span>
-                        In Progress
+                    <td>
+                        <asp:Label ID="Status9" runat="server" Text="In Progress" CssClass="inline-flex my-4 mx-6 items-center bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full"></asp:Label>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-blue-600 hover:underline">Update</a>
+                        <asp:Button ID="ButtonUpdate9" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
                         <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
                     </td>
                 </tr>
@@ -197,12 +189,11 @@
                     </td>
                     <td class="px-6 py-4">RM 9050
                     </td>
-                    <td class="inline-flex my-4 mx-6 items-center bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
-                        <span class="w-2 h-2 mr-1 bg-yellow-500 rounded-full"></span>
-                        In Progress
+                    <td>
+                        <asp:Label ID="Status10" runat="server" Text="In Progress" CssClass="inline-flex my-4 mx-6 items-center bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full"></asp:Label>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-blue-600 hover:underline">Update</a>
+                        <asp:Button ID="ButtonUpdate10" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
                         <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
                     </td>
                 </tr>
@@ -244,7 +235,38 @@
         </nav>
     </div>
 
-
+    <!--Modal of Update Order-->
+    <asp:Panel ID="PanelConfirmDelete" runat="server" Visible="false">
+        <div class="bg-black bg-opacity-50 md:bg-opacity-50 fixed top-0 left-0 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <div class="relative w-full h-full max-w-md md:h-auto mx-auto my-20">
+                <!--Pop Out-->
+                <div class="relative bg-white rounded-lg shadow ">
+                    <div class="p-6 text-center ">
+                        <h3 class="mb-5 text-lg font-normal text-gray-500 ">Update Order</h3>
+                        <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
+                        <asp:DropDownList ID="DropDownListUpdate" runat="server" AutoPostBack="True">
+                            <asp:ListItem>Success</asp:ListItem>
+                            <asp:ListItem>Canceled</asp:ListItem>
+                            <asp:ListItem>In Progress</asp:ListItem>
+                        </asp:DropDownList>
+                        <br>
+                            <br></br>
+                            <asp:Button ID="ButtonUpdate" runat="server" CssClass="my-5 text-white bg-orange-600 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange -300  font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2" OnClick="ButtonUpdate_Click" Text="Update" />
+                            <asp:Button ID="ButtonCancelDelete" runat="server" CssClass="text-gray-500 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " OnClick="ButtonCancelDelete_Click" Text="Cancel" />
+                        </br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
 
 
 </asp:Content>
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="head">
+    <style type="text/css">
+        .auto-style1 {
+            height: 32px;
+        }
+    </style>
+</asp:Content>
+

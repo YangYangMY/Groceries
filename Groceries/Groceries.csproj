@@ -80,17 +80,21 @@
       <DependentUpon>GoceriesDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="Customer\About.aspx" />
+    <Content Include="Customer\Checkout.aspx" />
     <Content Include="Customer\Contact.aspx" />
     <Content Include="Customer\FAQ.aspx" />
     <Content Include="Customer\HomePage.aspx" />
     <Content Include="Customer\Login.aspx" />
     <Content Include="Customer\OrderHistory.aspx" />
+    <Content Include="Customer\OrderSuccess.aspx" />
+    <Content Include="Customer\OrderTracking.aspx" />
     <Content Include="Customer\Payment.aspx" />
     <Content Include="Customer\Products.aspx" />
     <Content Include="Customer\Profile.aspx" />
     <Content Include="Customer\Promotion.aspx" />
     <Content Include="Customer\Register.aspx" />
     <Content Include="Customer\ResetPassword.aspx" />
+    <Content Include="Customer\ShoppingCart.aspx" />
     <Content Include="favicon_io\android-chrome-192x192.png" />
     <Content Include="favicon_io\android-chrome-512x512.png" />
     <Content Include="favicon_io\apple-touch-icon.png" />
@@ -179,6 +183,13 @@
     <Compile Include="Customer\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -213,6 +224,20 @@
     </Compile>
     <Compile Include="Customer\OrderHistory.aspx.designer.cs">
       <DependentUpon>OrderHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\OrderSuccess.aspx.cs">
+      <DependentUpon>OrderSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\OrderSuccess.aspx.designer.cs">
+      <DependentUpon>OrderSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\OrderTracking.aspx.cs">
+      <DependentUpon>OrderTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\OrderTracking.aspx.designer.cs">
+      <DependentUpon>OrderTracking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Payment.aspx.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
@@ -255,6 +280,13 @@
     </Compile>
     <Compile Include="Customer\ResetPassword.aspx.designer.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>

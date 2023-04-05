@@ -6,7 +6,6 @@
     <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
 
     <!--Table-->
-
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-left text-gray-500">
             <thead class="text-xs text-gray-700 uppercase bg-[#FBEBDB]">
@@ -40,7 +39,7 @@
                     </td>
                     <td class="px-6 py-4">
                         <asp:Button ID="ButtonUpdate1" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
-                        <asp:Button ID="ButtonView1" runat="server" Text="View" CssClass=" cursor-pointer font-medium text-gray-700 hover:underline mx-5" />
+                        <asp:Button ID="ButtonView1" runat="server" Text="View" CssClass=" cursor-pointer font-medium text-gray-700 hover:underline mx-5" OnClick="ButtonView1_Click" />
                     </td>
                 </tr>
                 <tr class="bg-white border-b hover:bg-gray-50">
@@ -57,7 +56,7 @@
                     </td>
                     <td class="px-6 py-4">
                         <asp:Button ID="ButtonUpdate2" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
-                        <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
+                        <asp:Button ID="ButtonView2" runat="server" Text="View" CssClass=" cursor-pointer font-medium text-gray-700 hover:underline mx-5" OnClick="ButtonView1_Click" />
                     </td>
                 </tr>
                 <tr class="bg-white border-b hover:bg-gray-50">
@@ -74,7 +73,7 @@
                     </td>
                     <td class="px-6 py-4">
                         <asp:Button ID="ButtonUpdate3" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
-                        <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
+                        <asp:Button ID="ButtonView3" runat="server" Text="View" CssClass=" cursor-pointer font-medium text-gray-700 hover:underline mx-5" OnClick="ButtonView1_Click" />
                     </td>
                 </tr>
                 <tr class="bg-white border-b hover:bg-gray-50">
@@ -91,7 +90,7 @@
                     </td>
                     <td class="px-6 py-4">
                         <asp:Button ID="ButtonUpdate4" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
-                        <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
+                        <asp:Button ID="ButtonView4" runat="server" Text="View" CssClass=" cursor-pointer font-medium text-gray-700 hover:underline mx-5" OnClick="ButtonView1_Click" />
                     </td>
                 </tr>
                 <tr class="bg-white border-b hover:bg-gray-50">
@@ -108,7 +107,7 @@
                     </td>
                     <td class="px-6 py-4">
                         <asp:Button ID="ButtonUpdate5" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
-                        <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
+                        <asp:Button ID="ButtonView5" runat="server" Text="View" CssClass=" cursor-pointer font-medium text-gray-700 hover:underline mx-5" OnClick="ButtonView1_Click" />
                     </td>
                 </tr>
                 <tr class="bg-white border-b hover:bg-gray-50">
@@ -125,7 +124,7 @@
                     </td>
                     <td class="px-6 py-4">
                         <asp:Button ID="ButtonUpdate6" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
-                        <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
+                        <asp:Button ID="ButtonView6" runat="server" Text="View" CssClass=" cursor-pointer font-medium text-gray-700 hover:underline mx-5" OnClick="ButtonView1_Click" />
                     </td>
                 </tr>
                 <tr class="bg-white border-b hover:bg-gray-50">
@@ -142,7 +141,7 @@
                     </td>
                     <td class="px-6 py-4">
                         <asp:Button ID="ButtonUpdate7" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
-                        <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
+                        <asp:Button ID="ButtonView7" runat="server" Text="View" CssClass=" cursor-pointer font-medium text-gray-700 hover:underline mx-5" OnClick="ButtonView1_Click" />
                     </td>
                 </tr>
 
@@ -160,7 +159,7 @@
                     </td>
                     <td class="px-6 py-4">
                         <asp:Button ID="ButtonUpdate8" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
-                        <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
+                        <asp:Button ID="ButtonView8" runat="server" Text="View" CssClass=" cursor-pointer font-medium text-gray-700 hover:underline mx-5" OnClick="ButtonView1_Click" />
                     </td>
                 </tr>
                 <tr class="bg-white border-b hover:bg-gray-50 ">
@@ -177,7 +176,7 @@
                     </td>
                     <td class="px-6 py-4">
                         <asp:Button ID="ButtonUpdate9" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
-                        <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
+                        <asp:Button ID="ButtonView9" runat="server" Text="View" CssClass=" cursor-pointer font-medium text-gray-700 hover:underline mx-5" OnClick="ButtonView1_Click" />
                     </td>
                 </tr>
                 <tr class="bg-white border-b hover:bg-gray-50 ">
@@ -194,7 +193,7 @@
                     </td>
                     <td class="px-6 py-4">
                         <asp:Button ID="ButtonUpdate10" runat="server" Text="Update" CssClass=" cursor-pointer font-medium text-blue-600 hover:underline" OnClick="ButtonUpdate1_Click" />
-                        <a href="#" class="font-medium text-gray-700 hover:underline mx-5">View</a>
+                        <asp:Button ID="ButtonView10" runat="server" Text="View" CssClass=" cursor-pointer font-medium text-gray-700 hover:underline mx-5" OnClick="ButtonView1_Click" />
                     </td>
                 </tr>
             </tbody>
@@ -244,16 +243,99 @@
                     <div class="p-6 text-center ">
                         <h3 class="mb-5 text-lg font-normal text-gray-500 ">Update Order</h3>
                         <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
-                        <asp:DropDownList ID="DropDownListUpdate" runat="server" AutoPostBack="True">
+                        <asp:DropDownList ID="DropDownListUpdate" CssClass="font-sans" runat="server" AutoPostBack="True">
                             <asp:ListItem>Success</asp:ListItem>
                             <asp:ListItem>Canceled</asp:ListItem>
                             <asp:ListItem>In Progress</asp:ListItem>
                         </asp:DropDownList>
-                        <br>
-                            <br></br>
-                            <asp:Button ID="ButtonUpdate" runat="server" CssClass="my-5 text-white bg-orange-600 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange -300  font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2" OnClick="ButtonUpdate_Click" Text="Update" />
-                            <asp:Button ID="ButtonCancelDelete" runat="server" CssClass="text-gray-500 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " OnClick="ButtonCancelDelete_Click" Text="Cancel" />
                         </br>
+                        <asp:Button ID="ButtonUpdate" runat="server" CssClass="my-5 text-white bg-orange-600 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange -300  font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2" OnClick="ButtonUpdate_Click" Text="Update" />
+                        <asp:Button ID="ButtonCancelDelete" runat="server" CssClass="text-gray-500 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " OnClick="ButtonCancelDelete_Click" Text="Cancel" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
+
+    <!--Modal of View Order-->
+    <asp:Panel ID="PanelViewOrder" runat="server" Visible="false">
+        <div class="bg-black bg-opacity-50 md:bg-opacity-50 fixed top-0 left-0 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <div class="relative w-1/2 h-full   md:h-auto mx-auto my-20">
+                <!--Pop Out-->
+                <div class="relative bg-white rounded-lg shadow w:full">
+                    <h3 class=" text-3xl font-bold text-black pt-4 px-6">Order #1001</h3>
+                    <asp:Image ID="Image1" runat="server" CssClass="object-right  bg-transparent rounded-lg text-sm px-6 ml-auto" ImageUrl="~/favicon_io/favicon-32x32.png" />
+                    <h3 class=" text-2xl font-bold text-black px-6 text-right">Goceries</h3>
+                    <h3 class=" text-1xl font-normal text-black px-6 text-right">
+                        Jalan Genting Kalang,53300, Kuala Lumpur</h3>
+                    <h3 class=" text-1xl font-normal text-gray-600 px-6 text-right">4 May,2023</h3>
+                    <h3 class=" text-2xl font-bold text-black pt-6 px-6">Bill To</h3>
+                    <h3 class=" text-1xl font-bold text-black px-6">Oh Boon Suen</h3>
+                    <h3 class=" text-1xl font-normal text-black px-6 italic max-w-xs">
+                        2, Jalan Danau Saujana, 
+                        Taman Danau Kota, 53000 Kuala Lumpur, 
+                        Wilayah Persekutuan Kuala Lumpur
+                    </h3>
+                    <!--Table-->
+                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg w-11/12 mx-auto my-5">
+                        <table class="w-full text-sm text-left text-gray-500">
+                            <thead class="text-xs text-gray-700 uppercase bg-[#FBEBDB]">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">Product
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">QTY
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">Price
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 ">Total
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">100 Plus
+                                    </th>
+                                    <td class="px-6 py-4">3
+                                    </td>
+                                    <td class="px-6 py-4">RM 40
+                                    </td>
+                                    <td class="px-6 py-4">RM 120
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Ice Cream
+                                    </th>
+                                    <td class="px-6 py-4">1
+                                    </td>
+                                    <td class="px-6 py-4">RM 399
+                                    </td>
+                                    <td class="px-6 py-4">RM 399
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Chocolate
+                                    </th>
+                                    <td class="px-6 py-4">2
+                                    </td>
+                                    <td class="px-6 py-4">RM 699
+                                    </td>
+                                    <td class="px-6 py-4">RM 1398
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
+                    <h3 class=" text-1xl font-bold text-gray-700 px-auto text-right">
+                        TOTAL                     
+                        <span class=" mx-10 text-1xl font-bold text-gray-700 text-right">
+                        RM 1917   
+                    </span>
+                    </h3>
+
+                    <div class="p-6 text-center ">
+                        <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
+                        <asp:Button ID="ButtonOrderClose" runat="server" CssClass="text-gray-500 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " OnClick="ButtonOrderClose_Click1" Text="Close" />
                     </div>
                 </div>
             </div>

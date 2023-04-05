@@ -11,7 +11,7 @@ namespace Groceries
 {
 
 
-    public partial class Categories
+    public partial class Products
     {
     }
 }

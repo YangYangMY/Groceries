@@ -80,27 +80,36 @@
       <DependentUpon>GoceriesDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="Customer\About.aspx" />
-    <Content Include="Customer\AddressBook.aspx" />
+    <Content Include="Customer\Checkout.aspx" />
     <Content Include="Customer\Contact.aspx" />
     <Content Include="Customer\FAQ.aspx" />
     <Content Include="Customer\HomePage.aspx" />
     <Content Include="Customer\Login.aspx" />
     <Content Include="Customer\OrderHistory.aspx" />
+    <Content Include="Customer\OrderSuccess.aspx" />
     <Content Include="Customer\Payment.aspx" />
     <Content Include="Customer\Products.aspx" />
     <Content Include="Customer\Profile.aspx" />
     <Content Include="Customer\Promotion.aspx" />
     <Content Include="Customer\Register.aspx" />
     <Content Include="Customer\ResetPassword.aspx" />
+    <Content Include="Customer\ShoppingCart.aspx" />
     <Content Include="favicon_io\android-chrome-192x192.png" />
     <Content Include="favicon_io\android-chrome-512x512.png" />
     <Content Include="favicon_io\apple-touch-icon.png" />
+    <Content Include="images\bakery.png" />
+    <Content Include="images\drinks.png" />
     <Content Include="favicon_io\favicon-16x16.png" />
     <Content Include="favicon_io\favicon-32x32.png" />
     <Content Include="favicon_io\favicon.ico" />
+    <Content Include="images\homepage-ads.png" />
+    <Content Include="images\meat.png" />
+    <Content Include="images\snack.png" />
+    <Content Include="images\vegetable.png" />
     <Content Include="images\card.png" />
     <Content Include="images\facebook.png" />
     <Content Include="images\ForgotPassword.jpg" />
+    <Content Include="images\fruits.png" />
     <Content Include="images\github.png" />
     <Content Include="images\hero-pic.png" />
     <Content Include="images\instagram.png" />
@@ -180,12 +189,12 @@
     <Compile Include="Customer\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer\AddressBook.aspx.cs">
-      <DependentUpon>AddressBook.aspx</DependentUpon>
+    <Compile Include="Customer\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer\AddressBook.aspx.designer.cs">
-      <DependentUpon>AddressBook.aspx</DependentUpon>
+    <Compile Include="Customer\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -221,6 +230,13 @@
     </Compile>
     <Compile Include="Customer\OrderHistory.aspx.designer.cs">
       <DependentUpon>OrderHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\OrderSuccess.aspx.cs">
+      <DependentUpon>OrderSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\OrderSuccess.aspx.designer.cs">
+      <DependentUpon>OrderSuccess.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Payment.aspx.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
@@ -264,6 +280,13 @@
     <Compile Include="Customer\ResetPassword.aspx.designer.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPage\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -278,12 +301,20 @@
     <Compile Include="MasterPage\Customer.Master.designer.cs">
       <DependentUpon>Customer.Master</DependentUpon>
     </Compile>
+    <Compile Include="MasterPage\Products.master.cs">
+      <DependentUpon>Products.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\Products.master.designer.cs">
+      <DependentUpon>Products.master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage\Admin.Master" />
     <Content Include="MasterPage\Customer.Master" />
     <Content Include="favicon_io\site.webmanifest" />
+    <Content Include="MasterPage\Products.master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

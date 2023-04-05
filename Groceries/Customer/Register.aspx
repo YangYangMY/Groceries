@@ -13,7 +13,7 @@
                      
                     <asp:FormView class="space-y-4 md:space-y-6" action="#" ID="fvLogin" runat="server" DefaultMode="Insert" InsertMethod="fvLogin_InsertItem" ItemType="GroceryModel.GroceryModel.Customers" DataKeyName="CustomerID" Istyle="margin-right: 47px" OnPageIndexChanging="fvLogin_PageIndexChanging">
                          <InsertItemTemplate>
-                             <asp:Label ID="lblName" runat="server" Text="Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></asp:Label>
+                             <asp:Label ID="lblName" runat="server" Text="Full Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></asp:Label>
                              <br />
                              <asp:TextBox ID="txtName" runat="server" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required=""></asp:TextBox>
                              <br />
@@ -46,45 +46,7 @@
                                  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
                                  dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" OnTextChanged="txtConfirm_TextChanged"></asp:TextBox>
                              <br />
-                             <table class="w-full p-0.5">
-                                 <tr>
-                                     <td style="width: 370px">
-                                         <asp:Label ID="lblCountry" runat="server" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" Text="Country">
-                                         </asp:Label>
-                                         <br />
-                                         <asp:TextBox ID="txtCountry" runat="server"></asp:TextBox>
-                                     </td>
-                                     <td><asp:Label ID="lblCity" runat="server" Text="City"
-                                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                               </asp:Label>
-                                         <br />
-                                         <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td style="width: 370px">
-                                         <asp:Label ID="lblRegion" runat="server" Text="Region" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                         </asp:Label>
-                                         <br />
-                                         <asp:TextBox ID="txtRegion" runat="server"></asp:TextBox>
-                                     </td>
-                                     <td>
-                                         <asp:Label ID="lblPostalCode" runat="server" Text="Postal code" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" Width="327px"></asp:Label>
-                                         <br />
-                                         <br />
-                                         <asp:TextBox ID="txtPostalCode" runat="server"></asp:TextBox>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td colspan="2">
-                                         <br />
-                                         <asp:Label ID="lblAddress" runat="server" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" Text="Address">
-                                         </asp:Label>
-                                         <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
-                                     </td>
-                                 </tr>
-                             </table>
-                             <br />
+                             
                              <asp:Label ID="lblDisplayError" runat="server" ForeColor="Red" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                              </asp:Label>
                              <br />

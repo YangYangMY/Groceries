@@ -270,12 +270,20 @@
     <Compile Include="MasterPage\Customer.Master.designer.cs">
       <DependentUpon>Customer.Master</DependentUpon>
     </Compile>
+    <Compile Include="MasterPage\MyProfile.master.cs">
+      <DependentUpon>MyProfile.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\MyProfile.master.designer.cs">
+      <DependentUpon>MyProfile.master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage\Admin.Master" />
     <Content Include="MasterPage\Customer.Master" />
     <Content Include="favicon_io\site.webmanifest" />
+    <Content Include="MasterPage\MyProfile.master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

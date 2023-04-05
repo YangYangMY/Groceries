@@ -3,128 +3,198 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl lg:text-3xl">Dashboard</h1>
-
+    <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"></h1>
     <!--Total Profit, orders, products -->
-    <div class="grid grid-cols-3 gap-10 my-auto">
-        <div class="w-full mx-auto px-0 py-5 ">
-            <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl ">
-                <img class="mx-4 object-cover w-full rounded-t-lg h-96 md:h-auto md:w-20 md:rounded-none md:rounded-l-lg" src="../images/save-money.gif" alt="">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-1xl font-bold tracking-tight text-[#4B49AC]">Total Profit</h5>
-                    <p class="mb-3 text-2xl font-bold dark:text-black">RM 5,000.20</p>
-                </div>
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 my-2">
+        <div class="flex items-center p-8 bg-white shadow rounded-lg shadow-xl border-solid border-2">
+            <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-purple-600 bg-purple-100 rounded-full mr-6">
+                <img class="mx-4 object-cover w-full rounded-t-lg h-30 md:h-20 md:w-20 md:rounded-none md:rounded-l-lg" src="../images/save-money.gif" alt="">
+            </div>
+            <div>
+                <span class="block text-1xl font-bold text-[#4B49AC]">Total Profit</span>
+                <span class="block text-2xl text-black font-bold">RM 5,000.20</span>
             </div>
         </div>
-        <div class="w-full mx-auto px-0 py-5 ">
-            <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl ">
-                <img class="mx-4 object-cover w-full rounded-t-lg h-96 md:h-auto md:w-20 md:rounded-none md:rounded-l-lg" src="../images/shopping-cart.gif" alt="">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-1xl font-bold tracking-tight text-[#4B49AC]">Total Orders</h5>
-                    <p class="mb-3 text-2xl font-bold dark:text-black">400</p>
-                </div>
+        <div class="flex items-center p-8 bg-white shadow rounded-lg shadow-xl border-solid border-2">
+            <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-purple-600 bg-purple-100 rounded-full mr-6">
+                <img class="mx-4 object-cover w-full rounded-t-lg h-30 md:h-20 md:w-20 md:rounded-none md:rounded-l-lg" src="../images/shopping-cart.gif" alt="">
+            </div>
+            <div>
+                <span class="block text-1xl font-bold text-[#4B49AC]">Total Orders</span>
+                <span class="block text-2xl text-black font-bold">400</span>
             </div>
         </div>
-        <div class="w-full mx-auto px-0 py-5 ">
-            <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl ">
-                <img class="mx-4 object-cover w-full rounded-t-lg h-96 md:h-auto md:w-20 md:rounded-none md:rounded-l-lg" src="../images/shopping-basket.gif" alt="">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-1xl font-bold tracking-tight text-[#4B49AC]">Total Products</h5>
-                    <p class="mb-3 text-2xl font-bold dark:text-black">45</p>
-                </div>
+        <div class="flex items-center p-8 bg-white shadow rounded-lg shadow-xl border-solid border-2">
+            <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-purple-600 bg-purple-100 rounded-full mr-6">
+                <img class="mx-4 object-cover w-full rounded-t-lg h-30 md:h-20 md:w-20 md:rounded-none md:rounded-l-lg" src="../images/shopping-basket.gif" alt="">
             </div>
-        </div>
-        <div>
+            <div>
+                <span class="block text-1xl font-bold text-[#4B49AC]">Total Products</span>
+                <span class="block text-2xl text-black font-bold">40</span>
+            </div>
         </div>
     </div>
 
-    <!--Line Chart-->
-    <div class="grid grid-cols-3 gap-10 ">
+    <!--end -->
 
-        <div class="block p-6 bg-white border border-gray-200 rounded-lg shadow col-span-2">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">Sales Satistics</h5>
-            <span class="text-base font-normal text-gray-500">Recent month</span>
-            <div class="overflow-hidden rounded-lg shadow-lg">
-                <canvas class="p-10" id="chartLine"></canvas>
+
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 my-10 ">
+        <!--Line Chart-->
+        <!-- Component Start -->
+        <div class="flex flex-col items-center w-auto max-w-screen-md p-6 pb-6 bg-white rounded-lg shadow-xl sm:p-8 col-span-2  border-solid border-2">
+            <h2 class="text-xl font-bold">Monthly Revenue</h2>
+            <span class="text-sm font-semibold text-gray-500">2022 - 2023</span>
+            <div class="flex items-end flex-grow w-full mt-2 space-x-2 sm:space-x-3">
+                <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$37,500</span>
+                    <div class="relative flex justify-center w-full h-8 bg-indigo-200"></div>
+                    <div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
+                    <div class="relative flex justify-center w-full h-16 bg-indigo-400"></div>
+                    <span class="absolute bottom-0 text-xs font-bold">Mar</span>
+                </div>
+                <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$45,000</span>
+                    <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
+                    <div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
+                    <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+                    <span class="absolute bottom-0 text-xs font-bold">Apr</span>
+                </div>
+                <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
+                    <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
+                    <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+                    <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+                    <span class="absolute bottom-0 text-xs font-bold">May</span>
+                </div>
+                <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$50,000</span>
+                    <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
+                    <div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
+                    <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
+                    <span class="absolute bottom-0 text-xs font-bold">Jun</span>
+                </div>
+                <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
+                    <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
+                    <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+                    <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+                    <span class="absolute bottom-0 text-xs font-bold">Jul</span>
+                </div>
+                <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$55,000</span>
+                    <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+                    <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+                    <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
+                    <span class="absolute bottom-0 text-xs font-bold">Aug</span>
+                </div>
+                <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$60,000</span>
+                    <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+                    <div class="relative flex justify-center w-full h-16 bg-indigo-300"></div>
+                    <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+                    <span class="absolute bottom-0 text-xs font-bold">Sept</span>
+                </div>
+                <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$57,500</span>
+                    <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+                    <div class="relative flex justify-center w-full h-10 bg-indigo-300"></div>
+                    <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
+                    <span class="absolute bottom-0 text-xs font-bold">Oct</span>
+                </div>
+                <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$67,500</span>
+                    <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+                    <div class="relative flex justify-center w-full h-10 bg-indigo-300"></div>
+                    <div class="relative flex justify-center w-full h-32 bg-indigo-400"></div>
+                    <span class="absolute bottom-0 text-xs font-bold">Nov</span>
+                </div>
+                <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$65,000</span>
+                    <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+                    <div class="relative flex justify-center w-full h-12 bg-indigo-300"></div>
+                    <div class="relative flex justify-center w-full bg-indigo-400 h-28"></div>
+                    <span class="absolute bottom-0 text-xs font-bold">Dec</span>
+                </div>
+                <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$70,000</span>
+                    <div class="relative flex justify-center w-full h-8 bg-indigo-200"></div>
+                    <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+                    <div class="relative flex justify-center w-full h-40 bg-indigo-400"></div>
+                    <span class="absolute bottom-0 text-xs font-bold">Jan</span>
+                </div>
+                <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$75,000</span>
+                    <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+                    <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+                    <div class="relative flex justify-center w-full h-40 bg-indigo-400"></div>
+                    <span class="absolute bottom-0 text-xs font-bold">Feb</span>
+                </div>
             </div>
-
-            <!-- Required chart.js -->
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-            <!-- Chart line -->
-            <script>
-                const labels = ["October", "November", "December", "January", "Feburary", "March"];
-                const data = {
-                    labels: labels,
-                    datasets: [
-                        {
-                            label: "Sales Satistics",
-                            backgroundColor: "hsl(217, 57%, 51%)",
-                            borderColor: "hsl(217, 57%, 51%)",
-                            data: [500, 1500, 600, 1000, 500, 1400],
-                        },
-                    ],
-                };
-
-                const configLineChart = {
-                    type: "line",
-                    data,
-                    options: {},
-                };
-
-                var chartLine = new Chart(
-                    document.getElementById("chartLine"),
-                    configLineChart
-                );
-            </script>
+            <div class="flex w-full mt-3">
+                <div class="flex items-center ml-auto">
+                    <span class="block w-4 h-4 bg-indigo-400"></span>
+                    <span class="ml-1 text-xs font-medium">Existing</span>
+                </div>
+                <div class="flex items-center ml-4">
+                    <span class="block w-4 h-4 bg-indigo-300"></span>
+                    <span class="ml-1 text-xs font-medium">Upgrades</span>
+                </div>
+                <div class="flex items-center ml-4">
+                    <span class="block w-4 h-4 bg-indigo-200"></span>
+                    <span class="ml-1 text-xs font-medium">New</span>
+                </div>
+            </div>
         </div>
+        <!-- Component End  -->
+
 
         <!--Doughnut Chart-->
-        <div class="block max-w-full p-6 bg-white border border-gray-200 rounded-lg shadow ">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">Trends</h5>
-            <span class="text-base font-normal text-gray-500">Product Categories</span>
-            </br></br>
-            <div class="overflow-hidden rounded-lg shadow-lg">
-                <canvas class="p-10" id="chartDoughnut"></canvas>
+        <div class="overflow-hidden rounded-lg shadow-lg border-solid border-2">
+            <div
+                class="text-xl font-bold py-5 px-5 bg-white text-black text-center">
+                Product Trends
             </div>
-
-            <!-- Required chart.js -->
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-            <!-- Chart doughnut -->
-            <script>
-                const dataDoughnut = {
-                    labels: ["Foods", "Drinks", "Diary"],
-                    datasets: [
-                        {
-                            label: "Product Category",
-                            data: [300, 500, 100],
-                            backgroundColor: [
-                                "rgb(133, 105, 241)",
-                                "rgb(164, 101, 241)",
-                                "rgb(101, 143, 241)",
-                            ],
-                            hoverOffset: 4,
-                        },
-                    ],
-                };
-
-                const configDoughnut = {
-                    type: "doughnut",
-                    data: dataDoughnut,
-                    options: {},
-                };
-
-                var chartBar = new Chart(
-                    document.getElementById("chartDoughnut"),
-                    configDoughnut
-                );
-            </script>
+            <canvas class="p-10" id="chartDoughnut"></canvas>
         </div>
+
+        <!-- Required chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- Chart doughnut -->
+        <script>
+            const dataDoughnut = {
+                labels: ["Bread", "Sushi", "Drinks"],
+                datasets: [
+                    {
+                        label: "My First Dataset",
+                        data: [300, 50, 100],
+                        backgroundColor: [
+                            "rgb(100,200,1)",
+                            "#F6BD60",
+                            "rgb(1, 5, 51)",
+                        ],
+                        hoverOffset: 4,
+                    },
+                ],
+            };
+
+            const configDoughnut = {
+                type: "doughnut",
+                data: dataDoughnut,
+                options: {},
+            };
+
+            var chartBar = new Chart(
+                document.getElementById("chartDoughnut"),
+                configDoughnut
+            );
+        </script>
     </div>
 
+
+
     <!--Latest Orders-->
-    <div class="grid grid-cols-1 gap-10 ">
-        <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 my-5 ">
+        <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 my-5  border-solid border-2">
             <div class="mb-4 flex items-center justify-between">
                 <div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Latest Orders</h3>
@@ -201,15 +271,10 @@
                                         <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">RM 200
                                         </td>
                                     </tr>
-                                </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
-
 </asp:Content>

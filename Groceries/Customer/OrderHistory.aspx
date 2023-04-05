@@ -3,7 +3,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 <div>
-    <div class="py-4 px-4 md:px-6 2xl:px-20 2xl:container xl:mx-auto bg-stone-50">
+<div class="py-4 px-4 md:px-6 2xl:px-20 2xl:container xl:mx-auto bg-stone-50">
 <div class="mx-auto" style="max-width:800px">
 <div class="border-gray-900/10  px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full" >
 <div class="flex justify-start item-start space-y-2 flex-col">

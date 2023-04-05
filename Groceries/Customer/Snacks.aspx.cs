@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Groceries.Customer
 {
-    public partial class Products : System.Web.UI.Page
+    public partial class Snacks : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

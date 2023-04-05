@@ -1,7 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="Groceries.Customer.Products" MasterPageFile="~/MasterPage/ProductsCat.master" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/ProductsCat.master" AutoEventWireup="true" CodeBehind="Meat.aspx.cs" Inherits="Groceries.Customer.Meat" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-10">
-        <h1 class="text-4xl font-bold tracking-tight text-[#003049]">Product Category</h1>
+        <h1 class="text-4xl font-bold tracking-tight text-[#003049]">Meats</h1>
     </div>
 </asp:Content>
 
@@ -34,7 +34,7 @@
         <div class="grid content-between group">
             <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
                 <div class="absolute inset-0 flex justify-center items-center">
-                    <img src="../images/cornflakes.png" alt="cornflakes" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                    <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                 </div>
             </div>
             <h3 class="mt-4 text-lg text-gray-700">Kellogg's Frosted Flakes (108g)</h3>
@@ -58,10 +58,10 @@
         <div class="grid content-between group">
             <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
                 <div class="absolute inset-0 flex justify-center items-center">
-                    <img src="../images/massimo.png" alt="massimo" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                    <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                 </div>
             </div>
-            <h3 class="mt-4 text-lg text-gray-700">Massimo Sandwich Loaf with Wheat Germ (400g) (400g)</h3>
+            <h3 class="mt-4 text-lg text-gray-700">Massimo Sandwich Loaf with Wheat Germ (400g)</h3>
             <p class="mt-1 text-lg font-medium text-gray-900">RM 3.19</p>
             <div class="flex flex-row mt-2">
                 <button type="button" class="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
@@ -82,11 +82,11 @@
         <div class="grid content-between group">
             <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
                 <div class="absolute inset-0 flex justify-center items-center">
-                    <img src="../images/chips.png" alt="chips" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                    <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                 </div>
             </div>
-            <h3 class="mt-4 text-lg text-gray-700">Calbee Honey Butter Chips (60g)</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">RM 5.50</p>
+            <h3 class="mt-4 text-lg text-gray-700">Massimo Sandwich Loaf with Wheat Germ (400g)</h3>
+            <p class="mt-1 text-lg font-medium text-gray-900">RM 3.19</p>
             <div class="flex flex-row mt-2">
                 <button type="button" class="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
                     <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -106,10 +106,10 @@
         <div class="grid content-between group">
             <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
                 <div class="absolute inset-0 flex justify-center items-center">
-                    <img src="../images/mandu.png" alt="mandu" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                    <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                 </div>
             </div>
-            <h3 class="mt-4 text-lg text-gray-700">CJ Bibigo Original Korea Dumplings Kimchi & Pork (525g)</h3>
+            <h3 class="mt-4 text-lg text-gray-700">Massimo Sandwich Loaf with Wheat Germ (400g)</h3>
             <p class="mt-1 text-lg font-medium text-gray-900">RM 3.19</p>
             <div class="flex flex-row mt-2">
                 <button type="button" class="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">

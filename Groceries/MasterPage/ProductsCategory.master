@@ -1,6 +1,0 @@
-﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/Customer.Master" AutoEventWireup="true" CodeBehind="ProductsCategory.master.cs" Inherits="Groceries.MasterPage.ProductsCategory" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!--CONTENT-->
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-    </asp:ContentPlaceHolder>
-</asp:Content>

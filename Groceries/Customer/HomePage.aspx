@@ -105,7 +105,7 @@
                 <div class="grid content-between group">
                     <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
                         <div class="absolute inset-0 flex justify-center items-center">
-                            <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                            <img src="../images/cornflakes.png" alt="cornflakes" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                         </div>
                     </div>
                     <h3 class="mt-4 text-lg text-gray-700">Kellogg's Frosted Flakes (108g)</h3>
@@ -129,7 +129,7 @@
                 <div class="grid content-between group">
                     <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
                         <div class="absolute inset-0 flex justify-center items-center">
-                            <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                            <img src="../images/massimo.png" alt="massimo" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                         </div>
                     </div>
                     <h3 class="mt-4 text-lg text-gray-700">Massimo Sandwich Loaf with Wheat Germ (400g)</h3>
@@ -157,7 +157,7 @@
                         </div>
                     </div>
                     <h3 class="mt-4 text-lg text-gray-700">White Rabbit Creamy Candy (108g)</h3>
-                    <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
+                    <p class="mt-1 text-lg font-medium text-gray-900">RM 7.17</p>
                     <div class="flex flex-row mt-2">
                         <button type="button" class="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
                             <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -186,7 +186,7 @@
                <div class="grid content-between group">
                    <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
                        <div class="absolute inset-0 flex justify-center items-center">
-                           <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                           <img src="../images/chips.png" alt="chips" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                        </div>
                    </div>
                    <h3 class="mt-4 text-lg text-gray-700">Calbee Honey Butter Chips (60g)</h3>
@@ -210,7 +210,7 @@
                 <div class="grid content-between group">
                     <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
                         <div class="absolute inset-0 flex justify-center items-center">
-                            <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                            <img src="../images/mandu.png" alt="mandu" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                         </div>
                     </div>
                     <div>
@@ -236,7 +236,7 @@
                 <div class="grid content-between group">
                     <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
                         <div class="absolute inset-0 flex justify-center items-center">
-                            <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                            <img src="../images/milk.png" alt="milk" class="h-2/4 w-auto object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                         </div>
                     </div>
                     <h3 class="mt-4 text-lg text-gray-700">Korea Binggarae Banana Flavored Milk (6 x 240ml)</h3>
@@ -264,7 +264,7 @@
                         </div>
                     </div>
                     <h3 class="mt-4 text-lg text-gray-700">White Rabbit Creamy Candy (108g)</h3>
-                    <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
+                    <p class="mt-1 text-lg font-medium text-gray-900">RM 20.23</p>
                     <div class="flex flex-row mt-2">
                         <button type="button" class="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
                             <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -292,7 +292,7 @@
                 <div class="grid grid-cols-2 sm:grid-cols-2 gap-x-10">
                     <div class="relative w-content h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
                         <div class="absolute inset-0 flex justify-center items-center">
-                            <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                            <img src="../images/yoghurt.png" alt="yoghurt" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                         </div>
                     </div>
                 <div class="flex max-w-xl flex-col items-start justify-between my-8">
@@ -324,7 +324,7 @@
                 <div class="grid grid-cols-2 sm:grid-cols-2 gap-x-10">
                     <div class="relative w-content h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
                         <div class="absolute inset-0 flex justify-center items-center">
-                            <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                            <img src="../images/avocado.png" alt="guacamole" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                         </div>
                     </div>
                 <div class="flex max-w-xl flex-col items-start justify-between my-8">

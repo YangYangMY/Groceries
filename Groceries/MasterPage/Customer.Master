@@ -47,6 +47,9 @@
                             <a href="HomePage.aspx">
                                 <img class="w-4 h-4" src="../images/user.png" alt="user" />
                             </a>
+                            <a href="Favourite.aspx">
+                                <img class="w-4 h-4" src="../images/favourite.png" alt="favourite" />
+                            </a>
                             <a href="ShoppingCart.aspx">
                                 <img class="w-4 h-4" src="../images/cart.png" alt="cart" />
                             </a>

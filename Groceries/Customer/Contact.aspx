@@ -2,16 +2,14 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2 class=" mt-5 text-3xl font-normal tracking-tight text-gray-900 text-center mb-6">Contact Us</h2>
-
+    <h2 class=" mt-5 text-5xl font-bold text-[#003049] text-center mb-6 mt-10">Contact Us</h2>
+    <p class="text-center my-5 text-gray-500">How can we help you?</p>
 
        <asp:Panel ID="PanelContactUs" runat="server" Visible="True" CssClass="bg-gray-50 p-20">
         <!--Start of Contact Us-->
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div class="w-full rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 ">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-                    <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">Contact Us
-                    </h1>
                     <h1 class="text-0.5xl font-normal leading-tight tracking-tight text-gray-900 ">
                         Have a issue? Write to us here, and we will respond as quickly as possible.
                     </h1>

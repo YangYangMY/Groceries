@@ -385,7 +385,6 @@
     </Compile>
     <Compile Include="Customer\OrderTracking.aspx.cs">
       <DependentUpon>OrderTracking.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Customer\OrderTracking.aspx.designer.cs">
       <DependentUpon>OrderTracking.aspx</DependentUpon>

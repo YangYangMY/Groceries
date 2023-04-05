@@ -60,6 +60,15 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.Button ButtonUpdate2;
 
         /// <summary>
+        /// ButtonView2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonView2;
+
+        /// <summary>
         /// Status3 control.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,15 @@ namespace Groceries.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonUpdate3;
+
+        /// <summary>
+        /// ButtonView3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonView3;
 
         /// <summary>
         /// Status4 control.
@@ -96,6 +114,15 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.Button ButtonUpdate4;
 
         /// <summary>
+        /// ButtonView4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonView4;
+
+        /// <summary>
         /// Status5 control.
         /// </summary>
         /// <remarks>
@@ -112,6 +139,15 @@ namespace Groceries.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonUpdate5;
+
+        /// <summary>
+        /// ButtonView5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonView5;
 
         /// <summary>
         /// Status6 control.
@@ -132,6 +168,15 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.Button ButtonUpdate6;
 
         /// <summary>
+        /// ButtonView6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonView6;
+
+        /// <summary>
         /// Status7 control.
         /// </summary>
         /// <remarks>
@@ -148,6 +193,15 @@ namespace Groceries.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonUpdate7;
+
+        /// <summary>
+        /// ButtonView7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonView7;
 
         /// <summary>
         /// Status8 control.
@@ -168,6 +222,15 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.Button ButtonUpdate8;
 
         /// <summary>
+        /// ButtonView8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonView8;
+
+        /// <summary>
         /// Status9 control.
         /// </summary>
         /// <remarks>
@@ -186,6 +249,15 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.Button ButtonUpdate9;
 
         /// <summary>
+        /// ButtonView9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonView9;
+
+        /// <summary>
         /// Status10 control.
         /// </summary>
         /// <remarks>
@@ -202,6 +274,15 @@ namespace Groceries.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonUpdate10;
+
+        /// <summary>
+        /// ButtonView10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonView10;
 
         /// <summary>
         /// PanelConfirmDelete control.
@@ -238,5 +319,32 @@ namespace Groceries.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonCancelDelete;
+
+        /// <summary>
+        /// PanelViewOrder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelViewOrder;
+
+        /// <summary>
+        /// Image1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
+
+        /// <summary>
+        /// ButtonOrderClose control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonOrderClose;
     }
 }

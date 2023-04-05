@@ -60,5 +60,15 @@ namespace Groceries.Admin
                 DropDownListUpdate.SelectedIndex = 2;
             }
         }
+
+        protected void ButtonOrderClose_Click1(object sender, EventArgs e)
+        {
+            PanelViewOrder.Visible = false;
+        }
+
+        protected void ButtonView1_Click(object sender, EventArgs e)
+        {
+            PanelViewOrder.Visible = true;
+        }
     }
 }

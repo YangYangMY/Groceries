@@ -13,5 +13,10 @@ namespace Groceries.Customer
         {
 
         }
+
+        protected void FormView1_PageIndexChanging(object sender, FormViewPageEventArgs e)
+        {
+
+        }
     }
 }

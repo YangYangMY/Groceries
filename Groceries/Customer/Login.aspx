@@ -60,7 +60,7 @@
             </div>
                   <div class="text-center lg:text-left">
                       <div class="px-20 ml-20"> 
-                          <asp:Button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-10 border-b-4 border-blue-700 hover:border-blue-500 rounded" ID="btnLogin" runat="server" Text="Log in"/>
+                          <asp:Button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-10 border-b-4 border-blue-700 hover:border-blue-500 rounded" ID="btnLogin" runat="server" Text="Log in" PostBackUrl="~/Customer/HomePage.aspx"/>
                       </div>
                       <p class="mt-2 mb-0 pt-1 text-sm font-semibold">Don't have an account?
                           <asp:HyperLink class="text-gray-600 transition duration-150 ease-in-out 

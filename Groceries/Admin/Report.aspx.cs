@@ -13,5 +13,15 @@ namespace Groceries.Admin
         {
 
         }
+
+        protected void ButtonOrderClose_Click(object sender, EventArgs e)
+        {
+            PanelViewReport.Visible = false;
+        }
+
+        protected void ButtonViewReport1_Click(object sender, EventArgs e)
+        {
+            PanelViewReport.Visible=true;
+        }
     }
 }

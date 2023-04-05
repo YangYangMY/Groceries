@@ -34,7 +34,7 @@
                                     <td class=" p-4 whitespace-nowrap text-sm font-semibold">June 2021
                                     </td>
                                     <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <a href="Orders.aspx" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View</a>
+                                        <asp:Button ID="ButtonViewReport1" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
                                     </td>
                                 </tr>
                                 <tr class="bg-gray-50">
@@ -43,7 +43,7 @@
                                     <td class=" p-4 whitespace-nowrap text-sm font-semibold">May 2021
                                     </td>
                                     <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <a href="Orders.aspx" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View</a>
+                                        <asp:Button ID="ButtonViewReport2" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -52,7 +52,7 @@
                                     <td class=" p-4 whitespace-nowrap text-sm font-semibold">April 2021
                                     </td>
                                     <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <a href="Orders.aspx" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View</a>
+                                        <asp:Button ID="ButtonViewReport3" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -61,16 +61,16 @@
                                     <td class=" p-4 whitespace-nowrap text-sm font-semibold">March 2021
                                     </td>
                                     <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <a href="Orders.aspx" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View</a>
+                                        <asp:Button ID="ButtonViewReport4" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
                                     </td>
                                     <tr>
                                         <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1001
                                         </td>
                                         <td class=" p-4 whitespace-nowrap text-sm font-semibold">February 2021
                                         </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                            <a href="Orders.aspx" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View</a>
-                                        </td>
+                                    <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
+                                        <asp:Button ID="ButtonViewReport5" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
+                                    </td>
                                     </tr>
                                 </tr>
                         </table>
@@ -107,6 +107,86 @@
             </ul>
         </nav>
     </div>
+
+        <!--Modal of  report-->
+    <asp:Panel ID="PanelViewReport" runat="server" Visible="false">
+        <div class="bg-black bg-opacity-50 md:bg-opacity-50 fixed top-0 left-0 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <div class="relative w-1/2 h-full   md:h-auto mx-auto my-20">
+                <!--Pop Out-->
+                <div class="relative bg-white rounded-lg shadow w:full shadow">
+                    <h3 class=" text-3xl font-bold text-black pt-4 px-6">Report </h3>
+                    <asp:Image ID="Image1" runat="server" CssClass="object-right  bg-transparent rounded-lg text-sm px-6 ml-auto" ImageUrl="~/favicon_io/favicon-32x32.png" />
+                    <h3 class=" text-2xl font-bold text-black px-6 text-right">Goceries</h3>
+                    <h3 class=" text-1xl font-bold text-black px-6 text-right">June 2021</h3>                    <!--Table-->
+                    
+                    
+                    <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
+                    <h3 class=" text-2xl font-bold text-black p-3 mx-4 ">Total Profit:
+                        <span class=" mx-10 text-1xl font-bold text-gray-700 text-right">
+                        RM 1917   
+                    </span>
+                    </h3>
+                    <h3 class=" text-2xl font-bold text-black p-3 mx-4 ">Product Sold:
+                        <span class=" mx-10 text-1xl font-bold text-gray-700 text-right">
+                        540  
+                    </span>
+                    </h3>
+                    <div class="relative overflow-x-auto border-2 shadow-md sm:rounded-lg w-11/12 mx-auto my-5">
+                        <h3 class=" text-2xl font-bold text-black p-3 px-4 ">Top 5 Products</h3>
+                        <table class="w-full text-sm text-left text-gray-500">
+                            <thead class="text-xs text-gray-700 uppercase bg-[#FBEBDB]">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">Product
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">Unit Sold
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">100 Plus
+                                    </th>
+                                    <td class="px-6 py-4">45
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Ice Cream
+                                    </th>
+                                    <td class="px-6 py-4">39
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Chocolate
+                                    </th>
+                                    <td class="px-6 py-4">37
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Fries
+                                    </th>
+                                    <td class="px-6 py-4">36
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Noodles
+                                    </th>
+                                    <td class="px-6 py-4">34
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="p-6 text-center ">
+                        <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
+                        <asp:Button ID="ButtonOrderClose" Text="Close" runat="server" CssClass="text-gray-500 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " OnClick="ButtonOrderClose_Click" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
+
+
 
 </asp:Content>
 

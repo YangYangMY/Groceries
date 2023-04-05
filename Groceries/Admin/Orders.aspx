@@ -276,6 +276,7 @@
                         Taman Danau Kota, 53000 Kuala Lumpur, 
                         Wilayah Persekutuan Kuala Lumpur
                     </h3>
+                        <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
                     <!--Table-->
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg w-11/12 mx-auto my-5">
                         <table class="w-full text-sm text-left text-gray-500">
@@ -325,7 +326,6 @@
                             </tbody>
                         </table>
                     </div>
-                    <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
                     <h3 class=" text-1xl font-bold text-gray-700 px-auto text-right">
                         TOTAL                     
                         <span class=" mx-10 text-1xl font-bold text-gray-700 text-right">

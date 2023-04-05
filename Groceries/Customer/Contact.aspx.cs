@@ -13,5 +13,10 @@ namespace Groceries
         {
 
         }
+
+        protected void ButtonSubmit_Click(object sender, EventArgs e)
+        {
+            PanelInquirySuccess.Visible = true;
+        }
     }
 }

@@ -38,7 +38,7 @@ namespace Groceries.Customer
                     }
                 }
                 table.Append("</table>");
-                PlaceHolder1.Controls.Add(new Literal { Text = table.ToString() });
+                //PlaceHolder1.Controls.Add(new Literal { Text = table.ToString() });
                 rd.Close();
 
 

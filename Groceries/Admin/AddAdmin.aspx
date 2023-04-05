@@ -28,13 +28,31 @@
                             <label for="TextBoxConfirmPass" class="block mb-2 text-sm font-medium text-gray-900">Confirm password</label>
                             <asp:TextBox ID="TextBoxConfirmPass" runat="server" required="" placeholder="••••••••" CssClass="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" TextMode="Password"></asp:TextBox>
                         </div>
-                        <button type="submit" class="w-full text-white bg-[#F6BD60] hover:bg-[#FDBA74] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Create an account</button>
+                        <asp:Button ID="ButtonCreate" runat="server" Text="Create Account" CssClass="w-full text-white bg-[#F6BD60] hover:bg-[#FDBA74] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" OnClick="ButtonCreate_Click" />
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+        <!--Modal of Added new Admin Account Successful-->
+    <asp:Panel ID="PanelAddSuccess" runat="server" Visible="False">
+        <div class="bg-black bg-opacity-50 md:bg-opacity-50 fixed top-0 left-0 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <div class="relative w-full h-full max-w-md md:h-auto mx-auto my-20">
+                <!--Pop Out-->
+                <div class="relative bg-white rounded-lg shadow ">
+                    <div class="p-6 text-center ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#059669] mx-auto h-11 rounded-full bg-[#D1FAE5] w-11" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-2xl font-medium">New Admin Account Created Successfully</span>
+                        <p class="text-center">Press continue to go to Dashboard page.</p>
+                        <asp:Button ID="Button1" runat="server" Text="Continue" CssClass=" my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " PostBackUrl="~/Admin/Dashboard.aspx" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
 
 
 </asp:Content>

@@ -15,15 +15,6 @@ namespace Groceries.Admin
     {
 
         /// <summary>
-        /// PanelAddProduct control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelAddProduct;
-
-        /// <summary>
         /// TextBoxAdminName control.
         /// </summary>
         /// <remarks>
@@ -76,5 +67,41 @@ namespace Groceries.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonDelete;
+
+        /// <summary>
+        /// PanelConfirmDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelConfirmDelete;
+
+        /// <summary>
+        /// ButtonCancelDeleteIcon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonCancelDeleteIcon;
+
+        /// <summary>
+        /// ButtonConfirmDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonConfirmDelete;
+
+        /// <summary>
+        /// ButtonCancelDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonCancelDelete;
     }
 }

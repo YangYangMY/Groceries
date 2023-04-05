@@ -201,9 +201,9 @@
                     <img class="mx-4 object-cover w-full rounded-t-lg mx-6 mt-10 md:h-40 md:w-auto" src="../images/yyphoto.png" alt=""/>
                     <div class="p-6 text-center ">
                         <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
-                        <a href = "weeyanlee1231@gmail.com?subject = Feedback&body = Message">
-                        <asp:Button ID="ButtonSendEmail" runat="server" CssClass="text-orange-500 bg-orange-300 hover:bg-orange-400 focus:ring-4 focus:outline-none focus:ring-orange-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-orange-900 focus:z-10 " Text="Send Email"  />
-                                </a>
+                            <a runat="server" id="ButtonSendEmail" href="mailto:weeyanlee1231@gmail.com?Subject=Refund" Class="w-full text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                Send Email
+                            </a>                            
                             <asp:Button ID="ButtonOrderClose" runat="server" CssClass="text-gray-500 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " Text="Close" OnClick="ButtonOrderClose_Click1"  />
                     </div>
                 </div>

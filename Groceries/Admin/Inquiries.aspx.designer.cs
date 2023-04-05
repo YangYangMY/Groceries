@@ -66,7 +66,7 @@ namespace Groceries.Admin
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonSendEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor ButtonSendEmail;
 
         /// <summary>
         /// ButtonOrderClose control.

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Groceries.MasterPage
 {
-    public partial class NestedMasterPage1 : System.Web.UI.MasterPage
+    public partial class ProductsCategory : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

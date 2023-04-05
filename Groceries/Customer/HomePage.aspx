@@ -11,7 +11,7 @@
     <!--Category Section-->
     <div class="bg-white">
         <div class="grid items-center mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-            <h2 class="text-3xl font-normal tracking-tight text-gray-900 text-center mb-10">Shop by Category</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-[#003049] text-center mb-10">Shop by Category</h2>
 
             <div class="grid lg:grid-cols-6 gap-x-6 gap-y-10 sm:grid-cols-3">
                 <a class="grid content-between group" href="Products.aspx">
@@ -75,7 +75,7 @@
     <!--First Section-->
     <div class="bg-white">
         <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-            <h2 class="text-3xl font-normal tracking-tight text-gray-900 text-center mb-10">Popular items</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-[#003049] text-center mb-10">Popular items</h2>
 
             <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
                 <div class="grid content-between group">
@@ -180,7 +180,7 @@
     <!--Second Section-->
     <div class="bg-[#FFF6E7] my-5">
        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-            <h2 class="text-3xl font-normal tracking-tight text-gray-900 text-center mb-10">Han-gry for Korean Foods?</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-[#003049] text-center mb-10">Han-gry for Korean Foods?</h2>
 
            <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
                <div class="grid content-between group">
@@ -287,7 +287,7 @@
     <!--Third Section-->
     <div class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                 <h2 class="text-3xl font-normal text-gray-900 text-center mb-10">Top-Rated Products</h2>
+                 <h2 class="text-3xl font-bold text-[#003049] text-center mb-10">Top-Rated Products</h2>
             <div class="mx-auto mt-10 grid max-w-xl grid-rows-2 gap-x-6 gap-y-10 lg:mx-1/2">
                 <div class="grid grid-cols-2 sm:grid-cols-2 gap-x-10">
                     <div class="relative w-content h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">

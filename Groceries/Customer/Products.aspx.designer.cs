@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Groceries
+namespace Groceries.Customer
 {
 
 

@@ -11,7 +11,7 @@ namespace Groceries.MasterPage
 {
 
 
-    public partial class Customer
+    public partial class ProductsCategory
     {
 
         /// <summary>

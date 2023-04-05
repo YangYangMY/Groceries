@@ -94,7 +94,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\AddAdmin.aspx" />
     <Content Include="Admin\AddProduct.aspx" />
     <Content Include="Admin\AdminAccount.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
@@ -102,6 +101,7 @@
     <Content Include="Admin\Orders.aspx" />
     <Content Include="Admin\ProductList.aspx" />
     <Content Include="Admin\Report.aspx" />
+    <Content Include="Admin\RoleAssign.aspx" />
     <Content Include="App_Data\GoceriesDatabase.mdf" />
     <Content Include="App_Data\GoceriesDatabase_log.ldf">
       <DependentUpon>GoceriesDatabase.mdf</DependentUpon>
@@ -114,7 +114,6 @@
     <Content Include="Customer\Login.aspx" />
     <Content Include="Customer\OrderHistory.aspx" />
     <Content Include="Customer\OrderSuccess.aspx" />
-    <Content Include="Customer\OrderTracking.aspx" />
     <Content Include="Customer\Payment.aspx" />
     <Content Include="Customer\Products.aspx" />
     <Content Include="Customer\Profile.aspx" />
@@ -125,12 +124,19 @@
     <Content Include="favicon_io\android-chrome-192x192.png" />
     <Content Include="favicon_io\android-chrome-512x512.png" />
     <Content Include="favicon_io\apple-touch-icon.png" />
+    <Content Include="images\bakery.png" />
+    <Content Include="images\drinks.png" />
     <Content Include="favicon_io\favicon-16x16.png" />
     <Content Include="favicon_io\favicon-32x32.png" />
     <Content Include="favicon_io\favicon.ico" />
+    <Content Include="images\homepage-ads.png" />
+    <Content Include="images\meat.png" />
+    <Content Include="images\snack.png" />
+    <Content Include="images\vegetable.png" />
     <Content Include="images\card.png" />
     <Content Include="images\facebook.png" />
     <Content Include="images\ForgotPassword.jpg" />
+    <Content Include="images\fruits.png" />
     <Content Include="images\github.png" />
     <Content Include="images\hero-pic.png" />
     <Content Include="images\instagram.png" />
@@ -148,13 +154,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\AddAdmin.aspx.cs">
-      <DependentUpon>AddAdmin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\AddAdmin.aspx.designer.cs">
-      <DependentUpon>AddAdmin.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,6 +202,13 @@
     </Compile>
     <Compile Include="Admin\Report.aspx.designer.cs">
       <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RoleAssign.aspx.cs">
+      <DependentUpon>RoleAssign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RoleAssign.aspx.designer.cs">
+      <DependentUpon>RoleAssign.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -259,13 +265,6 @@
     </Compile>
     <Compile Include="Customer\OrderSuccess.aspx.designer.cs">
       <DependentUpon>OrderSuccess.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\OrderTracking.aspx.cs">
-      <DependentUpon>OrderTracking.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\OrderTracking.aspx.designer.cs">
-      <DependentUpon>OrderTracking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Payment.aspx.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
@@ -330,12 +329,12 @@
     <Compile Include="MasterPage\Customer.Master.designer.cs">
       <DependentUpon>Customer.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\MyProfile.master.cs">
-      <DependentUpon>MyProfile.master</DependentUpon>
+    <Compile Include="MasterPage\Products.master.cs">
+      <DependentUpon>Products.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\MyProfile.master.designer.cs">
-      <DependentUpon>MyProfile.master</DependentUpon>
+    <Compile Include="MasterPage\Products.master.designer.cs">
+      <DependentUpon>Products.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -343,7 +342,7 @@
     <Content Include="MasterPage\Admin.Master" />
     <Content Include="MasterPage\Customer.Master" />
     <Content Include="favicon_io\site.webmanifest" />
-    <Content Include="MasterPage\MyProfile.master" />
+    <Content Include="MasterPage\Products.master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

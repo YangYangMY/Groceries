@@ -62,7 +62,7 @@
             </div>
         </aside>
         <div class="p-4 sm:ml-64">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server" >
             </asp:ContentPlaceHolder>
            
         </div>

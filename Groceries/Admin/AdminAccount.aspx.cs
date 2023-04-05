@@ -41,5 +41,20 @@ namespace Groceries.Admin
             TextBoxAdminName.CssClass = "mb-6 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5";
             TextBoxEmail.CssClass = "mb-6 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5";
         }
+
+        protected void ButtonDelete_Click(object sender, EventArgs e)
+        {
+            PanelConfirmDelete.Visible = true;
+        }
+
+        protected void ButtonCancelDelete_Click(object sender, EventArgs e)
+        {
+            PanelConfirmDelete.Visible = false;
+        }
+
+        protected void ButtonCancelDeleteIcon_Click(object sender, EventArgs e)
+        {
+            PanelConfirmDelete.Visible = false;
+        }
     }
 }

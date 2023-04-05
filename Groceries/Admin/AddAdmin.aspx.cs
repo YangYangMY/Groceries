@@ -14,5 +14,11 @@ namespace Groceries.Admin
 
         }
 
+        protected void ButtonCreate_Click(object sender, EventArgs e)
+        {
+            PanelAddSuccess.Visible = true;
+            TextBoxPass.Enabled = false;
+            TextBoxConfirmPass.Enabled = false;
+        }
     }
 }

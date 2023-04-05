@@ -230,9 +230,6 @@
                                         </td>
                                         <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">RM 1300
                                         </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                            <a href="Orders.aspx" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View</a>
-                                        </td>
                                     </tr>
                                     <tr class="bg-gray-50">
                                         <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900 rounded-lg rounded-left">1004
@@ -242,9 +239,6 @@
                                         <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-500">Apr 23 ,2021
                                         </td>
                                         <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">RM 500
-                                        </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                            <a href="Orders.aspx" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -256,9 +250,6 @@
                                         </td>
                                         <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">RM 434
                                         </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                            <a href="Orders.aspx" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View</a>
-                                        </td>
                                     </tr>
                                     <tr class="bg-gray-50">
                                         <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900 rounded-lg rounded-left">1002
@@ -269,9 +260,6 @@
                                         </td>
                                         <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">RM 450
                                         </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                            <a href="Orders.aspx" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View</a>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1001
@@ -281,9 +269,6 @@
                                         <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-500">Apr 15 ,2021
                                         </td>
                                         <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">RM 200
-                                        </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                            <a href="Orders.aspx" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View</a>
                                         </td>
                                     </tr>
                             </table>

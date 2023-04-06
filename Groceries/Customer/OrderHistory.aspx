@@ -1,30 +1,26 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrderHistory.aspx.cs" Inherits="Groceries.Customer.OrderHistory" MasterPageFile="~/MasterPage/Customer.Master"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrderHistory.aspx.cs" Inherits="Groceries.Customer.OrderHistory" MasterPageFile="~/MasterPage/MyProfile.master"%>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-<div>
-<div class="py-4 px-4 md:px-6 2xl:px-20 2xl:container xl:mx-auto bg-stone-50">
-<div class="mx-auto" style="max-width:800px">
-<div class="border-gray-900/10  px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full" >
-<div class="flex justify-start item-start space-y-2 flex-col">
-    <h1 class="pb-4 text-2xl lg:text-3xl font-semibold leading-7 lg:leading-9 text-gray-800">Order Tracking</h1>
-</div> 
-
-<div class="rounded-lg bg-white shadow-lg border p-6 space-y-6">
-    <h1 class="pb-4 text-xl lg:text-2xl font-semibold leading-7 lg:leading-9 text-gray-800">Order #001</h1>
-    
-<div class="flex justify-start space-x-12 items-start w-full">
-    <p class="text-base xl:text-lg leading-6">Ordered Date:</p>
-    <p class="text-base xl:text-lg leading-6 text-gray-800">4/5/2023 1:18pm</p>
-</div>
-
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div>
-         <div class="w-11/12 lg:w-6/6 mx-auto my-14">
-                        <div class="bg-gray-200 dark:bg-gray-700 h-1 flex items-center justify-between">
-                            <div class="w-1/3 bg-indigo-700 h-1 flex items-center">
-                                <div class="bg-indigo-700 h-6 w-6 rounded-full shadow flex items-center justify-center">
-                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/thin_with_steps-svg1.svg" alt="check"/>
-                                </div>
+        <div class="py-4 px-4 md:px-6 2xl:px-20 2xl:container xl:mx-auto bg-stone-50">
+            <div class="mx-auto" style="max-width:800px">
+                <div class="border-gray-900/10  px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full" >
+                    <div class="flex justify-start item-start space-y-2 flex-col">
+                        <h1 class="pb-4 text-2xl lg:text-3xl font-semibold leading-7 lg:leading-9 text-gray-800">Order Tracking</h1>
+                    </div> 
+                    <div class="rounded-lg bg-white shadow-lg border p-6 space-y-6">
+                        <h1 class="pb-4 text-xl lg:text-2xl font-semibold leading-7 lg:leading-9 text-gray-800">Order #001</h1>
+                        <div class="flex justify-start space-x-12 items-start w-full">
+                            <p class="text-base xl:text-lg leading-6">Ordered Date:</p>
+                            <p class="text-base xl:text-lg leading-6 text-gray-800">4/5/2023 1:18pm</p>
+                        </div>
+                        <div>
+                            <div class="w-11/12 lg:w-6/6 mx-auto my-14">
+                                <div class="bg-gray-200 dark:bg-gray-700 h-1 flex items-center justify-between">
+                                    <div class="w-1/3 bg-indigo-700 h-1 flex items-center">
+                                        <div class="bg-indigo-700 h-6 w-6 rounded-full shadow flex items-center justify-center">
+                                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/thin_with_steps-svg1.svg" alt="check"/>
+                                        </div>
                             </div>
                             <div class="w-1/3 flex justify-between bg-indigo-700 h-1 items-center relative">
                                 <div class="absolute right-0 -mr-2">

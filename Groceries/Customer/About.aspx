@@ -3,10 +3,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="max-h-screen bg-cover bg-center bg-[url('/images/aboutus.jpg')]">
-        <div class="">
-            <h1>Nice to meet you</h1>
-            <p><Strong>Goceries</Strong>, an online groceries website developed since Year 2020 aims to provide one-stop shop service</p>
-        </div>
     </div>
     <section class="bg-white-950 antialiased">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">

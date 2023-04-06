@@ -14,7 +14,7 @@
             <h2 class="text-3xl font-bold tracking-tight text-[#003049] text-center mb-10">Shop by Category</h2>
 
             <div class="grid lg:grid-cols-6 gap-x-6 gap-y-10 sm:grid-cols-3">
-                <a class="grid content-between group" href="Products.aspx">
+                <a class="grid content-between group" href="Fruits.aspx">
                     <div class="relative w-3/4 h-auto bg-gray-200 rounded-lg align-center border-2 hover:border-[#F6BD60] hover:opacity-75 hover:bg-[#FBEBDB]" style="padding-bottom: 100%">
                         <div class="absolute inset-0 justify-center flex flex-col items-center pt-7">
                             <img src="../images/fruits.png" alt="fruits" class="h-2/5 w-suto object-cover object-center">
@@ -23,7 +23,7 @@
                     </div>
                 </a>
 
-                <a class="grid content-between group" href="Products.aspx">
+                <a class="grid content-between group" href="Vegetables.aspx">
                     <div class="relative w-3/4 h-0 bg-gray-200 rounded-lg align-center border-2 hover:border-[#F6BD60] hover:opacity-75 hover:bg-[#FBEBDB]" style="padding-bottom: 100%">
                         <div class="absolute inset-0 justify-center flex flex-col items-center pt-7">
                             <img src="../images/vegetable.png" alt="vege" class="h-2/5 w-suto object-cover object-center">
@@ -32,7 +32,7 @@
                     </div>
                 </a>
 
-                <a class="grid content-between group" href="Products.aspx">
+                <a class="grid content-between group" href="Meat.aspx">
                     <div class="relative w-3/4 h-0 bg-gray-200 rounded-lg align-center border-2 hover:border-[#F6BD60] hover:opacity-75 hover:bg-[#FBEBDB]" style="padding-bottom: 100%">
                         <div class="absolute inset-0 flex justify-center flex flex-col items-center pt-7">
                             <img src="../images/meat.png" alt="meats" class="h-2/5 w-suto object-cover object-center">
@@ -41,7 +41,7 @@
                     </div>
                 </a>
 
-                <a class="grid content-between group" href="Products.aspx">
+                <a class="grid content-between group" href="Bakery.aspx">
                     <div class="relative w-3/4 h-0 bg-gray-200 rounded-lg align-center border-2 hover:border-[#F6BD60] hover:opacity-75 hover:bg-[#FBEBDB]" style="padding-bottom: 100%">
                         <div class="absolute inset-0 flex justify-center flex flex-col items-center pt-7">
                             <img src="../images/bakery.png" alt="bakery" class="h-2/5 w-suto object-cover object-center">
@@ -50,7 +50,7 @@
                     </div>
                 </a>
 
-                <a class="grid content-between group" href="Products.aspx">
+                <a class="grid content-between group" href="Snacks.aspx">
                     <div class="relative w-3/4 h-0 bg-gray-200 rounded-lg align-center border-2 hover:border-[#F6BD60] hover:opacity-75 hover:bg-[#FBEBDB]" style="padding-bottom: 100%">
                         <div class="absolute inset-0 flex justify-center flex flex-col items-center pt-7">
                             <img src="../images/snack.png" alt="snack" class="h-2/5 w-suto object-cover object-center">
@@ -59,7 +59,7 @@
                     </div>
                 </a>
 
-                <a class="grid content-between group" href="Products.aspx">
+                <a class="grid content-between group" href="Beverages.aspx">
                     <div class="relative w-3/4 h-0 bg-gray-200 rounded-lg align-center border-2 hover:border-[#F6BD60] hover:opacity-75 hover:bg-[#FBEBDB]" style="padding-bottom: 100%">
                         <div class="absolute inset-0 flex justify-center flex flex-col items-center pt-7">
                             <img src="../images/drinks.png" alt="drinks" class="h-2/5 w-suto object-cover object-center">

@@ -11,19 +11,14 @@
         
         <aside id="logo-sidebar" class="sticky top-3 left-3 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
             <div class="h-full px-3 py-4 overflow-y-auto bg-[#FFF6E7] ">
-                <a href="../Customer/Profile.aspx" class="flex items-center pl-2.5 mb-5">
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#F6BD60]">Goceries
-                    </span>
-                    <h1 class="text-1xl mx-2 text-[#003049] font-bold">| Profile</h1>
-                </a>
                 <ul class="space-y-2 font-medium">
-                    <li class="justify-items-center">
+                    <li class="justify-items-center my-5">
                         <div class="w-24 mx-20 rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16"> <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path> <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path> </svg>
                             <input hidden="" type="file" name="avator" id="avator">
                         </div>
-                        <div class="ml-8 mr-10 pr-4 text-center"">
-                            <span id="ContentPlaceHolder1_displayName">User Name</span>
+                        <div class="ml-8 mr-10 pr-4 text-center mt-4">
+                            <span id="ContentPlaceHolder1_displayName ">Tan Wee Men</span>
                         </div>
                     </li>
                         <li>
@@ -41,9 +36,7 @@
                                 </svg>
                                 <span class="flex-1 ml-3 whitespace-nowrap">Orders</span>                            </a>
                         </li>
-                     
-                        <li>
-                            <a href="#" class="flex items-center p-2 rounded-lg text-[#003049]  hover:bg-[#F6BD60]">
+                            <a href="../Customer/Login.aspx" class="flex items-center p-2 rounded-lg text-[#003049]  hover:bg-[#F6BD60]">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
                                 </svg>

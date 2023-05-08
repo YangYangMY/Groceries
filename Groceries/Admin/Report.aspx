@@ -10,70 +10,35 @@
         <div class="mb-4 flex items-center justify-between">
             <div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Monthly Report</h3>
+
+                <asp:DataList ID="DataList1" runat="server"></asp:DataList>
+                  <h1>HELLO</h1>
             </div>
         </div>
         <div class="flex flex-col mt-8">
             <div class="overflow-x-auto rounded-lg">
                 <div class="align-middle inline-block min-w-full">
                     <div class="shadow overflow-hidden sm:rounded-lg">
-                        <table class="min-w-full divide-y divide-gray-200">
-                            <thead class="bg-gray-50">
-                                <tr>
-                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Report ID
-                                    </th>
-                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Month
-                                    </th>
-                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions 
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white">
-                                <tr class="bg-gray-50">
-                                    <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900 rounded-lg rounded-left">1005
-                                    </td>
-                                    <td class=" p-4 whitespace-nowrap text-sm font-semibold">June 2021
-                                    </td>
-                                    <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <asp:Button ID="ButtonViewReport1" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
-                                    </td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900 rounded-lg rounded-left">1004
-                                    </td>
-                                    <td class=" p-4 whitespace-nowrap text-sm font-semibold">May 2021
-                                    </td>
-                                    <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <asp:Button ID="ButtonViewReport2" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1003
-                                    </td>
-                                    <td class=" p-4 whitespace-nowrap text-sm font-semibold">April 2021
-                                    </td>
-                                    <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <asp:Button ID="ButtonViewReport3" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1002
-                                    </td>
-                                    <td class=" p-4 whitespace-nowrap text-sm font-semibold">March 2021
-                                    </td>
-                                    <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <asp:Button ID="ButtonViewReport4" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
-                                    </td>
-                                    <tr>
-                                        <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1001
-                                        </td>
-                                        <td class=" p-4 whitespace-nowrap text-sm font-semibold">February 2021
-                                        </td>
-                                    <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <asp:Button ID="ButtonViewReport5" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
-                                    </td>
-                                    </tr>
-                                </tr>
-                        </table>
+                        <!-- Table was here -->
+                                               <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [ReportID], [Month] FROM [Report] ORDER BY [ReportID] DESC"></asp:SqlDataSource>
+                        <asp:GridView ID="GridView1" runat="server" CssClass="table min-w-full divide-y divide-gray-200" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="ReportID" AllowPaging="True">
+                            <Columns>
+                                <asp:CommandField ShowSelectButton="True" />
+                                <asp:BoundField DataField="ReportID" HeaderText="ReportID" ReadOnly="True" SortExpression="ReportID" HeaderStyle-CssClass="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" >
+<HeaderStyle CssClass="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></HeaderStyle>
+                                </asp:BoundField>
+                                <asp:BoundField DataField="Month" HeaderText="Month" SortExpression="Month" HeaderStyle-CssClass="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" >
+<HeaderStyle CssClass="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></HeaderStyle>
+                                </asp:BoundField>
+                            </Columns>
+                          
+                </asp:GridView>
+
+                        <asp:GridView ID="GridView2" runat="server">
+                            <Columns>
+                                <asp:BoundField DataField="id" HeaderText="id" />
+                            </Columns>
+                        </asp:GridView>
                     </div>
                 </div>
             </div>

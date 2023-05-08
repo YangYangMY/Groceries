@@ -1,6 +1,47 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ShoppingCart.aspx.cs" Inherits="Groceries.Customer.ShoppingCart" MasterPageFile="~/MasterPage/Customer.Master" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+        <asp:HyperLink ID="hyperCS" runat="server" NavigateUrl="~/Customer/Products.aspx">Continue Shopping</asp:HyperLink>
+
+        <br />
+
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="281px" Width="941px" OnRowDeleting="GridView1_RowDeleting" AllowCustomPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ShowFooter="True">
+        <AlternatingRowStyle BackColor="#CCCCCC" />
+        <Columns>
+            <asp:BoundField DataField="no" HeaderText="No" >
+            <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="ProductID" HeaderText="ProductID" >
+            <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="ProductName" HeaderText="ProductName" >
+            <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="UnitPrice" HeaderText="UnitPrice" >
+            <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="Quantity" HeaderText="Quantity" >
+            <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="totalprice" HeaderText="Total Price" >
+            <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:CommandField >
+            <ItemStyle Font-Underline="True" HorizontalAlign="Center" />
+            </asp:CommandField>
+            <asp:CommandField DeleteText="Remove" ShowDeleteButton="True" />
+        </Columns>
+        <FooterStyle BackColor="#CCCCCC" />
+        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+        <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+        <SortedAscendingHeaderStyle BackColor="#808080" />
+        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+        <SortedDescendingHeaderStyle BackColor="#383838" />
+    </asp:GridView>
+
 <div>
     <div class="py-14 px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto bg-stone-50">
     <div class="flex justify-start item-start space-y-2 flex-col">
@@ -35,9 +76,9 @@
                             <p class="text-base xl:text-lg leading-6">RM 3.19</p>
                             <div>
                             <%--<p class="text-base xl:text-lg leading-6 text-gray-800">1</p>--%>
-                            <asp:Button ID="btnIncrement" runat="server" Text=" +  " class ="rounded-full bg-black text-white hover:bg-stone-300 hover:text-black" OnClick="btnIncrement_Click" />
+                            <asp:Button ID="btnIncrement" runat="server" Text=" +  " class ="rounded-full bg-black text-white hover:bg-stone-300 hover:text-black"/>
                             <asp:Label ID="lblQty" runat="server" Text="" class="mx-2"></asp:Label>
-                            <asp:Button ID="btnDecrement" runat="server" Text="  -  " class ="rounded-full bg-black text-white font-bold hover:bg-stone-300 hover:text-black" OnClick="btnDecrement_Click" />
+                            <asp:Button ID="btnDecrement" runat="server" Text="  -  " class ="rounded-full bg-black text-white font-bold hover:bg-stone-300 hover:text-black"/>
                             </div>
                             <p class="text-base xl:text-lg font-semibold leading-6 text-gray-800">RM 3.19</p>
                             <asp:Button ID="btnRemoveItem" runat="server" Text="Remove" class="underline hover:text-stone-300"/>
@@ -56,9 +97,9 @@
                             <p class="text-base xl:text-lg leading-6">RM5.50</p>
                            <div>
                             <%--<p class="text-base xl:text-lg leading-6 text-gray-800">1</p>--%>
-                            <asp:Button ID="ButtonIncrement2" runat="server" Text=" +  " class ="rounded-full bg-black text-white hover:bg-stone-300 hover:text-black" OnClick="btnIncrement_Click" />
+                            <asp:Button ID="ButtonIncrement2" runat="server" Text=" +  " class ="rounded-full bg-black text-white hover:bg-stone-300 hover:text-black" />
                             <asp:Label ID="lblQty2" runat="server" Text="" class="mx-2"></asp:Label>
-                            <asp:Button ID="ButtonDecrement2" runat="server" Text="  -  " class ="rounded-full bg-black text-white font-bold hover:bg-stone-300 hover:text-black" OnClick="btnDecrement_Click" />
+                            <asp:Button ID="ButtonDecrement2" runat="server" Text="  -  " class ="rounded-full bg-black text-white font-bold hover:bg-stone-300 hover:text-black" />
                             </div>
                             <p class="text-base xl:text-lg font-semibold leading-6 text-gray-800">RM5.50</p>
                             <asp:Button ID="btnRemoveItem2" runat="server" Text="Remove" class="underline hover:text-stone-300"/>

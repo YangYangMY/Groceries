@@ -6,9 +6,46 @@
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+
+    <asp:DataList ID="DataList1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyField="ProductID" DataSourceID="SqlDataSource1" GridLines="Both" OnItemCommand="DataList1_ItemCommand" RepeatDirection="Horizontal">
+        <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+        <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+        <ItemStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+        <ItemTemplate>
+            ProductID:
+            <asp:Label ID="ProductIDLabel" runat="server" Text='<%# Eval("ProductID") %>'></asp:Label>
+            <br />
+            ProductName:
+            <asp:Label ID="ProductNameLabel" runat="server" Text='<%# Eval("ProductName") %>' />
+            <br />
+            UnitPrice:
+            <asp:Label ID="UnitPriceLabel" runat="server" Text='<%# Eval("UnitPrice") %>' />
+            <br />
+            Quantity:
+            <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:ListItem>1</asp:ListItem>
+                <asp:ListItem>2</asp:ListItem>
+                <asp:ListItem>3</asp:ListItem>
+                <asp:ListItem>4</asp:ListItem>
+                <asp:ListItem>5</asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:Button ID="Button1" runat="server" CommandName="addtocart" Text="Add to cart" CommandArgument='<%# Eval("ProductID") %>'/>
+            <br />
+        </ItemTemplate>
+        <SelectedItemStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+    </asp:DataList>
+
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
+
+
     <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
         <div class="grid content-between group">
             <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
+                <br />
+                <br />
+                <br />
                 <div class="absolute inset-0 flex justify-center items-center">
                     <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                 </div>

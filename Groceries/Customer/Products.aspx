@@ -21,17 +21,7 @@
             UnitPrice:
             <asp:Label ID="UnitPriceLabel" runat="server" Text='<%# Eval("UnitPrice") %>' />
             <br />
-            Quantity:
-            <asp:DropDownList ID="DropDownList1" runat="server">
-                <asp:ListItem>1</asp:ListItem>
-                <asp:ListItem>2</asp:ListItem>
-                <asp:ListItem>3</asp:ListItem>
-                <asp:ListItem>4</asp:ListItem>
-                <asp:ListItem>5</asp:ListItem>
-                <asp:ListItem></asp:ListItem>
-            </asp:DropDownList>
-            <br />
-            <asp:Button ID="btnAddToCart" runat="server" CommandName="AddToCart" Text="Add to cart" CommandArgument='<%# Eval("ProductID") %>'/>
+            <asp:Button ID="btnAddToCart" runat="server" CommandName="AddToCart" Text="Add to cart" CommandArgument='<%# Eval("ProductId") %>'/>
             <br />
         </ItemTemplate>
         <SelectedItemStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />

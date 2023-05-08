@@ -11,8 +11,29 @@ namespace Groceries.Customer
 {
     public partial class ShoppingCart : System.Web.UI.Page
     {
+        const decimal shippingFee = 10.00M;
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if (Session["buyitems"] == null)
+            //{
+            //    // Display a message indicating that the shopping cart is empty
+            //    lblEmptyCart.Text = "Your shopping cart is currently empty.";
+            //}
+            //else
+            //{
+            //    DataTable dt = (DataTable)Session["buyitems"];
+            //    if (dt.Rows.Count == 0)
+            //    {
+            //        // Display a message indicating that the shopping cart is empty
+            //        lblEmptyCart.Text = "Your shopping cart is currently empty.";
+            //    }
+            //    else
+            //    {
+            //        // Bind the data to the gridview
+            //        GridView1.DataSource = dt;
+            //        GridView1.DataBind();
+            //    }
+            //}
             if (!IsPostBack)
             {
                 DataTable dt = new DataTable();
@@ -24,7 +45,12 @@ namespace Groceries.Customer
                 dt.Columns.Add("Quantity");
                 dt.Columns.Add("totalprice");
 
-
+                //if (Session["buyitems"] == null && Request.QueryString["id"] == null)
+                //{
+                //    // Display a message indicating that the shopping cart is empty
+                //    lblEmptyCart.Text = "Your shopping cart is currently empty.";
+                //    Session["buyitems"] = dt;
+                //}
                 if (Request.QueryString["id"] != null)
                 {
                     if (Session["Buyitems"] == null)
@@ -40,6 +66,7 @@ namespace Groceries.Customer
                         SqlDataAdapter da = new SqlDataAdapter();
                         da.SelectCommand = cmd;
                         DataSet ds = new DataSet();
+
                         da.Fill(ds);
                         dr["no"] = 1;
                         dr["ProductID"] = ds.Tables[0].Rows[0]["ProductID"].ToString();
@@ -56,45 +83,80 @@ namespace Groceries.Customer
                         GridView1.DataBind();
 
                         Session["buyitems"] = dt;
-                        GridView1.FooterRow.Cells[4].Text = "Total Amount";
-                        GridView1.FooterRow.Cells[5].Text = grandtotal().ToString();
+                        GridView1.FooterRow.Cells[5].Text = "Total(RM)";
+                        GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
+                        lblSubtotal.Text = grandtotal().ToString();
+                        decimal grandTotal = grandtotal();
+                        decimal finaltotal = grandTotal + shippingFee;
+                        lblShipFee.Text = shippingFee.ToString();
+                        lbltotal.Text = finaltotal.ToString();
                         Response.Redirect("ShoppingCart.aspx");
                     }
                     else
                     {
+                        string productId = Request.QueryString["id"];
+
+                        // check if the product already exists in the cart
                         dt = (DataTable)Session["buyitems"];
-                        int sr;
-                        sr = dt.Rows.Count;
-                        dr = dt.NewRow();
-                        String mycon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
-                        SqlConnection scon = new SqlConnection(mycon);
-                        String myquery = "select ProductID, ProductName, UnitPrice from Products where ProductID ='" + Request.QueryString["id"] + "'";
-                        SqlCommand cmd = new SqlCommand();
-                        cmd.CommandText = myquery;
-                        cmd.Connection = scon;
-                        SqlDataAdapter da = new SqlDataAdapter();
-                        da.SelectCommand = cmd;
-                        DataSet ds = new DataSet();
-                        da.Fill(ds);
-                        dr["no"] = sr + 1;
-                        dr["ProductID"] = ds.Tables[0].Rows[0]["ProductID"].ToString();
-                        dr["ProductName"] = ds.Tables[0].Rows[0]["ProductName"].ToString();
-                        dr["UnitPrice"] = ds.Tables[0].Rows[0]["UnitPrice"].ToString();
-                        dr["Quantity"] = Request.QueryString["Quantity"];
-                        Decimal unitprice = Convert.ToDecimal(ds.Tables[0].Rows[0]["UnitPrice"].ToString());
-                        int quantity = Convert.ToInt16(Request.QueryString["Quantity"].ToString());
-                        decimal totalprice = unitprice * quantity;
-                        dr["totalprice"] = totalprice;
+                        DataRow existingItem = dt.AsEnumerable().FirstOrDefault(row => row.Field<string>("ProductID") == productId);
 
-                        dt.Rows.Add(dr);
-                        GridView1.DataSource = dt;
-                        GridView1.DataBind();
+                        if (existingItem != null)
+                        {
+                            // update the quantity of the existing product
+                            existingItem["Quantity"] = Convert.ToInt32(existingItem["Quantity"]) + 1;
+                            
 
-                        Session["buyitems"] = dt;
-                        GridView1.FooterRow.Cells[7].Text = "Total";
-                        GridView1.FooterRow.Cells[8].Text = grandtotal().ToString();
-                        Response.Redirect("ShoppingCart.aspx");
+                            // Update the total price for the corresponding row
+                            decimal unitPrice = Convert.ToDecimal(existingItem["UnitPrice"]);
+                            int quantity = Convert.ToInt32(existingItem["Quantity"]);
+                            decimal totalPrice = unitPrice * quantity;
+                            existingItem["totalprice"] = totalPrice.ToString();
+
+                            Session["buyitems"] = dt;
+                            Response.Redirect("ShoppingCart.aspx");
+                        }
+                        else
+                        {
+                            dt = (DataTable)Session["buyitems"];
+                            int sr;
+                            sr = dt.Rows.Count;
+                            dr = dt.NewRow();
+                            String mycon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
+                            SqlConnection scon = new SqlConnection(mycon);
+                            String myquery = "select ProductID, ProductName, UnitPrice from Products where ProductID ='" + Request.QueryString["id"] + "'";
+                            SqlCommand cmd = new SqlCommand();
+                            cmd.CommandText = myquery;
+                            cmd.Connection = scon;
+                            SqlDataAdapter da = new SqlDataAdapter();
+                            da.SelectCommand = cmd;
+                            DataSet ds = new DataSet();
+                            da.Fill(ds);
+                            dr["no"] = sr + 1;
+                            dr["ProductID"] = ds.Tables[0].Rows[0]["ProductID"].ToString();
+                            dr["ProductName"] = ds.Tables[0].Rows[0]["ProductName"].ToString();
+                            dr["UnitPrice"] = ds.Tables[0].Rows[0]["UnitPrice"].ToString();
+                            dr["Quantity"] = Request.QueryString["Quantity"];
+                            Decimal unitprice = Convert.ToDecimal(ds.Tables[0].Rows[0]["UnitPrice"].ToString());
+                            int quantity = Convert.ToInt16(Request.QueryString["Quantity"].ToString());
+                            decimal totalprice = unitprice * quantity;
+                            dr["totalprice"] = totalprice;
+
+                            dt.Rows.Add(dr);
+                            GridView1.DataSource = dt;
+                            GridView1.DataBind();
+
+                            Session["buyitems"] = dt;
+                            GridView1.FooterRow.Cells[5].Text = "Total(RM)";
+                            GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
+                            lblSubtotal.Text = grandtotal().ToString();
+                            decimal grandTotal = grandtotal();
+                            decimal finaltotal = grandTotal + shippingFee;
+                            lblShipFee.Text = shippingFee.ToString();
+                            lbltotal.Text = finaltotal.ToString();
+                            Response.Redirect("ShoppingCart.aspx");
+                        }
                     }
+                    
                 }
                 else
                 {
@@ -103,8 +165,14 @@ namespace Groceries.Customer
                     GridView1.DataBind();
                     if (GridView1.Rows.Count > 0)
                     {
-                        GridView1.FooterRow.Cells[7].Text = "Total";
-                        GridView1.FooterRow.Cells[8].Text = grandtotal().ToString();
+                        GridView1.FooterRow.Cells[5].Text = "Total(RM)";
+                        GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
+                        lblSubtotal.Text = grandtotal().ToString();
+                        decimal grandTotal = grandtotal();
+                        decimal finaltotal = grandTotal + shippingFee;
+                        lblShipFee.Text = shippingFee.ToString();
+                        lbltotal.Text = finaltotal.ToString();
+                        
                     }
                 }
             }
@@ -119,6 +187,7 @@ namespace Groceries.Customer
             int nrow = dt.Rows.Count;
             int i = 0;
             decimal totalprice = 0;
+            
             while (i < nrow)
             {
                 totalprice = totalprice + Convert.ToDecimal(dt.Rows[i]["totalprice"].ToString());
@@ -156,8 +225,9 @@ namespace Groceries.Customer
                 dt.Rows[i - 1]["no"] = i;
                 dt.AcceptChanges();
             }
-            Session["buyitems"] = dt;
-            Response.Redirect("ShoppingCart.aspx");
+                Session["buyitems"] = dt;
+                Response.Redirect("ShoppingCart.aspx");
+
 
         }
 
@@ -182,14 +252,18 @@ namespace Groceries.Customer
                     // Update the total price for the corresponding row
                     decimal unitprice = Convert.ToDecimal(GridView1.Rows[rowIndex].Cells[3].Text);
                     decimal totalprice = unitprice * quantity;
-                    GridView1.Rows[rowIndex].Cells[8].Text = totalprice.ToString();
-                    //GridView1.FooterRow.Cells[8].Text = grandtotal().ToString();
+                    GridView1.Rows[rowIndex].Cells[7].Text = totalprice.ToString();
 
                     dt.Rows[rowIndex]["Quantity"] = quantity.ToString();
                     dt.Rows[rowIndex]["totalprice"] = totalprice.ToString();
                     
                     Session["buyitems"] = dt;
-                    GridView1.FooterRow.Cells[8].Text = grandtotal().ToString();
+                    GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
+                    lblSubtotal.Text = grandtotal().ToString();
+                    decimal grandTotal = grandtotal();
+                    decimal finaltotal = grandTotal + shippingFee;
+                    lblShipFee.Text = shippingFee.ToString();
+                    lbltotal.Text = finaltotal.ToString();
 
 
             }
@@ -207,10 +281,21 @@ namespace Groceries.Customer
                     // Update the total price for the corresponding row
                     decimal unitprice = Convert.ToDecimal(GridView1.Rows[rowIndex].Cells[3].Text);
                     decimal totalprice = unitprice * quantity;
-                    GridView1.Rows[rowIndex].Cells[8].Text = totalprice.ToString();
-                    GridView1.FooterRow.Cells[8].Text = grandtotal().ToString();
+                    GridView1.Rows[rowIndex].Cells[7].Text = totalprice.ToString();
 
-                    if (quantity < 1)
+                    dt.Rows[rowIndex]["Quantity"] = quantity.ToString();
+                    dt.Rows[rowIndex]["totalprice"] = totalprice.ToString();
+
+                    Session["buyitems"] = dt;
+                    GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
+                    lblSubtotal.Text = grandtotal().ToString();
+                    decimal grandTotal = grandtotal();
+                    decimal finaltotal = grandTotal + shippingFee;
+                    lblShipFee.Text = shippingFee.ToString();
+                    lbltotal.Text = finaltotal.ToString();
+
+
+                if (quantity < 1)
                     {
                         // Call GridView1_RowDeleting
                         GridViewDeleteEventArgs deleteArgs = new GridViewDeleteEventArgs(rowIndex);
@@ -221,5 +306,19 @@ namespace Groceries.Customer
            
           
         }
+        //private void CalculateTotalPrice()
+        //{
+        //    DataTable dt = new DataTable();
+        //    dt = (DataTable)Session["buyitems"];
+
+        //    double finaltotal = 0.0;
+        //    const double shipFee = 10.00;
+
+        //    double total = Convert.ToDouble(grandtotal());
+        //    finaltotal = total + shipFee;
+
+        //    lbltotal.Text = string.Format("{0:C}", finaltotal); // set the Text property of the Label to display the total price in currency format
+        //}
+
     }
 }

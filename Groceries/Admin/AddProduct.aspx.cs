@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Configuration;
@@ -18,8 +19,30 @@ namespace Groceries.Admin.Product
 
         protected void ButtonSubmit_Click1(object sender, EventArgs e)
         {
+            //Open and Link database
+            SqlConnection con;
+            string strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
+            con = new SqlConnection(strCon);
+            con.Open();
+
+            //SQL command for insert data
+            SqlCommand insertCmd = new SqlCommand();
+            SqlDataAdapter insertAdapter = new SqlDataAdapter();
+            String insertSql = "";
+
+            //Read Data input
+            String name = TextBoxProductName.Text;
+            String category = TextBoxProductCategory.Text;
+            String desc = TextBoxDescriptions.Text;
+            int stock = Int32.Parse(TextBoxStock.Text);
+
+
+
+
             PanelAddProduct.Visible = false;
             PanelAddSuccess.Visible = true;
+            insertCmd.Dispose();
+            con.Close();
         }
     }
 }

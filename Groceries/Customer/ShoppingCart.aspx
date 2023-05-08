@@ -6,9 +6,12 @@
 
         <br />
 
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="281px" Width="941px" OnRowDeleting="GridView1_RowDeleting" AllowCustomPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ShowFooter="True">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="281px" Width="941px" OnRowDeleting="GridView1_RowDeleting" AllowCustomPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ShowFooter="True" OnRowCommand="GridView1_RowCommand">
         <AlternatingRowStyle BackColor="#CCCCCC" />
         <Columns>
+            <%--<asp:ButtonField ButtonType="Button" CommandName="Add" Text="+" >--%>
+            <%--<ItemStyle HorizontalAlign="Center" />--%>
+            <%--</asp:ButtonField>--%>
             <asp:BoundField DataField="no" HeaderText="No" >
             <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
@@ -18,21 +21,34 @@
             <asp:BoundField DataField="ProductName" HeaderText="ProductName" >
             <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
-            <asp:BoundField DataField="UnitPrice" HeaderText="UnitPrice" >
+            <asp:BoundField DataField="UnitPrice" HeaderText="UnitPrice(RM)" >
             <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
-            <asp:BoundField DataField="Quantity" HeaderText="Quantity" >
+            <asp:TemplateField>
+            <ItemTemplate>
+                <asp:Button ID="btnIncrement" runat="server" text="+" CommandName="Increment" CommandArgument='<%# Eval("ProductId") %>' />
+            </ItemTemplate>
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:TemplateField>
+            <asp:BoundField DataField="Quantity" HeaderText="Qty" >
             <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
-            <asp:BoundField DataField="totalprice" HeaderText="Total Price" >
-            <ItemStyle HorizontalAlign="Center" />
+            <asp:TemplateField>
+            <ItemTemplate>
+                <asp:Button ID="btnDecrement" runat="server" text="-" CommandName="Decrement" CommandArgument='<%# Eval("ProductId") %>' />
+            </ItemTemplate>
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:TemplateField>
+            <asp:TemplateField></asp:TemplateField>
+            <asp:BoundField DataField="totalprice" HeaderText="Total Price(RM)" >
+            <ItemStyle HorizontalAlign="Center" Wrap="False" />
             </asp:BoundField>
-            <asp:CommandField >
-            <ItemStyle Font-Underline="True" HorizontalAlign="Center" />
+            <asp:CommandField DeleteText="Remove" ShowDeleteButton="True" >
+            <ControlStyle Font-Underline="True" />
+            <ItemStyle Font-Italic="False" ForeColor="Red" HorizontalAlign="Center" Wrap="False" />
             </asp:CommandField>
-            <asp:CommandField DeleteText="Remove" ShowDeleteButton="True" />
         </Columns>
-        <FooterStyle BackColor="#CCCCCC" />
+        <FooterStyle BackColor="#CCCCCC" HorizontalAlign="Center" />
         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
         <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />

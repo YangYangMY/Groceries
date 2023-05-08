@@ -31,7 +31,7 @@
                 <asp:ListItem></asp:ListItem>
             </asp:DropDownList>
             <br />
-            <asp:Button ID="Button1" runat="server" CommandName="addtocart" Text="Add to cart" CommandArgument='<%# Eval("ProductID") %>'/>
+            <asp:Button ID="btnAddToCart" runat="server" CommandName="AddToCart" Text="Add to cart" CommandArgument='<%# Eval("ProductID") %>'/>
             <br />
         </ItemTemplate>
         <SelectedItemStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />

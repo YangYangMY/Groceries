@@ -24,6 +24,15 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.TextBox TextBoxName;
 
         /// <summary>
+        /// LabelErrorName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorName;
+
+        /// <summary>
         /// TextBoxEmail control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace Groceries.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
+
+        /// <summary>
+        /// LabelErrorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorEmail;
 
         /// <summary>
         /// TextBoxPass control.
@@ -42,13 +60,13 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.TextBox TextBoxPass;
 
         /// <summary>
-        /// TextBoxConfirmPass control.
+        /// LabelErrorPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxConfirmPass;
+        protected global::System.Web.UI.WebControls.Label LabelErrorPass;
 
         /// <summary>
         /// ButtonCreate control.

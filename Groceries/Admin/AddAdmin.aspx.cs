@@ -33,7 +33,7 @@ namespace Groceries.Admin
             //SQL Command for read data
             SqlCommand readCmd;
             SqlDataReader dataReader;
-            String readSql, readOutput = "";
+            String readSql;
             int idcount = 0;
 
             readSql = "Select AdminID from Admin";

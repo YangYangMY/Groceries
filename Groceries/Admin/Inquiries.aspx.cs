@@ -86,7 +86,6 @@ namespace Groceries.Admin
             else
             {
                 InquiryPic.Visible = true;
-                //Convert byte arry to base64string
                 String imageUrl = "/upload/"+ imageFileName;
                 InquiryPic.ImageUrl = imageUrl;
             }

@@ -18,6 +18,10 @@ namespace Groceries.Admin.Product
     public partial class AddProduct : System.Web.UI.Page
     {
         static String imageLink;
+        //Open and Link database
+        SqlConnection con;
+        string strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -32,8 +36,6 @@ namespace Groceries.Admin.Product
         private void getProductId()
         {
             //Open and Link database
-            SqlConnection con;
-            string strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
             con = new SqlConnection(strCon);
             con.Open();
 
@@ -81,9 +83,6 @@ namespace Groceries.Admin.Product
 
         protected void ButtonSubmit_Click1(object sender, EventArgs e)
         {
-            //Open and Link database
-            SqlConnection con;
-            string strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
             con = new SqlConnection(strCon);
             con.Open();
 
@@ -93,15 +92,13 @@ namespace Groceries.Admin.Product
             String insertSql = "";
 
             //Read Data input (IDK Right data type or not)
+            String id = LabelProductID.Text;
             String name = TextBoxProductName.Text;
             String category = TextBoxProductCategory.Text;
             String desc = TextBoxDescriptions.Text;
             int stock = Int32.Parse(TextBoxStock.Text);
             decimal price = decimal.Parse(TextBoxUnitPrice.Text);
-            var image = FileUploadProductImage;
-            String discontinue = "false";
 
-            Boolean imageSaved = false;
 
             //VALIDATION
             if (name.Length < 3)
@@ -140,15 +137,13 @@ namespace Groceries.Admin.Product
                                 LabelErrorPrice.Text = "";
                                if(uploadImage() == true)
                                 {
-                                    String query = "insert into Products(ProductName,Description,UnitPrice,UnitInStock) values " +
-                                        "(" + TextBoxProductName.Text + ",'" + TextBoxDescriptions.Text + "','" + TextBoxUnitPrice.Text + "','" + TextBoxStock.Text + "')";
-                                    String mycon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
-                                    SqlConnection con1 = new SqlConnection(mycon);
-                                    con1.Open();
-                                    SqlCommand cmd = new SqlCommand();
-                                    cmd.CommandText = query;
-                                    cmd.Connection = con1;
-                                    cmd.ExecuteNonQuery();
+                                    insertSql = "Insert into Products(ProductID,ProductName,Description,UnitPrice,UnitInStock) values(" + id + "','" + name + "','" + desc + "','" + price + "','" + stock + "')";
+
+                                    insertCmd = new SqlCommand(insertSql, con);
+                                    insertAdapter.InsertCommand = new SqlCommand(insertSql, con);
+                                    insertCmd.ExecuteNonQuery();
+                                    insertCmd.Dispose();
+                                    con.Close();
                                 }
                             }
                         }
@@ -156,8 +151,8 @@ namespace Groceries.Admin.Product
                         // INSERT data start from here
                         
                         
-                        PanelAddProduct.Visible = false;
-                        PanelAddSuccess.Visible = true;
+                       // PanelAddProduct.Visible = false;
+                        //PanelAddSuccess.Visible = true;
                     }
 
                 }

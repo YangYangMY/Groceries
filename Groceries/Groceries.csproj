@@ -103,7 +103,6 @@
     <Content Include="Admin\Orders.aspx" />
     <Content Include="Admin\ProductList.aspx" />
     <Content Include="Admin\Report.aspx" />
-    <Content Include="Admin\test.aspx" />
     <Content Include="App_Data\GoceriesDatabase.mdf" />
     <Content Include="App_Data\GoceriesDatabase_log.ldf">
       <DependentUpon>GoceriesDatabase.mdf</DependentUpon>
@@ -291,13 +290,6 @@
     </Compile>
     <Compile Include="Admin\Report.aspx.designer.cs">
       <DependentUpon>Report.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>

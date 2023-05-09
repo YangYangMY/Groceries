@@ -21,16 +21,11 @@
                             <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                             <asp:BoundField DataField="UnitPrice" HeaderText="UnitPrice" SortExpression="UnitPrice" />
                             <asp:BoundField DataField="UnitInStock" HeaderText="UnitInStock" SortExpression="UnitInStock" />
-                            <asp:CheckBoxField DataField="Discontinued" HeaderText="Discontinued" SortExpression="Discontinued" />
                             <asp:BoundField DataField="CategoryID" HeaderText="CategoryID" SortExpression="CategoryID" />
                         </Columns>
                     </asp:GridView>
                     <form class="space-y-4 md:space-y-6" action="#">
                         <div>
-                            <label for="TextBoxProductID" class="block mb-2 text-sm font-medium text-gray-900 ">
-                                Product ID
-                            </label>
-                            <asp:Label ID="LabelProductID" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>
                             <label for="TextBoxProductName" class="block mb-2 text-sm font-medium text-gray-900 ">
                                 Product Name
                             </label>

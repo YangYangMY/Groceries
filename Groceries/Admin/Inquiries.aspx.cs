@@ -91,7 +91,7 @@ namespace Groceries.Admin
                 InquiryPic.ImageUrl = imageUrl;
             }
 
-
+            ButtonSendEmail.HRef = "mailto:" + email;
 
             PanelViewInquiry.Visible = true;
         }

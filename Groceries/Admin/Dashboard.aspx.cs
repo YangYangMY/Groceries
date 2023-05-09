@@ -51,13 +51,16 @@ namespace Groceries
             readCmd.Dispose();
 
             //Read Profit
-            readSql = "Select OrderID from [Order]";
+            readSql = "SELECT TotalPrice FROM [Order]";
             readCmd = new SqlCommand(readSql, con);
             dataReader = readCmd.ExecuteReader();
+            double totalPrice = 0.00;
             while (dataReader.Read())
             {
-                profit += (double)dataReader.GetValue(3);
+                totalPrice = Convert.ToDouble(dataReader.GetValue(0));
+                profit += totalPrice;
             }
+            
             dataReader.Close();
             readCmd.Dispose();
 

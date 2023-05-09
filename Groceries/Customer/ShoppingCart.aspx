@@ -6,14 +6,12 @@
 
     <div>
     <div class="py-14 px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto bg-stone-50">
-    <div class="flex justify-start item-start space-y-2 flex-col">
-        <h1 class="text-3xl lg:text-4xl font-semibold leading-7 lg:leading-9 text-gray-800">Shopping Cart</h1>   
-    </div> 
-
-    <div class="flex justify-start item-start space-y-2 flex-col">
-       <asp:HyperLink ID="hyperCS" runat="server" NavigateUrl="~/Customer/Products.aspx">Continue Shopping</asp:HyperLink> 
+    <div class="flex justify-between w-full">
+         <h1 class="text-3xl lg:text-4xl font-semibold leading-7 lg:leading-9 text-gray-800">Shopping Cart</h1>
+         <asp:HyperLink ID="hyperCS" runat="server" NavigateUrl="~/Customer/Products.aspx" Font-Underline="True" ForeColor="Black">Continue Shopping</asp:HyperLink> 
     </div>
-       
+    
+
     <div class="grid grid-cols-4 gap-4 mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full">
               
         <div class="col-span-3 flex flex-col justify-start items-start rounded-lg bg-white shadow-lg border px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
@@ -38,7 +36,7 @@
             </asp:BoundField>
             <asp:TemplateField>
             <ItemTemplate>
-                <asp:Button ID="btnIncrement" runat="server" text="+" CommandName="Increment" CommandArgument='<%# Eval("ProductId") %>' />
+                <asp:Button ID="btnIncrement" runat="server" text="+" CommandName="Increment" CommandArgument='<%# Eval("ProductId") %>' AutoPostBack="True"/>
             </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
@@ -48,7 +46,7 @@
             </asp:BoundField>
             <asp:TemplateField>
             <ItemTemplate>
-                <asp:Button ID="btnDecrement" runat="server" text="-" CommandName="Decrement" CommandArgument='<%# Eval("ProductId") %>' />
+                <asp:Button ID="btnDecrement" runat="server" text="-" CommandName="Decrement" CommandArgument='<%# Eval("ProductId") %>' AutoPostBack="True"/>
             </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
@@ -68,7 +66,7 @@
                 
                 <div class="flex flex-col px-4 py-6 xl:p-6 w-full rounded-lg bg-white shadow-lg border space-y-6 max-h-80">
                     <h3 class="text-xl font-semibold leading-5 text-gray-800">Summary</h3>
-                    <div class="flex justify-center items-center w-full space-y-4 flex-col border-gray-200 border-b pb-4">
+                    <div class="flex justify-center items-center w-full space-y-4 flex-col border-gray-200 border-b">
                         <div class="flex justify-between w-full">
                             <p class="text-base leading-4 text-gray-800">Subtotal(RM)</p>
                             <asp:Label ID="lblSubtotal" runat="server" Text="0.00"></asp:Label>
@@ -77,6 +75,10 @@
                             <p class="text-base leading-4 text-gray-800">Shipping Fee(RM)</p>
                             <asp:Label ID="lblShipFee" runat="server" Text="0.00"></asp:Label>
                         </div>
+                        <div class="flex justify-between items-center w-full">
+                            <p class="text-base leading-4 text-gray-800">Sales Tax(RM)</p>
+                            <asp:Label ID="lblTax" runat="server" Text="0.00"></asp:Label>
+                        </div>
                     </div>
                     <div class="flex justify-between items-center w-full">
                         <p class="text-base font-semibold leading-4 text-gray-800">Total(RM)</p>
@@ -84,12 +86,12 @@
                     </div>
                     <div class="relative">
                          <div class="bottom-0">
-                             <asp:Button ID="btnCheckout" runat="server" Text="Checkout" class="mt-10 mb-2 block w-full max-w-xs mx-auto bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" PostBackUrl="~/Customer/Checkout.aspx" />
+                             <asp:Button ID="btnCheckout" runat="server" Text="Checkout" class="mt-2  mb-2 block w-full max-w-xs mx-auto bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" PostBackUrl="~/Customer/Checkout.aspx" />
                          </div>
                     </div>
             </div>
 </div>
 
 </div>
-    </div>
+</div>
 </asp:Content>

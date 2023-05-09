@@ -85,11 +85,7 @@ namespace Groceries.Customer
                         Session["buyitems"] = dt;
                         GridView1.FooterRow.Cells[5].Text = "Total(RM)";
                         GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
-                        lblSubtotal.Text = grandtotal().ToString();
-                        decimal grandTotal = grandtotal();
-                        decimal finaltotal = grandTotal + shippingFee;
-                        lblShipFee.Text = shippingFee.ToString();
-                        lbltotal.Text = finaltotal.ToString();
+                        Calculatefinaltotal();
                         Response.Redirect("ShoppingCart.aspx");
                     }
                     else
@@ -148,11 +144,7 @@ namespace Groceries.Customer
                             Session["buyitems"] = dt;
                             GridView1.FooterRow.Cells[5].Text = "Total(RM)";
                             GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
-                            lblSubtotal.Text = grandtotal().ToString();
-                            decimal grandTotal = grandtotal();
-                            decimal finaltotal = grandTotal + shippingFee;
-                            lblShipFee.Text = shippingFee.ToString();
-                            lbltotal.Text = finaltotal.ToString();
+                            Calculatefinaltotal();
                             Response.Redirect("ShoppingCart.aspx");
                         }
                     }
@@ -167,12 +159,8 @@ namespace Groceries.Customer
                     {
                         GridView1.FooterRow.Cells[5].Text = "Total(RM)";
                         GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
-                        lblSubtotal.Text = grandtotal().ToString();
-                        decimal grandTotal = grandtotal();
-                        decimal finaltotal = grandTotal + shippingFee;
-                        lblShipFee.Text = shippingFee.ToString();
-                        lbltotal.Text = finaltotal.ToString();
-                        
+                        Calculatefinaltotal();
+
                     }
                 }
             }
@@ -259,11 +247,7 @@ namespace Groceries.Customer
                     
                     Session["buyitems"] = dt;
                     GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
-                    lblSubtotal.Text = grandtotal().ToString();
-                    decimal grandTotal = grandtotal();
-                    decimal finaltotal = grandTotal + shippingFee;
-                    lblShipFee.Text = shippingFee.ToString();
-                    lbltotal.Text = finaltotal.ToString();
+                    Calculatefinaltotal();
 
 
             }
@@ -288,11 +272,7 @@ namespace Groceries.Customer
 
                     Session["buyitems"] = dt;
                     GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
-                    lblSubtotal.Text = grandtotal().ToString();
-                    decimal grandTotal = grandtotal();
-                    decimal finaltotal = grandTotal + shippingFee;
-                    lblShipFee.Text = shippingFee.ToString();
-                    lbltotal.Text = finaltotal.ToString();
+                    Calculatefinaltotal();   
 
 
                 if (quantity < 1)
@@ -306,19 +286,23 @@ namespace Groceries.Customer
            
           
         }
-        //private void CalculateTotalPrice()
-        //{
-        //    DataTable dt = new DataTable();
-        //    dt = (DataTable)Session["buyitems"];
+        private void Calculatefinaltotal()
+        {
 
-        //    double finaltotal = 0.0;
-        //    const double shipFee = 10.00;
+            decimal finaltotal = 0.00M;
 
-        //    double total = Convert.ToDouble(grandtotal());
-        //    finaltotal = total + shipFee;
+            decimal total = grandtotal();
+            decimal tax = total * 0.06M;
+            string taxFormatted = tax.ToString("0.00");
+            finaltotal = total + tax + shippingFee;
+            string finalTotalFormatted = finaltotal.ToString("0.00");
 
-        //    lbltotal.Text = string.Format("{0:C}", finaltotal); // set the Text property of the Label to display the total price in currency format
-        //}
+            lblSubtotal.Text = grandtotal().ToString();
+            lblShipFee.Text = shippingFee.ToString();
+            lblTax.Text = taxFormatted.ToString();
+            lbltotal.Text = finalTotalFormatted.ToString(); 
+        }
+
 
     }
 }

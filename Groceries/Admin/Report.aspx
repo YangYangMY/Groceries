@@ -12,13 +12,17 @@
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Monthly Report</h3>
 
                 <asp:DataList ID="DataList1" runat="server"></asp:DataList>
-                  <h1>HELLO</h1>
+                  <asp:Button ID="ButtonGenerateReport" runat="server" CssClass="text-gray-500 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " Text="Generate Report" OnClick="ButtonGenerateReport_Click"/>                
             </div>
         </div>
         <div class="flex flex-col mt-8">
             <div class="overflow-x-auto rounded-lg">
                 <div class="align-middle inline-block min-w-full">
                     <div class="shadow overflow-hidden sm:rounded-lg">
+                        <!-- Gridview was here -->
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+                        <asp:GridView ID="GridViewReport" runat="server"></asp:GridView>
+
                         <!-- Table was here -->
 <table class="min-w-full divide-y divide-gray-200">
                             <thead class="bg-gray-50">
@@ -190,7 +194,24 @@
         </div>
     </asp:Panel>
 
-
+            <!--Modal of Report Generated Successful-->
+    <asp:Panel ID="PanelAddSuccess" runat="server" Visible="False">
+        <div class="bg-black bg-opacity-50 md:bg-opacity-50 fixed top-0 left-0 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <div class="relative w-full h-full max-w-md md:h-auto mx-auto my-20">
+                <!--Pop Out-->
+                <div class="relative bg-white rounded-lg shadow ">
+                    <div class="p-6 text-center ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#059669] mx-auto h-11 rounded-full bg-[#D1FAE5] w-11" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-2xl font-medium">Report Generated Successfully</span>
+                        <p class="text-center">Press refresh to refresh the page.</p>
+                        <asp:Button ID="ButtonRefresh" runat="server" Text="Refresh" CssClass=" my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " OnClick="ButtonRefresh_Click"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
 
 </asp:Content>
 

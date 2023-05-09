@@ -113,7 +113,7 @@ namespace Groceries.Admin
             else
             {
                 InquiryPic.Visible = true;
-                String imageUrl = "/upload/"+ imageFileName;
+                String imageUrl = "/InquiryImageUpload/" + imageFileName;
                 InquiryPic.ImageUrl = imageUrl;
             }
 

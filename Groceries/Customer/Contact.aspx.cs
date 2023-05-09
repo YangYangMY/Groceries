@@ -30,7 +30,7 @@ namespace Groceries
             if (FileUploadProductImage.HasFile)
             {
                 string strname = FileUploadProductImage.FileName.ToString();
-                FileUploadProductImage.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
+                FileUploadProductImage.PostedFile.SaveAs(Server.MapPath("~/InquiryImageUpload/") + strname);
                 ImagefileName = strname;
             }
             else

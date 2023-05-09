@@ -105,7 +105,7 @@ namespace Groceries.Admin.Product
                                 else
                                 {
                                     string imgName = FileUploadProductImage.FileName.ToString();
-                                    FileUploadProductImage.PostedFile.SaveAs(Server.MapPath("~/upload/") + imgName);
+                                    FileUploadProductImage.PostedFile.SaveAs(Server.MapPath("~/ProductImageupload/") + imgName);
                                     imageFileName = imgName;
                                     submitPass = true;
                                 }

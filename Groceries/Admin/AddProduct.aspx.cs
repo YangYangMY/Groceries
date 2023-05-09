@@ -116,7 +116,7 @@ namespace Groceries.Admin.Product
                         if (submitPass)
                         {
                             //HVT PASS IMAGE NAME
-                            insertSql = "Insert into Products(ProductID,ProductName,Description,UnitPrice,UnitInStock,CategoryID) values (" + idcount + ",'" + name + "','" + desc + "','" + price + "','" + stock + "','" + category + "')";
+                            insertSql = "Insert into Products(ProductID,ProductName,Description,UnitPrice,UnitInStock,Media,CategoryID) values (" + idcount + ",'" + name + "','" + desc + "','" + price + "','" + stock + "','" + imageFileName + "','" + category + "')";
                             insertCmd = new SqlCommand(insertSql, con);
                             insertAdapter.InsertCommand = new SqlCommand(insertSql, con);
                             insertCmd.ExecuteNonQuery();
@@ -135,6 +135,18 @@ namespace Groceries.Admin.Product
             con.Close();
         }
 
-       
+        protected void ButtonReset_Click(object sender, EventArgs e)
+        {
+            TextBoxDescriptions.Text = string.Empty;
+            TextBoxStock.Text = string.Empty;
+            TextBoxUnitPrice.Text = string.Empty;
+            FileUploadProductImage = null;
+            TextBoxProductName.Text = string.Empty;
+            LabelErrorProductName.Text= string.Empty;
+            LabelErrorDescription.Text= string.Empty;
+            LabelErrorPrice.Text= string.Empty;
+            LabelErrorStock .Text= string.Empty;
+            LabelErrorUpload.Text= string.Empty;
+        }
     }
 }

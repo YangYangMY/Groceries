@@ -17,7 +17,7 @@
                 <div class="align-middle inline-block min-w-full">
                     <div class="shadow overflow-hidden sm:rounded-lg">
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Inquiry] ORDER BY [InquiryID]"></asp:SqlDataSource>
-                        <asp:GridView ID="GridViewInquiry" runat="server" AutoGenerateColumns="False" CssClass="table min-w-full divide-y divide-gray-200" DataKeyNames="InquiryID" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" PagerStyle-CssClass="text-cyan-500" OnSelectedIndexChanged="GridViewInquiry_SelectedIndexChanged">
+                        <asp:GridView ID="GridViewInquiry" runat="server" AutoGenerateColumns="False" CssClass=" min-w-full divide-y divide-gray-200" DataKeyNames="InquiryID" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" PagerStyle-CssClass="text-cyan-500" OnSelectedIndexChanged="GridViewInquiry_SelectedIndexChanged">
                             <Columns>
                                 <asp:BoundField DataField="InquiryID" HeaderText="InquiryID" ReadOnly="True" SortExpression="InquiryID" HeaderStyle-CssClass=" bg-gray-50 p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" ItemStyle-CssClass="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" >
                                 </asp:BoundField>
@@ -25,7 +25,7 @@
                                 </asp:BoundField>
                                 <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" HeaderStyle-CssClass="bg-gray-50 p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" ItemStyle-CssClass="p-4 whitespace-nowrap text-sm font-semibold" >
                                 </asp:BoundField>
-                                <asp:CommandField HeaderText="View" ShowSelectButton="True" HeaderStyle-CssClass="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" ItemStyle-CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:text-cyan-800 hover:underline rounded-lg px-2" />
+                                <asp:CommandField HeaderText="Actions" ShowSelectButton="True" HeaderStyle-CssClass="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" ItemStyle-CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:text-cyan-800 hover:underline rounded-lg px-2" />
                             </Columns>
                         </asp:GridView>
 

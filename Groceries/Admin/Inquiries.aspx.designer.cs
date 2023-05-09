@@ -24,13 +24,13 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
-        /// GridView1 control.
+        /// GridViewInquiry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView GridViewInquiry;
 
         /// <summary>
         /// PanelViewInquiry control.
@@ -96,13 +96,13 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.Image InquiryPic;
 
         /// <summary>
-        /// ButtonClose control.
+        /// ButtonOrderClose control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonClose;
+        protected global::System.Web.UI.WebControls.Button ButtonOrderClose;
 
         /// <summary>
         /// ButtonSendEmail control.
@@ -111,6 +111,6 @@ namespace Groceries.Admin
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonSendEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor ButtonSendEmail;
     }
 }

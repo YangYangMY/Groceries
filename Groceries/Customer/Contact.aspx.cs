@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -28,7 +29,10 @@ namespace Groceries
             byte[] Imagefile = null;
             if (FileUploadProductImage.HasFile)
             {
-                Imagefile = FileUploadProductImage.FileBytes;
+                using (BinaryReader br = new BinaryReader(FileUploadProductImage.PostedFile.InputStream))
+                {
+                    Imagefile = br.ReadBytes(FileUploadProductImage.PostedFile.ContentLength);
+                }
             }
             else
             {
@@ -93,6 +97,8 @@ namespace Groceries
                 insertCmd = new SqlCommand(insertSql, con);
                 insertAdapter.InsertCommand = new SqlCommand(insertSql, con);
                 insertCmd.ExecuteNonQuery();
+                insertCmd.Dispose();
+                con.Close();
                 PanelInquirySuccess.Visible = true;
             }
 

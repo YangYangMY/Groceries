@@ -17,7 +17,7 @@
                 <div class="align-middle inline-block min-w-full">
                     <div class="shadow overflow-hidden sm:rounded-lg">
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Inquiry] ORDER BY [InquiryID]"></asp:SqlDataSource>
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table min-w-full divide-y divide-gray-200" DataKeyNames="InquiryID" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" PagerStyle-CssClass="text-cyan-500">
+                        <asp:GridView ID="GridViewInquiry" runat="server" AutoGenerateColumns="False" CssClass="table min-w-full divide-y divide-gray-200" DataKeyNames="InquiryID" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" PagerStyle-CssClass="text-cyan-500" OnSelectedIndexChanged="GridViewInquiry_SelectedIndexChanged">
                             <Columns>
                                 <asp:BoundField DataField="InquiryID" HeaderText="InquiryID" ReadOnly="True" SortExpression="InquiryID" HeaderStyle-CssClass=" bg-gray-50 p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" ItemStyle-CssClass="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" >
                                 </asp:BoundField>
@@ -38,29 +38,29 @@
                 <div class="relative bg-white rounded-lg shadow w:full">
                     <br>
                     </br>
-                    <asp:Label ID="InquiryNum" runat="server" Text="Inquiry #1004" CssClass=" text-3xl font-bold text-black  px-6"></asp:Label>
+                    <asp:Label ID="InquiryNum" runat="server" Text="" CssClass=" text-3xl font-bold text-black  px-6"></asp:Label>
                     <br>
                     </br>
-                    <asp:Label ID="InquiryName" runat="server" Text="Tan Yong Yue" CssClass=" text-1xl font-bold text-black mx-6 mt-6"></asp:Label>
+                    <asp:Label ID="InquiryName" runat="server" Text="" CssClass=" text-1xl font-bold text-black mx-6 mt-6"></asp:Label>
                     <br>
                     </br>
-                    <asp:Label ID="InquiryEmail" runat="server" Text="YongYue123@gmail.com" CssClass=" text-1xl font-normal text-black px-6 "></asp:Label>
+                    <asp:Label ID="InquiryEmail" runat="server" Text="" CssClass=" text-1xl font-normal text-black px-6 "></asp:Label>
                     <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
-                    <asp:Label ID="InquiryDate" runat="server" Text="23 April, 2023" CssClass=" text-1xl font-normal text-gray-600 px-6"></asp:Label>
+                    <asp:Label ID="InquiryDate" runat="server" Text="" CssClass=" text-1xl font-normal text-gray-600 px-6"></asp:Label>
                     <br>
                     </br>
-                    <asp:Label ID="InquiryDesc" runat="server" Text="I don't want to use this website anymore! How can I delete my account!
-                        I want to 财务自由!" CssClass=" text-1xl font-normal text-black px-6 "></asp:Label>
-                    <asp:Image ID="InquiryPic" runat="server" CssClass="mx-4 object-cover w-full rounded-t-lg mx-6 mt-10 md:h-40 md:w-auto" ImageUrl="../images/yyphoto.png" />
+                    <asp:Label ID="InquiryDesc" runat="server" Text="" CssClass=" text-1xl font-normal text-black px-6 "></asp:Label>
+                    <asp:Image ID="InquiryPic" runat="server" CssClass="mx-4 object-cover w-full rounded-t-lg mx-6 mt-10 md:h-40 md:w-auto" ImageUrl="" />
                     <div class="p-6 text-center ">
                         <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
-                        <asp:Button ID="ButtonClose" runat="server" Text="Close" CssClass="text-gray-500 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " />    
-                        </br>
-                        <asp:Button ID="ButtonSendEmail" runat="server" Text="Send Email" CssClass="w-full text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"/>                    </div>
-                </div>
+                        <asp:Button ID="ButtonOrderClose" runat="server" CssClass="text-gray-500 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " Text="Close" OnClick="ButtonOrderClose_Click1"/>                
+                                            <a runat="server" id="ButtonSendEmail" href="mailto:weeyanlee1231@gmail.com?Subject=Refund" Class="w-full text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                Send Email
+                        </a>   
+                    </div>        
             </div>
         </div>
 
-    </asp:Panel>
+                        </asp:Panel>
 
 </asp:Content>

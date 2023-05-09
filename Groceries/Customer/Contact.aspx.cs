@@ -26,17 +26,16 @@ namespace Groceries
             String name = TextBoxUserName.Text;
             String email = TextBoxEmail.Text;
             String reason = TextBoxDescriptions.Text;
-            byte[] Imagefile = null;
+            String ImagefileName = null;
             if (FileUploadProductImage.HasFile)
             {
-                using (BinaryReader br = new BinaryReader(FileUploadProductImage.PostedFile.InputStream))
-                {
-                    Imagefile = br.ReadBytes(FileUploadProductImage.PostedFile.ContentLength);
-                }
+                string strname = FileUploadProductImage.FileName.ToString();
+                FileUploadProductImage.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
+                ImagefileName = strname;
             }
             else
             {
-                Imagefile = null;
+                ImagefileName = null;
             }
             bool submitpass = false;
 
@@ -93,7 +92,7 @@ namespace Groceries
 
             if (submitpass)
             {
-                insertSql = "Insert into Inquiry(InquiryID, InquiryDate,Name, Email, Reasons, Media) values(" + idcount + ",'" + formattedDate + "','" + name + "','" + email + "','" + reason + "','" + Imagefile +"')";
+                insertSql = "Insert into Inquiry(InquiryID, InquiryDate,Name, Email, Reasons, Media) values(" + idcount + ",'" + formattedDate + "','" + name + "','" + email + "','" + reason + "','" + ImagefileName + "')";
                 insertCmd = new SqlCommand(insertSql, con);
                 insertAdapter.InsertCommand = new SqlCommand(insertSql, con);
                 insertCmd.ExecuteNonQuery();

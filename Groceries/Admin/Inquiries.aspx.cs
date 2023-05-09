@@ -46,7 +46,7 @@ namespace Groceries.Admin
             String name = null;
             String email = null ;
             String reason = null;
-            byte[] media = null ;
+            String imageFileName = null ;
 
             readSql = "Select * from Inquiry";
 
@@ -60,7 +60,7 @@ namespace Groceries.Admin
                     name = dataReader.GetValue(2).ToString();
                     email = dataReader.GetValue(3).ToString();
                     reason = dataReader.GetValue(4).ToString();
-                    media = (byte[])dataReader.GetValue(5);
+                    imageFileName = dataReader.GetValue(5).ToString();
                     break;
                 }
                 else{
@@ -79,7 +79,7 @@ namespace Groceries.Admin
             InquiryEmail.Text = email;
             InquiryDesc.Text = reason;
 
-            if(media.ToString() == "0x")
+            if(imageFileName == null)
             {
                 InquiryPic.Visible = false;
             }
@@ -87,7 +87,7 @@ namespace Groceries.Admin
             {
                 InquiryPic.Visible = true;
                 //Convert byte arry to base64string
-                String imageUrl = "data:image/png;base64," + Convert.ToBase64String((byte[])media);
+                String imageUrl = "/upload/"+ imageFileName;
                 InquiryPic.ImageUrl = imageUrl;
             }
 

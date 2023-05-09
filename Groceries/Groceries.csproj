@@ -80,6 +80,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -228,7 +229,6 @@
     <Content Include="images\user.png" />
     <Content Include="images\yellow-rec.png" />
     <Content Include="images\yoghurt.png" />
-    <Content Include="images\yyphoto.png" />
     <Content Include="obj\Debug\Groceries.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Groceries.dll" />
     <Content Include="obj\Debug\Groceries.pdb" />
@@ -516,6 +516,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="upload\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

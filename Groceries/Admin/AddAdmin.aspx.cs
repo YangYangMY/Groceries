@@ -33,15 +33,23 @@ namespace Groceries.Admin
             //SQL Command for read data
             SqlCommand readCmd;
             SqlDataReader dataReader;
-            String readSql, readOutput = "";
+            String readSql;
             int idcount = 0;
 
-            readSql = "Select AdminID from Admin";
+            //Check if Email Existed
+                //Customer email Check
+            SqlCommand check_CustomerEmail = new SqlCommand("SELECT COUNT(*) FROM Customers WHERE ([EmailAddress] = @EmailAddress)", con);
+            check_CustomerEmail.Parameters.AddWithValue("@EmailAddress", TextBoxEmail.Text);
+            int CustomerEmailExist = (int)check_CustomerEmail.ExecuteScalar();
+                //Admin email Check
+            SqlCommand check_AdminEmail = new SqlCommand("SELECT COUNT(*) FROM Admin WHERE ([EmailAddress] = @EmailAddress)", con);
+            check_AdminEmail.Parameters.AddWithValue("@EmailAddress", TextBoxEmail.Text);
+            int AdminEmailExist = (int)check_AdminEmail.ExecuteScalar();
 
+
+
+            readSql = "Select AdminID from Admin";
             readCmd = new SqlCommand(readSql, con);
-            SqlCommand check_Email = new SqlCommand("SELECT COUNT(*) FROM Admin WHERE ([EmailAddress] = @EmailAddress)", con);
-            check_Email.Parameters.AddWithValue("@EmailAddress", TextBoxEmail.Text);
-            int EmailExist = (int)check_Email.ExecuteScalar();
             dataReader = readCmd.ExecuteReader();
             while (dataReader.Read())
             { 
@@ -55,7 +63,7 @@ namespace Groceries.Admin
             String email = TextBoxEmail.Text;
             String pass = TextBoxPass.Text;
 
-            if (EmailExist > 0)
+            if (CustomerEmailExist > 0 || AdminEmailExist > 0)
             {
                 LabelErrorEmail.Text = "Duplicated Email Found!";
             }

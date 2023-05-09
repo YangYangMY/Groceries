@@ -177,7 +177,6 @@
     <Content Include="Customer\ResetPassword.aspx" />
     <Content Include="Customer\ShoppingCart.aspx" />
     <Content Include="Customer\Snacks.aspx" />
-    <Content Include="Customer\test.aspx" />
     <Content Include="Customer\Vegetables.aspx" />
     <Content Include="favicon_io\android-chrome-192x192.png" />
     <Content Include="favicon_io\android-chrome-512x512.png" />
@@ -446,13 +445,6 @@
     </Compile>
     <Compile Include="Customer\Snacks.aspx.designer.cs">
       <DependentUpon>Snacks.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Vegetables.aspx.cs">
       <DependentUpon>Vegetables.aspx</DependentUpon>

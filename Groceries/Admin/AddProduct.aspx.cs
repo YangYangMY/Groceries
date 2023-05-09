@@ -28,7 +28,7 @@ namespace Groceries.Admin.Product
 
             //Reading Data input
             String name = TextBoxProductName.Text;
-            String category = TextBoxProductCategory.Text;
+            String category = ddlProductCategory.SelectedValue;
             String desc = TextBoxDescriptions.Text;
             String imageFileName = null;
             int stock = Int32.Parse(TextBoxStock.Text);
@@ -73,15 +73,7 @@ namespace Groceries.Admin.Product
             else
             {
                 LabelErrorProductName.Text = "";
-                if (category.Length < 2)
-                {
-                    //NEED TO CHANGE TO DROPDOWNLIST
-                    LabelErrorProductCategory.Text = "Product category should be at least 2 chracters";
-                    submitPass = false;
-                }
-                else
-                {
-                    LabelErrorProductCategory.Text = "";
+                
                     if(desc.Length < 5)
                     {
                         LabelErrorDescription.Text = "Description is too short";
@@ -123,8 +115,8 @@ namespace Groceries.Admin.Product
 
                         if (submitPass)
                         {
-                            //HVT PASS IMAGE NAME AND CATEGORYID
-                            insertSql = "Insert into Products(ProductID,ProductName,Description,UnitPrice, UnitInStock) values (" + idcount + ",'" + name + "','" + desc + "','" + price + "','" + stock + "')";
+                            //HVT PASS IMAGE NAME
+                            insertSql = "Insert into Products(ProductID,ProductName,Description,UnitPrice,UnitInStock,CategoryID) values (" + idcount + ",'" + name + "','" + desc + "','" + price + "','" + stock + "','" + category + "')";
                             insertCmd = new SqlCommand(insertSql, con);
                             insertAdapter.InsertCommand = new SqlCommand(insertSql, con);
                             insertCmd.ExecuteNonQuery();
@@ -134,8 +126,6 @@ namespace Groceries.Admin.Product
                             PanelAddProduct.Visible = false;
                             PanelAddSuccess.Visible = true;
                         }
-
-                    }
 
                 }
             }

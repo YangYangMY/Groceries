@@ -34,10 +34,10 @@
                         </div>
                         <div>
                             <label for="TextBoxProductCategory" class="block mb-2 text-sm font-medium text-gray-900 ">
-                                Product Category
+                                Product Category<br />
                             </label>
-                            <asp:TextBox ID="TextBoxProductCategory" placeholder="Magee" runat="server" required="" CssClass="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"></asp:TextBox>
-                            <asp:Label ID="LabelErrorProductCategory" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>   
+                            <asp:DropDownList ID="ddlProductCategory" runat="server" DataSourceID="SqlDataSource2" DataTextField="CategoryName" DataValueField="CategoryID"></asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>  
                             </div>
                         <div>
                             <label for="TextBoxDescriptions" class="block mb-2 text-sm font-medium text-gray-900 ">

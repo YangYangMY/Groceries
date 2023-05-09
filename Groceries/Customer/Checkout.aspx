@@ -8,63 +8,59 @@
     <div class="flex justify-start item-start space-y-2 flex-col">
         <h1 class="pb-4 text-2xl lg:text-3xl font-semibold leading-7 lg:leading-9 text-gray-800">Shipping Address</h1>
     </div> 
-    
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 ">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
-            <tr>
-                <th scope="col" class="px-6 py-3">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Name
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Contact Number
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Address
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-white border-b ">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    <asp:RadioButton ID="RadioButton1" runat="server" AutoPostBack="True" />
-                </th>
-                <td class="px-6 py-4">
-                    Chia Chia
-                </td>
-                <td class="px-6 py-4">
-                    018-8888888
-                </td>
-                <td class="px-6 py-4">
-                    B-8-8, PV9 Residences, Taman Melati, Setapak, 54400, Kuala Lumpur.
-                </td>
-            </tr>
-            <tr class="bg-white border-b ">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                    <asp:RadioButton ID="RadioButton2" runat="server" />
-                </th>
 
-                <td class="px-6 py-4">
-                    Gamen
-                </td>
-                <td class="px-6 py-4">
-                    019-9999999
-                </td>
-                <td class="px-6 py-4">
-                    B-9-9, PV9 Residences, Taman Melati, Setapak, 54400, Kuala Lumpur.
-                </td>
-            </tr> 
-        </tbody>
-    </table>
+    <asp:SqlDataSource ID="AddressDataSource" runat="server" ConnectionString="<%$ConnectionStrings:ConnectionString%>"
+    SelectCommand="SELECT * FROM Address WHERE CustomerID = @CustomerID">
+    <SelectParameters>
+        <asp:Parameter Name="CustomerID" Type="Int32" DefaultValue="1" />
+    </SelectParameters>
+    </asp:SqlDataSource>
+
+    <asp:GridView ID="AddressGridView" runat="server" DataSourceID="AddressDataSource" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HorizontalAlign="Center" OnSelectedIndexChanged="AddressGridView_SelectedIndexChanged">
+    <Columns>
+        <asp:CommandField />
+        <asp:BoundField DataField="SavedName" HeaderText="Name" >
+        <HeaderStyle HorizontalAlign="Center" />
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
+        <asp:BoundField DataField="SavedContact" HeaderText="Contact" >
+        <HeaderStyle HorizontalAlign="Center" />
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
+        <asp:BoundField DataField="Street" HeaderText="Street" >
+        <HeaderStyle HorizontalAlign="Center" />
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
+        <asp:BoundField DataField="State" HeaderText="State" >
+        <HeaderStyle HorizontalAlign="Center" />
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
+        <asp:BoundField DataField="PostCode" HeaderText="Postal Code" >
+        <HeaderStyle HorizontalAlign="Center" />
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
+        <asp:BoundField DataField="City" HeaderText="City" >
+        <HeaderStyle HorizontalAlign="Center" />
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:BoundField>
+        <asp:CommandField ShowSelectButton="True">
+        <ItemStyle HorizontalAlign="Center" />
+        </asp:CommandField>
+    </Columns>
+        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+        <SortedAscendingCellStyle BackColor="#F7F7F7" />
+        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+        <SortedDescendingCellStyle BackColor="#E5E5E5" />
+        <SortedDescendingHeaderStyle BackColor="#242121" />
+</asp:GridView>
 </div>
 
     <!-- Modal toggle -->
     <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="block ml-auto mt-6 px-5 py-2.5 bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" type="button">
-    Add New Address
-    </button>
+    Add New Address</button>
 
 </div>  
     
@@ -112,50 +108,53 @@
     
       <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
         <div class="sm:col-span-3">
-          <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Your Name</label>
+          <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Your Name</label>
           <div class="mt-2">
-            <input type="text" name="first-name" id="first-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              <asp:TextBox ID="txtName" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></asp:TextBox>  
+              
           </div>
         </div>
 
         <div class="sm:col-span-3">
-          <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Contact Number</label>
+          <label for="contact" class="block text-sm font-medium leading-6 text-gray-900">Contact Number</label>
           <div class="mt-2">
-            <input type="text" name="last-name" id="last-name"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              <asp:TextBox ID="txtContact" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></asp:TextBox>
           </div>
         </div>
 
         <div class="sm:col-span-3">
-          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Street Address</label>
+          <label for="street" class="block text-sm font-medium leading-6 text-gray-900">Street Address</label>
           <div class="mt-2">
-            <input id="email" name="street" type="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <asp:TextBox ID="txtStreet" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></asp:TextBox>
           </div>
         </div>
 
         <div class="sm:col-span-3">
-          <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">State</label>
+          <label for="state" class="block text-sm font-medium leading-6 text-gray-900">State</label>
           <div class="mt-2">
-            <input type="text" name="first-name" id="state" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <asp:TextBox ID="txtState" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></asp:TextBox>
           </div>
         </div>
 
         <div class="sm:col-span-3">
-          <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">City</label>
+          <label for="postalcode" class="block text-sm font-medium leading-6 text-gray-900">Postal Code</label>
           <div class="mt-2">
-            <input type="text" name="last-name" id="city"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              <asp:TextBox ID="txtPostalCode" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></asp:TextBox>
           </div>
         </div>
 
-         <div class="sm:col-span-3">
-          <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Postal Code</label>
+        <div class="sm:col-span-3">
+          <label for="city" class="block text-sm font-medium leading-6 text-gray-900">City</label>
           <div class="mt-2">
-            <input type="text" name="last-name" id="postalcode"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <asp:TextBox ID="txtCity" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></asp:TextBox>
           </div>
         </div>
+
+         
 
       </div>
             <div>
-                <asp:Button ID="btnCheckout" runat="server" Text="Save" class="mt-10 mb-2 block ml-auto px-8 py-2.5 bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" PostBackUrl="~/Customer/Checkout.aspx" />
+                <asp:Button ID="btnCheckout" runat="server" Text="Save" class="mt-10 mb-2 block ml-auto px-8 py-2.5 bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" PostBackUrl="~/Customer/Checkout.aspx" OnClick="btnCheckout_Click" />
             </div>
                 
                 

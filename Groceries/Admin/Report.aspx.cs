@@ -74,7 +74,7 @@ namespace Groceries.Admin
 
             if (generatepass)
             {
-                insertSql = "Insert into Report(ReportID, DateGenerated,Month, Year, TotalProfit, TotalOrder, TopProductID) values(" + idcount + ",'" + formattedDate + "','" + Month + "','" + Year + "','" + totalProfit + "','" + totalOrder + "','" + null + "')";
+                insertSql = "Insert into Report(ReportID, DateGenerated,Month, Year, TotalProfit, TotalOrder) values(" + idcount + ",'" + formattedDate + "','" + Month + "','" + Year + "','" + totalProfit + "','" + totalOrder + "')";
                 insertCmd = new SqlCommand(insertSql, con);
                 insertAdapter.InsertCommand = new SqlCommand(insertSql, con);
                 insertCmd.ExecuteNonQuery();

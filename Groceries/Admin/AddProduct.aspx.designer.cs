@@ -24,33 +24,6 @@ namespace Groceries.Admin.Product
         protected global::System.Web.UI.WebControls.Panel PanelAddProduct;
 
         /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-
-        /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
-        /// LabelProductID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelProductID;
-
-        /// <summary>
         /// TextBoxProductName control.
         /// </summary>
         /// <remarks>
@@ -69,22 +42,22 @@ namespace Groceries.Admin.Product
         protected global::System.Web.UI.WebControls.Label LabelErrorProductName;
 
         /// <summary>
-        /// TextBoxProductCategory control.
+        /// ddlProductCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxProductCategory;
+        protected global::System.Web.UI.WebControls.DropDownList ddlProductCategory;
 
         /// <summary>
-        /// LabelErrorProductCategory control.
+        /// SqlDataSource2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelErrorProductCategory;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
 
         /// <summary>
         /// TextBoxDescriptions control.

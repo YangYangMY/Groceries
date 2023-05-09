@@ -515,8 +515,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="InquiryImageUpload\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="upload\" />
+    <Folder Include="ProductImageupload\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

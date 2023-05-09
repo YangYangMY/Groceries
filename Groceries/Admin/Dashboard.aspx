@@ -12,7 +12,7 @@
             </div>
             <div>
                 <span class="block text-1xl font-bold text-[#4B49AC]">Total Profit</span>
-                <span class="block text-2xl text-black font-bold">RM 5,000.20</span>
+                <asp:Label ID="LabelProfit" runat="server" Text="RM 5,000.20" CssClass="block text-2xl text-black font-bold"></asp:Label>
             </div>
         </div>
         <div class="flex items-center p-8 bg-white shadow rounded-lg shadow-xl border-solid border-2">
@@ -21,7 +21,7 @@
             </div>
             <div>
                 <span class="block text-1xl font-bold text-[#4B49AC]">Total Orders</span>
-                <span class="block text-2xl text-black font-bold">400</span>
+                <asp:Label ID="LabelOrders" runat="server" Text="400" CssClass="block text-2xl text-black font-bold"></asp:Label>
             </div>
         </div>
         <div class="flex items-center p-8 bg-white shadow rounded-lg shadow-xl border-solid border-2">
@@ -30,7 +30,7 @@
             </div>
             <div>
                 <span class="block text-1xl font-bold text-[#4B49AC]">Total Products</span>
-                <span class="block text-2xl text-black font-bold">40</span>
+                <asp:Label ID="LabelProduct" runat="server" Text="40" CssClass="block text-2xl text-black font-bold"></asp:Label>
             </div>
         </div>
     </div>
@@ -38,159 +38,7 @@
     <!--end -->
 
 
-    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 my-10 ">
-        <!--Line Chart-->
-        <!-- Component Start -->
-        <div class="flex flex-col items-center w-auto max-w-screen-md p-6 pb-6 bg-white rounded-lg shadow-xl sm:p-8 col-span-2  border-solid border-2">
-            <h2 class="text-xl font-bold">Monthly Revenue</h2>
-            <span class="text-sm font-semibold text-gray-500">2022 - 2023</span>
-            <div class="flex items-end flex-grow w-full mt-2 space-x-2 sm:space-x-3">
-                <div class="relative flex flex-col items-center flex-grow pb-5 group">
-                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$37,500</span>
-                    <div class="relative flex justify-center w-full h-8 bg-indigo-200"></div>
-                    <div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
-                    <div class="relative flex justify-center w-full h-16 bg-indigo-400"></div>
-                    <span class="absolute bottom-0 text-xs font-bold">Mar</span>
-                </div>
-                <div class="relative flex flex-col items-center flex-grow pb-5 group">
-                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$45,000</span>
-                    <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
-                    <div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
-                    <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
-                    <span class="absolute bottom-0 text-xs font-bold">Apr</span>
-                </div>
-                <div class="relative flex flex-col items-center flex-grow pb-5 group">
-                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
-                    <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
-                    <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
-                    <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
-                    <span class="absolute bottom-0 text-xs font-bold">May</span>
-                </div>
-                <div class="relative flex flex-col items-center flex-grow pb-5 group">
-                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$50,000</span>
-                    <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
-                    <div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
-                    <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
-                    <span class="absolute bottom-0 text-xs font-bold">Jun</span>
-                </div>
-                <div class="relative flex flex-col items-center flex-grow pb-5 group">
-                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
-                    <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
-                    <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
-                    <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
-                    <span class="absolute bottom-0 text-xs font-bold">Jul</span>
-                </div>
-                <div class="relative flex flex-col items-center flex-grow pb-5 group">
-                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$55,000</span>
-                    <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
-                    <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
-                    <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
-                    <span class="absolute bottom-0 text-xs font-bold">Aug</span>
-                </div>
-                <div class="relative flex flex-col items-center flex-grow pb-5 group">
-                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$60,000</span>
-                    <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
-                    <div class="relative flex justify-center w-full h-16 bg-indigo-300"></div>
-                    <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
-                    <span class="absolute bottom-0 text-xs font-bold">Sept</span>
-                </div>
-                <div class="relative flex flex-col items-center flex-grow pb-5 group">
-                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$57,500</span>
-                    <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
-                    <div class="relative flex justify-center w-full h-10 bg-indigo-300"></div>
-                    <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
-                    <span class="absolute bottom-0 text-xs font-bold">Oct</span>
-                </div>
-                <div class="relative flex flex-col items-center flex-grow pb-5 group">
-                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$67,500</span>
-                    <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
-                    <div class="relative flex justify-center w-full h-10 bg-indigo-300"></div>
-                    <div class="relative flex justify-center w-full h-32 bg-indigo-400"></div>
-                    <span class="absolute bottom-0 text-xs font-bold">Nov</span>
-                </div>
-                <div class="relative flex flex-col items-center flex-grow pb-5 group">
-                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$65,000</span>
-                    <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
-                    <div class="relative flex justify-center w-full h-12 bg-indigo-300"></div>
-                    <div class="relative flex justify-center w-full bg-indigo-400 h-28"></div>
-                    <span class="absolute bottom-0 text-xs font-bold">Dec</span>
-                </div>
-                <div class="relative flex flex-col items-center flex-grow pb-5 group">
-                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$70,000</span>
-                    <div class="relative flex justify-center w-full h-8 bg-indigo-200"></div>
-                    <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
-                    <div class="relative flex justify-center w-full h-40 bg-indigo-400"></div>
-                    <span class="absolute bottom-0 text-xs font-bold">Jan</span>
-                </div>
-                <div class="relative flex flex-col items-center flex-grow pb-5 group">
-                    <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$75,000</span>
-                    <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
-                    <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
-                    <div class="relative flex justify-center w-full h-40 bg-indigo-400"></div>
-                    <span class="absolute bottom-0 text-xs font-bold">Feb</span>
-                </div>
-            </div>
-            <div class="flex w-full mt-3">
-                <div class="flex items-center ml-auto">
-                    <span class="block w-4 h-4 bg-indigo-400"></span>
-                    <span class="ml-1 text-xs font-medium">Existing</span>
-                </div>
-                <div class="flex items-center ml-4">
-                    <span class="block w-4 h-4 bg-indigo-300"></span>
-                    <span class="ml-1 text-xs font-medium">Upgrades</span>
-                </div>
-                <div class="flex items-center ml-4">
-                    <span class="block w-4 h-4 bg-indigo-200"></span>
-                    <span class="ml-1 text-xs font-medium">New</span>
-                </div>
-            </div>
-        </div>
-        <!-- Component End  -->
-
-
-        <!--Doughnut Chart-->
-        <div class="overflow-hidden rounded-lg shadow-lg border-solid border-2">
-            <div
-                class="text-xl font-bold py-5 px-5 bg-white text-black text-center">
-                Product Trends
-            </div>
-            <canvas class="p-10" id="chartDoughnut"></canvas>
-        </div>
-
-        <!-- Required chart.js -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-        <!-- Chart doughnut -->
-        <script>
-            const dataDoughnut = {
-                labels: ["Bread", "Sushi", "Drinks"],
-                datasets: [
-                    {
-                        label: "My First Dataset",
-                        data: [300, 50, 100],
-                        backgroundColor: [
-                            "rgb(100,200,1)",
-                            "#F6BD60",
-                            "rgb(1, 5, 51)",
-                        ],
-                        hoverOffset: 4,
-                    },
-                ],
-            };
-
-            const configDoughnut = {
-                type: "doughnut",
-                data: dataDoughnut,
-                options: {},
-            };
-
-            var chartBar = new Chart(
-                document.getElementById("chartDoughnut"),
-                configDoughnut
-            );
-        </script>
-    </div>
-
+        
 
 
     <!--Latest Orders-->
@@ -207,71 +55,16 @@
                 <div class="overflow-x-auto rounded-lg">
                     <div class="align-middle inline-block min-w-full">
                         <div class="shadow overflow-hidden sm:rounded-lg">
-                            <table class="min-w-full divide-y divide-gray-200">
-                                <thead class="bg-gray-50">
-                                    <tr>
-                                        <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Order ID
-                                        </th>
-                                        <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Buyer
-                                        </th>
-                                        <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date
-                                        </th>
-                                        <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody class="bg-white">
-                                    <tr>
-                                        <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1005 
-                                        </td>
-                                        <td class=" p-4 whitespace-nowrap text-sm font-semibold">Bonnie Green
-                                        </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-500">Apr 23 ,2021
-                                        </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">RM 1300
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900 rounded-lg rounded-left">1004
-                                        </td>
-                                        <td class=" p-4 whitespace-nowrap text-sm font-semibold">Yong Yue
-                                        </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-500">Apr 23 ,2021
-                                        </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">RM 500
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1003
-                                        </td>
-                                        <td class=" p-4 whitespace-nowrap text-sm font-semibold">Ga Men
-                                        </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-500">Apr 18 ,2021
-                                        </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">RM 434
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900 rounded-lg rounded-left">1002
-                                        </td>
-                                        <td class=" p-4 whitespace-nowrap text-sm font-semibold">Chia Chia
-                                        </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-500">Apr 15 ,2021
-                                        </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">RM 450
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1001
-                                        </td>
-                                        <td class=" p-4 whitespace-nowrap text-sm font-semibold">Wee Yan
-                                        </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-500">Apr 15 ,2021
-                                        </td>
-                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">RM 200
-                                        </td>
-                                    </tr>
-                            </table>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Order].OrderID, [Order].OrderDate, [Order].TotalPrice, Customers.CustomerName FROM [Order] INNER JOIN Customers ON [Order].CustomerID = Customers.CustomerID ORDER BY [Order].OrderID DESC"></asp:SqlDataSource>
+                            <asp:GridView ID="GridViewOrder" runat="server" AutoGenerateColumns="False" DataKeyNames="OrderID" DataSourceID="SqlDataSource1" PageSize="5" CssClass=" min-w-full divide-y divide-gray-200">
+                                <Columns>
+                                    <asp:BoundField DataField="OrderID" HeaderText="Order ID" InsertVisible="False" ReadOnly="True" SortExpression="OrderID" HeaderStyle-CssClass="text-left text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
+                                    <asp:BoundField DataField="CustomerName" HeaderText="Buyer" SortExpression="CustomerName" HeaderStyle-CssClass="text-left text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
+                                    <asp:BoundField DataField="OrderDate" HeaderText="Date" SortExpression="OrderDate" HeaderStyle-CssClass="text-left text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
+                                    <asp:BoundField DataField="TotalPrice" HeaderText="Amount" SortExpression="TotalPrice" HeaderStyle-CssClass="text-left text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
+                                </Columns>
+                            </asp:GridView>
+                            <asp:Label ID="LabelErrorOrder" runat="server" Text="Order is Empty" CssClass="flex justify-center p-4 whitespace-nowrap text-sm font-semibold" Visible="False"></asp:Label>
                         </div>
                     </div>
                 </div>

@@ -46,11 +46,11 @@
                     </br>
                     <asp:Label ID="InquiryEmail" runat="server" Text="" CssClass=" text-1xl font-normal text-black px-6 "></asp:Label>
                     <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
-                    <asp:Label ID="InquiryDate" runat="server" Text="" CssClass=" text-1xl font-normal text-gray-600 px-6"></asp:Label>
+                    <asp:Label ID="InquiryDate" runat="server" Text="" CssClass="end-0 text-1xl font-normal text-gray-600 px-6"></asp:Label>
                     <br>
                     </br>
-                    <asp:Label ID="InquiryDesc" runat="server" Text="" CssClass=" text-1xl font-normal text-black px-6 "></asp:Label>
-                    <asp:Image ID="InquiryPic" runat="server" CssClass="mx-4 object-cover w-full rounded-t-lg mx-6 mt-10 md:h-40 md:w-auto" ImageUrl="" />
+                    <asp:Label ID="InquiryDesc" runat="server" Text="" CssClass=" flex justify-center text-1xl font-normal text-black px-6 "></asp:Label>
+                    <asp:Image ID="InquiryPic" runat="server" CssClass="mx-auto object-cover w-full rounded-t-lg mx-6 mt-10 md:h-40 md:w-auto" ImageUrl="" />
                     <div class="p-6 text-center ">
                         <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
                         <asp:Button ID="ButtonOrderClose" runat="server" CssClass="text-gray-500 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " Text="Close" OnClick="ButtonOrderClose_Click1"/>                

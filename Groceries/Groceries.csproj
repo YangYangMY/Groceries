@@ -228,7 +228,6 @@
     <Content Include="images\user.png" />
     <Content Include="images\yellow-rec.png" />
     <Content Include="images\yoghurt.png" />
-    <Content Include="images\yyphoto.png" />
     <Content Include="obj\Debug\Groceries.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Groceries.dll" />
     <Content Include="obj\Debug\Groceries.pdb" />

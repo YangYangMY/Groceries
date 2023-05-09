@@ -79,7 +79,7 @@ namespace Groceries.Admin
             InquiryEmail.Text = email;
             InquiryDesc.Text = reason;
 
-            if(imageFileName == null)
+            if(imageFileName == "")
             {
                 InquiryPic.Visible = false;
             }

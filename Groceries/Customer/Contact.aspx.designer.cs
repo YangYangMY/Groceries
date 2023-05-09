@@ -24,22 +24,40 @@ namespace Groceries
         protected global::System.Web.UI.WebControls.Panel PanelContactUs;
 
         /// <summary>
-        /// TextBoxProductName control.
+        /// TextBoxUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxProductName;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxUserName;
 
         /// <summary>
-        /// TextBoxProductCategory control.
+        /// LabelErrorUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxProductCategory;
+        protected global::System.Web.UI.WebControls.Label LabelErrorUserName;
+
+        /// <summary>
+        /// TextBoxEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
+
+        /// <summary>
+        /// LabelErrorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorEmail;
 
         /// <summary>
         /// TextBoxDescriptions control.
@@ -51,6 +69,15 @@ namespace Groceries
         protected global::System.Web.UI.WebControls.TextBox TextBoxDescriptions;
 
         /// <summary>
+        /// LabelErrorDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorDescription;
+
+        /// <summary>
         /// FileUploadProductImage control.
         /// </summary>
         /// <remarks>
@@ -58,6 +85,15 @@ namespace Groceries
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUploadProductImage;
+
+        /// <summary>
+        /// LabelErrorFileUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorFileUpload;
 
         /// <summary>
         /// ButtonSubmit control.

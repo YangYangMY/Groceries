@@ -230,7 +230,6 @@
     <Content Include="images\user.png" />
     <Content Include="images\yellow-rec.png" />
     <Content Include="images\yoghurt.png" />
-    <Content Include="images\yyphoto.png" />
     <Content Include="obj\Debug\Groceries.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Groceries.dll" />
     <Content Include="obj\Debug\Groceries.pdb" />
@@ -532,6 +531,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="upload\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

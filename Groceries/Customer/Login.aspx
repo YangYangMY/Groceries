@@ -41,7 +41,7 @@
                       <asp:Label class="block mb-2 text-sm font-medium text-blue-700 dark:text-blue-500" ID="lblPassword" runat="server" Text="Password"></asp:Label>
                       <div class="relative w-full">
                           <asp:TextBox ID="TextBox1" runat="server" class="hidden js-password-toggle" placeholder="·········"></asp:TextBox>
-                          <asp:TextBox ID="TextBox3" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono js-password" placeholder="**********" autocomplete="off"></asp:TextBox>
+                          <asp:TextBox ID="txtPass" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono js-password" placeholder="**********" autocomplete="off"></asp:TextBox>
                       </div>
                       <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource> <br />
                       <asp:Label ID="lblDisplayError" runat="server"></asp:Label><br /> 
@@ -60,7 +60,7 @@
             </div>
                   <div class="text-center lg:text-left">
                       <div class="px-20 ml-20"> 
-                          <asp:Button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-10 border-b-4 border-blue-700 hover:border-blue-500 rounded" ID="btnLogin" runat="server" Text="Log in" PostBackUrl="~/Customer/HomePage.aspx"/>
+                          <asp:Button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-10 border-b-4 border-blue-700 hover:border-blue-500 rounded" ID="btnLogin" runat="server" Text="Log in" PostBackUrl="~/Customer/HomePage.aspx" OnClick="btnLogin_Click"/>
                       </div>
                       <p class="mt-2 mb-0 pt-1 text-sm font-semibold">Don't have an account?
                           <asp:HyperLink class="text-gray-600 transition duration-150 ease-in-out 

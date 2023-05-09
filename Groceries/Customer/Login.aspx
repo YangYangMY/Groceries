@@ -34,7 +34,7 @@
                   <div class="relative mb-6" data-te-input-wrapper-init>
                       <!-- Email input -->
                       <asp:Label ID="lblEmail" runat="server" Text="Email"
-                          class="block mb-2 text-sm font-medium text-blue-700 dark:text-blue-500"></asp:Label>
+                          class="block mb-2 text-sm font-medium text-blue-700 dark:text-blue-500" Width="51px"></asp:Label>
                       <asp:RequiredFieldValidator ID="reqEmail" runat="server" ErrorMessage="Email is required. " ForeColor="red" ControlToValidate="txtEmail">*</asp:RequiredFieldValidator>
                             <label for="" class="text-xs font-semibold px-1">
                             <span class="font-semibold">
@@ -45,7 +45,7 @@
                       <br /><br />
                       
                       <!-- Password input -->
-                      <asp:Label class="block mb-2 text-sm font-medium text-blue-700 dark:text-blue-500" ID="lblPassword" runat="server" Text="Password"></asp:Label>
+                      <asp:Label class="block mb-2 text-sm font-medium text-blue-700 dark:text-blue-500" ID="lblPassword" runat="server" Text="Password" Width="88px"></asp:Label>
                       <asp:RequiredFieldValidator ID="reqPassword" runat="server" ErrorMessage="Password is required. " ForeColor="red" ControlToValidate="txtPass">*</asp:RequiredFieldValidator>
                             <label for="" class="text-xs font-semibold px-1">
                             <asp:RegularExpressionValidator ID="regPass" runat="server" ErrorMessage="Password should be 6 characters" ForeColor="red" ValidationExpression="\w(6)" ControlToValidate="txtPass">*</asp:RegularExpressionValidator>

@@ -141,6 +141,15 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regConPass;
 
         /// <summary>
+        /// cmpPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cmpPass;
+
+        /// <summary>
         /// txtConPassword control.
         /// </summary>
         /// <remarks>

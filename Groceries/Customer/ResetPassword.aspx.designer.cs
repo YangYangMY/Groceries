@@ -60,13 +60,13 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.Label lblPassword;
 
         /// <summary>
-        /// regPass0 control.
+        /// regPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator regPass0;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regPass;
 
         /// <summary>
         /// reqPass control.
@@ -87,13 +87,13 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// TextBox3 control.
+        /// txtPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtPass;
 
         /// <summary>
         /// Label1 control.
@@ -123,6 +123,15 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqConPass;
 
         /// <summary>
+        /// cmpPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cmpPass;
+
+        /// <summary>
         /// TextBox2 control.
         /// </summary>
         /// <remarks>
@@ -132,13 +141,22 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
-        /// TextBox4 control.
+        /// txtConPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtConPass;
+
+        /// <summary>
+        /// lblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
         /// ValidationSummary1 control.

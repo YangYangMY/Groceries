@@ -50,7 +50,7 @@
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
                             <label for="" class="text-xs font-semibold px-1">Birthday</label>
-                            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Date of Birth format should be MM/DD/YYYY" ForeColor="red" Operator="DataTypeCheck" ControlToCompare="txtBirthday">*</asp:CompareValidator>
+                            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Date of Birth format should be MM/DD/YYYY" ForeColor="red" Operator="DataTypeCheck" ControlToValidate="txtBirthday" Type="Date">*</asp:CompareValidator>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div> <!--OnTextChanged="TextBox4_TextChanged"-->
                                 <asp:TextBox ID="txtBirthday" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="    Select birthday date"></asp:TextBox>
@@ -78,6 +78,7 @@
                             <asp:RequiredFieldValidator ID="reqConPass" runat="server" ControlToValidate="txtConPass" ForeColor="red" ErrorMessage="Confirmation password is required.">*</asp:RequiredFieldValidator>
                             </span>
                             <asp:RegularExpressionValidator ID="regConPass" runat="server" ErrorMessage="Password should be 6 characters" ForeColor="red" ValidationExpression="\w(6)" ControlToValidate="txtConPassword">*</asp:RegularExpressionValidator>
+                            <asp:CompareValidator ID="cmpPass" runat="server" ErrorMessage="Passwords do not match" ForeColor="red" ClientIDMode="AutoID" ControlToCompare="txtPass" ControlToValidate="txtConPass">*</asp:CompareValidator>
                             </label>
                             &nbsp;<div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>

@@ -88,7 +88,7 @@
                      <asp:ListItem class="inline-flex items-center justify-between w-full px-8 py-4 my-4 mx-4 text-black bg-white border border-black-200 rounded-lg cursor-pointer hover:text-gray-600 hover:bg-gray-100">Debit/Credit Card</asp:ListItem>
                  </asp:RadioButtonList>
             </div>
-                <asp:Button ID="btnProceedPayment" runat="server" Text="Proceed" class="mt-6 block ml-auto px-8 py-2.5 bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" PostBackUrl="~/Customer/Payment.aspx"/>
+                <asp:Button ID="btnProceedPayment" runat="server" Text="Proceed" class="mt-6 block ml-auto px-8 py-2.5 bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" PostBackUrl="~/Customer/PaymentGateway.aspx"/>
             </div>
         </div>
 </div>

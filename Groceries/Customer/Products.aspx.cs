@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace Groceries.Customer
 {
@@ -19,8 +13,8 @@ namespace Groceries.Customer
         protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
         {
             int quantity = 1; // set the initial quantity to 1
-            
-            Response.Redirect("ShoppingCart.aspx?id=" + e.CommandArgument.ToString() + "&Quantity=" +quantity); // redirect to the shopping cart page
+
+            Response.Redirect("ShoppingCart.aspx?id=" + e.CommandArgument.ToString() + "&Quantity=" + quantity); // redirect to the shopping cart page
 
             //DropDownList dlist = (DropDownList)(e.Item.FindControl("DropDownList1"));
             //Response.Redirect("ShoppingCart.aspx?id=" + e.CommandArgument.ToString() + "&Quantity=" + dlist.SelectedItem.ToString());

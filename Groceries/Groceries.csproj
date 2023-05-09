@@ -169,6 +169,7 @@
     <Content Include="Customer\OrderHistory.aspx" />
     <Content Include="Customer\OrderSuccess.aspx" />
     <Content Include="Customer\Payment.aspx" />
+    <Content Include="Customer\PaymentGateway.aspx" />
     <Content Include="Customer\Products.aspx" />
     <Content Include="Customer\Profile.aspx" />
     <Content Include="Customer\Promotion.aspx" />
@@ -388,6 +389,13 @@
     </Compile>
     <Compile Include="Customer\Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\PaymentGateway.aspx.cs">
+      <DependentUpon>PaymentGateway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\PaymentGateway.aspx.designer.cs">
+      <DependentUpon>PaymentGateway.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>

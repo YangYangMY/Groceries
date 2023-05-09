@@ -156,7 +156,6 @@
     <Content Include="bin\System.Runtime.CompilerServices.Unsafe.dll" />
     <Content Include="bin\System.Threading.Tasks.Extensions.dll" />
     <Content Include="Customer\About.aspx" />
-    <Content Include="Customer\andrew.aspx" />
     <Content Include="Customer\Bakery.aspx" />
     <Content Include="Customer\Beverages.aspx" />
     <Content Include="Customer\Checkout.aspx" />
@@ -306,13 +305,6 @@
     </Compile>
     <Compile Include="Customer\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\andrew.aspx.cs">
-      <DependentUpon>andrew.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\andrew.aspx.designer.cs">
-      <DependentUpon>andrew.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Bakery.aspx.cs">
       <DependentUpon>Bakery.aspx</DependentUpon>

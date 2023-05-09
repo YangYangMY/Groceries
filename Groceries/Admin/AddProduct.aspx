@@ -27,6 +27,10 @@
                     </asp:GridView>
                     <form class="space-y-4 md:space-y-6" action="#">
                         <div>
+                            <label for="TextBoxProductID" class="block mb-2 text-sm font-medium text-gray-900 ">
+                                Product ID
+                            </label>
+                            <asp:Label ID="LabelProductID" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>
                             <label for="TextBoxProductName" class="block mb-2 text-sm font-medium text-gray-900 ">
                                 Product Name
                             </label>

@@ -24,12 +24,17 @@ namespace Groceries.Admin
         protected void ButtonViewInquiry1_Click(object sender, EventArgs e)
         {
             PanelViewInquiry.Visible = true;
-            ButtonSendEmail.HRef = "mailto:weeyanlee1231@gmail.com?Subject=Refund";
         }
 
         protected void ButtonOrderClose_Click1(object sender, EventArgs e)
         {
             PanelViewInquiry.Visible=false;
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            PanelViewInquiry.Visible = true;
         }
     }
 }

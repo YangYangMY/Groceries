@@ -32,7 +32,7 @@
                             <label for="TextBoxDescriptions" class="block mb-2 text-sm font-medium text-gray-900 ">
                                 Description
                             </label>
-                            <asp:TextBox ID="TextBoxDescriptions" runat="server" placeholder="Descriptions" Rows="4" required="" TextMode="MultiLine" CssClass=" border-1 border-solid border-gray-700 peer block min-h-[auto] w-full rounded  bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxDescriptions" runat="server" placeholder="Descriptions" Rows="4" required="" TextMode="MultiLine" CssClass=" border-1 border-solid border-gray-700 peer block min-h-[auto] w-full rounded  bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear" MaxLength="200"></asp:TextBox>
                             <asp:Label ID="LabelErrorDescription" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>                                                
                         </div>
                             <label for="FileUploadProductImage" class="block mb-2 text-sm font-medium text-gray-900 ">

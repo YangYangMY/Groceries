@@ -13,17 +13,6 @@
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">Add New Product
                     </h1>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ProductID" DataSourceID="SqlDataSource1">
-                        <Columns>
-                            <asp:BoundField DataField="ProductID" HeaderText="ProductID" ReadOnly="True" SortExpression="ProductID" />
-                            <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
-                            <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                            <asp:BoundField DataField="UnitPrice" HeaderText="UnitPrice" SortExpression="UnitPrice" />
-                            <asp:BoundField DataField="UnitInStock" HeaderText="UnitInStock" SortExpression="UnitInStock" />
-                            <asp:BoundField DataField="CategoryID" HeaderText="CategoryID" SortExpression="CategoryID" />
-                        </Columns>
-                    </asp:GridView>
                     <form class="space-y-4 md:space-y-6" action="#">
                         <div>
                             <label for="TextBoxProductName" class="block mb-2 text-sm font-medium text-gray-900 ">
@@ -34,10 +23,10 @@
                         </div>
                         <div>
                             <label for="TextBoxProductCategory" class="block mb-2 text-sm font-medium text-gray-900 ">
-                                Product Category
+                                Product Category<br />
                             </label>
-                            <asp:TextBox ID="TextBoxProductCategory" placeholder="Magee" runat="server" required="" CssClass="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"></asp:TextBox>
-                            <asp:Label ID="LabelErrorProductCategory" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>   
+                            <asp:DropDownList ID="ddlProductCategory" runat="server" DataSourceID="SqlDataSource2" DataTextField="CategoryName" DataValueField="CategoryID"></asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>  
                             </div>
                         <div>
                             <label for="TextBoxDescriptions" class="block mb-2 text-sm font-medium text-gray-900 ">
@@ -68,7 +57,7 @@
                             <asp:Label ID="LabelErrorUpload" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>                           
                         </div>
                         <div class="flex justify-center space-x-2 p-4">
-                            <asp:Button ID="ButtonReset" type="reset" runat="server" Text="Reset" CssClass="w-full text-white bg-[#FDBA74] hover:bg-[#FB923C] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" />
+                            <asp:Button ID="ButtonReset" type="reset" runat="server" Text="Reset" CssClass="w-full text-white bg-[#FDBA74] hover:bg-[#FB923C] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" OnClick="ButtonReset_Click" />
                             <asp:Button ID="ButtonSubmit" runat="server" Text="Submit" CssClass="w-full text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" OnClick="ButtonSubmit_Click1" />
                         </div>
                     </form>

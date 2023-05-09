@@ -60,6 +60,15 @@ namespace Groceries
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqEmail;
 
         /// <summary>
+        /// regEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regEmail;
+
+        /// <summary>
         /// txtEmail control.
         /// </summary>
         /// <remarks>
@@ -87,6 +96,15 @@ namespace Groceries
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqPassword;
 
         /// <summary>
+        /// regPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regPass;
+
+        /// <summary>
         /// txtPass control.
         /// </summary>
         /// <remarks>
@@ -103,6 +121,15 @@ namespace Groceries
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDisplayError;
+
+        /// <summary>
+        /// ValidationSummary1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
 
         /// <summary>
         /// chkRemember control.

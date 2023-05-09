@@ -36,6 +36,10 @@
                       <asp:Label ID="lblEmail" runat="server" Text="Email"
                           class="block mb-2 text-sm font-medium text-blue-700 dark:text-blue-500"></asp:Label>
                       <asp:RequiredFieldValidator ID="reqEmail" runat="server" ErrorMessage="Email is required. " ForeColor="red" ControlToValidate="txtEmail">*</asp:RequiredFieldValidator>
+                            <label for="" class="text-xs font-semibold px-1">
+                            <span class="font-semibold">
+                            <asp:RegularExpressionValidator ID="regEmail" runat="server" ErrorMessage="Invalid Email Format." ForeColor="red"  ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail">*</asp:RegularExpressionValidator>
+                            </span></label>
                       <br />
                       <asp:TextBox ID="txtEmail" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono" placeholder="name@flowbite.com"></asp:TextBox>
                       <br /><br />
@@ -43,10 +47,16 @@
                       <!-- Password input -->
                       <asp:Label class="block mb-2 text-sm font-medium text-blue-700 dark:text-blue-500" ID="lblPassword" runat="server" Text="Password"></asp:Label>
                       <asp:RequiredFieldValidator ID="reqPassword" runat="server" ErrorMessage="Password is required. " ForeColor="red" ControlToValidate="txtPass">*</asp:RequiredFieldValidator>
+                            <label for="" class="text-xs font-semibold px-1">
+                            <asp:RegularExpressionValidator ID="regPass" runat="server" ErrorMessage="Password should be 6 characters" ForeColor="red" ValidationExpression="\w(6)" ControlToValidate="txtPass">*</asp:RegularExpressionValidator>
+                            </label>
                       <div class="relative w-full">
                           <asp:TextBox ID="txtPass" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono js-password" placeholder="**********" TextMode="Password" MaxLength="30"></asp:TextBox>
                       </div>
-                      <asp:Label ID="lblDisplayError" runat="server" ForeColor="red"></asp:Label><br /> <br /> 
+                      <asp:Label ID="lblDisplayError" runat="server" ForeColor="red"></asp:Label>
+                      <br />
+                      <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="The following problems have been encountered" Width="1247px" />
+                      <br /> <br /> 
                       
                       <!--Checkbox Remember me--->
                       <div class="flex items-center justify-between">

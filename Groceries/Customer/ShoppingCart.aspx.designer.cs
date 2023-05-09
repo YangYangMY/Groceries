@@ -24,6 +24,15 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.HyperLink hyperCS;
 
         /// <summary>
+        /// lblEmptyCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmptyCart;
+
+        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>
@@ -33,76 +42,31 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// btnIncrement control.
+        /// lblSubtotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnIncrement;
+        protected global::System.Web.UI.WebControls.Label lblSubtotal;
 
         /// <summary>
-        /// lblQty control.
+        /// lblShipFee control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQty;
+        protected global::System.Web.UI.WebControls.Label lblShipFee;
 
         /// <summary>
-        /// btnDecrement control.
+        /// lbltotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDecrement;
-
-        /// <summary>
-        /// btnRemoveItem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRemoveItem;
-
-        /// <summary>
-        /// ButtonIncrement2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonIncrement2;
-
-        /// <summary>
-        /// lblQty2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQty2;
-
-        /// <summary>
-        /// ButtonDecrement2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonDecrement2;
-
-        /// <summary>
-        /// btnRemoveItem2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRemoveItem2;
+        protected global::System.Web.UI.WebControls.Label lbltotal;
 
         /// <summary>
         /// btnCheckout control.

@@ -32,6 +32,28 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
     <link rel="manifest" href="../favicon_io/site.webmanifest">
 
+<style>
+    .gridview {
+        border-collapse: collapse;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .gridview th {
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        background-color: #e6e6e6;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .gridview td {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+    }
+</style>
+
+
 </head>
 <body class="flex flex-col min-h-screen">
     <form id="form1" runat="server">

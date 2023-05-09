@@ -7,13 +7,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Groceries
 {
     public partial class Login : System.Web.UI.Page
     {
+        //Open and Link database
         SqlConnection con;
         string strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
+        int acc;
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -41,28 +44,73 @@ namespace Groceries
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            try
+            con = new SqlConnection(strCon);
+            con.Open();
+
+            //Admin email Check
+            SqlCommand chkCust = new SqlCommand("SELECT COUNT(*) FROM Customers WHERE ([EmailAddress] = @EmailAddress)", con);
+            chkCust.Parameters.AddWithValue("@EmailAddress", txtEmail.Text);
+            int CustAccount = (int)chkCust.ExecuteScalar();
+            //Admin email Check
+            SqlCommand chkAdmin = new SqlCommand("SELECT COUNT(*) FROM Admin WHERE ([EmailAddress] = @EmailAddress)", con);
+            chkAdmin.Parameters.AddWithValue("@EmailAddress", txtEmail.Text);
+            int AdminAccount = (int)chkAdmin.ExecuteScalar();
+
+            bool signIn = false;
+            string SignInAcc = "";
+            //Check the login account belong to customer or admin
+            
+            if (CustAccount > 0)
+            { 
+                SqlCommand CustSignIn = new SqlCommand("SELECT Password FROM Customers WHERE ([EmailAddress] = @EmailAddress)", con);
+                CustSignIn.Parameters.AddWithValue("@EmailAddress", txtEmail.Text);
+                SignInAcc = (string)CustSignIn.ExecuteScalar(); 
+                acc = 1;
+                signIn = true;
+
+            }
+            else if (AdminAccount > 0)
             {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("select count(*) from Customers where EmailAddress ='" + txtEmail.Text + "' and password ='"+ txtPass.Text +"' ", con);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                cmd.ExecuteNonQuery();
-                if (dt.Rows[0][0] == "1")
+                SqlCommand AdminSignIn = new SqlCommand("SELECT Password FROM Admin WHERE ([EmailAddress] = @EmailAddress)", con);
+                AdminSignIn.Parameters.AddWithValue("@EmailAddress", txtEmail.Text);
+                acc = 2;
+                SignInAcc = (string)AdminSignIn.ExecuteScalar();
+                signIn = true;
+            }
+            else
+            {
+                lblDisplayError.Text = "Account not exist\t";
+                signIn = false;
+            }
+            
+            string confirmPass = txtPass.Text;
+            if(signIn == true)
+            {
+                if (SignInAcc.Replace(" ", "") == confirmPass)
                 {
-                    Response.Write("<script>alert('Successful in login')</script>");
+                    // The email and password are valid, do something
+                    if (acc == 1)
+                    {
+                        PanelCustLoginSuccess.Visible = true;
+                    }
+                    else
+                    {
+                        PanelAdminLoginSuccess.Visible = true;
+                    }
+                    
                 }
                 else
                 {
-                    Response.Write("<script>alert('error in login')</script>");
+                    // The email exists, but the password is incorrect, do something else
+                    lblDisplayError.Text = "Unmatch password. Please enter a valid password.\t";
                 }
-            }catch(Exception ex)
-            {
-                Response.Write(ex.Message); 
             }
 
+            // Close the connection
+            con.Close();
 
         }
+
+            
     }
 }

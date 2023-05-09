@@ -56,7 +56,7 @@
                             <label for="" class="text-xs font-semibold px-1">Password</label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
-                                <asp:TextBox ID="txtPassword" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************"></asp:TextBox>
+                                <asp:TextBox ID="txtPassword" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************" TextMode="Password" MaxLength="30"></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                             <label for="" class="text-xs font-semibold px-1">Confirm password</label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
-                                <asp:TextBox ID="txtConPassword" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************"></asp:TextBox>
+                                <asp:TextBox ID="txtConPassword" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************" TextMode="Password" MaxLength="30"></asp:TextBox>
                                 <span class="font-semibold">
                                 <br />
                                 <asp:Label ID="lblErrorMessage" runat="server"></asp:Label>

@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Groceries.Login" MasterPageFile="~/MasterPage/Customer.Master"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--Content-->
+    <div>
 <section class="h-screen">
   <div class="h-full">
       <div class="p-8 g-6 flex h-full flex-wrap items-center justify-center justify-normal">
@@ -34,17 +35,18 @@
                       <!-- Email input -->
                       <asp:Label ID="lblEmail" runat="server" Text="Email"
                           class="block mb-2 text-sm font-medium text-blue-700 dark:text-blue-500"></asp:Label>
+                      <asp:RequiredFieldValidator ID="reqEmail" runat="server" ErrorMessage="Email is required. " ForeColor="red" ControlToValidate="txtEmail">*</asp:RequiredFieldValidator>
+                      <br />
                       <asp:TextBox ID="txtEmail" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono" placeholder="name@flowbite.com"></asp:TextBox>
                       <br /><br />
                       
                       <!-- Password input -->
                       <asp:Label class="block mb-2 text-sm font-medium text-blue-700 dark:text-blue-500" ID="lblPassword" runat="server" Text="Password"></asp:Label>
+                      <asp:RequiredFieldValidator ID="reqPassword" runat="server" ErrorMessage="Password is required. " ForeColor="red" ControlToValidate="txtPass">*</asp:RequiredFieldValidator>
                       <div class="relative w-full">
-                          <asp:TextBox ID="TextBox1" runat="server" class="hidden js-password-toggle" placeholder="·········"></asp:TextBox>
-                          <asp:TextBox ID="txtPass" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono js-password" placeholder="**********" autocomplete="off"></asp:TextBox>
+                          <asp:TextBox ID="txtPass" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono js-password" placeholder="**********" TextMode="Password" MaxLength="30"></asp:TextBox>
                       </div>
-                      <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource> <br />
-                      <asp:Label ID="lblDisplayError" runat="server"></asp:Label><br /> 
+                      <asp:Label ID="lblDisplayError" runat="server" ForeColor="red"></asp:Label><br /> <br /> 
                       
                       <!--Checkbox Remember me--->
                       <div class="flex items-center justify-between">
@@ -57,10 +59,10 @@
                               hover:text-blue-600 focus:text-cyan-600 active:text-danger-700" 
                               ID="hplForgotPassword" runat="server" NavigateUrl="~/Customer/ResetPassword.aspx">Forgot password?</asp:HyperLink><br />
                       </div>
-            </div>
+                  </div>
                   <div class="text-center lg:text-left">
                       <div class="px-20 ml-20"> 
-                          <asp:Button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-10 border-b-4 border-blue-700 hover:border-blue-500 rounded" ID="btnLogin" runat="server" Text="Log in" PostBackUrl="~/Customer/HomePage.aspx" OnClick="btnLogin_Click"/>
+                          <asp:Button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-10 border-b-4 border-blue-700 hover:border-blue-500 rounded" ID="btnLogin" runat="server" Text="Log in" OnClick="btnLogin_Click"/>
                       </div>
                       <p class="mt-2 mb-0 pt-1 text-sm font-semibold">Don't have an account?
                           <asp:HyperLink class="text-gray-600 transition duration-150 ease-in-out 
@@ -73,4 +75,41 @@
       </div>
   </div>
 </section>
+</div>
+     <!--Modal of Log in new Customer Account Successful-->
+    <asp:Panel ID="PanelCustLoginSuccess" runat="server" Visible="False">
+        <div class="bg-black bg-opacity-50 md:bg-opacity-50 fixed top-0 left-0 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <div class="relative w-full h-full max-w-md md:h-auto mx-auto my-20">
+                <!--Pop Out-->
+                <div class="relative bg-white rounded-lg shadow ">
+                    <div class="p-6 text-center ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#059669] mx-auto h-11 rounded-full bg-[#D1FAE5] w-11" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-2xl font-medium">Account Login Successfully</span>
+                        <p class="text-center">Press continue to go to Home page.</p>
+                        <asp:Button ID="Button1" runat="server" Text="Continue" CssClass=" my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " PostBackUrl="~/Customer/Login.aspx" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
+        <br />
+     <asp:Panel ID="PanelAdminLoginSuccess" runat="server" Visible="False">
+        <div class="bg-black bg-opacity-50 md:bg-opacity-50 fixed top-0 left-0 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <div class="relative w-full h-full max-w-md md:h-auto mx-auto my-20">
+                <!--Pop Out-->
+                <div class="relative bg-white rounded-lg shadow ">
+                    <div class="p-6 text-center ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#059669] mx-auto h-11 rounded-full bg-[#D1FAE5] w-11" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-2xl font-medium">Account Login Successfully</span>
+                        <p class="text-center">Press continue to go to Admin Dashboard.</p>
+                        <asp:Button ID="Button2" runat="server" Text="Continue" CssClass=" my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " PostBackUrl="~/Admin/Dashboard.aspx" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
 </asp:Content>

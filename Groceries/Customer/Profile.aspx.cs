@@ -17,6 +17,13 @@ namespace Groceries.Customer
         StringBuilder table = new StringBuilder();
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Check if the user is authenticated
+            if (!User.Identity.IsAuthenticated)
+            {
+                // The user is not authenticated, redirect to the login page
+                Response.Redirect("Login.aspx");
+            }
+
             // Retrieve the email session variable
             int custID = (int)Session["user"];
 

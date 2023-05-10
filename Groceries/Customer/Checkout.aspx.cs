@@ -11,6 +11,8 @@ using System.Drawing;
 using System.Net.NetworkInformation;
 using System.Xml.Linq;
 using Org.BouncyCastle.Utilities.Collections;
+using System.Reflection;
+using System.Windows.Forms;
 
 namespace Groceries.Customer
 {
@@ -40,6 +42,15 @@ namespace Groceries.Customer
                         txtCity.Text = reader["City"].ToString();
                     }
                     reader.Close();
+
+                    AddressDataSource.SelectCommand =
+"SELECT Address.SavedName, Address.SavedContact, Address.Street, Address.State, Address.Postcode, Address.City"+
+" FROM Address" +
+" INNER JOIN Customers ON Address.CustomerID = Customers.CustomerID" +
+" WHERE Address.CustomerID = " + customerID;
+
+
+
                     con.Close();
                 }
             }

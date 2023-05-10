@@ -99,8 +99,8 @@ namespace Groceries
                         if (reader.HasRows)
                         {
                             reader.Read();
-                            int customerID = reader.GetInt32(0);
-                            Session["user"] = customerID; // store the customer ID in a session
+                            int customerID = (int)reader.GetValue(0);
+                            this.Session["user"] = customerID; // store the customer ID in a session
                         }
                         reader.Close();
                         Response.Redirect("HomePage.aspx");
@@ -113,8 +113,8 @@ namespace Groceries
                         if (reader.HasRows)
                         {
                             reader.Read();
-                            int adminID = reader.GetInt32(0);
-                            Session["user"] = adminID; // store the customer ID in a session
+                            int adminID = (int)reader.GetValue(0);
+                            this.Session["user"] = adminID; // store the customer ID in a session
                         }
                         reader.Close();
                         Response.Redirect("~/Admin/Dashboard.aspx");

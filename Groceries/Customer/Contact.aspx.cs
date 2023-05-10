@@ -15,11 +15,21 @@ namespace Groceries
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (this.Session["user"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                // The user is logged in, proceed with the page logic
+            }
         }
 
         protected void ButtonSubmit_Click(object sender, EventArgs e)
         {
+
+            int custID = Int32.Parse(Session["user"].ToString());
+
             //Reading data input
             DateTime currentDate = DateTime.Now;
             string formattedDate = currentDate.ToString("dd/MM/yyyy");

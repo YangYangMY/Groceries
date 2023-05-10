@@ -119,7 +119,9 @@ namespace Groceries.Admin
 
             ButtonSendEmail.HRef = "mailto:" + email;
 
+            con.Close();
             PanelViewInquiry.Visible = true;
+
         }
     }
 }

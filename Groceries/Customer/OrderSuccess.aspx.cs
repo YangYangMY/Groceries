@@ -49,9 +49,10 @@ namespace Groceries.Customer
                     cmd.CommandText = updateCart;
                     cmd.Connection = con;
                     cmd.ExecuteNonQuery();
+                    s.Close();
                     for (int i=0; i<=dt.Rows.Count-1; i++) {
                         String updateCartItem = "INSERT INTO OrderItem(OrderID, ProductID, Quantity) VALUES('" + Session["orderID"] + "', '" + dt.Rows[i]["ProductID"] + "', '" + dt.Rows[i]["Quantity"] + "')";
-                       
+                        s.Open();
                         SqlCommand cmd1 = new SqlCommand();
                         cmd1.CommandText = updateCartItem;
                         cmd1.Connection = s;

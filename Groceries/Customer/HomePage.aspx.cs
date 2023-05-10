@@ -13,36 +13,52 @@ namespace Groceries
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            // Retrieve the email session variable
-            string email = (string)Session["Email"];
-
-            // Check if the user is authenticated
-            if (!string.IsNullOrEmpty(email))
+            if (!IsPostBack)
             {
-                SqlConnection con;
                 string strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
+                string query = String.Format("SELECT * FROM [Products]");
+                SqlConnection con;
+                con = new SqlConnection(strCon);
+                SqlCommand command = new SqlCommand(query, con);
+                con.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                reptProduct.DataSource = reader;
+                reptProduct.DataBind();
 
-                using (con = new SqlConnection(strCon))
+                con.Close();
+
+
+
+                // Retrieve the email session variable
+                string email = (string)Session["Email"];
+
+                // Check if the user is authenticated
+                if (!string.IsNullOrEmpty(email))
                 {
-                    con.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT CustomerName FROM Customers WHERE ([EmailAddress] = @Email)", con))
+                    SqlConnection con1;
+                    string strCon1 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
+
+                    using (con1 = new SqlConnection(strCon1))
                     {
-                        command.Parameters.AddWithValue("@Email", email);
-                        string customerName = (string)command.ExecuteScalar();
-                        // Do something with the data, such as displaying it in a label or textbox
-                        lblWelcomeMsg.Text = "Welcome, " + customerName + " .";
+                        con1.Open();
+                        using (SqlCommand command1 = new SqlCommand("SELECT CustomerName FROM Customers WHERE ([EmailAddress] = @Email)", con1))
+                        {
+                            command1.Parameters.AddWithValue("@Email", email);
+                            string customerName = (string)command1.ExecuteScalar();
+                            // Do something with the data, such as displaying it in a label or textbox
+                            lblWelcomeMsg.Text = "Welcome, " + customerName + " .";
+                        }
                     }
+
+                    // The user is authenticated, display a welcome message
+                    PanelCustLoginSuccess.Style.Add("display", "block");
+
+                    // Set the panel to disappear after 5 seconds
+
+                    string script = "setTimeout(function() { document.getElementById('" + PanelCustLoginSuccess.ClientID + "').style.display = 'none'; }, 5000);";
+                    ScriptManager.RegisterStartupScript(this, GetType(), "PanelDisappearScript", script, true);
+
                 }
-
-                // The user is authenticated, display a welcome message
-                PanelCustLoginSuccess.Style.Add("display", "block");
-
-                // Set the panel to disappear after 5 seconds
-
-                string script = "setTimeout(function() { document.getElementById('" + PanelCustLoginSuccess.ClientID + "').style.display = 'none'; }, 5000);";
-                ScriptManager.RegisterStartupScript(this, GetType(), "PanelDisappearScript", script, true);
-
             }
         }
     }

@@ -1,13 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="Groceries.HomePage" MasterPageFile="~/MasterPage/Customer.Master" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<!--Content-->
+    <!--Content-->
 
     <!--Hero Section-->
     <div class="relative">
         <img class="h-full w-full" src="../images/hero-pic.png" alt="hero-pic" />
     </div>
-
+    
     <!--Category Section-->
     <div class="bg-white">
         <div class="grid items-center mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -155,6 +155,7 @@
                         <div class="absolute inset-0 flex justify-center items-center">
                             <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                         </div>
+                        
                     </div>
                     <h3 class="mt-4 text-lg text-gray-700">White Rabbit Creamy Candy (108g)</h3>
                     <p class="mt-1 text-lg font-medium text-gray-900">RM 7.17</p>
@@ -173,10 +174,33 @@
                         </button>
                     </div>
                 </div>
+
+                <asp:Repeater ID="reptProduct" runat="server">
+                    <ItemTemplate>
+                        <div class="grid content-between group">
+                            <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
+                                <div class="absolute inset-0 flex justify-center items-center">
+
+                                    <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                                </div>
+                            </div>
+                            <asp:Label runat="server" ID="lblName" Text='<%# Eval("ProductName") %>' CssClass="mt-4 text-lg text-gray-700"></asp:Label>
+                            <p cssclass="mt-1 text-lg font-medium text-gray-900">
+                                RM
+                            <asp:Label runat="server" ID="lblPrice" Text='<%# Eval("UnitPrice") %>' CssClass="mt-1 text-lg font-medium text-gray-900"></asp:Label>
+                            </p>
+                            <div class="flex flex-row mt-2">
+                                <asp:Button ID="btnAddToCart" runat="server" CommandName="AddToCart" Text="Add to cart" CssClass="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" />
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+                
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
             </div>
         </div>
     </div>
-
+    
     <!--Second Section-->
     <div class="bg-[#FFF6E7] my-5">
        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -355,23 +379,5 @@
             </div>
         </div>
     </div>
-
-    <!--Newsletter-->
-    <div class="relative isolate overflow-hidden flex justify-center">
-        <div class="rounded-[50px] bg-[#003049] py-16 sm:py-24 lg:py-32 m-10 w-3/4">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-                    <div class="max-w-xl lg:max-w-lg mx-10">
-                        <h2 class="text-3xl font-bold text-white">Get more updates of Fresh Groceries</h2>
-                        <p class="mt-4 text-lg leading-8 text-gray-400">Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt dolore.</p>
-                        <div class="mt-6 flex max-w-md gap-x-4">
-                            <label for="email-address" class="sr-only">Email address</label>
-                            <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Enter your email">
-                            <button type="submit" class="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Subscribe</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+ 
 </asp:Content>

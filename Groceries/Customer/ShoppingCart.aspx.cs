@@ -304,6 +304,16 @@ namespace Groceries.Customer
             lbltotal.Text = finalTotalFormatted.ToString(); 
         }
 
-
+        protected void btnCheckout_Click(object sender, EventArgs e)
+        {
+            if (GridView1.Rows.Count == 0)
+            {
+                PanelAddProduct.Visible = true;
+            }
+            else
+            {
+                Response.Redirect("~/Customer/Checkout.aspx");
+            }
+        }
     }
 }

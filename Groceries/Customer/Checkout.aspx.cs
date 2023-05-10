@@ -13,6 +13,8 @@ using System.Xml.Linq;
 using Org.BouncyCastle.Utilities.Collections;
 using System.Reflection;
 using System.Windows.Forms;
+using System.Data.Common;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Groceries.Customer
 {
@@ -58,18 +60,31 @@ namespace Groceries.Customer
         {
             using (SqlConnection con = new SqlConnection(cs))
             {
+                //SQL Command for read data
+                SqlCommand readCmd;
+                SqlDataReader dataReader;
+                String readSql;
+                int idcount = 0;
+
+
+                con.Open();
+
+                readSql = "Select AddressID from Address";
+                readCmd = new SqlCommand(readSql, con);
+                dataReader = readCmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    idcount++;
+                }
+                idcount += 1;
+                dataReader.Close();
+                readCmd.Dispose();
+
                 //string customerID = Session["CustomerID"].ToString();
                 int customerID = Convert.ToInt32(Session["user"]);
-                con.Open();
-                string query = "INSERT INTO Address (SavedName, SavedContact, Street, State, PostCode, City, CustomerID) VALUES (@Name, @Contact, @Street, @State,  @PostalCode, @City, @CustomerID)";
+
+                string query = "INSERT INTO Address (AddressID, SavedName, SavedContact, Street, State, PostCode, City, CustomerID) VALUES (" + idcount + ",'" + txtName.Text + "','" + txtContact.Text + "','" + txtStreet.Text + "','" + txtState.Text + "','" + txtPostalCode.Text + "','" + txtCity.Text + "','" + customerID.ToString() + "')";
                 SqlCommand command = new SqlCommand(query, con);
-                command.Parameters.AddWithValue("@Name", txtName.Text);
-                command.Parameters.AddWithValue("@Contact", txtContact.Text);
-                command.Parameters.AddWithValue("@Street", txtStreet.Text);
-                command.Parameters.AddWithValue("@State", txtState.Text);
-                command.Parameters.AddWithValue("@PostalCode", txtPostalCode.Text);
-                command.Parameters.AddWithValue("@City", txtCity.Text);
-                command.Parameters.AddWithValue("@CustomerID", customerID.ToString());
                 command.ExecuteNonQuery();
                 con.Close();
             }

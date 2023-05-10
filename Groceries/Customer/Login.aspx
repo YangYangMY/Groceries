@@ -14,23 +14,6 @@
           <div class="p-10 mb-12 md:mb-0 md:w-10/12 lg:w-5/12 xl:w-5/12">
               <form>
                   <h1 class="py-5 mb-4 text-3xl font-extrabold text-gray-900 dark:text-black md:text-5xl lg:text-6xl">Log in</h1>
-                  <div
-                      class="flex flex-row items-center justify-center lg:justify-start">
-                      <p class="mb-0 mr-4 text-lg">Sign in with </p> 
-                      <div>
-                          <asp:ImageButton ID="ibtnGoogle" class="w-10 h-10" runat="server" BorderWidth="0" ImageUrl="~/images/google.png" 
-                              alt="Go to GoogleLogin.com" OnClick="ibtnGoogle_Click"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                          <asp:ImageButton ID="ibtnFacebook" class="w-10 h-10" runat="server" BorderWidth="0" ImageUrl="~/images/facebook.png" 
-                              alt="Go to FacebookLogin.com" OnClick="ibtnFacebook_Click"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                          <asp:ImageButton ID="ibtnInstagram" class="w-10 h-10" runat="server" BorderWidth="0" ImageUrl="~/images/instagram.png" 
-                              alt="Go to InstagramLogin.com" OnClick="ibtnInstagram_Click"/>
-                      </div>
-                  </div>
-                  <br />
-                  <div class="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 
-                      after:border-t after:border-neutral-300">
-                      <p class="mx-4 mb-0 text-center font-semibold dark:text-black">Or</p>
-                  </div>
                   <div class="relative mb-6" data-te-input-wrapper-init>
                       <!-- Email input -->
                       <asp:Label ID="lblEmail" runat="server" Text="Email"

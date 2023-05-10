@@ -27,6 +27,8 @@
                             <asp:TextBox ID="TextBoxPass" runat="server" required="" placeholder="••••••••" CssClass="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " TextMode="Password" MaxLength="30"></asp:TextBox>
                             <asp:Label ID="LabelErrorPass" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>
                         </div>
+                        <asp:Label ID="lblDisplayError" runat="server" ForeColor="Red"></asp:Label>
+                        <br />
                         <asp:Button ID="ButtonCreate" runat="server" Text="Create Account" CssClass="w-full text-white bg-[#F6BD60] hover:bg-[#FDBA74] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" OnClick="ButtonCreate_Click" />
                     </form>
                 </div>

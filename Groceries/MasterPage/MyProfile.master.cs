@@ -12,9 +12,11 @@ namespace Groceries.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string email = (string)Session["Email"];
+            // Retrieve the email session variable
+            int custID = (int)Session["user"];
+
             // Check if the user is authenticated
-            if (!string.IsNullOrEmpty(email))
+            if (Session["user"] != null && !String.IsNullOrEmpty(Session["user"].ToString()))
             {
                 SqlConnection con;
                 string strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
@@ -22,9 +24,9 @@ namespace Groceries.MasterPage
                 using (con = new SqlConnection(strCon))
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT CustomerName FROM Customers WHERE ([EmailAddress] = @Email)", con))
+                    using (SqlCommand command = new SqlCommand("SELECT CustomerName FROM Customers WHERE ([CustomerID] = @user)", con))
                     {
-                        command.Parameters.AddWithValue("@Email", email);
+                        command.Parameters.AddWithValue("@user", custID);
                         string customerName = (string)command.ExecuteScalar();
                         // Do something with the data, such as displaying it in a label or textbox
                         lblName.Text = customerName;

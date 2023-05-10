@@ -161,7 +161,6 @@
     <Content Include="Customer\Checkout.aspx" />
     <Content Include="Customer\Contact.aspx" />
     <Content Include="Customer\FAQ.aspx" />
-    <Content Include="Customer\Favourite.aspx" />
     <Content Include="Customer\Fruits.aspx" />
     <Content Include="Customer\HomePage.aspx" />
     <Content Include="Customer\Login.aspx" />
@@ -346,13 +345,6 @@
     </Compile>
     <Compile Include="Customer\FAQ.aspx.designer.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\Favourite.aspx.cs">
-      <DependentUpon>Favourite.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\Favourite.aspx.designer.cs">
-      <DependentUpon>Favourite.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Fruits.aspx.cs">
       <DependentUpon>Fruits.aspx</DependentUpon>

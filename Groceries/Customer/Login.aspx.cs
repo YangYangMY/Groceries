@@ -19,7 +19,16 @@ namespace Groceries
         int acc;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
+            if (!IsPostBack)
+            {
+                //Cookies is available
+                if (Request.Cookies["Email"] != null && Response.Cookies["Pass"] != null)
+                {
+                    txtEmail.Text = Request.Cookies["Email"].Value;
+                    txtPass.Attributes["value"] = Request.Cookies["Pass"].Value; 
+                }
+            }
         }
 
         protected void ibtnGoogle_Click(object sender, ImageClickEventArgs e)
@@ -61,8 +70,9 @@ namespace Groceries
             string SignInAcc = "";
             //Check the login account belong to customer or admin
             
+            
             if (CustAccount > 0)
-            { 
+            {
                 SqlCommand CustSignIn = new SqlCommand("SELECT Password FROM Customers WHERE ([EmailAddress] = @EmailAddress)", con);
                 CustSignIn.Parameters.AddWithValue("@EmailAddress", txtEmail.Text);
                 SignInAcc = (string)CustSignIn.ExecuteScalar(); 
@@ -83,11 +93,29 @@ namespace Groceries
                 lblDisplayError.Text = "Account not exist\t";
                 signIn = false;
             }
-            
+
+            string SignAccount = SignInAcc.Replace(" ", "");
+            if (CustAccount > 0 || AdminAccount > 0)
+            {
+                if (chkRemember.Checked)
+                {
+                    Response.Cookies["Email"].Value = txtEmail.Text;
+                    Response.Cookies["Pass"].Value = SignAccount;
+                    Response.Cookies["Emal"].Expires = DateTime.Now.AddMinutes(1);
+                    Response.Cookies["Pass"].Expires = DateTime.Now.AddMinutes(1);
+
+                }
+                else
+                {
+                    Response.Cookies["Emal"].Expires = DateTime.Now.AddMinutes(-1);
+                    Response.Cookies["Pass"].Expires = DateTime.Now.AddMinutes(-1);
+                }
+            }
+
             string confirmPass = txtPass.Text;
             if(signIn == true)
             {
-                if (SignInAcc.Replace(" ", "") == confirmPass)
+                if (SignAccount == confirmPass)
                 {
 
                     // The email and password are valid, do something

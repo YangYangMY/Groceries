@@ -113,7 +113,7 @@ namespace Groceries.Admin
             string phoneNum = null;
             string deliveryName = null;
             string deliveryaddress = null;
-            int addressIDCheck = Int32.Parse(addressID);
+            int addressIDCheck = int.Parse(addressID);
             idcount = 1;
             readSql = "SELECT * FROM [Address]";
             readCmd = new SqlCommand(readSql, con);

@@ -45,17 +45,23 @@
                     <h3 class=" text-3xl font-bold text-black pt-4 px-6">Report </h3>
                     <asp:Image ID="Image1" runat="server" CssClass="object-right  bg-transparent rounded-lg text-sm px-6 ml-auto" ImageUrl="~/favicon_io/favicon-32x32.png" />
                     <h3 class=" text-2xl font-bold text-black px-6 text-right">Goceries</h3>
-                    <h3 class=" text-1xl font-bold text-black px-6 text-right">June 2021</h3>
-                    <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
+                    <span class=" text-2xl font-bold text-black px-6 absolute right-0">
+                        <asp:Label ID="LabelMonth" runat="server" Text="June"></asp:Label>
+                        <asp:Label ID="LabelYear" runat="server" Text="2021"></asp:Label>
+                    </span>
+                    <br />
+                    <h1 class="pt-4 mt-8 space-y-2 font-medium border-t border-gray-700"></h1>
+                    <asp:Label ID="LabelDateGenerated" CssClass=" text-1xl text-black px-6 absolute right-0" runat="server" Text="10/05/2023"></asp:Label>
+                    <br />
                     <h3 class=" text-2xl font-bold text-black p-3 mx-4 ">Total Profit:
-                        <span class=" mx-10 text-1xl font-bold text-gray-700 text-right">RM 1917   
-                        </span>
+                        <asp:Label ID="LabelProfit" CssClass=" mx-10 text-1xl font-bold text-gray-700 text-right" runat="server" Text="RM 1917 "></asp:Label>
                     </h3>
-                    <h3 class=" text-2xl font-bold text-black p-3 mx-4 ">Product Sold:
-                        <span class=" mx-10 text-1xl font-bold text-gray-700 text-right">540  
-                        </span>
+                    <h3 class=" text-2xl font-bold text-black p-3 mx-4 ">Orders Made:
+                        <asp:Label ID="LabelOrders" CssClass=" mx-10 text-1xl font-bold text-gray-700 text-right" runat="server" Text="540"></asp:Label>
                     </h3>
-
+                    <h3 class=" text-2xl font-bold text-black p-3 mx-4 ">Total Products:
+                        <asp:Label ID="LabelProduct" CssClass=" mx-10 text-1xl font-bold text-gray-700 text-right" runat="server" Text="40"></asp:Label>
+                    </h3>
                     <div class="p-6 text-center ">
                         <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
                         <asp:Button ID="ButtonOrderClose" Text="Close" runat="server" CssClass="text-gray-500 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " OnClick="ButtonOrderClose_Click" />

@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
+using Groceries.Customer;
 
 namespace Groceries.Admin
 {
@@ -36,9 +37,6 @@ namespace Groceries.Admin
             string formattedDate = currentDate.ToString("dd/MM/yyyy");
             String Month = currentDate.ToString("MMMM");
             String Year = currentDate.ToString("yyyy");
-            double totalProfit = 0.00;
-            int totalOrder = 0;
-            int totalProduct = 5;
             bool generatepass = false;
 
             //Open and Link database
@@ -57,6 +55,8 @@ namespace Groceries.Admin
             SqlDataReader dataReader;
             String readSql;
             int idcount = 0;
+            int Ordercount = 0, ProductCount = 0;
+            double profit = 0.00;
 
             //Check reportID
             readSql = "Select ReportID from Report";
@@ -70,12 +70,48 @@ namespace Groceries.Admin
             dataReader.Close();
             readCmd.Dispose();
 
+            //Read Order Count
+            readSql = "Select OrderID from [Order]";
+            readCmd = new SqlCommand(readSql, con);
+            dataReader = readCmd.ExecuteReader();
+            while (dataReader.Read())
+            {
+                Ordercount++;
+            }
+            dataReader.Close();
+            readCmd.Dispose();
+
+            //Read Product count
+            readSql = "Select ProductID from [Products]";
+            readCmd = new SqlCommand(readSql, con);
+            dataReader = readCmd.ExecuteReader();
+            while (dataReader.Read())
+            {
+                ProductCount++;
+            }
+            dataReader.Close();
+            readCmd.Dispose();
+
+            //Read Profit
+            readSql = "SELECT TotalPrice FROM [Order]";
+            readCmd = new SqlCommand(readSql, con);
+            dataReader = readCmd.ExecuteReader();
+            double totalPrice = 0.00;
+            while (dataReader.Read())
+            {
+                totalPrice = Convert.ToDouble(dataReader.GetValue(0));
+                profit += totalPrice;
+            }
+
+            dataReader.Close();
+            readCmd.Dispose();
+
             generatepass = true;
 
 
             if (generatepass)
             {
-                insertSql = "Insert into Report(ReportID, DateGenerated,Month, Year, TotalProfit, TotalOrder,TotalProduct) values(" + idcount + ",'" + formattedDate + "','" + Month + "','" + Year + "','" + totalProfit + "','" + totalOrder + "','" + totalProduct + "')";
+                insertSql = "Insert into Report(ReportID, DateGenerated,Month, Year, TotalProfit, TotalOrder,TotalProduct) values(" + idcount + ",'" + formattedDate + "','" + Month + "','" + Year + "','" + profit + "','" + Ordercount + "','" + ProductCount + "')";
                 insertCmd = new SqlCommand(insertSql, con);
                 insertAdapter.InsertCommand = new SqlCommand(insertSql, con);
                 insertCmd.ExecuteNonQuery();
@@ -106,23 +142,44 @@ namespace Groceries.Admin
             GridViewRow row = GridViewReport.SelectedRow;
             int selectedID = int.Parse(row.Cells[0].Text);
 
+            string dategenerated = null;
             string month = null;
             string year = null;
-            int Ordercount = 0, ProductCount = 0;
-            double profit = 0.00;
+            string Ordercount = null;
+            string ProductCount = null ;
+            string profit = null;
 
             //Read Order Count
-            readSql = "Select OrderID from [Order]";
+            readSql = "Select * from Report";
             readCmd = new SqlCommand(readSql, con);
             dataReader = readCmd.ExecuteReader();
             while (dataReader.Read())
             {
-                Ordercount++;
+                if (idcount == selectedID)
+                {
+                    dategenerated = dataReader.GetValue(1).ToString();
+                    month = dataReader.GetValue(2).ToString();
+                    year = dataReader.GetValue(3).ToString();
+                    profit = dataReader.GetValue(4).ToString();
+                    Ordercount = dataReader.GetValue(5).ToString();
+                    ProductCount = dataReader.GetValue(6).ToString();
+                    break;
+                }
+                else
+                {
+                    idcount++;
+                }
             }
             dataReader.Close();
             readCmd.Dispose();
+            con.Close();
 
-
+            LabelMonth.Text = month;
+            LabelYear.Text = year;
+            LabelDateGenerated.Text = dategenerated;
+            LabelProfit.Text = "RM " + profit;
+            LabelOrders.Text = Ordercount;
+            LabelProduct.Text = ProductCount;
 
             PanelViewReport.Visible = true;
         }

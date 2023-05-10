@@ -24,6 +24,15 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.TextBox TextBoxAdminName;
 
         /// <summary>
+        /// LabelErrorName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorName;
+
+        /// <summary>
         /// TextBoxEmail control.
         /// </summary>
         /// <remarks>
@@ -33,6 +42,15 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
 
         /// <summary>
+        /// LabelErrorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorEmail;
+
+        /// <summary>
         /// TextBoxPassword control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,15 @@ namespace Groceries.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxPassword;
+
+        /// <summary>
+        /// LabelErrorPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorPass;
 
         /// <summary>
         /// ButtonEdit control.
@@ -58,50 +85,5 @@ namespace Groceries.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonSave;
-
-        /// <summary>
-        /// ButtonDelete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonDelete;
-
-        /// <summary>
-        /// PanelConfirmDelete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelConfirmDelete;
-
-        /// <summary>
-        /// ButtonCancelDeleteIcon control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonCancelDeleteIcon;
-
-        /// <summary>
-        /// ButtonConfirmDelete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonConfirmDelete;
-
-        /// <summary>
-        /// ButtonCancelDelete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonCancelDelete;
     }
 }

@@ -37,14 +37,28 @@ namespace Groceries.Customer
                     //    cmd1.CommandType = CommandType.Text;
                     //    cmd1.CommandText = "INSERT INTO [Order](OrderID,CustomerID, OrderDate, TotalPrice) VALUES ('" + Session["orderID"] + "', '" + Session["user"] + "', '" + DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + "','" + Session["finaltotal"] + "')";
                     //    cmd1.ExecuteNonQuery();
+                    //, '" + dt.Rows[i]["Price"] + "'
+                    //'" + Session["user"] + "',
 
                     DataTable dt;
                     dt = (DataTable)Session["buyitems"];
-                    for (int i = 0; i <= dt.Rows.Count - 1; i++)
-                    {
-                        String updatepass = "INSERT INTO OrderItem(OrderID, ProductID, Quantity, Price) VALUES('" + Session["orderID"] + "', '" + dt.Rows[i]["ProductID"] + "', '" + dt.Rows[i]["Quantity"] + "', '" + dt.Rows[i]["Price"] + "')";
-                    }
-
+                    String updateCart = "INSERT INTO [Order](OrderID,OrderDate, TotalPrice) VALUES ('" + Session["orderID"] + "',  '" + DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + "','" + Session["finaltotal"] + "')";
+                    SqlConnection s = new SqlConnection(cs);
+                    s.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandText = updateCart;
+                    cmd.Connection = con;
+                    cmd.ExecuteNonQuery();
+                    s.Close();
+                    for (int i=0; i<=dt.Rows.Count-1; i++) {
+                        String updateCartItem = "INSERT INTO OrderItem(OrderID, ProductID, Quantity) VALUES('" + Session["orderID"] + "', '" + dt.Rows[i]["ProductID"] + "', '" + dt.Rows[i]["Quantity"] + "')";
+                        s.Open();
+                        SqlCommand cmd1 = new SqlCommand();
+                        cmd1.CommandText = updateCartItem;
+                        cmd1.Connection = s;
+                        cmd1.ExecuteNonQuery();
+                        s.Close();
+                    }   
 
                 }
 

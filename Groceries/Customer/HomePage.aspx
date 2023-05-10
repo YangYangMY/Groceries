@@ -184,7 +184,6 @@
                                     <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                                 </div>
                             </div>
-                            <asp:Label runat="server" ID="Label1" Text='<%# Eval("ProductID") %>' CssClass="mt-4 text-lg text-gray-700"></asp:Label>
                             <asp:Label runat="server" ID="lblName" Text='<%# Eval("ProductName") %>' CssClass="mt-4 text-lg text-gray-700"></asp:Label>
                             <p cssclass="mt-1 text-lg font-medium text-gray-900">
                                 RM

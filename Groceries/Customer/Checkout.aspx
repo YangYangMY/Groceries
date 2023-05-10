@@ -9,14 +9,15 @@
         <h1 class="pb-4 text-2xl lg:text-3xl font-semibold leading-7 lg:leading-9 text-gray-800">Shipping Address</h1>
     </div> 
 
-    <asp:SqlDataSource ID="AddressDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Address.SavedName, Address.SavedContact, Address.Street, Address.State, Address.Postcode, Address.City FROM Address INNER JOIN Customers ON Address.CustomerID = Customers.CustomerID">
+    <asp:SqlDataSource ID="AddressDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Address.AddressID, Address.SavedName, Address.SavedContact, Address.Street, Address.State, Address.Postcode, Address.City FROM Address INNER JOIN Customers ON Address.CustomerID = Customers.CustomerID">
     </asp:SqlDataSource>
 
-    <asp:GridView ID="AddressGridView" runat="server" DataSourceID="AddressDataSource" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HorizontalAlign="Center" OnSelectedIndexChanged="AddressGridView_SelectedIndexChanged">
+    <asp:GridView ID="AddressGridView" runat="server" DataSourceID="AddressDataSource" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HorizontalAlign="Center" OnSelectedIndexChanged="AddressGridView_SelectedIndexChanged" DataKeyNames="AddressID">
     <Columns>
-        <asp:BoundField DataField="SavedName" HeaderText="SavedName" SortExpression="SavedName" >
+        <asp:BoundField DataField="AddressID" HeaderText="No" InsertVisible="False" ReadOnly="True" SortExpression="AddressID" />
+        <asp:BoundField DataField="SavedName" HeaderText="Name" SortExpression="SavedName" >
         </asp:BoundField>
-        <asp:BoundField DataField="SavedContact" HeaderText="SavedContact" SortExpression="SavedContact" >
+        <asp:BoundField DataField="SavedContact" HeaderText="Contact" SortExpression="SavedContact" >
         </asp:BoundField>
         <asp:BoundField DataField="Street" HeaderText="Street" SortExpression="Street" >
         </asp:BoundField>

@@ -44,7 +44,7 @@ namespace Groceries.Customer
                     reader.Close();
 
                     AddressDataSource.SelectCommand =
-"SELECT Address.SavedName, Address.SavedContact, Address.Street, Address.State, Address.Postcode, Address.City"+
+"SELECT Address.AddressID, Address.SavedName, Address.SavedContact, Address.Street, Address.State, Address.Postcode, Address.City " +
 " FROM Address" +
 " INNER JOIN Customers ON Address.CustomerID = Customers.CustomerID" +
 " WHERE Address.CustomerID = " + customerID;
@@ -81,7 +81,11 @@ namespace Groceries.Customer
 
         protected void AddressGridView_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Get the currently selected row using the SelectedRow property.
+            GridViewRow row = AddressGridView.SelectedRow;
+            int selectedID = int.Parse(row.Cells[0].Text);
 
+            Session["address"] = selectedID;
         }
 
         protected void btnProceedPayment_Click(object sender, EventArgs e)

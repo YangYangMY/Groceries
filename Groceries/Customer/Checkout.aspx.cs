@@ -72,5 +72,17 @@ namespace Groceries.Customer
         {
 
         }
+
+        protected void btnProceedPayment_Click(object sender, EventArgs e)
+        {
+            if(AddressGridView.SelectedIndex == -1)
+            {
+                LabelErrorAddress.Text = "Please select an address";
+            }
+            else
+            {
+                Response.Redirect("~/Customer/PaymentGateway.aspx");
+            }   
+        }
     }
 }

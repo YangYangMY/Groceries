@@ -56,6 +56,8 @@
         <SortedDescendingCellStyle BackColor="#E5E5E5" />
         <SortedDescendingHeaderStyle BackColor="#242121" />
 </asp:GridView>
+ <asp:Label ID="LabelErrorAddress" runat="server" Text="" ForeColor="#CC0000" CssClass=" pt-5 text-center block mb-2 text-1xl font-medium"></asp:Label>
+
 </div>
 
     <!-- Modal toggle -->
@@ -70,9 +72,9 @@
              <div class="flex justify-between item-between space-y-2 flex-col">
                 <h1 class="pb-4 px-4 text-2xl lg:text-3xl font-semibold leading-7 lg:leading-9 text-gray-800">Delivery Method</h1>
              </div>
-             
+                  <asp:Label ID="LabelErrorDeliveryMethod" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>
                  <asp:RadioButtonList ID="deliveryMethod" runat="server">
-                     <asp:ListItem class="inline-flex items-center justify-between w-full px-8 py-4 my-4 mx-6 text-black bg-white border border-black-200 rounded-lg cursor-pointer hover:text-gray-600 hover:bg-gray-100">GoExpress</asp:ListItem>
+                     <asp:ListItem class="inline-flex items-center justify-between w-full px-8 py-4 my-4 mx-6 text-black bg-white border border-black-200 rounded-lg cursor-pointer hover:text-gray-600 hover:bg-gray-100" Selected="True">GoExpress</asp:ListItem>
                      <asp:ListItem class="inline-flex items-center justify-between w-full px-8 py-4 my-4 mx-6 text-black bg-white border border-black-200 rounded-lg cursor-pointer hover:text-gray-600 hover:bg-gray-100">Lalamove</asp:ListItem>
                  </asp:RadioButtonList>
              </div>
@@ -83,12 +85,13 @@
             <div class="flex justify-start item-start space-y-2 flex-col">
                 <h1 class="pb-4 px-4 text-2xl lg:text-3xl font-semibold leading-7 lg:leading-9 text-gray-800">Payment Method</h1>
              </div>
+                <asp:Label ID="LabelErrorPaymentMethod" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>
                 <asp:RadioButtonList ID="paymentMethod" runat="server">
-                     <asp:ListItem class="inline-flex items-center justify-between w-full px-8 py-4 my-4 mx-4 text-black bg-white border border-black-200 rounded-lg cursor-pointer hover:text-gray-600 hover:bg-gray-100">Cash On Delivery</asp:ListItem>
-                     <asp:ListItem class="inline-flex items-center justify-between w-full px-8 py-4 my-4 mx-4 text-black bg-white border border-black-200 rounded-lg cursor-pointer hover:text-gray-600 hover:bg-gray-100">Debit/Credit Card</asp:ListItem>
+                     <asp:ListItem class="inline-flex items-center justify-between w-full px-8 py-4 my-4 mx-4 text-black bg-white border border-black-200 rounded-lg cursor-pointer hover:text-gray-600 hover:bg-gray-100" Selected="True">Cash On Delivery</asp:ListItem>
+                     <asp:ListItem class="inline-flex items-center justify-between w-full px-8 py-4 my-4 mx-4 text-black bg-white border border-black-200 rounded-lg cursor-pointer hover:text-gray-600 hover:bg-gray-100" Selected="False">Debit/Credit Card</asp:ListItem>
                  </asp:RadioButtonList>
             </div>
-                <asp:Button ID="btnProceedPayment" runat="server" Text="Proceed" class="mt-6 block ml-auto px-8 py-2.5 bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" PostBackUrl="~/Customer/PaymentGateway.aspx"/>
+                <asp:Button ID="btnProceedPayment" runat="server" Text="Proceed" class="mt-6 block ml-auto px-8 py-2.5 bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" OnClick="btnProceedPayment_Click"/>
             </div>
         </div>
 </div>

@@ -33,6 +33,24 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.GridView AddressGridView;
 
         /// <summary>
+        /// LabelErrorAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorAddress;
+
+        /// <summary>
+        /// LabelErrorDeliveryMethod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorDeliveryMethod;
+
+        /// <summary>
         /// deliveryMethod control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,15 @@ namespace Groceries.Customer
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList deliveryMethod;
+
+        /// <summary>
+        /// LabelErrorPaymentMethod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorPaymentMethod;
 
         /// <summary>
         /// paymentMethod control.

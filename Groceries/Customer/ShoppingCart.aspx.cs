@@ -62,8 +62,9 @@ namespace Groceries.Customer
                         int quantity = Convert.ToInt16(Request.QueryString["Quantity"].ToString());
                         decimal totalprice = unitprice * quantity;
                         dr["totalprice"] = totalprice;
-                        int userId = Convert.ToInt32(Session["user"]);
-                        savecartdetail(1, ds.Tables[0].Rows[0]["ProductID"].ToString(), ds.Tables[0].Rows[0]["ProductName"].ToString(), Request.QueryString["Quantity"], ds.Tables[0].Rows[0]["UnitPrice"].ToString(), totalprice.ToString(), userId);
+                        
+                        int ProductID = Convert.ToInt32(ds.Tables[0].Rows[0]["ProductID"]);
+                        savecartdetail(1, ProductID, ds.Tables[0].Rows[0]["ProductName"].ToString(), Request.QueryString["Quantity"], ds.Tables[0].Rows[0]["UnitPrice"].ToString(), totalprice.ToString());
 
 
                         dt.Rows.Add(dr);
@@ -124,11 +125,9 @@ namespace Groceries.Customer
                             int quantity = Convert.ToInt16(Request.QueryString["Quantity"].ToString());
                             decimal totalprice = unitprice * quantity;
                             dr["totalprice"] = totalprice;
-                            int userId = Convert.ToInt32(Session["user"]);
-                            savecartdetail(sr+1, ds.Tables[0].Rows[0]["ProductID"].ToString(), ds.Tables[0].Rows[0]["ProductName"].ToString(), Request.QueryString["Quantity"], ds.Tables[0].Rows[0]["UnitPrice"].ToString(), totalprice.ToString(), userId);
-
-                            dt.Rows.Add(dr);
-                            GridView1.DataSource = dt;
+                            
+                            int ProductID = Convert.ToInt32(ds.Tables[0].Rows[0]["ProductID"]);
+                            savecartdetail(sr + 1, ProductID, ds.Tables[0].Rows[0]["ProductName"].ToString(), Request.QueryString["Quantity"], ds.Tables[0].Rows[0]["UnitPrice"].ToString(), totalprice.ToString());
                             GridView1.DataBind();
 
                             Session["buyitems"] = dt;
@@ -303,10 +302,10 @@ namespace Groceries.Customer
             }
         }
 
-        private void savecartdetail(int no, String ProductID, String ProductName, String UnitPrice, String Quantity, String TotalPrice, int CustomerID)
+        private void savecartdetail(int no, int ProductID, String ProductName, String UnitPrice, String Quantity, String TotalPrice)
         {
             int userId = Convert.ToInt32(Session["user"]);
-            String query = "insert into SavedCart(no,ProductID,ProductName,UnitPrice,Quantity,TotalPrice, CustomerID) values(" + no + "," + ProductID + ",'" + ProductName + "','" + Quantity + "','" + UnitPrice + "','" + TotalPrice + "', " + userId + ")";
+            String query = "insert into SavedCart(no,ProductID,ProductName,UnitPrice,Quantity,TotalPrice, CustomerID) values(" + no + "," + ProductID + ",'" + ProductName + "','" + Quantity + "','" + UnitPrice + "','" + TotalPrice + "', '" + Session["user"].ToString() + "')";
             String mycon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
             SqlConnection con = new SqlConnection(mycon);
             con.Open();

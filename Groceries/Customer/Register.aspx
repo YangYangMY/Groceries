@@ -29,7 +29,7 @@
                             <span class="font-semibold">Phone Numbe</span><div class="flex">
                                 <div class="r-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
                                     <i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                <asp:TextBox ID="txtPNumber" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="011-11111111"></asp:TextBox>
+                                <asp:TextBox ID="txtPNumber" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="011-11111111" MaxLength="12"></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
                             <asp:Button class="block w-full max-w-xs mx-auto bg-red-500 hover:bg-amber-400 focus:bg-amber-400 text-white rounded-lg px-3 py-3 font-semibold" 
-                                ID="btnRegister" runat="server" Text="REGISTER NOW" OnClick="Button1_Click"  />
+                                ID="btnRegister" runat="server" Text="REGISTER NOW" OnClick="btnRegister_Click" />
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,8 @@
                         </svg>
                         <span class="text-2xl font-medium">New Customer Account Created Successfully</span>
                         <p class="text-center">Press continue to go to Login page.</p>
-                        <asp:Button ID="Button1" runat="server" Text="Continue" CssClass=" my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " PostBackUrl="~/Customer/Login.aspx" />
+                        <br />
+                        <a href="Login.aspx" class=" my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Continue</a>
                     </div>
                 </div>
             </div>

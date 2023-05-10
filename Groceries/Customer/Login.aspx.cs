@@ -89,6 +89,10 @@ namespace Groceries
             {
                 if (SignInAcc.Replace(" ", "") == confirmPass)
                 {
+
+                    // The email and password are valid, do something
+                    if (acc == 1)
+                    {
                         SqlCommand command = new SqlCommand("SELECT CustomerID FROM Customers WHERE EmailAddress = @Email", con);
                         command.Parameters.AddWithValue("@Email", txtEmail.Text);
                         SqlDataReader reader = command.ExecuteReader();
@@ -99,14 +103,21 @@ namespace Groceries
                             Session["user"] = customerID; // store the customer ID in a session
                         }
                         reader.Close();
-                    // The email and password are valid, do something
-                    if (acc == 1)
-                    {
                         Response.Redirect("HomePage.aspx");
                     }
                     else
                     {
-                        PanelAdminLoginSuccess.Visible = true;
+                        SqlCommand command = new SqlCommand("SELECT AdminID FROM Admin WHERE EmailAddress = @Email", con);
+                        command.Parameters.AddWithValue("@Email", txtEmail.Text);
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            int adminID = reader.GetInt32(0);
+                            Session["user"] = adminID; // store the customer ID in a session
+                        }
+                        reader.Close();
+                        Response.Redirect("~/Admin/Dashboard.aspx");
                     }
                     
                 }

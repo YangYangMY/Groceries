@@ -84,21 +84,5 @@
 </section>
 </div>
         <br />
-     <asp:Panel ID="PanelAdminLoginSuccess" runat="server" Visible="False">
-        <div class="bg-black bg-opacity-50 md:bg-opacity-50 fixed top-0 left-0 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
-            <div class="relative w-full h-full max-w-md md:h-auto mx-auto my-20">
-                <!--Pop Out-->
-                <div class="relative bg-white rounded-lg shadow ">
-                    <div class="p-6 text-center ">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#059669] mx-auto h-11 rounded-full bg-[#D1FAE5] w-11" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span class="text-2xl font-medium">Account Login Successfully</span>
-                        <p class="text-center">Press continue to go to Admin Dashboard.</p> 
-                        <asp:Button ID="btnAdmin" runat="server" PostBackUrl="~/Admin/Dashboard.aspx" Text="Continue"  CssClass=" my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm py-2.5 text-center mr-2 mb-2 "/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </asp:Panel>
+
 </asp:Content>

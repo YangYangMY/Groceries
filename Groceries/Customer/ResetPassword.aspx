@@ -21,25 +21,48 @@
                   <div class="relative mb-6" data-te-input-wrapper-init>
                       <!-- Email input -->
                       <asp:Label ID="lblEmail" runat="server" Text="Email"
-                          class="block mb-2 text-sm font-medium text-orange-300 dark:text-orange-500"></asp:Label>
+                          class="block mb-2 text-sm font-medium text-orange-300 dark:text-orange-500" Width="53px"></asp:Label>
+                            <label for="" class="text-xs font-semibold px-1">
+                            <span class="font-semibold">
+                            <asp:RegularExpressionValidator ID="regEmail" runat="server" ErrorMessage="Invalid Email Format." ForeColor="red"  ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail">*</asp:RegularExpressionValidator>
+                      <asp:RequiredFieldValidator ID="reqEmail" runat="server" ErrorMessage="Email is required. " ForeColor="red" ControlToValidate="txtEmail">*</asp:RequiredFieldValidator>
+                            </span></label>
                       <asp:TextBox ID="txtEmail" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono" placeholder="name@flowbite.com"></asp:TextBox>
                       <br /><br />
                       
                       <!-- Password input -->
-                      <asp:Label class="block mb-2 text-sm font-medium text-orange-300 dark:text-orange-500" ID="lblPassword" runat="server" Text="Password"></asp:Label>
+                      <asp:Label class="block mb-2 text-sm font-medium text-orange-300 dark:text-orange-500" ID="lblPassword" runat="server" Text="Password" Width="93px"></asp:Label>
+                            <label for="" class="text-xs font-semibold px-1">
+                            <asp:RegularExpressionValidator ID="regPass" runat="server" ErrorMessage="Password should be 6 characters" ForeColor="red" ValidationExpression="\w(6)" ControlToValidate="txtPass">*</asp:RegularExpressionValidator>
+                            <span class="font-semibold">
+                            <asp:RequiredFieldValidator ID="reqPass" runat="server" ControlToValidate="txtPass" ForeColor="red" ErrorMessage="Password is required.">*</asp:RequiredFieldValidator>
+                            </span>
+                            </label>
                       <div class="relative w-full">
                           <asp:TextBox ID="TextBox1" runat="server" class="hidden js-password-toggle" placeholder="·········"></asp:TextBox>
-                          <asp:TextBox ID="TextBox3" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono js-password" placeholder="**********" autocomplete="off"></asp:TextBox>
+                          <asp:TextBox ID="txtPass" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono js-password" placeholder="**********" autocomplete="off"></asp:TextBox>
                       </div>
-                      <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource> <br />
+                      <br />
 
                       <!-- Reset Password -->
-                      <asp:Label class="block mb-2 text-sm font-medium text-orange-300 dark:text-orange-500" ID="Label1" runat="server" Text="Reset Password"></asp:Label>
+                      <asp:Label class="block mb-2 text-sm font-medium text-orange-300 dark:text-orange-500" ID="Label1" runat="server" Text="Reset Password" Width="139px"></asp:Label>
+                            <label for="" class="text-xs font-semibold px-1">
+                            <asp:RegularExpressionValidator ID="regConPass" runat="server" ErrorMessage="Password should be 6 characters" ForeColor="red" ValidationExpression="\w(6)" ControlToValidate="txtConPassword">*</asp:RegularExpressionValidator>
+                            <span class="font-semibold">
+                            <asp:RequiredFieldValidator ID="reqConPass" runat="server" ControlToValidate="txtConPass" ForeColor="red" ErrorMessage="Confirmation password is required.">*</asp:RequiredFieldValidator>
+                            <asp:CompareValidator ID="cmpPass" runat="server" ErrorMessage="Passwords do not match" ForeColor="red" Operator="DataTypeCheck" ClientIDMode="AutoID" ControlToCompare="txtPass" ControlToValidate="txtConPass">*</asp:CompareValidator>
+                            </span>
+                            </label>
                       <div class="relative w-full">
                           <asp:TextBox ID="TextBox2" runat="server" class="hidden js-password-toggle" placeholder="·········"></asp:TextBox>
-                          <asp:TextBox ID="TextBox4" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono js-password" placeholder="**********" autocomplete="off"></asp:TextBox>
+                          <asp:TextBox ID="txtConPass" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono js-password" placeholder="**********" autocomplete="off"></asp:TextBox>
+                          <br />
+                          <asp:Label ID="lblError" runat="server" ForeColor="red"></asp:Label>
+                                <span class="font-semibold">
+                                <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="The following problems have been encountered" Width="1247px" />
+                                </span>
                       </div>
-                      <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource> <br />
+                      <br />
                        
                       
                   <div class="text-center lg:text-left">

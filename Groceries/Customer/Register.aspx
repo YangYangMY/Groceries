@@ -16,10 +16,11 @@
                 <div>
                     <div class="flex -mx-3">
                         <div class="w-1/2 px-3 mb-5">
-                            <span class="font-semibold">Name</span><div class="flex">
-                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                                    <i class="mdi mdi-account-outline text-gray-400 text-lg"></i>
-                                </div>
+                            <span class="font-semibold">Name
+                            <asp:RequiredFieldValidator ID="reqName" runat="server" ControlToValidate="txtName" ForeColor="red" ErrorMessage="Name is required.">*</asp:RequiredFieldValidator>
+                            <br />
+                            </span>
+                            <div class="flex">
                                 <asp:TextBox ID="txtName" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="John"></asp:TextBox>
                                 <br />
                             </div>
@@ -34,8 +35,12 @@
                     </div>
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
-                            <label for="" class="text-xs font-semibold px-1">Email</label>
-                            <div class="flex">
+                            <label for="" class="text-xs font-semibold px-1">Email
+                            <span class="font-semibold">
+                            <asp:RequiredFieldValidator ID="reqEmail" runat="server" ControlToValidate="txtEmail" ForeColor="red" ErrorMessage="Email is required.">*</asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="regEmail" runat="server" ErrorMessage="Invalid Email Format." ForeColor="red"  ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail">*</asp:RegularExpressionValidator>
+                            </span></label>
+                            &nbsp;<div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
                                 <asp:TextBox ID="txtEmail" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="johnsmith@example.com"></asp:TextBox>
                             </div>
@@ -45,6 +50,7 @@
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
                             <label for="" class="text-xs font-semibold px-1">Birthday</label>
+                            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Date of Birth format should be MM/DD/YYYY" ForeColor="red" Operator="DataTypeCheck" ControlToValidate="txtBirthday" Type="Date">*</asp:CompareValidator>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div> <!--OnTextChanged="TextBox4_TextChanged"-->
                                 <asp:TextBox ID="txtBirthday" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="    Select birthday date"></asp:TextBox>
@@ -53,22 +59,34 @@
                     </div>
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
-                            <label for="" class="text-xs font-semibold px-1">Password</label>
-                            <div class="flex">
+                            <label for="" class="text-xs font-semibold px-1">Password
+                            <span class="font-semibold">
+                            <asp:RequiredFieldValidator ID="reqPass" runat="server" ControlToValidate="txtPass" ForeColor="red" ErrorMessage="Password is required.">*</asp:RequiredFieldValidator>
+                            </span>
+                            <asp:RegularExpressionValidator ID="regPass" runat="server" ErrorMessage="Password should be 6 characters" ForeColor="red"  ValidationExpression="\w(6)" ControlToValidate="txtPassword">*</asp:RegularExpressionValidator>
+                            </label>
+                            &nbsp;<div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
-                                <asp:TextBox ID="txtPassword" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************"></asp:TextBox>
+                                <asp:TextBox ID="txtPassword" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************" TextMode="Password" MaxLength="30"></asp:TextBox>
                             </div>
                         </div>
                     </div>
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-12">
-                            <label for="" class="text-xs font-semibold px-1">Confirm password</label>
-                            <div class="flex">
+                            <label for="" class="text-xs font-semibold px-1">Confirm password
+                            <span class="font-semibold">
+                            <asp:RequiredFieldValidator ID="reqConPass" runat="server" ControlToValidate="txtConPass" ForeColor="red" ErrorMessage="Confirmation password is required.">*</asp:RequiredFieldValidator>
+                            </span>
+                            <asp:RegularExpressionValidator ID="regConPass" runat="server" ErrorMessage="Password should be 6 characters" ForeColor="red" ValidationExpression="\w(6)" ControlToValidate="txtConPassword">*</asp:RegularExpressionValidator>
+                            <asp:CompareValidator ID="cmpPass" runat="server" ErrorMessage="Passwords do not match" ForeColor="red" ClientIDMode="AutoID" ControlToCompare="txtPass" ControlToValidate="txtConPass">*</asp:CompareValidator>
+                            </label>
+                            &nbsp;<div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
-                                <asp:TextBox ID="txtConPassword" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************"></asp:TextBox>
+                                <asp:TextBox ID="txtConPassword" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************" TextMode="Password" MaxLength="30"></asp:TextBox>
                                 <span class="font-semibold">
                                 <br />
                                 <asp:Label ID="lblErrorMessage" runat="server"></asp:Label>
+                                <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="The following problems have been encountered" Width="1247px" />
                                 </span>
                             </div>
                         </div>

@@ -20,20 +20,7 @@ namespace Groceries.Admin.Product
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Check if the user is authenticated
-            if (!User.Identity.IsAuthenticated)
-            {
-                // The user is not authenticated, redirect to the login page
-                Response.Redirect("~/Login.aspx");
-            }
 
-            // Check if the user is in a specific role
-            if (!User.IsInRole("Admin"))
-            {
-                // The user is not in the Admin role, show an error message
-                //lblDisplayError.Text = "Access denied. You need to be an admin to perform this action.";
-                // lblError.Visible = true;
-            }
         }
 
         protected void ButtonSubmit_Click1(object sender, EventArgs e)

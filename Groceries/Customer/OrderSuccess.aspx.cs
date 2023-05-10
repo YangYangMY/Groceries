@@ -29,7 +29,7 @@ namespace Groceries.Customer
 
                     DataTable dt;
                     dt = (DataTable)Session["buyitems"];
-                    String updateCart = "INSERT INTO [Order](OrderID,OrderDate, TotalPrice) VALUES ('" + Session["orderID"] + "',  '" + DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + "','" + Session["finaltotal"] + "')";
+                    String updateCart = "INSERT INTO [Order](OrderID,OrderDate, TotalPrice, CustomerID) VALUES ('" + Session["orderID"] + "',  '" + DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + "','" + Session["finaltotal"] + "','" + Session["user"] + "')";
                     SqlConnection s = new SqlConnection(cs);
                     s.Open();
                     SqlCommand cmd = new SqlCommand();

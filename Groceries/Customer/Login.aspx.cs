@@ -44,10 +44,11 @@ namespace Groceries
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            string cs = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             con = new SqlConnection(strCon);
             con.Open();
 
-            //Admin email Check
+            //Customer email Check
             SqlCommand chkCust = new SqlCommand("SELECT COUNT(*) FROM Customers WHERE ([EmailAddress] = @EmailAddress)", con);
             chkCust.Parameters.AddWithValue("@EmailAddress", txtEmail.Text);
             int CustAccount = (int)chkCust.ExecuteScalar();
@@ -88,8 +89,16 @@ namespace Groceries
             {
                 if (SignInAcc.Replace(" ", "") == confirmPass)
                 {
-                    // Create a login session
-                    Session["Email"] = txtEmail.Text;
+                        SqlCommand command = new SqlCommand("SELECT CustomerID FROM Customers WHERE EmailAddress = @Email", con);
+                        command.Parameters.AddWithValue("@Email", txtEmail.Text);
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            int customerID = reader.GetInt32(0);
+                            Session["user"] = customerID; // store the customer ID in a session
+                        }
+                        reader.Close();
                     // The email and password are valid, do something
                     if (acc == 1)
                     {

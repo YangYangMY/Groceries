@@ -34,6 +34,7 @@ namespace Groceries.Customer
             //        GridView1.DataBind();
             //    }
             //}
+
             if (!IsPostBack)
             {
                 DataTable dt = new DataTable();

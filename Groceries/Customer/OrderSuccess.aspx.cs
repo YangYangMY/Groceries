@@ -40,16 +40,16 @@ namespace Groceries.Customer
 
                     DataTable dt;
                     dt = (DataTable)Session["buyitems"];
-                    for(int i=0; i<=dt.Rows.Count-1; i++) {
+                    for (int i = 0; i <= dt.Rows.Count - 1; i++)
+                    {
                         String updatepass = "INSERT INTO OrderItem(OrderID, ProductID, Quantity, Price) VALUES('" + Session["orderID"] + "', '" + dt.Rows[i]["ProductID"] + "', '" + dt.Rows[i]["Quantity"] + "', '" + dt.Rows[i]["Price"] + "')";
                     }
-                        
-                          
-                    }
+
 
                 }
-            }
 
+            }
         }
+
     }
 }

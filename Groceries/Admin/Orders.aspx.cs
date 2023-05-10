@@ -65,6 +65,7 @@ namespace Groceries.Admin
             //Get Address ID & Customer ID
             string addressID = null;
             string buyerID = null;
+            string tax = null;
             readSql = "SELECT * FROM [Order]";
             readCmd = new SqlCommand(readSql, con);
             dataReader = readCmd.ExecuteReader();
@@ -72,8 +73,9 @@ namespace Groceries.Admin
             {
                 if (idcount == selectedID)
                 {
-                    buyerID = dataReader.GetValue(3).ToString();
-                    addressID = dataReader.GetValue(4).ToString();
+                    tax = dataReader.GetValue(2).ToString();
+                    buyerID = dataReader.GetValue(5).ToString();
+                    addressID = dataReader.GetValue(6).ToString();
                     break;
                 }
                 else
@@ -139,7 +141,7 @@ namespace Groceries.Admin
             readCmd.Dispose();
 
             SqlDataSource2.SelectCommand =
-    "SELECT Products.ProductName, OrderItem.Quantity, Products.UnitPrice" +
+    "SELECT Products.ProductName, OrderItem.Quantity, Products.UnitPrice, OrderItem.TotalAmount" +
     " FROM [Order]" +
     " INNER JOIN OrderItem ON [Order].OrderID = OrderItem.OrderID" +
     " INNER JOIN Products ON OrderItem.ProductID = Products.ProductID" +
@@ -149,6 +151,7 @@ namespace Groceries.Admin
 
             //Display Data
             LabelDate.Text = orderdate;
+            LabelTax.Text = "RM " + tax;
             LabelOrderID.Text = "Order #" + selectedID;
             LabelTotal.Text = "RM" + totalprice;
 

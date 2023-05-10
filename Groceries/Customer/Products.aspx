@@ -21,7 +21,7 @@
             UnitPrice:
             <asp:Label ID="UnitPriceLabel" runat="server" Text='<%# Eval("UnitPrice") %>' />
             <br />
-            <asp:Button ID="btnAddToCart" runat="server" CommandName="AddToCart" Text="Add to cart" CommandArgument='<%# Eval("ProductId") %>'/>
+            <asp:Button ID="btnAddToCart" runat="server" CommandName="AddToCart" Text="Add to cart" CommandArgument='<%# Eval("ProductID") %>'/>
             <br />
         </ItemTemplate>
         <SelectedItemStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />

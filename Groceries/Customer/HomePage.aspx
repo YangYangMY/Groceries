@@ -175,7 +175,7 @@
                     </div>
                 </div>
 
-                <asp:Repeater ID="reptProduct" runat="server">
+                <asp:Repeater ID="reptProduct" runat="server" OnItemCommand="reptProduct_ItemCommand">
                     <ItemTemplate>
                         <div class="grid content-between group">
                             <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
@@ -184,13 +184,14 @@
                                     <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
                                 </div>
                             </div>
+                            <asp:Label runat="server" ID="Label1" Text='<%# Eval("ProductID") %>' CssClass="mt-4 text-lg text-gray-700"></asp:Label>
                             <asp:Label runat="server" ID="lblName" Text='<%# Eval("ProductName") %>' CssClass="mt-4 text-lg text-gray-700"></asp:Label>
                             <p cssclass="mt-1 text-lg font-medium text-gray-900">
                                 RM
                             <asp:Label runat="server" ID="lblPrice" Text='<%# Eval("UnitPrice") %>' CssClass="mt-1 text-lg font-medium text-gray-900"></asp:Label>
                             </p>
                             <div class="flex flex-row mt-2">
-                                <asp:Button ID="btnAddToCart" runat="server" CommandName="AddToCart" Text="Add to cart" CssClass="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" />
+                                <asp:Button ID="btnAddToCart" runat="server" CssClass="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" CommandName="AddToCart" Text="Add to cart" CommandArgument='<%# Eval("ProductID") %>' />
                             </div>
                         </div>
                     </ItemTemplate>

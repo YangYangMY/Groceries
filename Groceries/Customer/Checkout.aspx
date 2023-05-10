@@ -9,43 +9,25 @@
         <h1 class="pb-4 text-2xl lg:text-3xl font-semibold leading-7 lg:leading-9 text-gray-800">Shipping Address</h1>
     </div> 
 
-    <asp:SqlDataSource ID="AddressDataSource" runat="server" ConnectionString="<%$ConnectionStrings:ConnectionString%>"
-    SelectCommand="SELECT * FROM Address WHERE CustomerID = @CustomerID">
-    <SelectParameters>
-        <asp:Parameter Name="CustomerID" Type="Int32" DefaultValue="1" />
-    </SelectParameters>
+    <asp:SqlDataSource ID="AddressDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Address.AddressID, Address.SavedName, Address.SavedContact, Address.Street, Address.State, Address.Postcode, Address.City FROM Address INNER JOIN Customers ON Address.CustomerID = Customers.CustomerID">
     </asp:SqlDataSource>
 
-    <asp:GridView ID="AddressGridView" runat="server" DataSourceID="AddressDataSource" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HorizontalAlign="Center" OnSelectedIndexChanged="AddressGridView_SelectedIndexChanged">
+    <asp:GridView ID="AddressGridView" runat="server" DataSourceID="AddressDataSource" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HorizontalAlign="Center" OnSelectedIndexChanged="AddressGridView_SelectedIndexChanged" DataKeyNames="AddressID">
     <Columns>
-        <asp:CommandField />
-        <asp:BoundField DataField="SavedName" HeaderText="Name" >
-        <HeaderStyle HorizontalAlign="Center" />
-        <ItemStyle HorizontalAlign="Center" />
+        <asp:BoundField DataField="AddressID" HeaderText="No" InsertVisible="False" ReadOnly="True" SortExpression="AddressID" />
+        <asp:BoundField DataField="SavedName" HeaderText="Name" SortExpression="SavedName" >
         </asp:BoundField>
-        <asp:BoundField DataField="SavedContact" HeaderText="Contact" >
-        <HeaderStyle HorizontalAlign="Center" />
-        <ItemStyle HorizontalAlign="Center" />
+        <asp:BoundField DataField="SavedContact" HeaderText="Contact" SortExpression="SavedContact" >
         </asp:BoundField>
-        <asp:BoundField DataField="Street" HeaderText="Street" >
-        <HeaderStyle HorizontalAlign="Center" />
-        <ItemStyle HorizontalAlign="Center" />
+        <asp:BoundField DataField="Street" HeaderText="Street" SortExpression="Street" >
         </asp:BoundField>
-        <asp:BoundField DataField="State" HeaderText="State" >
-        <HeaderStyle HorizontalAlign="Center" />
-        <ItemStyle HorizontalAlign="Center" />
+        <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" >
         </asp:BoundField>
-        <asp:BoundField DataField="PostCode" HeaderText="Postal Code" >
-        <HeaderStyle HorizontalAlign="Center" />
-        <ItemStyle HorizontalAlign="Center" />
+        <asp:BoundField DataField="Postcode" HeaderText="Postcode" SortExpression="Postcode" >
         </asp:BoundField>
-        <asp:BoundField DataField="City" HeaderText="City" >
-        <HeaderStyle HorizontalAlign="Center" />
-        <ItemStyle HorizontalAlign="Center" />
+        <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" >
         </asp:BoundField>
-        <asp:CommandField ShowSelectButton="True">
-        <ItemStyle HorizontalAlign="Center" />
-        </asp:CommandField>
+        <asp:CommandField ShowSelectButton="True" />
     </Columns>
         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -61,6 +43,7 @@
 </div>
 
     <!-- Modal toggle -->
+
     <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="block ml-auto mt-6 px-5 py-2.5 bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" type="button">
     Add New Address</button>
 
@@ -87,8 +70,7 @@
              </div>
                 <asp:Label ID="LabelErrorPaymentMethod" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>
                 <asp:RadioButtonList ID="paymentMethod" runat="server">
-                     <asp:ListItem class="inline-flex items-center justify-between w-full px-8 py-4 my-4 mx-4 text-black bg-white border border-black-200 rounded-lg cursor-pointer hover:text-gray-600 hover:bg-gray-100" Selected="True">Cash On Delivery</asp:ListItem>
-                     <asp:ListItem class="inline-flex items-center justify-between w-full px-8 py-4 my-4 mx-4 text-black bg-white border border-black-200 rounded-lg cursor-pointer hover:text-gray-600 hover:bg-gray-100" Selected="False">Debit/Credit Card</asp:ListItem>
+                     <asp:ListItem class="inline-flex items-center justify-between w-full px-8 py-4 my-4 mx-4 text-black bg-white border border-black-200 rounded-lg cursor-pointer hover:text-gray-600 hover:bg-gray-100" Selected="True">Paypal</asp:ListItem>
                  </asp:RadioButtonList>
             </div>
                 <asp:Button ID="btnProceedPayment" runat="server" Text="Proceed" class="mt-6 block ml-auto px-8 py-2.5 bg-[#003049] hover:bg-stone-300 focus:bg-neutral-900 text-white rounded-lg px-3 py-3 font-semibold" OnClick="btnProceedPayment_Click"/>
@@ -113,7 +95,7 @@
         <div class="sm:col-span-3">
           <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Your Name</label>
           <div class="mt-2">
-              <asp:TextBox ID="txtName" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></asp:TextBox>  
+              <asp:TextBox ID="txtName" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text=""></asp:TextBox>  
               
           </div>
         </div>
@@ -121,35 +103,35 @@
         <div class="sm:col-span-3">
           <label for="contact" class="block text-sm font-medium leading-6 text-gray-900">Contact Number</label>
           <div class="mt-2">
-              <asp:TextBox ID="txtContact" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></asp:TextBox>
+              <asp:TextBox ID="txtContact" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text=""></asp:TextBox>
           </div>
         </div>
 
         <div class="sm:col-span-3">
           <label for="street" class="block text-sm font-medium leading-6 text-gray-900">Street Address</label>
           <div class="mt-2">
-            <asp:TextBox ID="txtStreet" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></asp:TextBox>
+            <asp:TextBox ID="txtStreet" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text=""></asp:TextBox>
           </div>
         </div>
 
         <div class="sm:col-span-3">
           <label for="state" class="block text-sm font-medium leading-6 text-gray-900">State</label>
           <div class="mt-2">
-            <asp:TextBox ID="txtState" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></asp:TextBox>
+            <asp:TextBox ID="txtState" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text=""></asp:TextBox>
           </div>
         </div>
 
         <div class="sm:col-span-3">
           <label for="postalcode" class="block text-sm font-medium leading-6 text-gray-900">Postal Code</label>
           <div class="mt-2">
-              <asp:TextBox ID="txtPostalCode" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></asp:TextBox>
+              <asp:TextBox ID="txtPostalCode" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text=""></asp:TextBox>
           </div>
         </div>
 
         <div class="sm:col-span-3">
           <label for="city" class="block text-sm font-medium leading-6 text-gray-900">City</label>
           <div class="mt-2">
-            <asp:TextBox ID="txtCity" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></asp:TextBox>
+            <asp:TextBox ID="txtCity" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text=""></asp:TextBox>
           </div>
         </div>
 

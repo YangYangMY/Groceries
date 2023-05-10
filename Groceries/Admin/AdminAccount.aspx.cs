@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,9 +10,26 @@ namespace Groceries.Admin
 {
     public partial class AdminAccount : System.Web.UI.Page
     {
+        //Open and Link database
+        SqlConnection con;
+        string strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Check if the user is authenticated
+            if (!User.Identity.IsAuthenticated)
+            {
+                // The user is not authenticated, redirect to the login page
+                Response.Redirect("Customer/Login.aspx");
+            }
 
+            // Check if the user is in a specific role
+            if (!User.IsInRole("Admin"))
+            {
+                // The user is not in the Admin role, show an error message
+                //lblDisplayError.Text = "Access denied. You need to be an admin to perform this action.";
+                // lblError.Visible = true;
+            }
         }
 
         protected void ButtonEdit_Click(object sender, EventArgs e)

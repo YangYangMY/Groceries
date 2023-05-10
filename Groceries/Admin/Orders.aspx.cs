@@ -72,8 +72,8 @@ namespace Groceries.Admin
             {
                 if (idcount == selectedID)
                 {
-                    buyerID = dataReader.GetValue(4).ToString();
-                    addressID = dataReader.GetValue(5).ToString();
+                    buyerID = dataReader.GetValue(3).ToString();
+                    addressID = dataReader.GetValue(4).ToString();
                     break;
                 }
                 else
@@ -113,7 +113,7 @@ namespace Groceries.Admin
             string phoneNum = null;
             string deliveryName = null;
             string deliveryaddress = null;
-            int addressIDCheck = Int32.Parse(addressID);
+            int addressIDCheck = int.Parse(addressID);
             idcount = 1;
             readSql = "SELECT * FROM [Address]";
             readCmd = new SqlCommand(readSql, con);

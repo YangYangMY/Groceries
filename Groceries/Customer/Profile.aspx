@@ -6,7 +6,7 @@
             <h1 class="text-lg leading-6 font-medium text-gray-900">Personal Information</h1>
             <p class="mt-1 max-w-2xl text-sm text-gray-500">
                 Details and informations about user.
-            </p>
+                </p>
         </div>
         <div class="border-t border-gray-200">
             <table style="width:100%;">

@@ -156,8 +156,8 @@
     <Content Include="bin\System.Runtime.CompilerServices.Unsafe.dll" />
     <Content Include="bin\System.Threading.Tasks.Extensions.dll" />
     <Content Include="Customer\About.aspx" />
-    <Content Include="Customer\Bakery.aspx" />
-    <Content Include="Customer\Beverages.aspx" />
+    <Content Include="Customer\Dairy.aspx" />
+    <Content Include="Customer\Drinks.aspx" />
     <Content Include="Customer\Checkout.aspx" />
     <Content Include="Customer\Contact.aspx" />
     <Content Include="Customer\FAQ.aspx" />
@@ -177,7 +177,6 @@
     <Content Include="Customer\ResetPassword.aspx" />
     <Content Include="Customer\ShoppingCart.aspx" />
     <Content Include="Customer\Snacks.aspx" />
-    <Content Include="Customer\Vegetables.aspx" />
     <Content Include="favicon_io\android-chrome-192x192.png" />
     <Content Include="favicon_io\android-chrome-512x512.png" />
     <Content Include="favicon_io\apple-touch-icon.png" />
@@ -232,6 +231,15 @@
     <Content Include="obj\Debug\Groceries.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Groceries.dll" />
     <Content Include="obj\Debug\Groceries.pdb" />
+    <Content Include="ProductImageupload\100plus.jpg" />
+    <Content Include="ProductImageupload\apple.jpg" />
+    <Content Include="ProductImageupload\brocoli.png" />
+    <Content Include="ProductImageupload\chickenbreast.jpg" />
+    <Content Include="ProductImageupload\enokimushroom.png" />
+    <Content Include="ProductImageupload\farmfreshmilk2l.jpg" />
+    <Content Include="ProductImageupload\millo.png" />
+    <Content Include="ProductImageupload\oreorblackpink.png" />
+    <Content Include="ProductImageupload\twistieschipsterHotSpicy.png" />
     <Content Include="tailwind.config.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -299,19 +307,19 @@
     <Compile Include="Customer\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer\Bakery.aspx.cs">
-      <DependentUpon>Bakery.aspx</DependentUpon>
+    <Compile Include="Customer\Dairy.aspx.cs">
+      <DependentUpon>Dairy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer\Bakery.aspx.designer.cs">
-      <DependentUpon>Bakery.aspx</DependentUpon>
+    <Compile Include="Customer\Dairy.aspx.designer.cs">
+      <DependentUpon>Dairy.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer\Beverages.aspx.cs">
-      <DependentUpon>Beverages.aspx</DependentUpon>
+    <Compile Include="Customer\Drinks.aspx.cs">
+      <DependentUpon>Drinks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer\Beverages.aspx.designer.cs">
-      <DependentUpon>Beverages.aspx</DependentUpon>
+    <Compile Include="Customer\Drinks.aspx.designer.cs">
+      <DependentUpon>Drinks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Checkout.aspx.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
@@ -446,13 +454,6 @@
     <Compile Include="Customer\Snacks.aspx.designer.cs">
       <DependentUpon>Snacks.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer\Vegetables.aspx.cs">
-      <DependentUpon>Vegetables.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\Vegetables.aspx.designer.cs">
-      <DependentUpon>Vegetables.aspx</DependentUpon>
-    </Compile>
     <Compile Include="MasterPage\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -517,7 +518,6 @@
   <ItemGroup>
     <Folder Include="InquiryImageUpload\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="ProductImageupload\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -8,14 +8,14 @@ using System.Web.UI.WebControls;
 
 namespace Groceries.Customer
 {
-    public partial class Snacks : System.Web.UI.Page
+    public partial class Beverages : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 string strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
-                string query = String.Format("SELECT * FROM [Products] WHERE CategoryID='3'");
+                string query = String.Format("SELECT * FROM [Products] WHERE CategoryID='5'");
                 SqlConnection con;
                 con = new SqlConnection(strCon);
                 SqlCommand command = new SqlCommand(query, con);

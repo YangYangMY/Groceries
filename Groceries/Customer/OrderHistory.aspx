@@ -10,74 +10,45 @@
                     </div> 
 
 
-                    <asp:Repeater ID="RptOrderHistory" runat="server">
-                        <itemTemplate>
-                        <div class="rounded-lg bg-white shadow-lg border p-6 space-y-6">
-                            <p class="pb-4 text-xl lg:text-2xl font-semibold leading-7 lg:leading-9 text-gray-800">OrderID: </p>
-                            <asp:Label ID="lblOrderID" runat="server" class="text-base xl:text-lg leading-6 text-gray-800"><%# Eval("OrderID") %></asp:Label>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="OrderID" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Width="868px">
+                        <Columns>
+                            <asp:BoundField DataField="OrderID" HeaderText="OrderID" ReadOnly="True" SortExpression="OrderID" />
+                            <asp:BoundField DataField="OrderDate" HeaderText="OrderDate" SortExpression="OrderDate" >
+                            <HeaderStyle HorizontalAlign="Center" />
+                            <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="Subtotal" HeaderText="Subtotal(RM)" SortExpression="Subtotal" >
+                            <HeaderStyle HorizontalAlign="Center" />
+                            <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="SalesTax" HeaderText="SalesTax(RM)" SortExpression="SalesTax" >
+                            <HeaderStyle HorizontalAlign="Center" />
+                            <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="TotalPrice" HeaderText="TotalPrice(RM)" SortExpression="TotalPrice" >
+                            <HeaderStyle HorizontalAlign="Center" />
+                            <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                        </Columns>
+                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                    </asp:GridView>
 
-                            <div class="flex justify-start space-x-12 items-start w-full">
-                                <p class="text-base xl:text-lg leading-6">Ordered Date:</p>
-                                <asp:Label ID="lblOrderDate" runat="server" class="text-base xl:text-lg leading-6 text-gray-800"><%# Eval("OrderDate") %></asp:Label>
-                            </div>
-                            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Order].OrderID, [Order].OrderDate, [Order].Subtotal, [Order].SalesTax, [Order].TotalPrice FROM Customers INNER JOIN [Order] ON Customers.CustomerID = [Order].CustomerID INNER JOIN OrderItem ON [Order].OrderID = OrderItem.OrderID INNER JOIN Products ON OrderItem.ProductID = Products.ProductID"></asp:SqlDataSource>
 
-                        
-                            <asp:Repeater ID="RptOrderData" runat="server">
-                             <itemTemplate>
-                                 <table class="w-full text-sm text-center text-gray-500 ">
-                            
-                            <tbody>
-                                <tr class="bg-white border-b ">
-                                    <th scope="row" class="px-6 py-4">
-                                        <div class="w-full md:w-20 mx-auto">
-                                            <%# Eval("ProductID") %>
-                                        </div>
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        <%# Eval("ProductName") %>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        <%# Eval("Quantity") %>
-                                    </td>
-                                </tr>
-                        </itemTemplate>
-                        </asp:Repeater>
-
-                        <div class="border-gray-200 md:flex-row flex-col flex justify-end items-start w-full space-y-4 md:space-y-0">
-                        <div class="flex justify-end space-x-12 items-start w-full pr-6 py-4">
-                        <p class="text-base xl:text-lg leading-6">Total Paid:</p>
-                        <p class="text-base xl:text-lg leading-6 text-gray-800">RM16.69</p>
-                    </div>
-                </div>
-         
-            </div> 
-            </itemTemplate>
-            </asp:Repeater>
 
 </div>
 </div>
 
 </div>
 </div>
-        
-</asp:Content>
 
-<%--<thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">
-                                        ProductID
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        ProductName
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Quantity
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Subtotal
-                                    </th>
-                                </tr>
-                            </thead>
---%>
+
+    </asp:Content>

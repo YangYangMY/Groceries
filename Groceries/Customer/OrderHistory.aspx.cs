@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using MailKit;
+using System.Net.NetworkInformation;
+using System.Xml.Linq;
 
 namespace Groceries.Customer
 {
@@ -17,23 +20,17 @@ namespace Groceries.Customer
 
             if (!IsPostBack) {
 
-                int customerID = Convert.ToInt32(Session["user"]); 
-                string strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;"; SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;");
-                string query = String.Format("select OrderID, OrderDate from [Order] where CustomerID = {0}",customerID);
+                // Replace with the actual ID of the customer whose address you want to retrieve
+                int customerID = Convert.ToInt32(Session["user"]);
+                SqlDataSource1.SelectCommand =
+                "SELECT [Order].OrderID, [Order].OrderDate, [Order].Subtotal, [Order].SalesTax, [Order].TotalPrice " +
+                " FROM Customers" +
+                " INNER JOIN [Order] ON Customers.CustomerID = [Order].CustomerID" +
+                " INNER JOIN OrderItem ON [Order].OrderID = OrderItem.OrderID" +
+                " INNER JOIN Products ON OrderItem.ProductID = Products.ProductID" +
+                " WHERE [Order].CustomerID = " + customerID;
 
-
-                con = new SqlConnection(strCon);
-                SqlCommand command = new SqlCommand(query, con);
-                con.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                RptOrderHistory.DataSource = reader;
-                RptOrderHistory.DataBind();
-                con.Close();
-
-               
-                
-
-            }
+        }
 
         }
     }

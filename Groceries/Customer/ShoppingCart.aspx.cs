@@ -36,12 +36,6 @@ namespace Groceries.Customer
                 dt.Columns.Add("Quantity");
                 dt.Columns.Add("totalprice");
 
-                //if (Session["buyitems"] == null && Request.QueryString["id"] == null)
-                //{
-                //    // Display a message indicating that the shopping cart is empty
-                //    lblEmptyCart.Text = "Your shopping cart is currently empty.";
-                //    Session["buyitems"] = dt;
-                //}
                 if (Request.QueryString["id"] != null)
                 {
                     if (Session["Buyitems"] == null)
@@ -68,6 +62,9 @@ namespace Groceries.Customer
                         int quantity = Convert.ToInt16(Request.QueryString["Quantity"].ToString());
                         decimal totalprice = unitprice * quantity;
                         dr["totalprice"] = totalprice;
+                        int userId = Convert.ToInt32(Session["user"]);
+                        savecartdetail(1, ds.Tables[0].Rows[0]["ProductID"].ToString(), ds.Tables[0].Rows[0]["ProductName"].ToString(), Request.QueryString["Quantity"], ds.Tables[0].Rows[0]["UnitPrice"].ToString(), totalprice.ToString(), userId);
+
 
                         dt.Rows.Add(dr);
                         GridView1.DataSource = dt;
@@ -127,6 +124,8 @@ namespace Groceries.Customer
                             int quantity = Convert.ToInt16(Request.QueryString["Quantity"].ToString());
                             decimal totalprice = unitprice * quantity;
                             dr["totalprice"] = totalprice;
+                            int userId = Convert.ToInt32(Session["user"]);
+                            savecartdetail(sr+1, ds.Tables[0].Rows[0]["ProductID"].ToString(), ds.Tables[0].Rows[0]["ProductName"].ToString(), Request.QueryString["Quantity"], ds.Tables[0].Rows[0]["UnitPrice"].ToString(), totalprice.ToString(), userId);
 
                             dt.Rows.Add(dr);
                             GridView1.DataSource = dt;
@@ -302,6 +301,19 @@ namespace Groceries.Customer
             {
                 Response.Redirect("~/Customer/Checkout.aspx");
             }
+        }
+
+        private void savecartdetail(int no, String ProductID, String ProductName, String UnitPrice, String Quantity, String TotalPrice, int CustomerID)
+        {
+            int userId = Convert.ToInt32(Session["user"]);
+            String query = "insert into SavedCart(no,ProductID,ProductName,UnitPrice,Quantity,TotalPrice, CustomerID) values(" + no + "," + ProductID + ",'" + ProductName + "','" + Quantity + "','" + UnitPrice + "','" + TotalPrice + "', " + userId + ")";
+            String mycon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
+            SqlConnection con = new SqlConnection(mycon);
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = query;
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Groceries.Customer
                 // Replace with the actual ID of the customer whose address you want to retrieve
                 int customerID = Convert.ToInt32(Session["user"]);
                 SqlDataSource1.SelectCommand =
-                "SELECT [Order].OrderID, [Order].OrderDate, [Order].Subtotal, [Order].SalesTax, [Order].TotalPrice " +
+                "SELECT DISTINCT [Order].OrderID, [Order].OrderDate, [Order].Subtotal, [Order].SalesTax, [Order].TotalPrice " +
                 " FROM Customers" +
                 " INNER JOIN [Order] ON Customers.CustomerID = [Order].CustomerID" +
                 " INNER JOIN OrderItem ON [Order].OrderID = OrderItem.OrderID" +

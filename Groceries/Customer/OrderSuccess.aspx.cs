@@ -24,19 +24,6 @@ namespace Groceries.Customer
 
                 if (orderID == Session["orderID"].ToString())
                 {
-                    //SqlCommand cmd = con.CreateCommand();
-                    //cmd.CommandType = CommandType.Text;
-                    //cmd.CommandText = "SELECT CustomerID FROM Customers WHERE EmailAddress='" + Session["user"] + "'";
-                    //cmd.ExecuteNonQuery();
-                    //DataTable dt = new DataTable();
-                    //SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    //da.Fill(dt);
-                    //foreach(DataRow dr in dt.Rows)
-                    //{
-                    //    SqlCommand cmd1 = con.CreateCommand();
-                    //    cmd1.CommandType = CommandType.Text;
-                    //    cmd1.CommandText = "INSERT INTO [Order](OrderID,CustomerID, OrderDate, TotalPrice) VALUES ('" + Session["orderID"] + "', '" + Session["user"] + "', '" + DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + "','" + Session["finaltotal"] + "')";
-                    //    cmd1.ExecuteNonQuery();
                     //, '" + dt.Rows[i]["Price"] + "'
                     //'" + Session["user"] + "',
 

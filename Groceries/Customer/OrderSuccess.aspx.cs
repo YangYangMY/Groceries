@@ -48,6 +48,8 @@ namespace Groceries.Customer
                     }   
 
                 }
+                Session.Remove("buyitems");
+                Session.Remove("finaltotal");
 
             }
         }

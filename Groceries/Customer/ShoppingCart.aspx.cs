@@ -83,7 +83,7 @@ namespace Groceries.Customer
                         GridView1.DataBind();
 
                         Session["buyitems"] = dt;
-                        GridView1.FooterRow.Cells[5].Text = "Total(RM)";
+                        GridView1.FooterRow.Cells[5].Text = "Subtotal(RM)";
                         GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
                         Calculatefinaltotal();
                         Response.Redirect("ShoppingCart.aspx");
@@ -142,7 +142,7 @@ namespace Groceries.Customer
                             GridView1.DataBind();
 
                             Session["buyitems"] = dt;
-                            GridView1.FooterRow.Cells[5].Text = "Total(RM)";
+                            GridView1.FooterRow.Cells[5].Text = "Subtotal(RM)";
                             GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
                             Calculatefinaltotal();
                             Response.Redirect("ShoppingCart.aspx");
@@ -157,7 +157,7 @@ namespace Groceries.Customer
                     GridView1.DataBind();
                     if (GridView1.Rows.Count > 0)
                     {
-                        GridView1.FooterRow.Cells[5].Text = "Total(RM)";
+                        GridView1.FooterRow.Cells[5].Text = "Subtotal(RM)";
                         GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
                         Calculatefinaltotal();
 

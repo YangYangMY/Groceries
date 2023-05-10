@@ -52,6 +52,9 @@
     </div>
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+
+<%--<asp:Repeater ID="Repeater1" runat="server">
+<ItemTemplate>--%>
 <table class="w-full text-sm text-center text-gray-500 ">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
         <tr>
@@ -104,6 +107,9 @@
     </div>
          
 </div>
+<%--</ItemTemplate>
+</asp:Repeater>--%>
+                        
 </div>
         
 </div>

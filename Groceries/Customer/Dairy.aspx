@@ -1,13 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/ProductsCat.master" AutoEventWireup="true" CodeBehind="Meat.aspx.cs" Inherits="Groceries.Customer.Meat" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/ProductsCat.master" AutoEventWireup="true" CodeBehind="Dairy.aspx.cs" Inherits="Groceries.Customer.Bakery" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-10">
-        <h1 class="text-4xl font-bold tracking-tight text-[#003049]">Meats</h1>
+        <h1 class="text-4xl font-bold tracking-tight text-[#003049]">Bakery</h1>
     </div>
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
-        <asp:Repeater ID="reptProduct" runat="server" OnItemCommand="reptProduct_ItemCommand">
+       <asp:Repeater ID="reptProduct" runat="server" OnItemCommand="reptProduct_ItemCommand">
             <ItemTemplate>
                 <div class="grid content-between group">
                     <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">

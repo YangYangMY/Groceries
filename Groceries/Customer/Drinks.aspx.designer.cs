@@ -11,7 +11,7 @@ namespace Groceries.Customer
 {
 
 
-    public partial class Snacks
+    public partial class Beverages
     {
 
         /// <summary>

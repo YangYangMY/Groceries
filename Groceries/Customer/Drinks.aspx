@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/ProductsCat.master" AutoEventWireup="true" CodeBehind="Meat.aspx.cs" Inherits="Groceries.Customer.Meat" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/ProductsCat.master" AutoEventWireup="true" CodeBehind="Drinks.aspx.cs" Inherits="Groceries.Customer.Beverages" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-10">
-        <h1 class="text-4xl font-bold tracking-tight text-[#003049]">Meats</h1>
+        <h1 class="text-4xl font-bold tracking-tight text-[#003049]">Beverages</h1>
     </div>
 </asp:Content>
 

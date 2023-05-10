@@ -78,22 +78,49 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.Label LabelDate;
 
         /// <summary>
-        /// LabelName control.
+        /// LabelBuyerName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelName;
+        protected global::System.Web.UI.WebControls.Label LabelBuyerName;
 
         /// <summary>
-        /// LabelAddress control.
+        /// LabelBuyerNum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelAddress;
+        protected global::System.Web.UI.WebControls.Label LabelBuyerNum;
+
+        /// <summary>
+        /// LabelDeliveryName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDeliveryName;
+
+        /// <summary>
+        /// LabelDeliveryNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDeliveryNum;
+
+        /// <summary>
+        /// LabelDeliveryAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDeliveryAddress;
 
         /// <summary>
         /// SqlDataSource2 control.

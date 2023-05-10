@@ -23,6 +23,15 @@
                     </div>
                 </a>
 
+                <a class="grid content-between group" href="Meat.aspx">
+                    <div class="relative w-3/4 h-0 bg-gray-200 rounded-lg align-center border-2 hover:border-[#F6BD60] hover:opacity-75 hover:bg-[#FBEBDB]" style="padding-bottom: 100%">
+                        <div class="absolute inset-0 flex justify-center flex flex-col items-center pt-7">
+                            <img src="../images/meat.png" alt="meats" class="h-2/5 w-suto object-cover object-center">
+                            <h6 class="my-5 font-medium text-gray-500">Meats & Seafood</h6>
+                        </div>
+                    </div>
+                </a>
+
                 <a class="grid content-between group" href="Vegetables.aspx">
                     <div class="relative w-3/4 h-0 bg-gray-200 rounded-lg align-center border-2 hover:border-[#F6BD60] hover:opacity-75 hover:bg-[#FBEBDB]" style="padding-bottom: 100%">
                         <div class="absolute inset-0 justify-center flex flex-col items-center pt-7">
@@ -32,14 +41,7 @@
                     </div>
                 </a>
 
-                <a class="grid content-between group" href="Meat.aspx">
-                    <div class="relative w-3/4 h-0 bg-gray-200 rounded-lg align-center border-2 hover:border-[#F6BD60] hover:opacity-75 hover:bg-[#FBEBDB]" style="padding-bottom: 100%">
-                        <div class="absolute inset-0 flex justify-center flex flex-col items-center pt-7">
-                            <img src="../images/meat.png" alt="meats" class="h-2/5 w-suto object-cover object-center">
-                            <h6 class="my-5 font-medium text-gray-500">Meats</h6>
-                        </div>
-                    </div>
-                </a>
+                
 
                 <a class="grid content-between group" href="Bakery.aspx">
                     <div class="relative w-3/4 h-0 bg-gray-200 rounded-lg align-center border-2 hover:border-[#F6BD60] hover:opacity-75 hover:bg-[#FBEBDB]" style="padding-bottom: 100%">
@@ -180,8 +182,7 @@
                         <div class="grid content-between group">
                             <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
                                 <div class="absolute inset-0 flex justify-center items-center">
-
-                                    <img src="../images/rabbit-candy.png" alt="rabbit-candy" class="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700">
+                                    <asp:Image runat="server" ID="prdImg" ImageUrl='<%# Eval("Media") %>' CssClass="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700"/>
                                 </div>
                             </div>
                             <asp:Label runat="server" ID="lblName" Text='<%# Eval("ProductName") %>' CssClass="mt-4 text-lg text-gray-700"></asp:Label>

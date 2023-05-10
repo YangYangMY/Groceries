@@ -33,12 +33,18 @@
                     <asp:Image ID="Image1" runat="server" CssClass="object-right  bg-transparent rounded-lg text-sm px-6 ml-auto" ImageUrl="~/favicon_io/favicon-32x32.png" />
                     <h3 class=" text-2xl font-bold text-black px-6 text-right">Goceries</h3>
                     <h3 class=" text-1xl font-normal text-black px-6 text-right">Jalan Genting Kalang,53300, Kuala Lumpur</h3>
-
                     <asp:Label ID="LabelDate" runat="server" Text="4 May,2023" CssClass="absolute right-0 text-1xl font-bold text-black px-6"></asp:Label>
-                    <h3 class=" text-2xl font-bold text-black pt-7 px-6">Bill To</h3>
-                    <asp:Label ID="LabelName" runat="server" Text="Oh Boon Suen" CssClass="text-1xl font-bold text-black px-6"></asp:Label>
+                    <h3 class=" text-2xl font-bold text-black pt-7 px-6">Buyer</h3>
+                    <asp:Label ID="LabelBuyerName" runat="server" Text="Oh Boon Suen" CssClass="text-1xl font-bold text-black px-6"></asp:Label>
                     <br />
-                    <asp:Label ID="LabelAddress" runat="server" Text="
+                    <asp:Label ID="LabelBuyerNum" runat="server" Text="0177255766" CssClass="text-1xl font-bold text-black px-6"></asp:Label>
+                    <br />
+                    <h3 class=" text-2xl font-bold text-black pt-7 px-6">Deliver To</h3>
+                    <asp:Label ID="LabelDeliveryName" runat="server" Text="Oh Boon Suen" CssClass="text-1xl font-bold text-black px-6"></asp:Label>
+                    <br />
+                    <asp:Label ID="LabelDeliveryNum" runat="server" Text="0177255766" CssClass="text-1xl font-bold text-black px-6"></asp:Label>
+                    <br />
+                    <asp:Label ID="LabelDeliveryAddress" runat="server" Text="
                         2, Jalan Danau Saujana, 
                         Taman Danau Kota, 53000 Kuala Lumpur, 
                         Wilayah Persekutuan Kuala Lumpur"
@@ -71,10 +77,5 @@
 
 </asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="head">
-    <style type="text/css">
-        .auto-style1 {
-            height: 32px;
-        }
-    </style>
-</asp:Content>
+    </asp:Content>
 

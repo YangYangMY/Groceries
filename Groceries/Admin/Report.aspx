@@ -25,7 +25,7 @@
                                 <asp:BoundField DataField="DateGenerated" HeaderText="Date Generated" SortExpression="DateGenerated" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
                                 <asp:BoundField DataField="Month" HeaderText="Month" SortExpression="Month" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
                                 <asp:BoundField DataField="Year" HeaderText="Year" SortExpression="Year" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
-                                <asp:CommandField SelectText="View" ShowSelectButton="True" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass=" cursor-pointer font-medium text-blue-600 hover:underline mx-5" HeaderText="Actions" />
+                                <asp:CommandField SelectText="View" ShowSelectButton="True" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass=" cursor-pointer font-medium text-blue-600 hover:underline mx-5" HeaderText="Action" />
                             </Columns>
                         </asp:GridView>
 

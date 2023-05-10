@@ -16,7 +16,7 @@
                 <asp:BoundField DataField="CustomerName" HeaderText="Buyer" SortExpression="CustomerName" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
                 <asp:BoundField DataField="OrderDate" HeaderText="Date" SortExpression="OrderDate" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
                 <asp:BoundField DataField="TotalPrice" HeaderText="Amount   " SortExpression="TotalPrice" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
-                <asp:CommandField SelectText="View" ShowSelectButton="True" HeaderStyle-CssClass="text-left text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass=" cursor-pointer font-medium text-blue-600 hover:underline mx-5" HeaderText="Actions" />
+                <asp:CommandField SelectText="View" ShowSelectButton="True" HeaderStyle-CssClass="text-left text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass=" cursor-pointer font-medium text-blue-600 hover:underline mx-5" HeaderText="Action" />
             </Columns>
         </asp:GridView>
     </div>

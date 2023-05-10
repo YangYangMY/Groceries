@@ -96,15 +96,6 @@ namespace Groceries
         protected global::System.Web.UI.WebControls.Label LabelErrorFileUpload;
 
         /// <summary>
-        /// ButtonSubmit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonSubmit;
-
-        /// <summary>
         /// ButtonReset control.
         /// </summary>
         /// <remarks>
@@ -112,6 +103,15 @@ namespace Groceries
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonReset;
+
+        /// <summary>
+        /// ButtonSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonSubmit;
 
         /// <summary>
         /// PanelInquirySuccess control.

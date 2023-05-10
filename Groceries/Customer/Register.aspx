@@ -53,7 +53,7 @@
                             <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Date of Birth format should be DD/MM/YYYY" ForeColor="red" Operator="DataTypeCheck" ControlToValidate="txtBirthday" Type="Date">*</asp:CompareValidator>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div> <!--OnTextChanged="TextBox4_TextChanged"-->
-                                <asp:TextBox ID="txtBirthday" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="    Select birthday date"></asp:TextBox>
+                                <asp:TextBox ID="txtBirthday" runat="server" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="    DD/MM/YYYY" TextMode="DateTime"></asp:TextBox>
                             </div>
                         </div>
                     </div>

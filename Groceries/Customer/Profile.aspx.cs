@@ -79,5 +79,10 @@ namespace Groceries.Customer
                 Response.Redirect("Login.aspx");
             }
         }
+
+        protected void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

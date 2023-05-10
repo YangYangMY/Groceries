@@ -24,12 +24,10 @@ namespace Groceries.Customer
 
                 if (orderID == Session["orderID"].ToString())
                 {
-                    //, '" + dt.Rows[i]["Price"] + "'
-                    //'" + Session["user"] + "',
 
                     DataTable dt;
                     dt = (DataTable)Session["buyitems"];
-                    String updateCart = "INSERT INTO [Order](OrderID,OrderDate, TotalPrice, CustomerID,AddressID) VALUES ('" + Session["orderID"] + "',  '" + DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + "','" + Session["finaltotal"] + "','" + Session["user"] + "','" + Session["address"] + "')";
+                    String updateCart = "INSERT INTO [Order](OrderID,OrderDate,SalesTax,Subtotal,TotalPrice, CustomerID,AddressID) VALUES ('" + Session["orderID"] + "',  '" + DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + "','" + Session["SalesTax"] + "','" + Session["Subtotal"] + "','" + Session["finaltotal"] + "','" + Session["user"] + "','" + Session["address"] + "')";
                     SqlConnection s = new SqlConnection(cs);
                     s.Open();
                     SqlCommand cmd = new SqlCommand();
@@ -50,6 +48,7 @@ namespace Groceries.Customer
                 }
                 Session.Remove("buyitems");
                 Session.Remove("finaltotal");
+
 
             }
         }

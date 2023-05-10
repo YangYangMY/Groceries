@@ -33,6 +33,8 @@ namespace Groceries.Customer
             finaltotal = totalprice + tax + shippingFee;
             string finalTotalFormatted = finaltotal.ToString("0.00");
             Session["finaltotal"] = finalTotalFormatted.ToString();
+            Session["subtotal"] = totalprice;
+            Session["SalesTax"] = taxFormatted;
 
             //// Get the cart data table from the session
             //DataTable cart = (DataTable)Session["buyitems"];

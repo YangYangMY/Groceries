@@ -13,7 +13,7 @@
                     <asp:Repeater ID="RptOrderHistory" runat="server">
                         <itemTemplate>
                         <div class="rounded-lg bg-white shadow-lg border p-6 space-y-6">
-                            <h1 class="pb-4 text-xl lg:text-2xl font-semibold leading-7 lg:leading-9 text-gray-800">OrderID: </h1>
+                            <p class="pb-4 text-xl lg:text-2xl font-semibold leading-7 lg:leading-9 text-gray-800">OrderID: </p>
                             <asp:Label ID="lblOrderID" runat="server" class="text-base xl:text-lg leading-6 text-gray-800"><%# Eval("OrderID") %></asp:Label>
 
                             <div class="flex justify-start space-x-12 items-start w-full">
@@ -23,49 +23,27 @@
                             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 
 
-                        <table class="w-full text-sm text-center text-gray-500 ">
-                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">
-                                        Product
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Quantity
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Total Price
-                                    </th>
-                                </tr>
-                            </thead>
+                        
+                            <asp:Repeater ID="RptOrderData" runat="server">
+                             <itemTemplate>
+                                 <table class="w-full text-sm text-center text-gray-500 ">
+                            
                             <tbody>
                                 <tr class="bg-white border-b ">
                                     <th scope="row" class="px-6 py-4">
                                         <div class="w-full md:w-20 mx-auto">
-                                            <img class="hidden md:block" src="../images/massimobread.png" alt="missimo" />
+                                            <%# Eval("ProductID") %>
                                         </div>
                                     </th>
                                     <td class="px-6 py-4">
-                                        1
+                                        <%# Eval("ProductName") %>
                                     </td>
                                     <td class="px-6 py-4">
-                                        RM3.19
+                                        <%# Eval("Quantity") %>
                                     </td>
                                 </tr>
-                                <tr class="bg-white border-b">
-                                    <th scope="row" class="px-6 py-4">
-                                        <div class="w-full md:w-20 mx-auto">
-                                            <img class="hidden md:block" src="../images/hbchips.jpg" alt="hbchips" />
-                                        </div>
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        1
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        RM5.50
-                                    </td>
-                                </tr> 
-                            </tbody>
-                        </table>
+                        </itemTemplate>
+                        </asp:Repeater>
 
                         <div class="border-gray-200 md:flex-row flex-col flex justify-end items-start w-full space-y-4 md:space-y-0">
                         <div class="flex justify-end space-x-12 items-start w-full pr-6 py-4">
@@ -74,8 +52,6 @@
                     </div>
                 </div>
          
-            </div>
-
             </div> 
             </itemTemplate>
             </asp:Repeater>
@@ -88,3 +64,20 @@
         
 </asp:Content>
 
+<%--<thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        ProductID
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        ProductName
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        Quantity
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        Subtotal
+                                    </th>
+                                </tr>
+                            </thead>
+--%>

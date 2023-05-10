@@ -72,8 +72,8 @@ namespace Groceries.Admin
             {
                 if (idcount == selectedID)
                 {
-                    buyerID = dataReader.GetValue(4).ToString();
-                    addressID = dataReader.GetValue(5).ToString();
+                    buyerID = dataReader.GetValue(3).ToString();
+                    addressID = dataReader.GetValue(4).ToString();
                     break;
                 }
                 else

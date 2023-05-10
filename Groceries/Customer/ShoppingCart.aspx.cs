@@ -68,7 +68,7 @@ namespace Groceries.Customer
                         DataSet ds = new DataSet();
 
                         da.Fill(ds);
-                        dr["no"] = 1;
+                        //dr["no"] = 1;
                         dr["ProductID"] = ds.Tables[0].Rows[0]["ProductID"].ToString();
                         dr["ProductName"] = ds.Tables[0].Rows[0]["ProductName"].ToString();
                         dr["Quantity"] = Request.QueryString["Quantity"];
@@ -127,7 +127,7 @@ namespace Groceries.Customer
                             da.SelectCommand = cmd;
                             DataSet ds = new DataSet();
                             da.Fill(ds);
-                            dr["no"] = sr + 1;
+                            //dr["no"] = sr + 1;
                             dr["ProductID"] = ds.Tables[0].Rows[0]["ProductID"].ToString();
                             dr["ProductName"] = ds.Tables[0].Rows[0]["ProductName"].ToString();
                             dr["UnitPrice"] = ds.Tables[0].Rows[0]["UnitPrice"].ToString();

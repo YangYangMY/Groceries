@@ -3,6 +3,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="bg-stone-50 flex items-center justify-center">
+
+
     <div class="my-28 w-full mx-auto rounded-lg bg-white shadow-lg p-5 text-gray-700" style="max-width:600px">
             <div class="text-center">
             <img src="../images/oderConfirmed.png" class="w-16 h-16 mx-auto my-6"/>

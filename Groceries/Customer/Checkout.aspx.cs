@@ -45,13 +45,11 @@ namespace Groceries.Customer
                     }
                     reader.Close();
 
-                    AddressDataSource.SelectCommand =
-"SELECT Address.AddressID, Address.SavedName, Address.SavedContact, Address.Street, Address.State, Address.Postcode, Address.City " +
-" FROM Address" +
-" INNER JOIN Customers ON Address.CustomerID = Customers.CustomerID" +
-" WHERE Address.CustomerID = " + customerID;
-
-
+                AddressDataSource.SelectCommand =
+                "SELECT Address.AddressID, Address.SavedName, Address.SavedContact, Address.Street, Address.State, Address.Postcode, Address.City " +
+                " FROM Address" +
+                " INNER JOIN Customers ON Address.CustomerID = Customers.CustomerID" +
+                " WHERE Address.CustomerID = " + customerID;
 
                     con.Close();
                 }

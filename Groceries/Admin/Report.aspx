@@ -19,7 +19,7 @@
                     <div class="shadow overflow-hidden sm:rounded-lg">
                         <!-- Gridview was here -->
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Report] ORDER BY [ReportID]"></asp:SqlDataSource>
-                        <asp:GridView ID="GridViewReport" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ReportID" DataSourceID="SqlDataSource1" CssClass="w-full text-sm text-left text-gray-500">
+                        <asp:GridView ID="GridViewReport" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ReportID" DataSourceID="SqlDataSource1" CssClass="w-full text-sm text-left text-gray-500" OnSelectedIndexChanged="GridViewReport_SelectedIndexChanged">
                             <Columns>
                                 <asp:BoundField DataField="ReportID" HeaderText="Report ID" ReadOnly="True" SortExpression="ReportID" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
                                 <asp:BoundField DataField="DateGenerated" HeaderText="Date Generated" SortExpression="DateGenerated" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />

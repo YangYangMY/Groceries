@@ -12,15 +12,15 @@
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT ProductID, ProductName, UnitInStock, UnitPrice FROM Products ORDER BY ProductID"></asp:SqlDataSource>
             <asp:GridView ID="GridViewProductList" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ProductID" DataSourceID="SqlDataSource1" CssClass="w-full text-sm text-left text-gray-500" OnSelectedIndexChanged="GridViewProductList_SelectedIndexChanged" >
                 <Columns>
-                    <asp:BoundField DataField="ProductID" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" HeaderText="ProductID" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" ReadOnly="True" SortExpression="ProductID">
+                    <asp:BoundField DataField="ProductID" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" HeaderText="Product ID" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" ReadOnly="True" SortExpression="ProductID">
                     </asp:BoundField>
-                    <asp:BoundField DataField="ProductName" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" HeaderText="ProductName" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" SortExpression="ProductName">
+                    <asp:BoundField DataField="ProductName" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" HeaderText="Product Name" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" SortExpression="ProductName">
                     </asp:BoundField>
-                    <asp:BoundField DataField="UnitInStock" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" HeaderText="UnitInStock" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" SortExpression="UnitInStock">
+                    <asp:BoundField DataField="UnitInStock" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" HeaderText="Stock" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" SortExpression="UnitInStock">
                     </asp:BoundField>
-                    <asp:BoundField DataField="UnitPrice" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" HeaderText="UnitPrice" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" SortExpression="UnitPrice">
+                    <asp:BoundField DataField="UnitPrice" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" HeaderText="Price" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" SortExpression="UnitPrice">
                     </asp:BoundField>
-                    <asp:CommandField SelectText="Edit" ShowSelectButton="True" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:text-cyan-800 hover:underline rounded-lg px-2" HeaderText="Action" />
+                    <asp:CommandField SelectText="Edit" ShowSelectButton="True" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass=" cursor-pointer font-medium text-blue-600 hover:underline mx-5" HeaderText="Action" />
                     
                 </Columns>
             </asp:GridView>

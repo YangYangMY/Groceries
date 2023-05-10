@@ -42,51 +42,6 @@ namespace Groceries.Admin
         protected global::System.Web.UI.WebControls.GridView GridViewReport;
 
         /// <summary>
-        /// ButtonViewReport1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonViewReport1;
-
-        /// <summary>
-        /// ButtonViewReport2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonViewReport2;
-
-        /// <summary>
-        /// ButtonViewReport3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonViewReport3;
-
-        /// <summary>
-        /// ButtonViewReport4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonViewReport4;
-
-        /// <summary>
-        /// ButtonViewReport5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonViewReport5;
-
-        /// <summary>
         /// PanelViewReport control.
         /// </summary>
         /// <remarks>

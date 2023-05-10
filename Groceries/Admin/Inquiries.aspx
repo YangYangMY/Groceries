@@ -12,10 +12,10 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Inquiry] ORDER BY [InquiryID]"></asp:SqlDataSource>
         <asp:GridView ID="GridViewInquiry" runat="server" AutoGenerateColumns="False" CssClass="w-full text-sm text-left text-gray-500" DataKeyNames="InquiryID" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" PagerStyle-CssClass="text-cyan-500" OnSelectedIndexChanged="GridViewInquiry_SelectedIndexChanged">
             <Columns>
-                <asp:BoundField DataField="InquiryID" HeaderText="InquiryID" ReadOnly="True" SortExpression="InquiryID" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"></asp:BoundField>
-                <asp:BoundField DataField="InquiryDate" HeaderText="InquiryDate" SortExpression="InquiryDate" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"></asp:BoundField>
+                <asp:BoundField DataField="InquiryID" HeaderText="Inquiry ID" ReadOnly="True" SortExpression="InquiryID" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"></asp:BoundField>
+                <asp:BoundField DataField="InquiryDate" HeaderText="Inquiry Date" SortExpression="InquiryDate" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"></asp:BoundField>
                 <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"></asp:BoundField>
-                <asp:CommandField HeaderText="Actions" ShowSelectButton="True" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:text-cyan-800 hover:underline rounded-lg px-2" />
+                <asp:CommandField HeaderText="Actions" ShowSelectButton="True" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass=" cursor-pointer font-medium text-blue-600 hover:underline mx-5" />
             </Columns>
         </asp:GridView>
     </div>

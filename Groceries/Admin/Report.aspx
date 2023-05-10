@@ -10,9 +10,7 @@
         <div class="mb-4 flex items-center justify-between">
             <div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Monthly Report</h3>
-
-                <asp:DataList ID="DataList1" runat="server"></asp:DataList>
-                  <asp:Button ID="ButtonGenerateReport" runat="server" CssClass="text-gray-500 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " Text="Generate Report" OnClick="ButtonGenerateReport_Click"/>                
+                <asp:Button ID="ButtonGenerateReport" runat="server" CssClass=" text-[#003049] cursor-pointer hover:bg-gray-300 bg-[#F6BD60] focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 " Text="Generate Report" OnClick="ButtonGenerateReport_Click" />
             </div>
         </div>
         <div class="flex flex-col mt-8">
@@ -20,103 +18,25 @@
                 <div class="align-middle inline-block min-w-full">
                     <div class="shadow overflow-hidden sm:rounded-lg">
                         <!-- Gridview was here -->
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
-                        <asp:GridView ID="GridViewReport" runat="server"></asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Report] ORDER BY [ReportID]"></asp:SqlDataSource>
+                        <asp:GridView ID="GridViewReport" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ReportID" DataSourceID="SqlDataSource1" CssClass="w-full text-sm text-left text-gray-500">
+                            <Columns>
+                                <asp:BoundField DataField="ReportID" HeaderText="Report ID" ReadOnly="True" SortExpression="ReportID" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
+                                <asp:BoundField DataField="DateGenerated" HeaderText="Date Generated" SortExpression="DateGenerated" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
+                                <asp:BoundField DataField="Month" HeaderText="Month" SortExpression="Month" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
+                                <asp:BoundField DataField="Year" HeaderText="Year" SortExpression="Year" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" />
+                                <asp:CommandField SelectText="View" ShowSelectButton="True" HeaderStyle-CssClass="text-xs text-gray-700 uppercase bg-[#FBEBDB] px-6 py-3" ItemStyle-CssClass=" cursor-pointer font-medium text-blue-600 hover:underline mx-5" HeaderText="Actions" />
+                            </Columns>
+                        </asp:GridView>
 
-                        <!-- Table was here -->
-<table class="min-w-full divide-y divide-gray-200">
-                            <thead class="bg-gray-50">
-                                <tr>
-                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Report ID
-                                    </th>
-                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Month
-                                    </th>
-                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions 
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white">
-                                <tr class="bg-gray-50">
-                                    <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900 rounded-lg rounded-left">1005
-                                    </td>
-                                    <td class=" p-4 whitespace-nowrap text-sm font-semibold">June 2021
-                                    </td>
-                                    <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <asp:Button ID="ButtonViewReport1" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
-                                    </td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900 rounded-lg rounded-left">1004
-                                    </td>
-                                    <td class=" p-4 whitespace-nowrap text-sm font-semibold">May 2021
-                                    </td>
-                                    <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <asp:Button ID="ButtonViewReport2" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1003
-                                    </td>
-                                    <td class=" p-4 whitespace-nowrap text-sm font-semibold">April 2021
-                                    </td>
-                                    <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <asp:Button ID="ButtonViewReport3" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1002
-                                    </td>
-                                    <td class=" p-4 whitespace-nowrap text-sm font-semibold">March 2021
-                                    </td>
-                                    <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <asp:Button ID="ButtonViewReport4" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
-                                    </td>
-                                    <tr>
-                                        <td class="p-4 whitespace-nowrap text-sm font-normal text-gray-900">1001
-                                        </td>
-                                        <td class=" p-4 whitespace-nowrap text-sm font-semibold">February 2021
-                                        </td>
-                                    <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                        <asp:Button ID="ButtonViewReport5" runat="server" Text="View" CssClass=" text-sm cursor-pointer font-medium text-cyan-600 hover:bg-gray-100 rounded-lg px-2" OnClick="ButtonViewReport1_Click" />
-                                    </td>
-                                    </tr>
-                                </tr>
-                        </table>
+
                     </div>
                 </div>
             </div>
         </div>
-        <nav class="flex items-center justify-between pt-4" aria-label="Table navigation">
-            <span class="text-sm font-normal text-gray-500 mx-5 ">Showing <span class="font-semibold text-gray-900 ">1-5</span></span>
-            <ul class="inline-flex items-center -space-x-px m-3 right-0">
-                <li>
-                    <a href="#" class="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 ">
-                        <span class="sr-only">Previous</span>
-                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-current="page" class="z-10 px-3 py-2 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700">1</a>
-                </li>
-                <li>
-                    <a href="#" class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">2</a>
-                </li>
-                <li>
-                    <a href="#" class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">3</a>
-                </li>
-                <li>
-                    <a href="#" class="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700">
-                        <span class="sr-only">Next</span>
-                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </div>
 
-        <!--Modal of  report-->
+    <!--Modal of  report-->
     <asp:Panel ID="PanelViewReport" runat="server" Visible="false">
         <div class="bg-black bg-opacity-50 md:bg-opacity-50 fixed top-0 left-0 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
             <div class="relative w-1/2 h-full   md:h-auto mx-auto my-20">
@@ -125,65 +45,16 @@
                     <h3 class=" text-3xl font-bold text-black pt-4 px-6">Report </h3>
                     <asp:Image ID="Image1" runat="server" CssClass="object-right  bg-transparent rounded-lg text-sm px-6 ml-auto" ImageUrl="~/favicon_io/favicon-32x32.png" />
                     <h3 class=" text-2xl font-bold text-black px-6 text-right">Goceries</h3>
-                    <h3 class=" text-1xl font-bold text-black px-6 text-right">June 2021</h3>                    <!--Table-->
-                    
-                    
+                    <h3 class=" text-1xl font-bold text-black px-6 text-right">June 2021</h3>
                     <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
                     <h3 class=" text-2xl font-bold text-black p-3 mx-4 ">Total Profit:
-                        <span class=" mx-10 text-1xl font-bold text-gray-700 text-right">
-                        RM 1917   
-                    </span>
+                        <span class=" mx-10 text-1xl font-bold text-gray-700 text-right">RM 1917   
+                        </span>
                     </h3>
                     <h3 class=" text-2xl font-bold text-black p-3 mx-4 ">Product Sold:
-                        <span class=" mx-10 text-1xl font-bold text-gray-700 text-right">
-                        540  
-                    </span>
+                        <span class=" mx-10 text-1xl font-bold text-gray-700 text-right">540  
+                        </span>
                     </h3>
-                    <div class="relative overflow-x-auto border-2 shadow-md sm:rounded-lg w-11/12 mx-auto my-5">
-                        <h3 class=" text-2xl font-bold text-black p-3 px-4 ">Top 5 Products</h3>
-                        <table class="w-full text-sm text-left text-gray-500">
-                            <thead class="text-xs text-gray-700 uppercase bg-[#FBEBDB]">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">Product
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">Unit Sold
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="bg-white border-b hover:bg-gray-50">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">100 Plus
-                                    </th>
-                                    <td class="px-6 py-4">45
-                                    </td>
-                                </tr>
-                                <tr class="bg-white border-b hover:bg-gray-50">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Ice Cream
-                                    </th>
-                                    <td class="px-6 py-4">39
-                                    </td>
-                                </tr>
-                                <tr class="bg-white border-b hover:bg-gray-50">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Chocolate
-                                    </th>
-                                    <td class="px-6 py-4">37
-                                    </td>
-                                </tr>
-                                <tr class="bg-white border-b hover:bg-gray-50">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Fries
-                                    </th>
-                                    <td class="px-6 py-4">36
-                                    </td>
-                                </tr>
-                                <tr class="bg-white border-b hover:bg-gray-50">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Noodles
-                                    </th>
-                                    <td class="px-6 py-4">34
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
 
                     <div class="p-6 text-center ">
                         <h1 class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-700"></h1>
@@ -194,7 +65,7 @@
         </div>
     </asp:Panel>
 
-            <!--Modal of Report Generated Successful-->
+    <!--Modal of Report Generated Successful-->
     <asp:Panel ID="PanelAddSuccess" runat="server" Visible="False">
         <div class="bg-black bg-opacity-50 md:bg-opacity-50 fixed top-0 left-0 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
             <div class="relative w-full h-full max-w-md md:h-auto mx-auto my-20">
@@ -206,7 +77,7 @@
                         </svg>
                         <span class="text-2xl font-medium">Report Generated Successfully</span>
                         <p class="text-center">Press refresh to refresh the page.</p>
-                        <asp:Button ID="ButtonRefresh" runat="server" Text="Refresh" CssClass=" my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " OnClick="ButtonRefresh_Click"/>
+                        <asp:Button ID="ButtonRefresh" runat="server" Text="Refresh" CssClass=" my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " OnClick="ButtonRefresh_Click" />
                     </div>
                 </div>
             </div>

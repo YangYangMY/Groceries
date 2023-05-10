@@ -25,7 +25,7 @@ namespace Groceries.Customer
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnRegister_Click(object sender, EventArgs e)
         {
             con = new SqlConnection(strCon);
             con.Open();
@@ -41,11 +41,11 @@ namespace Groceries.Customer
             int idcount = 0;
 
             //Check if Email Existed
-                //Customer email Check
+            //Customer email Check
             SqlCommand check_CustomerEmail = new SqlCommand("SELECT COUNT(*) FROM Customers WHERE ([EmailAddress] = @EmailAddress)", con);
             check_CustomerEmail.Parameters.AddWithValue("@EmailAddress", txtEmail.Text);
             int CustomerEmailExist = (int)check_CustomerEmail.ExecuteScalar();
-             //Admin email Check
+            //Admin email Check
             SqlCommand check_AdminEmail = new SqlCommand("SELECT COUNT(*) FROM Admin WHERE ([EmailAddress] = @EmailAddress)", con);
             check_AdminEmail.Parameters.AddWithValue("@EmailAddress", txtEmail.Text);
             int AdminEmailExist = (int)check_AdminEmail.ExecuteScalar();
@@ -92,7 +92,7 @@ namespace Groceries.Customer
                 }
                 insertCmd.Dispose();
             }
-            
+
             con.Close();
         }
 

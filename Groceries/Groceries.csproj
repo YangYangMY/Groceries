@@ -185,6 +185,7 @@
     <Content Include="images\bakery.png" />
     <Content Include="images\chips.png" />
     <Content Include="images\cornflakes.png" />
+    <Content Include="images\dairy.png" />
     <Content Include="images\drinks.png" />
     <Content Include="favicon_io\favicon-16x16.png" />
     <Content Include="favicon_io\favicon-32x32.png" />

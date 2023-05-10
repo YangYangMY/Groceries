@@ -22,30 +22,28 @@
                         </div>
                     </li>
                         <li>
-                            <a href="../Customer/Profile.aspx" class="flex items-center p-2  rounded-lg text-[#003049]  hover:bg-[#F6BD60]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
-                                </svg>
-                                <span class="flex-1 ml-3 whitespace-nowrap">User Profile</span>
+                            <a href="../Customer/Login.aspx" class="flex items-center p-2 rounded-lg text-[#003049]  hover:bg-[#F6BD60]">
+                            <asp:Button ID="btnUProfile" runat="server" PostBackUrl="~/Customer/Profile.aspx" Text="User Profile" Width="1219px" />
                             </a>
+                        </li>
+                    <li>
                         </li>
                         <li>
-                            <a href="../Customer/OrderHistory.aspx" class="flex items-center p-2  rounded-lg text-[#003049] hover:bg-[#F6BD60]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
-                                </svg>
-                                <span class="flex-1 ml-3 whitespace-nowrap">Orders</span>                            </a>
                         </li>
                             <a href="../Customer/Login.aspx" class="flex items-center p-2 rounded-lg text-[#003049]  hover:bg-[#F6BD60]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
-                                </svg>
-                                <span class="flex-1 ml-3 whitespace-nowrap">Sign Out</span>
+                            <asp:Button ID="btnOrder" runat="server" PostBackUrl="~/Customer/OrderHistory.aspx" Text="Order" Width="1219px" />
                             </a>
+                        </li>
+                    <li>
+                            <a href="../Customer/Login.aspx" class="flex items-center p-2 rounded-lg text-[#003049]  hover:bg-[#F6BD60]">&nbsp;<asp:Button ID="btnSignOut" runat="server" OnClick="btnSignOut_Click" Text="Sign out" Width="1225px" />
+                            </a>
+                        </li>
+                    <li>
                         </li>
 
                     </ul>
             </div>
+           
         </aside>
         <div class="mt-5 sm:ml-20">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server" >
@@ -54,4 +52,21 @@
         </div>
         
     </div>
+     <asp:Panel ID="PanelConfirmSignOut" runat="server" Visible="False">
+        <div class="bg-black bg-opacity-50 md:bg-opacity-50 fixed top-0 left-0 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <div class="relative w-full h-full max-w-md md:h-auto mx-auto my-20">
+                <!--Pop Out-->
+                <div class="relative bg-white rounded-lg shadow ">
+                    <div class="p-6 text-center ">
+                        <!--<svg xmlns="http://www.w3.org/2000/svg" class="text-[#059669] mx-auto h-11 rounded-full bg-[#D1FAE5] w-11" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13l4 4L19 7" />
+                        </svg>-->
+                        <span class="text-2xl font-medium">Account Successfully Sign out</span>
+                        <p class="text-center">Press confirm to back to home page.</p> 
+                        <asp:Button ID="btnAdmin" runat="server" PostBackUrl="~/Customer/HomePage.aspx" Text="Confirm" width="100px" CssClass="my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm py-2.5 text-center mr-2 mb-2 "/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </asp:Panel>
 </asp:Content>

@@ -16,7 +16,7 @@ namespace Groceries
             if (!IsPostBack)
             {
                 string strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\GoceriesDatabase.mdf;Integrated Security=True;";
-                string query = String.Format("SELECT * FROM [Products]");
+                string query = String.Format("SELECT * FROM [Products] WHERE ProductID='1' OR ProductID='3' OR ProductID='5' OR ProductID='7'");
                 SqlConnection con;
                 con = new SqlConnection(strCon);
                 SqlCommand command = new SqlCommand(query, con);
@@ -24,6 +24,9 @@ namespace Groceries
                 SqlDataReader reader = command.ExecuteReader();
                 reptProduct.DataSource = reader;
                 reptProduct.DataBind();
+
+                //reptProduct2.DataSource = reader;
+                //reptProduct2.DataBind();
 
                 con.Close();
 

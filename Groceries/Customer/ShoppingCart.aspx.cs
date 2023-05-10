@@ -14,26 +14,16 @@ namespace Groceries.Customer
         const decimal shippingFee = 10.00M;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["buyitems"] == null)
-            //{
-            //    // Display a message indicating that the shopping cart is empty
-            //    lblEmptyCart.Text = "Your shopping cart is currently empty.";
-            //}
-            //else
-            //{
-            //    DataTable dt = (DataTable)Session["buyitems"];
-            //    if (dt.Rows.Count == 0)
-            //    {
-            //        // Display a message indicating that the shopping cart is empty
-            //        lblEmptyCart.Text = "Your shopping cart is currently empty.";
-            //    }
-            //    else
-            //    {
-            //        // Bind the data to the gridview
-            //        GridView1.DataSource = dt;
-            //        GridView1.DataBind();
-            //    }
-            //}
+            if (Session["user"] == null)
+            {
+                Response.Redirect("~/Customer/Login.aspx");
+            }
+
+            if (Session["buyitems"] == null)
+            {
+                // Display a message indicating that the shopping cart is empty
+                lblEmptyCart.Text = "Your shopping cart is currently empty.";
+            }   
 
             if (!IsPostBack)
             {
@@ -216,8 +206,6 @@ namespace Groceries.Customer
             }
                 Session["buyitems"] = dt;
                 Response.Redirect("ShoppingCart.aspx");
-
-
         }
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)

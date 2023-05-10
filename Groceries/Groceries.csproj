@@ -233,11 +233,15 @@
     <Content Include="obj\Debug\Groceries.dll" />
     <Content Include="obj\Debug\Groceries.pdb" />
     <Content Include="ProductImageupload\100plus.jpg" />
+    <Content Include="ProductImageupload\almond.png" />
     <Content Include="ProductImageupload\apple.jpg" />
     <Content Include="ProductImageupload\brocoli.png" />
     <Content Include="ProductImageupload\chickenbreast.jpg" />
+    <Content Include="ProductImageupload\chips.png" />
     <Content Include="ProductImageupload\enokimushroom.png" />
     <Content Include="ProductImageupload\farmfreshmilk2l.jpg" />
+    <Content Include="ProductImageupload\mandu.png" />
+    <Content Include="ProductImageupload\milk.png" />
     <Content Include="ProductImageupload\millo.png" />
     <Content Include="ProductImageupload\oreorblackpink.png" />
     <Content Include="ProductImageupload\twistieschipsterHotSpicy.png" />

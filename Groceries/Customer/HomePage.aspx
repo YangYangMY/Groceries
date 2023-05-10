@@ -106,7 +106,7 @@
             <h2 class="text-3xl font-bold tracking-tight text-[#003049] text-center mb-10">Han-gry for Korean Foods?</h2>
 
            <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
-                <asp:Repeater ID="reptProduct2" runat="server" OnItemCommand="reptProduct_ItemCommand">
+                <asp:Repeater ID="reptProduct2" runat="server" OnItemCommand="reptProduct_ItemCommand" DataSourceID="SqlDataSource2">
                     <ItemTemplate>
                         <div class="grid content-between group">
                             <div class="relative w-full h-0 rounded-lg" style="padding-bottom: 100%">
@@ -131,6 +131,7 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT ProductID, ProductName, Description, UnitPrice, UnitInStock, Media, CategoryID FROM Products WHERE (ProductID = '10') OR (ProductID = '11') OR (ProductID = '12') OR (ProductID = '13')"></asp:SqlDataSource>
             </div>
         </div>
     </div>
@@ -196,7 +197,7 @@
                             <p class="font-semibold text-gray-900">
                                 <a href="#">
                                     <span class="absolute inset-0"></span>
-                                    Michael Foster
+                                    John Smith
                                 </a>
                             </p>
                         </div>

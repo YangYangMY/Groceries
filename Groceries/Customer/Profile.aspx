@@ -13,31 +13,37 @@
                 <tr class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <td class="text-sm font-medium text-gray-500" style="width: 438px">Full Name</td>
                     <td>
-                        <asp:Label ID="lblName" runat="server" Text="Tan Wee Men"></asp:Label>
+                        <asp:Label ID="lblName" runat="server"></asp:Label>
                     </td>
                 </tr> 
                 <tr class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <td class="text-sm font-medium text-gray-500" style="width: 438px">CustomerID</td>
                     <td>
-                        <asp:Label ID="Label2" runat="server" Text="10012"></asp:Label>
+                        <asp:Label ID="lblID" runat="server"></asp:Label>
                     </td>
                 </tr>
                 <tr class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <td class="text-sm font-medium text-gray-500" style="width: 438px">Birthday</td>
                     <td>
-                        <asp:Label ID="lblBirthday" runat="server" Text="12-11-2007"></asp:Label>
+                        <asp:Label ID="lblBirth" runat="server"></asp:Label>
                     </td>
                 </tr>
                 <tr class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <td class="text-sm font-medium text-gray-500" style="width: 438px">Phone Number</td>
                     <td>
-                        <asp:Label ID="lblPNumber" runat="server" Text="011-5328465"></asp:Label>
+                        <asp:Label ID="lblPnum" runat="server"></asp:Label>
                     </td>
                 </tr>
                 <tr class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <td class="text-sm font-medium text-gray-500" style="width: 438px">Email Address</td>
                     <td>
-                        <asp:Label ID="lblEmail" runat="server" Text="weemen@gmail.com"></asp:Label>
+                        <asp:Label ID="lblEmail" runat="server"></asp:Label>
+                    </td>
+                </tr>
+                <tr class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <td class="text-sm font-medium text-gray-500" style="width: 438px">Password</td>
+                    <td>
+                        <asp:Label ID="lblPass" runat="server"></asp:Label>
                     </td>
                 </tr>
             </table>

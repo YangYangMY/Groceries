@@ -96,15 +96,6 @@ namespace Groceries
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqPassword;
 
         /// <summary>
-        /// regPass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator regPass;
-
-        /// <summary>
         /// txtPass control.
         /// </summary>
         /// <remarks>
@@ -168,24 +159,6 @@ namespace Groceries
         protected global::System.Web.UI.WebControls.HyperLink hplRegister;
 
         /// <summary>
-        /// PanelCustLoginSuccess control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelCustLoginSuccess;
-
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-
-        /// <summary>
         /// PanelAdminLoginSuccess control.
         /// </summary>
         /// <remarks>
@@ -195,12 +168,12 @@ namespace Groceries
         protected global::System.Web.UI.WebControls.Panel PanelAdminLoginSuccess;
 
         /// <summary>
-        /// Button2 control.
+        /// btnAdmin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btnAdmin;
     }
 }

@@ -88,10 +88,12 @@ namespace Groceries
             {
                 if (SignInAcc.Replace(" ", "") == confirmPass)
                 {
+                    // Create a login session
+                    Session["Email"] = txtEmail.Text;
                     // The email and password are valid, do something
                     if (acc == 1)
                     {
-                        PanelCustLoginSuccess.Visible = true;
+                        Response.Redirect("HomePage.aspx");
                     }
                     else
                     {

@@ -18,7 +18,7 @@
                             <input hidden="" type="file" name="avator" id="avator">
                         </div>
                         <div class="ml-8 mr-10 pr-4 text-center mt-4">
-                            <span id="ContentPlaceHolder1_displayName ">Tan Wee Men</span>
+                            <asp:Label ID="lblName" runat="server"></asp:Label>
                         </div>
                     </li>
                         <li>

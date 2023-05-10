@@ -86,11 +86,12 @@ namespace Groceries.Customer
                 {
                     PanelAddSuccess.Visible = true;
                 }
+                else
+                {
+                    LabelErrorEmail.Text = "Duplicated Email Found!";
+                }
                 insertCmd.Dispose();
             }
-
-
-           
             
             con.Close();
         }

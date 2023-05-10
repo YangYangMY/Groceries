@@ -68,7 +68,7 @@ namespace Groceries.Customer
                         DataSet ds = new DataSet();
 
                         da.Fill(ds);
-                        //dr["no"] = 1;
+                        dr["no"] = 1;
                         dr["ProductID"] = ds.Tables[0].Rows[0]["ProductID"].ToString();
                         dr["ProductName"] = ds.Tables[0].Rows[0]["ProductName"].ToString();
                         dr["Quantity"] = Request.QueryString["Quantity"];
@@ -83,7 +83,7 @@ namespace Groceries.Customer
                         GridView1.DataBind();
 
                         Session["buyitems"] = dt;
-                        GridView1.FooterRow.Cells[5].Text = "Total(RM)";
+                        GridView1.FooterRow.Cells[5].Text = "Subtotal(RM)";
                         GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
                         Calculatefinaltotal();
                         Response.Redirect("ShoppingCart.aspx");
@@ -127,7 +127,7 @@ namespace Groceries.Customer
                             da.SelectCommand = cmd;
                             DataSet ds = new DataSet();
                             da.Fill(ds);
-                            //dr["no"] = sr + 1;
+                            dr["no"] = sr + 1;
                             dr["ProductID"] = ds.Tables[0].Rows[0]["ProductID"].ToString();
                             dr["ProductName"] = ds.Tables[0].Rows[0]["ProductName"].ToString();
                             dr["UnitPrice"] = ds.Tables[0].Rows[0]["UnitPrice"].ToString();
@@ -142,7 +142,7 @@ namespace Groceries.Customer
                             GridView1.DataBind();
 
                             Session["buyitems"] = dt;
-                            GridView1.FooterRow.Cells[5].Text = "Total(RM)";
+                            GridView1.FooterRow.Cells[5].Text = "Subtotal(RM)";
                             GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
                             Calculatefinaltotal();
                             Response.Redirect("ShoppingCart.aspx");
@@ -157,7 +157,7 @@ namespace Groceries.Customer
                     GridView1.DataBind();
                     if (GridView1.Rows.Count > 0)
                     {
-                        GridView1.FooterRow.Cells[5].Text = "Total(RM)";
+                        GridView1.FooterRow.Cells[5].Text = "Subtotal(RM)";
                         GridView1.FooterRow.Cells[7].Text = grandtotal().ToString();
                         Calculatefinaltotal();
 

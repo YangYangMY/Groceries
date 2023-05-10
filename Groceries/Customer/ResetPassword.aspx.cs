@@ -22,26 +22,24 @@ namespace Groceries.Customer
 
         protected void FormView1_PageIndexChanging(object sender, FormViewPageEventArgs e)
         {
-            
 
             // Define the query to update the user's password
             string updateQuery = "UPDATE Customers SET Password = @newPassword WHERE EmailAddress = @email";
 
             // Get the user's username and new password (for example, from a password reset form)
-            string email = txtEmail.Text; // replace with the user's actual username
-            string newPassword = txtConPass.Text; // replace with the user's desired new password
+            string Email = txtEmail.Text; // replace with the user's actual username
+            string NewPassword = txtConPass.Text; // replace with the user's desired new password
 
             // Open a connection to the database
             using (con = new SqlConnection(strCon))
             {
-               ;
                 con.Open();
 
                 // Create a command object with the update query and parameters
                 using (SqlCommand command = new SqlCommand(updateQuery, con))
                 {
-                    command.Parameters.AddWithValue("@Username", email);
-                    command.Parameters.AddWithValue("@NewPassword", newPassword);
+                    command.Parameters.AddWithValue("@email", Email);
+                    command.Parameters.AddWithValue("@newPassword", NewPassword);
 
                     // Execute the command and get the number of rows affected
                     int rowsAffected = command.ExecuteNonQuery();
@@ -50,7 +48,7 @@ namespace Groceries.Customer
                     {
                         // Password was successfully reset
                         // You can redirect the user to a success page, show a success message, etc.
-                        //Panel
+                        PanelSuccessResetPassword.Visible = true;
                     }
                     else
                     {
@@ -59,7 +57,19 @@ namespace Groceries.Customer
                         lblError.Text = "Unable to reset password. Please try again.";
                     }
                 }
+
+                con.Close();
             }
+        }
+
+        protected void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

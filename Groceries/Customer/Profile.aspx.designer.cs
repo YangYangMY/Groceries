@@ -24,31 +24,31 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.Label lblName;
 
         /// <summary>
-        /// Label2 control.
+        /// lblID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblID;
 
         /// <summary>
-        /// lblBirthday control.
+        /// lblBirth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBirthday;
+        protected global::System.Web.UI.WebControls.Label lblBirth;
 
         /// <summary>
-        /// lblPNumber control.
+        /// lblPnum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPNumber;
+        protected global::System.Web.UI.WebControls.Label lblPnum;
 
         /// <summary>
         /// lblEmail control.
@@ -58,5 +58,14 @@ namespace Groceries.Customer
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEmail;
+
+        /// <summary>
+        /// lblPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPass;
     }
 }

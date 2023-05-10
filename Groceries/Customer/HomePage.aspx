@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="Groceries.HomePage" MasterPageFile="~/MasterPage/Customer.Master" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<!--Content-->
+    <!--Content-->
 
     <!--Hero Section-->
     <div class="relative">
@@ -374,4 +374,20 @@
             </div>
         </div>
     </div>
+    <!--Modal of Log in new Customer Account Successful-->
+    <asp:Panel ID="PanelCustLoginSuccess" runat="server" style="display:none;">
+    <div class="bg-black bg-opacity-50 md:bg-opacity-50 fixed top-0 left-0 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+        <div class="relative w-full h-full max-w-md md:h-auto mx-auto my-20">
+            <!--Pop Out-->
+            <div class="relative bg-white rounded-lg shadow ">
+                <div class="p-6 text-center ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-[#059669] mx-auto h-11 rounded-full bg-[#D1FAE5] w-11" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13l4 4L19 7" />
+                    </svg><br /><br />
+                    <asp:Label ID="lblWelcomeMsg" runat="server" class="text-2xl font-medium"></asp:Label>
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Panel>
 </asp:Content>

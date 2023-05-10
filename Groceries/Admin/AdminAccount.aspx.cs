@@ -46,7 +46,6 @@ namespace Groceries.Admin
             //Initialise value
             string username = null;
             string email = null;
-            string password = null;
 
             //Read other data
             readSql = "Select * from Admin";
@@ -58,7 +57,6 @@ namespace Groceries.Admin
                 {
                     username = dataReader.GetValue(1).ToString();
                     email = dataReader.GetValue(2).ToString();
-                    password = dataReader.GetValue(3).ToString();
                     break;
                 }
                 else
@@ -66,10 +64,10 @@ namespace Groceries.Admin
                     idcount++;
                 }
             }
-
+            username = username.TrimEnd();
+            email = email.TrimEnd();
             TextBoxAdminName.Text = username;
             TextBoxEmail.Text = email;
-            TextBoxPassword.Text = password;
             con.Close();
         }
 
@@ -99,6 +97,8 @@ namespace Groceries.Admin
             string email = TextBoxEmail.Text;
             string password = TextBoxPassword.Text;
 
+            int adminID = int.Parse(Session["user"].ToString());
+
             con = new SqlConnection(strCon);
             con.Open();
             if (username.Length >= 2)
@@ -107,7 +107,7 @@ namespace Groceries.Admin
                 if (password.Length >= 6)
                 {
                     //Update Data
-                    Updatesql = "UPDATE Admin SET UserName='" + username + "',EmailAddress='" + email + "',Password='" + password;
+                    Updatesql = "UPDATE Admin SET UserName='" + username + "', EmailAddress='" + email + "', Password='" + password + "'WHERE AdminID = " + adminID;
                     Updatecmd = new SqlCommand(Updatesql, con);
                     Updateadapter.InsertCommand = new SqlCommand(Updatesql, con);
                     Updateadapter.InsertCommand.ExecuteNonQuery();

@@ -34,5 +34,13 @@ namespace Groceries.MasterPage
             }
 
         }
+
+        protected void btnSignOut_Click(object sender, EventArgs e)
+        {
+            
+            // Clear the session
+            Session.Abandon();
+            PanelConfirmSignOut.Visible = true;
+        }
     }
 }

@@ -53,7 +53,6 @@ namespace Groceries
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            string cs = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             con = new SqlConnection(strCon);
             con.Open();
 

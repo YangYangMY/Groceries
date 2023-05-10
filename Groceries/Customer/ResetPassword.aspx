@@ -27,7 +27,7 @@
                             <asp:RegularExpressionValidator ID="regEmail" runat="server" ErrorMessage="Invalid Email Format." ForeColor="red"  ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail">*</asp:RegularExpressionValidator>
                       <asp:RequiredFieldValidator ID="reqEmail" runat="server" ErrorMessage="Email is required. " ForeColor="red" ControlToValidate="txtEmail">*</asp:RequiredFieldValidator>
                             </span></label>
-                      <asp:TextBox ID="txtEmail" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono" placeholder="name@flowbite.com" OnTextChanged="txtEmail_TextChanged"></asp:TextBox>
+                      <asp:TextBox ID="txtEmail" runat="server" class="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono" placeholder="name@flowbite.com"></asp:TextBox>
                       <br /><br />
                       
                       <!-- Password input -->
@@ -65,7 +65,7 @@
                       
                   <div class="text-center lg:text-left">
                       <div class="px-20 ml-20"> 
-                          <asp:Button class="bg-yellow-500 hover:bg-yellow-400 text-white font-bold py-2 px-10 border-b-4 border-orange-700 hover:border-yellow-500 rounded" ID="btnReset" runat="server" Text="Reset"/>
+                          <asp:Button ID="btnRst" runat="server" class="bg-yellow-500 hover:bg-yellow-400 text-white font-bold py-2 px-10 border-b-4 border-orange-700 hover:border-yellow-500 rounded" Text="Reset" OnClick="btnRst_Click" />
                       </div>
                      
                   </div>
@@ -84,8 +84,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13l4 4L19 7" />
                         </svg>
                         <span class="text-2xl font-medium">Account Password Updated Successfully</span>
-                        <p class="text-center">Press continue to view Profile.</p>
-                        <asp:Button ID="Button2" runat="server" Text="Continue" CssClass=" my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 " PostBackUrl="~/Admin/Dashboard.aspx" />
+                        <p class="text-center">Press continue to view Profile.</p><br />
+                        <a href="Login.aspx" class=" my-3 cursor-pointer text-white bg-[#FB923C] hover:bg-[#FDBA74] focus:outline-none  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Continue</a>
                     </div>
                 </div>
             </div>

@@ -18,10 +18,10 @@ namespace Groceries.Customer
         protected void Page_Load(object sender, EventArgs e)
         {
             // Retrieve the email session variable
-            string email = (string)Session["Email"];
+            int custID = (int)Session["user"];
 
             // Check if the user is authenticated
-            if (!string.IsNullOrEmpty(email))
+            if (Session["user"] != null && !String.IsNullOrEmpty(Session["user"].ToString()))
             {
                 // Get the user data from the database based on the email session
                 //Open and Link database
@@ -30,9 +30,9 @@ namespace Groceries.Customer
                 using (con = new SqlConnection(strCon))
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT CustomerID, CustomerName, Password, BirthDate, PhoneNumber, EmailAddress FROM Customers WHERE ([EmailAddress] = @Email)", con))
+                    using (SqlCommand command = new SqlCommand("SELECT CustomerID, CustomerName, Password, BirthDate, PhoneNumber, EmailAddress FROM Customers WHERE ([CustomerID] = @user)", con))
                     {
-                        command.Parameters.AddWithValue("@Email", email);
+                        command.Parameters.AddWithValue("@user", custID);
                         SqlDataReader reader = command.ExecuteReader();
                         if (reader.HasRows)
                         {

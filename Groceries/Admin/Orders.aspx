@@ -61,11 +61,14 @@
                             </Columns>
                         </asp:GridView>
                     </div>
-                    <h3 class=" text-1xl font-bold text-gray-700 px-auto text-right">6% Tax
+                    <h3 class=" text-1xl font-bold text-gray-700 px-auto text-right">Sub Total
+                        <asp:Label ID="LabelSubTotal" runat="server" Text="RM 10" CssClass=" mx-10 text-1xl font-bold text-gray-700 text-right"></asp:Label>
+                    </h3>
+                    <h3 class=" text-1xl font-bold text-gray-700 px-auto text-right">Tax 6%
                         <asp:Label ID="LabelTax" runat="server" Text="RM 10" CssClass=" mx-10 text-1xl font-bold text-gray-700 text-right"></asp:Label>
                     </h3>
                     <h3 class=" text-1xl font-bold text-gray-700 px-auto text-right">Delivery Fee
-                        <asp:Label ID="Label1" runat="server" Text="RM 10" CssClass=" mx-10 text-1xl font-bold text-gray-700 text-right"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text="RM 10.00" CssClass=" mx-10 text-1xl font-bold text-gray-700 text-right"></asp:Label>
                     </h3>
                     <h3 class=" text-1xl font-bold text-gray-700 px-auto text-right">TOTAL
                         <asp:Label ID="LabelTotal" runat="server" Text="RM 1917" CssClass=" mx-10 text-1xl font-bold text-gray-700 text-right"></asp:Label>

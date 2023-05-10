@@ -11,9 +11,9 @@
         <asp:Repeater ID="reptProduct" runat="server" OnItemCommand="reptProduct_ItemCommand">
             <ItemTemplate>
                 <div class="grid content-between group">
-                    <div class="relative w-full h-0 bg-gray-200 rounded-lg" style="padding-bottom: 100%">
+                    <div class="relative w-full h-0 rounded-lg" style="padding-bottom: 100%">
                         <div class="absolute inset-0 flex justify-center items-center">
-                            <asp:Image runat="server" ID="prdImg" ImageUrl='<%# Eval("Media") %>' CssClass="h-auto w-2/4 object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700" />
+                            <asp:Image runat="server" ID="prdImg" ImageUrl='<%# "~/ProductImageupload/" + Eval("Media") %>' CssClass="h-3/4 w-auto object-cover object-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-700" />
                         </div>
                     </div>
                     <asp:Label runat="server" ID="lblName" Text='<%# Eval("ProductName") %>' CssClass="mt-4 text-lg text-gray-700"></asp:Label>

@@ -84,13 +84,7 @@
                             <asp:Label runat="server" ID="lblPrice" Text='<%# Eval("UnitPrice") %>' CssClass="mt-1 text-lg font-medium text-gray-900"></asp:Label>
                             </p>
                             <div class="flex flex-row mt-2">
-                                <asp:Button ID="btnAddToCart" runat="server" CssClass="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" CommandName="AddToCart" Text="Add to cart" CommandArgument='<%# Eval("ProductID") %>' />
-                                <button type="button" class="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm p-2.5 text-center ml-2">
-                                    <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                        <path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
-                                    </svg>
-                                    <span class="sr-only">Icon description</span>
-                                </button>
+                                <asp:Button ID="btnAddToCart" runat="server" CssClass="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex" CommandName="AddToCart" Text="Add to cart" CommandArgument='<%# Eval("ProductID") %>'/>
                             </div>
                         </div>
                     </ItemTemplate>
@@ -100,7 +94,7 @@
             </div>
         </div>
     </div>
-    <!--Second Section Repeater-->
+    <!--Second Section-->
     <div class="bg-[#FFF6E7] my-5">
        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
             <h2 class="text-3xl font-bold tracking-tight text-[#003049] text-center mb-10">Han-gry for Korean Foods?</h2>
@@ -121,12 +115,6 @@
                             </p>
                             <div class="flex flex-row mt-2">
                                 <asp:Button ID="btnAddToCart" runat="server" CssClass="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" CommandName="AddToCart" Text="Add to cart" CommandArgument='<%# Eval("ProductID") %>' />
-                                <button type="button" class="text-white bg-[#F6BD60] hover:opacity-75 font-medium rounded-lg text-sm p-2.5 text-center ml-2">
-                                    <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                        <path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
-                                    </svg>
-                                    <span class="sr-only">Icon description</span>
-                                </button>
                             </div>
                         </div>
                     </ItemTemplate>
@@ -150,10 +138,8 @@
                 <div class="flex max-w-xl flex-col items-start justify-between my-8">
                     <div class="group relative">
                             <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                                <a href="#">
                                     <span class="absolute inset-0"></span>
                                     Bulla Fat Free Frozen Yogurt Wildberry (1L)
-                                </a>
                             </h3>
                         <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
                            A burst of fruity sweetness that satisfies my craving for dessert without the guilt of added fat. 
@@ -163,10 +149,8 @@
                         <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-50">
                         <div class="text-sm leading-6">
                             <p class="font-semibold text-gray-900">
-                                <a href="#">
                                     <span class="absolute inset-0"></span>
                                     Michael Foster
-                                </a>
                             </p>
                         </div>
                         </div>
@@ -182,10 +166,8 @@
                 <div class="flex max-w-xl flex-col items-start justify-between my-8">
                     <div class="group relative">
                             <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                                <a href="#">
                                     <span class="absolute inset-0"></span>
                                     Simply Organic Guacamole Mix (113g)
-                                </a>
                             </h3>
                         <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
                             It is simply delicious with the rich taste and creamy texture. 
@@ -195,10 +177,8 @@
                         <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-50">
                         <div class="text-sm leading-6">
                             <p class="font-semibold text-gray-900">
-                                <a href="#">
                                     <span class="absolute inset-0"></span>
                                     John Smith
-                                </a>
                             </p>
                         </div>
                         </div>

@@ -21,7 +21,8 @@ namespace Groceries.Customer
         {
             if (!IsPostBack)
             {
-                int customerID = 1; // Replace with the actual ID of the customer whose address you want to retrieve
+                // Replace with the actual ID of the customer whose address you want to retrieve
+                int customerID = Convert.ToInt32(Session["user"]); 
                 using (SqlConnection con = new SqlConnection(cs))
                 {
                     con.Open();
@@ -49,7 +50,7 @@ namespace Groceries.Customer
             using (SqlConnection con = new SqlConnection(cs))
             {
                 //string customerID = Session["CustomerID"].ToString();
-                int customerID = 1;
+                int customerID = Convert.ToInt32(Session["user"]);
                 con.Open();
                 string query = "INSERT INTO Address (SavedName, SavedContact, Street, State, PostCode, City, CustomerID) VALUES (@Name, @Contact, @Street, @State,  @PostalCode, @City, @CustomerID)";
                 SqlCommand command = new SqlCommand(query, con);

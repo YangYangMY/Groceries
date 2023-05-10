@@ -84,42 +84,42 @@
                                 <div class="sm:col-span-3">
                                     <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Your Name</label>
                                     <div class="mt-2">
-                                        <asp:TextBox ID="txtName" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text=""></asp:TextBox>
+                                        <asp:TextBox ID="txtName" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text="" MaxLength="100"></asp:TextBox>
                                         <asp:Label ID="LabelErrorName" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="sm:col-span-3">
                                     <label for="contact" class="block text-sm font-medium leading-6 text-gray-900">Contact Number</label>
                                     <div class="mt-2">
-                                        <asp:TextBox ID="txtContact" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text=""></asp:TextBox>
+                                        <asp:TextBox ID="txtContact" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text="" MaxLength="12"></asp:TextBox>
                                         <asp:Label ID="LabelErrorContact" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="sm:col-span-3">
                                     <label for="street" class="block text-sm font-medium leading-6 text-gray-900">Street Address</label>
                                     <div class="mt-2">
-                                        <asp:TextBox ID="txtStreet" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text=""></asp:TextBox>
+                                        <asp:TextBox ID="txtStreet" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text="" MaxLength="100"></asp:TextBox>
                                         <asp:Label ID="LabelErrorStreet" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="sm:col-span-3">
                                     <label for="state" class="block text-sm font-medium leading-6 text-gray-900">State</label>
                                     <div class="mt-2">
-                                        <asp:TextBox ID="txtState" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text=""></asp:TextBox>
+                                        <asp:TextBox ID="txtState" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text="" MaxLength="50"></asp:TextBox>
                                         <asp:Label ID="LabelErrorState" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="sm:col-span-3">
                                     <label for="postalcode" class="block text-sm font-medium leading-6 text-gray-900">Postal Code</label>
                                     <div class="mt-2">
-                                        <asp:TextBox ID="txtPostalCode" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text=""></asp:TextBox>
+                                        <asp:TextBox ID="txtPostalCode" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text="" MaxLength="5"></asp:TextBox>
                                         <asp:Label ID="LabelErrorCode" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="sm:col-span-3">
                                     <label for="city" class="block text-sm font-medium leading-6 text-gray-900">City</label>
                                     <div class="mt-2">
-                                        <asp:TextBox ID="txtCity" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text=""></asp:TextBox>
+                                        <asp:TextBox ID="txtCity" runat="server" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" Text="" MaxLength="50"></asp:TextBox>
                                         <asp:Label ID="LabelErrorCity" runat="server" Text="" ForeColor="#CC0000" CssClass="block mb-2 text-sm font-medium"></asp:Label>
                                     </div>
                                 </div>

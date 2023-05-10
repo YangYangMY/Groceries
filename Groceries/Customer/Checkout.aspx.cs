@@ -27,69 +27,117 @@ namespace Groceries.Customer
             {
                 // Replace with the actual ID of the customer whose address you want to retrieve
                 int customerID = Convert.ToInt32(Session["user"]); 
-                using (SqlConnection con = new SqlConnection(cs))
-                {
-                    con.Open();
-                    string query = "SELECT * FROM Address WHERE CustomerID = @CustomerID"; 
-                    SqlCommand command = new SqlCommand(query, con);
-                    command.Parameters.AddWithValue("@CustomerID", customerID);
-                    SqlDataReader reader = command.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        txtName.Text = reader["SavedName"].ToString();
-                        txtContact.Text = reader["SavedContact"].ToString();
-                        txtStreet.Text = reader["Street"].ToString();
-                        txtState.Text = reader["State"].ToString();
-                        txtPostalCode.Text = reader["PostCode"].ToString();
-                        txtCity.Text = reader["City"].ToString();
-                    }
-                    reader.Close();
 
                 AddressDataSource.SelectCommand =
                 "SELECT Address.AddressID, Address.SavedName, Address.SavedContact, Address.Street, Address.State, Address.Postcode, Address.City " +
                 " FROM Address" +
                 " INNER JOIN Customers ON Address.CustomerID = Customers.CustomerID" +
                 " WHERE Address.CustomerID = " + customerID;
-
-                    con.Close();
-                }
             }
         }
 
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(cs))
+            string name = txtName.Text;
+            string contact = txtContact.Text;
+            string street = txtStreet.Text;
+            string city = txtCity.Text;
+            string state = txtState.Text;
+            string code = txtPostalCode.Text;
+            bool namepass= false, contactpass=false, streetpass=false, citypass=false, statepass=false, codepass=false;
+
+            if(name == "")
             {
-                //SQL Command for read data
-                SqlCommand readCmd;
-                SqlDataReader dataReader;
-                String readSql;
-                int idcount = 0;
-
-
-                con.Open();
-
-                readSql = "Select AddressID from Address";
-                readCmd = new SqlCommand(readSql, con);
-                dataReader = readCmd.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    idcount++;
-                }
-                idcount += 1;
-                dataReader.Close();
-                readCmd.Dispose();
-
-                //string customerID = Session["CustomerID"].ToString();
-                int customerID = Convert.ToInt32(Session["user"]);
-
-                string query = "INSERT INTO Address (AddressID, SavedName, SavedContact, Street, State, PostCode, City, CustomerID) VALUES (" + idcount + ",'" + txtName.Text + "','" + txtContact.Text + "','" + txtStreet.Text + "','" + txtState.Text + "','" + txtPostalCode.Text + "','" + txtCity.Text + "','" + customerID.ToString() + "')";
-                SqlCommand command = new SqlCommand(query, con);
-                command.ExecuteNonQuery();
-                con.Close();
+                LabelErrorName.Text = "Name cannot be empty";
             }
-            Response.Write("<script>alert('Delivery Address Added Successfully')</script>");
-            Response.Redirect("Checkout.aspx");
+            else
+            {
+                LabelErrorName.Text = "";
+                namepass = true;
+            }
+            if(contact == "")
+            {
+                LabelErrorContact.Text = "Contact cannot be empty";
+            }
+            else
+            {
+                LabelErrorContact.Text = "";
+                contactpass = true;
+            }
+            if(street == "")
+            {
+                LabelErrorStreet.Text = "Street cannot be empty";
+            }
+            else
+            {
+                LabelErrorStreet.Text = "";
+                streetpass = true;
+            }
+            if(city == "")
+            {
+                LabelErrorCity.Text = "City cannot be empty";
+            }
+            else
+            {
+                LabelErrorCity.Text = "";
+                citypass = true;
+            }
+            if(state == "")
+            {
+                LabelErrorState.Text = "State cannot be empty";
+            }
+            else
+            {
+                LabelErrorState.Text = "";
+                statepass = true;
+            }
+            if(code == "")
+            {
+                LabelErrorCode.Text = "Postal code cannot be empty";
+            }
+            else
+            {
+                LabelErrorCode.Text = "";
+                codepass = true;
+            }
+
+            if(namepass && contactpass && streetpass && citypass && statepass && codepass)
+            {
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+                    //SQL Command for read data
+                    SqlCommand readCmd;
+                    SqlDataReader dataReader;
+                    String readSql;
+                    int idcount = 0;
+
+
+                    con.Open();
+
+                    readSql = "Select AddressID from Address";
+                    readCmd = new SqlCommand(readSql, con);
+                    dataReader = readCmd.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        idcount++;
+                    }
+                    idcount += 1;
+                    dataReader.Close();
+                    readCmd.Dispose();
+
+                    //string customerID = Session["CustomerID"].ToString();
+                    int customerID = Convert.ToInt32(Session["user"]);
+
+                    string query = "INSERT INTO Address (AddressID, SavedName, SavedContact, Street, State, PostCode, City, CustomerID) VALUES (" + idcount + ",'" + txtName.Text + "','" + txtContact.Text + "','" + txtStreet.Text + "','" + txtState.Text + "','" + txtPostalCode.Text + "','" + txtCity.Text + "','" + customerID.ToString() + "')";
+                    SqlCommand command = new SqlCommand(query, con);
+                    command.ExecuteNonQuery();
+                    con.Close();
+                }
+                PanelAddAddress.Visible = false;
+                Response.Write("<script>alert('Delivery Address Added Successfully')</script>");
+                Response.Redirect("Checkout.aspx");
+            }
+           
         }
 
         protected void AddressGridView_SelectedIndexChanged(object sender, EventArgs e)
@@ -111,6 +159,16 @@ namespace Groceries.Customer
             {
                 Response.Redirect("~/Customer/PaymentGateway.aspx");
             }   
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            PanelAddAddress.Visible = true;
+        }
+
+        protected void btnCloseModal_Click(object sender, EventArgs e)
+        {
+            PanelAddAddress.Visible = false;
         }
     }
 }

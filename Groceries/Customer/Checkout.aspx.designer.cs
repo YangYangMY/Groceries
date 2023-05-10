@@ -42,6 +42,15 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.Label LabelErrorAddress;
 
         /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+
+        /// <summary>
         /// LabelErrorDeliveryMethod control.
         /// </summary>
         /// <remarks>
@@ -87,6 +96,24 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.Button btnProceedPayment;
 
         /// <summary>
+        /// PanelAddAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelAddAddress;
+
+        /// <summary>
+        /// btnCloseModal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCloseModal;
+
+        /// <summary>
         /// txtName control.
         /// </summary>
         /// <remarks>
@@ -94,6 +121,15 @@ namespace Groceries.Customer
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtName;
+
+        /// <summary>
+        /// LabelErrorName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorName;
 
         /// <summary>
         /// txtContact control.
@@ -105,6 +141,15 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.TextBox txtContact;
 
         /// <summary>
+        /// LabelErrorContact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorContact;
+
+        /// <summary>
         /// txtStreet control.
         /// </summary>
         /// <remarks>
@@ -112,6 +157,15 @@ namespace Groceries.Customer
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtStreet;
+
+        /// <summary>
+        /// LabelErrorStreet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorStreet;
 
         /// <summary>
         /// txtState control.
@@ -123,6 +177,15 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.TextBox txtState;
 
         /// <summary>
+        /// LabelErrorState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorState;
+
+        /// <summary>
         /// txtPostalCode control.
         /// </summary>
         /// <remarks>
@@ -132,6 +195,15 @@ namespace Groceries.Customer
         protected global::System.Web.UI.WebControls.TextBox txtPostalCode;
 
         /// <summary>
+        /// LabelErrorCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorCode;
+
+        /// <summary>
         /// txtCity control.
         /// </summary>
         /// <remarks>
@@ -139,6 +211,15 @@ namespace Groceries.Customer
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCity;
+
+        /// <summary>
+        /// LabelErrorCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorCity;
 
         /// <summary>
         /// btnCheckout control.

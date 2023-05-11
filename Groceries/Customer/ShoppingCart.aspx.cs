@@ -64,7 +64,7 @@ namespace Groceries.Customer
                         dr["totalprice"] = totalprice;
                         
                         int ProductID = Convert.ToInt32(ds.Tables[0].Rows[0]["ProductID"]);
-                        savecartdetail(1, ProductID, ds.Tables[0].Rows[0]["ProductName"].ToString(), Request.QueryString["Quantity"], ds.Tables[0].Rows[0]["UnitPrice"].ToString(), totalprice.ToString());
+                        //savecartdetail(1, ProductID, ds.Tables[0].Rows[0]["ProductName"].ToString(), Request.QueryString["Quantity"], ds.Tables[0].Rows[0]["UnitPrice"].ToString(), totalprice.ToString());
 
 
                         dt.Rows.Add(dr);
@@ -126,6 +126,9 @@ namespace Groceries.Customer
                             decimal totalprice = unitprice * quantity;
                             dr["totalprice"] = totalprice;
                             
+                            dt.Rows.Add(dr);
+                            GridView1.DataSource = dt;
+
                             int ProductID = Convert.ToInt32(ds.Tables[0].Rows[0]["ProductID"]);
                             savecartdetail(sr + 1, ProductID, ds.Tables[0].Rows[0]["ProductName"].ToString(), Request.QueryString["Quantity"], ds.Tables[0].Rows[0]["UnitPrice"].ToString(), totalprice.ToString());
                             GridView1.DataBind();

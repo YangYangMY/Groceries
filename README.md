@@ -9,10 +9,10 @@ Admin:
 Customer:
 1) Email: chiachia@gmail.com 
    Password: password123@
-3) Email: thenggayue@gmail.com 
+2) Email: thenggayue@gmail.com 
    Password: tgy123123@
 
 Paypal Sandbox Account:
-Email: sb-0dhji25778026@personal.example.com   
-Password: tAO4%m^M
+1) Email: sb-0dhji25778026@personal.example.com   
+   Password: tAO4%m^M
 
